@@ -1,0 +1,415 @@
+{
+ "_note": "全机模态仿真参数（modal.py 加载，启动校验）。fn/zeta/增益全部工程估值，待 FRF（锤击/脉冲）辨识替换；开关 enabled 是运行时内存态（POST /api/modal），不写入本文件。floor.level: off/clean(0.1µm)/typical(0.3µm)/poor(1.0µm)/custom（输出 RMS 口径工程近似，非真 VC 谱）；contact_pulse=键合接触脉冲；thermal_softening=热软化（fn_eff=fn·(1−coeff·ΔT)，clamp [0.55,1.15]·fn，ΔT=加热器当前温度−22℃）；scope_channels=4 通道环形缓冲选择（axis:<轴名>/mode:<模态名>）",
+ "axes": {
+  "WS_LS_X": {
+   "fn_hz": 45.0,
+   "zeta": 0.05,
+   "enable": true,
+   "input_gain": 0.05
+  },
+  "WS_LS_Y": {
+   "fn_hz": 45.0,
+   "zeta": 0.05,
+   "enable": true,
+   "input_gain": 0.05
+  },
+  "WS_Rz": {
+   "fn_hz": 70.0,
+   "zeta": 0.08,
+   "enable": true,
+   "input_gain": 0.05
+  },
+  "E_EPIN_Z_1": {
+   "fn_hz": 20.0,
+   "zeta": 0.07,
+   "enable": true,
+   "input_gain": 0.05
+  },
+  "E_EPIN_Z_2": {
+   "fn_hz": 20.0,
+   "zeta": 0.07,
+   "enable": true,
+   "input_gain": 0.05
+  },
+  "E_EPIN_Z_3": {
+   "fn_hz": 20.0,
+   "zeta": 0.07,
+   "enable": true,
+   "input_gain": 0.05
+  },
+  "BS_Arm_Z": {
+   "fn_hz": 95.0,
+   "zeta": 0.08,
+   "enable": true,
+   "input_gain": 0.05,
+   "thermal": "head",
+   "contact": true
+  },
+  "BS_CAL_Rx": {
+   "fn_hz": 110.0,
+   "zeta": 0.08,
+   "enable": true,
+   "input_gain": 0.05
+  },
+  "BS_CAL_Ry": {
+   "fn_hz": 110.0,
+   "zeta": 0.08,
+   "enable": true,
+   "input_gain": 0.05
+  },
+  "AS_X": {
+   "fn_hz": 65.0,
+   "zeta": 0.06,
+   "enable": true,
+   "input_gain": 0.05
+  },
+  "AS_Y": {
+   "fn_hz": 65.0,
+   "zeta": 0.06,
+   "enable": true,
+   "input_gain": 0.05
+  },
+  "AS_Z": {
+   "fn_hz": 90.0,
+   "zeta": 0.08,
+   "enable": true,
+   "input_gain": 0.05
+  },
+  "AS_Rx": {
+   "fn_hz": 85.0,
+   "zeta": 0.08,
+   "enable": true,
+   "input_gain": 0.05
+  },
+  "AS_Ry": {
+   "fn_hz": 85.0,
+   "zeta": 0.08,
+   "enable": true,
+   "input_gain": 0.05
+  },
+  "FA_X": {
+   "fn_hz": 40.0,
+   "zeta": 0.05,
+   "enable": true,
+   "input_gain": 0.05
+  },
+  "FA_Z": {
+   "fn_hz": 80.0,
+   "zeta": 0.08,
+   "enable": true,
+   "input_gain": 0.05
+  },
+  "FA_Rx": {
+   "fn_hz": 25.0,
+   "zeta": 0.06,
+   "enable": true,
+   "input_gain": 0.05
+  },
+  "CH_Rz": {
+   "fn_hz": 60.0,
+   "zeta": 0.08,
+   "enable": true,
+   "input_gain": 0.05
+  },
+  "ES_X": {
+   "fn_hz": 30.0,
+   "zeta": 0.06,
+   "enable": true,
+   "input_gain": 0.05
+  },
+  "ES_Y": {
+   "fn_hz": 30.0,
+   "zeta": 0.06,
+   "enable": true,
+   "input_gain": 0.05
+  },
+  "ES_PunchZ": {
+   "fn_hz": 85.0,
+   "zeta": 0.08,
+   "enable": true,
+   "input_gain": 0.05
+  }
+ },
+ "modes": {
+  "granite_sway_x": {
+   "fn_hz": 36.0,
+   "zeta": 0.04,
+   "enable": true,
+   "inputs": {
+    "WS_LS_X": 0.03,
+    "FA_X": 0.015
+   },
+   "outputs": {
+    "wafer_stage": [
+     1.0,
+     0,
+     0,
+     0,
+     0,
+     2e-06
+    ],
+    "align_stage": [
+     0.7,
+     0,
+     0,
+     0,
+     0,
+     1e-06
+    ],
+    "bond_head": [
+     0.9,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "flip": [
+     0.5,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   }
+  },
+  "granite_sway_y": {
+   "fn_hz": 38.0,
+   "zeta": 0.04,
+   "enable": true,
+   "inputs": {
+    "WS_LS_Y": 0.03
+   },
+   "outputs": {
+    "wafer_stage": [
+     0,
+     1.0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "align_stage": [
+     0,
+     0.6,
+     0,
+     0,
+     0,
+     0
+    ],
+    "bond_head": [
+     0,
+     0.8,
+     0,
+     0,
+     0,
+     0
+    ]
+   }
+  },
+  "gantry_yaw": {
+   "fn_hz": 27.0,
+   "zeta": 0.05,
+   "enable": true,
+   "inputs": {
+    "WS_LS_X": 0.02,
+    "WS_LS_Y": -0.01
+   },
+   "outputs": {
+    "wafer_stage": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     1e-06
+    ],
+    "align_stage": [
+     0.3,
+     0,
+     0,
+     0,
+     0,
+     8e-07
+    ],
+    "bond_head": [
+     0.4,
+     0,
+     0,
+     0,
+     0,
+     6e-07
+    ]
+   }
+  },
+  "gantry_sway_y": {
+   "fn_hz": 31.0,
+   "zeta": 0.05,
+   "enable": true,
+   "inputs": {
+    "FA_X": 0.025,
+    "WS_LS_Y": 0.015
+   },
+   "outputs": {
+    "bond_head": [
+     0,
+     1.0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "flip": [
+     0,
+     0.8,
+     0,
+     0,
+     0,
+     0
+    ],
+    "wafer_stage": [
+     0,
+     0.4,
+     0,
+     0,
+     0,
+     0
+    ]
+   }
+  },
+  "head_z_bounce": {
+   "fn_hz": 58.0,
+   "zeta": 0.06,
+   "enable": true,
+   "inputs": {
+    "BS_Arm_Z": 0.05
+   },
+   "outputs": {
+    "bond_head": [
+     0,
+     0,
+     1.0,
+     1e-06,
+     0,
+     0
+    ],
+    "wafer_stage": [
+     0,
+     0,
+     0.3,
+     0,
+     0,
+     0
+    ]
+   },
+   "thermal": "head",
+   "contact": true
+  },
+  "align_bridge": {
+   "fn_hz": 52.0,
+   "zeta": 0.05,
+   "enable": true,
+   "inputs": {
+    "AS_X": 0.04,
+    "AS_Y": 0.04
+   },
+   "outputs": {
+    "align_stage": [
+     0.8,
+     0.8,
+     0,
+     0,
+     0,
+     2e-06
+    ],
+    "bond_head": [
+     0.3,
+     0.3,
+     0,
+     0,
+     0,
+     0
+    ]
+   }
+  },
+  "frame_film": {
+   "fn_hz": 18.0,
+   "zeta": 0.06,
+   "enable": true,
+   "inputs": {
+    "ES_X": 0.01,
+    "ES_Y": 0.01
+   },
+   "outputs": {
+    "film_stage": [
+     1.0,
+     1.0,
+     0,
+     0,
+     0,
+     0
+    ]
+   }
+  },
+  "wafer_stage_rock": {
+   "fn_hz": 44.0,
+   "zeta": 0.05,
+   "enable": true,
+   "inputs": {
+    "WS_LS_X": 0.015,
+    "WS_LS_Y": 0.015
+   },
+   "outputs": {
+    "wafer_stage": [
+     0,
+     0,
+     0.5,
+     2e-06,
+     2e-06,
+     0
+    ]
+   },
+   "thermal": "wafer",
+   "contact": true
+  },
+  "flip_arm_sway": {
+   "fn_hz": 22.0,
+   "zeta": 0.06,
+   "enable": true,
+   "inputs": {
+    "FA_Rx": 0.005,
+    "FA_X": 0.01,
+    "FA_Z": 0.005
+   },
+   "outputs": {
+    "flip": [
+     0.6,
+     0.6,
+     0.4,
+     0,
+     0,
+     3e-06
+    ]
+   }
+  }
+ },
+ "floor": {
+  "level": "typical",
+  "custom_rms_um": 0.3
+ },
+ "contact_pulse": {
+  "enable": true,
+  "impulse_mm_s": 0.2
+ },
+ "thermal_softening": {
+  "enable": true,
+  "coeff_per_c": 0.0012
+ },
+ "scope_channels": [
+  "axis:WS_LS_X",
+  "mode:granite_sway_x",
+  "mode:head_z_bounce",
+  "axis:WS_LS_X"
+ ]
+}

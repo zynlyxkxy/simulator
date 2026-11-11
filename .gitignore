@@ -1,0 +1,46 @@
+# ============================================================
+#  预编译依赖 —— 不进仓库（单个 dll 可达 100 MB+，超过 GitHub 单文件上限）
+#  用 Release 里的 deps 包解压还原，见 MANIFEST.md
+# ============================================================
+/28module/env/
+/28module/backend/runtime/
+/simbridge/deploy/
+
+# 构建产物
+/build/
+/build_*/
+/output/
+/bin/
+/out/
+/cmake-build-*/
+
+# 编辑器 / 工具个人配置
+*.user
+.vs/
+.idea/
+.claude/
+
+# 日志 / 中间物
+/Log*
+*.log
+*.obj
+*.pdb
+*.ilk
+*.exp
+
+# ---- 以下是原内网 .gitignore 的其余规则 ----
+# Python 缂撳瓨
+__pycache__/
+*.pyc
+*.pyo
+# IDE 鏈湴閰嶇疆
+.idea/
+.vscode/
+# 绯荤粺/缂栬緫鍣ㄦ潅椤?
+Thumbs.db
+.DS_Store
+desktop.ini
+# 涓庨」鐩棤鍏崇殑绗笁鏂瑰畨瑁呭寘
+KimiCode-win-x64*.exe
+# 鍚屼簨妯℃澘宸ョ▼鍓湰锛堢粺涓€鏀惧湪鍒绠＄悊锛屼笉鍏ュ簱锛?
+/28module/閮ㄥ垎鎺ュ彛淇℃伅/

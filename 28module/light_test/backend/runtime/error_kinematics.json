@@ -1,0 +1,315 @@
+{
+ "_note": "六自由度误差合成运动链配置（error_kinematics.py 加载，启动时 schema 校验）。坐标为机架右手系（X 向右、Y 向后、Z 向上，单位 mm）零位姿态下的位置。dir 为单位向量（允许非精确单位，加载时归一化）；center=旋转枢轴（轴角度误差 drx/dry/drz 的物理支点，轴承中心等效点），T/R 链元均必填——直线轴的角度误差同样绕枢轴在工具点产生阿贝平移。几何默认值全部挖自 runtime/sandboxes.json 零件 AABB（TwinDOM 模型零位姿态；T 轴取随本轴动但不随下游轴动的滑台组件聚合盒中心，R 轴取对应回转组件盒中心），属占位值、未经真机标定；默认 center 只读，PUT /api/kinematics 只能改 custom_center（null 恢复默认，仅影响误差阿贝平移）与 tool_point，运行时生效、默认不持久化；PUT 带 persist:true 时把当前生效配置原子写回本文件（含本 _note 与各模块附属字段）。",
+ "modules": {
+  "wafer_stage": {
+   "label": "硅片台",
+   "_note": "工具点=多孔陶瓷面 AABB 中心（晶圆承载面）；WS_Rz 旋转枢轴=Rz旋转组件 AABB 中心。均占位，待真机标定",
+   "tool_point": [
+    -0.106,
+    0.0,
+    881.9
+   ],
+   "chain": [
+    {
+     "axis": "WS_LS_X",
+     "kind": "T",
+     "dir": [
+      1.0,
+      0.0,
+      0.0
+     ],
+     "center": [
+      0.0,
+      0.0,
+      805.25
+     ],
+     "custom_center": null
+    },
+    {
+     "axis": "WS_LS_Y",
+     "kind": "T",
+     "dir": [
+      0.0,
+      1.0,
+      0.0
+     ],
+     "center": [
+      0.0,
+      0.0,
+      845.375
+     ],
+     "custom_center": null
+    },
+    {
+     "axis": "WS_Rz",
+     "kind": "R",
+     "dir": [
+      0.0,
+      0.0,
+      1.0
+     ],
+     "center": [
+      0.0,
+      0.0,
+      840.0
+     ],
+     "custom_center": null
+    }
+   ]
+  },
+  "align_stage": {
+   "label": "对准台",
+   "_note": "工具点=对准相机承载台 AABB 中心（对准台承载面）；AS_Rx/AS_Ry 旋转枢轴同取承载台扫掠不变盒中心（真回转轴心挖不准）。2026-08-27 迭代 4 零位纠错：TwinDOM 轴语义 position=authored−current，AS_X current=17、AS_Y current=55.4，此前把 authored 当零位导致所有 AS 零位世界坐标多算 (17,55.4)；本模块 align_stage 全部 XY 已减 (17,55.4)。均占位，待真机标定",
+   "tool_point": [
+    -42.5,
+    23.5,
+    910.0
+   ],
+   "chain": [
+    {
+     "axis": "AS_X",
+     "kind": "T",
+     "dir": [
+      1.0,
+      0.0,
+      0.0
+     ],
+     "center": [
+      -302.5,
+      235.6,
+      1020.375
+     ],
+     "custom_center": null
+    },
+    {
+     "axis": "AS_Y",
+     "kind": "T",
+     "dir": [
+      0.0,
+      1.0,
+      0.0
+     ],
+     "center": [
+      -193.75,
+      228.5,
+      979.5
+     ],
+     "custom_center": null
+    },
+    {
+     "axis": "AS_Z",
+     "kind": "T",
+     "dir": [
+      0.0,
+      0.0,
+      1.0
+     ],
+     "center": [
+      -193.75,
+      228.5,
+      979.5
+     ],
+     "custom_center": null
+    },
+    {
+     "axis": "AS_Rx",
+     "kind": "R",
+     "dir": [
+      1.0,
+      0.0,
+      0.0
+     ],
+     "center": [
+      -42.5,
+      23.5,
+      910.0
+     ],
+     "custom_center": null
+    },
+    {
+     "axis": "AS_Ry",
+     "kind": "R",
+     "dir": [
+      0.0,
+      1.0,
+      0.0
+     ],
+     "center": [
+      -42.5,
+      23.5,
+      910.0
+     ],
+     "custom_center": null
+    }
+   ]
+  },
+  "bond_head": {
+   "label": "键合头",
+   "_note": "工具点=键合头吸盘底面中心（压头尖端，AABB 中心 xy + 底面 z）；BS_CAL_Rx/Ry 旋转枢轴=RxRy调整球座 AABB 中心。均占位，待真机标定",
+   "tool_point": [
+    -42.5,
+    7.0,
+    1053.83
+   ],
+   "chain": [
+    {
+     "axis": "BS_Arm_Z",
+     "kind": "T",
+     "dir": [
+      0.0,
+      0.0,
+      1.0
+     ],
+     "center": [
+      -42.5,
+      6.5,
+      1474.5
+     ],
+     "custom_center": null
+    },
+    {
+     "axis": "BS_CAL_Rx",
+     "kind": "R",
+     "dir": [
+      1.0,
+      0.0,
+      0.0
+     ],
+     "center": [
+      -42.5,
+      7.0,
+      1215.25
+     ],
+     "custom_center": null
+    },
+    {
+     "axis": "BS_CAL_Ry",
+     "kind": "R",
+     "dir": [
+      0.0,
+      1.0,
+      0.0
+     ],
+     "center": [
+      -42.5,
+      7.0,
+      1215.25
+     ],
+     "custom_center": null
+    }
+   ]
+  },
+  "flip": {
+   "label": "翻转模块",
+   "_note": "工具点=芯片吸盘（翻转吸盘）AABB 中心；FA_Rx 旋转枢轴=翻转模块Rx承载台 AABB 中心；CH_Rz 旋转枢轴=翻转模块Rz承载台 AABB 中心。均占位，待真机标定",
+   "tool_point": [
+    1199.85,
+    9.0,
+    937.0
+   ],
+   "chain": [
+    {
+     "axis": "FA_X",
+     "kind": "T",
+     "dir": [
+      1.0,
+      0.0,
+      0.0
+     ],
+     "center": [
+      1369.0,
+      -124.0,
+      1067.5
+     ],
+     "custom_center": null
+    },
+    {
+     "axis": "FA_Z",
+     "kind": "T",
+     "dir": [
+      0.0,
+      0.0,
+      1.0
+     ],
+     "center": [
+      1374.175,
+      -25.75,
+      997.0
+     ],
+     "custom_center": null
+    },
+    {
+     "axis": "FA_Rx",
+     "kind": "R",
+     "dir": [
+      1.0,
+      0.0,
+      0.0
+     ],
+     "center": [
+      1201.0,
+      9.0,
+      937.0
+     ],
+     "custom_center": null
+    },
+    {
+     "axis": "CH_Rz",
+     "kind": "R",
+     "dir": [
+      0.0,
+      0.0,
+      1.0
+     ],
+     "center": [
+      1199.85,
+      9.0,
+      937.0
+     ],
+     "custom_center": null
+    }
+   ]
+  },
+  "film_stage": {
+   "label": "蓝膜台",
+   "_note": "工具点=蓝膜 AABB 顶面中心（蓝膜面中心，AABB 中心 xy + 顶面 z）。占位，待真机标定",
+   "tool_point": [
+    1300.0,
+    0.0,
+    886.9
+   ],
+   "chain": [
+    {
+     "axis": "ES_X",
+     "kind": "T",
+     "dir": [
+      1.0,
+      0.0,
+      0.0
+     ],
+     "center": [
+      1300.0,
+      0.0,
+      859.4
+     ],
+     "custom_center": null
+    },
+    {
+     "axis": "ES_Y",
+     "kind": "T",
+     "dir": [
+      0.0,
+      1.0,
+      0.0
+     ],
+     "center": [
+      1300.0,
+      0.0,
+      880.4
+     ],
+     "custom_center": null
+    }
+   ]
+  }
+ }
+}

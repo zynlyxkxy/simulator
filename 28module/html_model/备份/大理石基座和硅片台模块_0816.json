@@ -1,0 +1,6438 @@
+{
+  "schemaVersion": "0.2.0",
+  "meta": {
+    "id": "project_mssjivym_2nhmn5",
+    "name": "未命名 TwinDOM 工程",
+    "unit": "mm",
+    "coordinateSystem": "RH_XYZ_Z_UP",
+    "createdAt": "2026-08-14T06:02:42.382Z",
+    "updatedAt": "2026-08-14T11:15:32.492Z"
+  },
+  "objects": [
+    {
+      "id": "machine_mssjivym_9mhbzz",
+      "name": "大理石基座",
+      "type": "Group",
+      "parentId": null,
+      "visible": true,
+      "locked": false,
+      "transform": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "geometry": null,
+      "material": null,
+      "metadata": {
+        "description": "",
+        "tags": []
+      }
+    },
+    {
+      "id": "box_mssjj329_9ocxvw",
+      "name": "大理石基座1",
+      "type": "MechanicalObject",
+      "parentId": "machine_mssjivym_9mhbzz",
+      "visible": true,
+      "locked": true,
+      "transform": {
+        "position": [
+          -80,
+          100,
+          92.5
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "geometry": {
+        "type": "RoundedBox",
+        "width": 1613,
+        "height": 185,
+        "depth": 1399,
+        "segments": 3,
+        "radius": 5
+      },
+      "material": {
+        "id": "granite",
+        "name": "精密花岗岩",
+        "category": "结构材料",
+        "color": "#34383d",
+        "metalness": 0.08,
+        "roughness": 0.72,
+        "opacity": 1,
+        "presetId": "granite",
+        "emissive": "#000000"
+      },
+      "metadata": {
+        "description": "",
+        "tags": []
+      }
+    },
+    {
+      "id": "box_mssjmmim_1tklq3",
+      "name": "大理石基座2",
+      "type": "MechanicalObject",
+      "parentId": "machine_mssjivym_9mhbzz",
+      "visible": true,
+      "locked": true,
+      "transform": {
+        "position": [
+          0,
+          0,
+          235
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "geometry": {
+        "type": "RoundedBox",
+        "width": 1210,
+        "height": 100,
+        "depth": 1080,
+        "segments": 3,
+        "radius": 5
+      },
+      "material": {
+        "id": "granite",
+        "name": "精密花岗岩",
+        "category": "结构材料",
+        "color": "#34383d",
+        "metalness": 0.08,
+        "roughness": 0.72,
+        "opacity": 1,
+        "presetId": "granite",
+        "emissive": "#000000"
+      },
+      "metadata": {
+        "description": "",
+        "tags": []
+      }
+    },
+    {
+      "id": "box_mssk7agj_24pkjb",
+      "name": "X导轨1",
+      "type": "MechanicalObject",
+      "parentId": "group_msskz7ic_n7g6q2",
+      "visible": true,
+      "locked": true,
+      "transform": {
+        "position": [
+          0,
+          -486,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "geometry": null,
+      "material": null,
+      "metadata": {
+        "description": "",
+        "tags": []
+      }
+    },
+    {
+      "id": "mechanicalobject_msskbh0f_tgkwsb",
+      "name": "X导轨2",
+      "type": "Group",
+      "parentId": "group_msskz7ic_n7g6q2",
+      "visible": true,
+      "locked": true,
+      "transform": {
+        "position": [
+          25,
+          486,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "geometry": null,
+      "material": null,
+      "metadata": {
+        "description": "",
+        "tags": []
+      }
+    },
+    {
+      "id": "group_msske7sa_02k07b",
+      "name": "运动台",
+      "type": "Module",
+      "parentId": "machine_mssjivym_9mhbzz",
+      "visible": true,
+      "locked": false,
+      "transform": {
+        "position": [
+          0,
+          0,
+          334
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "geometry": null,
+      "material": null,
+      "metadata": {
+        "description": "",
+        "tags": []
+      }
+    },
+    {
+      "id": "box_msskm8s7_isrgf5",
+      "name": "Y导轨1",
+      "type": "MechanicalObject",
+      "parentId": "group_mssl0re6_ppzut0",
+      "visible": true,
+      "locked": true,
+      "transform": {
+        "position": [
+          -289.5,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "geometry": null,
+      "material": null,
+      "metadata": {
+        "description": "",
+        "tags": []
+      }
+    },
+    {
+      "id": "mechanicalobject_msskpo8d_djx7nd",
+      "name": "Y导轨2",
+      "type": "MechanicalObject",
+      "parentId": "group_mssl0re6_ppzut0",
+      "visible": true,
+      "locked": true,
+      "transform": {
+        "position": [
+          289.5,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "geometry": null,
+      "material": null,
+      "metadata": {
+        "description": "",
+        "tags": []
+      }
+    },
+    {
+      "id": "group_msskz7ic_n7g6q2",
+      "name": "X导轨",
+      "type": "Group",
+      "parentId": "group_msske7sa_02k07b",
+      "visible": true,
+      "locked": false,
+      "transform": {
+        "position": [
+          0,
+          0,
+          -26.5
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "geometry": null,
+      "material": null,
+      "metadata": {
+        "description": "",
+        "tags": []
+      }
+    },
+    {
+      "id": "xr1_mount_0001",
+      "name": "X导轨1-安装座",
+      "type": "MechanicalObject",
+      "parentId": "group_msskz7ic_n7g6q2",
+      "visible": true,
+      "locked": false,
+      "transform": {
+        "position": [
+          0,
+          -486,
+          -16.25
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "geometry": {
+        "type": "Box",
+        "width": 1020,
+        "height": 12.5,
+        "depth": 45
+      },
+      "material": {
+        "id": "stainless-steel",
+        "name": "不锈钢",
+        "category": "金属",
+        "color": "#6b7076",
+        "metalness": 0.85,
+        "roughness": 0.35,
+        "opacity": 1,
+        "presetId": "stainless-steel",
+        "emissive": "#000000"
+      },
+      "metadata": {
+        "description": "",
+        "tags": []
+      }
+    },
+    {
+      "id": "xr2_mount_0001",
+      "name": "X导轨2-安装座",
+      "type": "MechanicalObject",
+      "parentId": "group_msskz7ic_n7g6q2",
+      "visible": true,
+      "locked": false,
+      "transform": {
+        "position": [
+          25,
+          486,
+          -16.25
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "geometry": {
+        "type": "Box",
+        "width": 1020,
+        "height": 12.5,
+        "depth": 45
+      },
+      "material": {
+        "id": "stainless-steel",
+        "name": "不锈钢",
+        "category": "金属",
+        "color": "#6b7076",
+        "metalness": 0.85,
+        "roughness": 0.35,
+        "opacity": 1,
+        "presetId": "stainless-steel",
+        "emissive": "#000000"
+      },
+      "metadata": {
+        "description": "",
+        "tags": []
+      }
+    },
+    {
+      "id": "xr1_base_0001",
+      "name": "X导轨1-基座",
+      "type": "MechanicalObject",
+      "parentId": "group_msskz7ic_n7g6q2",
+      "visible": true,
+      "locked": false,
+      "transform": {
+        "position": [
+          0,
+          -486,
+          -4
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "geometry": {
+        "type": "Box",
+        "width": 1020,
+        "height": 12,
+        "depth": 45
+      },
+      "material": {
+        "id": "stainless-steel",
+        "name": "不锈钢",
+        "category": "金属",
+        "color": "#6b7076",
+        "metalness": 0.85,
+        "roughness": 0.35,
+        "opacity": 1,
+        "presetId": "stainless-steel",
+        "emissive": "#000000"
+      },
+      "metadata": {
+        "description": "",
+        "tags": []
+      }
+    },
+    {
+      "id": "xr1_rail_0001",
+      "name": "X导轨1-轨道",
+      "type": "MechanicalObject",
+      "parentId": "group_msskz7ic_n7g6q2",
+      "visible": true,
+      "locked": false,
+      "transform": {
+        "position": [
+          0,
+          -486,
+          6
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "geometry": {
+        "type": "Box",
+        "width": 1020,
+        "height": 8,
+        "depth": 16
+      },
+      "material": {
+        "id": "stainless-steel",
+        "name": "不锈钢",
+        "category": "金属",
+        "color": "#9aa1a8",
+        "metalness": 0.9,
+        "roughness": 0.22,
+        "opacity": 1,
+        "presetId": "stainless-steel",
+        "emissive": "#000000"
+      },
+      "metadata": {
+        "description": "",
+        "tags": []
+      }
+    },
+    {
+      "id": "xr1_stator_0001",
+      "name": "X导轨1-定子",
+      "type": "MechanicalObject",
+      "parentId": "group_msskz7ic_n7g6q2",
+      "visible": true,
+      "locked": false,
+      "transform": {
+        "position": [
+          0,
+          -470,
+          2.4
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "geometry": {
+        "type": "Box",
+        "width": 1020,
+        "height": 0.8,
+        "depth": 12
+      },
+      "material": {
+        "id": "stainless-steel",
+        "name": "不锈钢",
+        "category": "金属",
+        "color": "#4a4f55",
+        "metalness": 0.85,
+        "roughness": 0.35,
+        "opacity": 1,
+        "presetId": "stainless-steel",
+        "emissive": "#000000"
+      },
+      "metadata": {
+        "description": "",
+        "tags": []
+      }
+    },
+    {
+      "id": "xr2_base_0001",
+      "name": "X导轨2-基座",
+      "type": "MechanicalObject",
+      "parentId": "group_msskz7ic_n7g6q2",
+      "visible": true,
+      "locked": false,
+      "transform": {
+        "position": [
+          25,
+          486,
+          -4
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "geometry": {
+        "type": "Box",
+        "width": 1020,
+        "height": 12,
+        "depth": 45
+      },
+      "material": {
+        "id": "stainless-steel",
+        "name": "不锈钢",
+        "category": "金属",
+        "color": "#6b7076",
+        "metalness": 0.85,
+        "roughness": 0.35,
+        "opacity": 1,
+        "presetId": "stainless-steel",
+        "emissive": "#000000"
+      },
+      "metadata": {
+        "description": "",
+        "tags": []
+      }
+    },
+    {
+      "id": "xr2_rail_0001",
+      "name": "X导轨2-轨道",
+      "type": "MechanicalObject",
+      "parentId": "group_msskz7ic_n7g6q2",
+      "visible": true,
+      "locked": false,
+      "transform": {
+        "position": [
+          25,
+          486,
+          6
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "geometry": {
+        "type": "Box",
+        "width": 1020,
+        "height": 8,
+        "depth": 16
+      },
+      "material": {
+        "id": "stainless-steel",
+        "name": "不锈钢",
+        "category": "金属",
+        "color": "#9aa1a8",
+        "metalness": 0.9,
+        "roughness": 0.22,
+        "opacity": 1,
+        "presetId": "stainless-steel",
+        "emissive": "#000000"
+      },
+      "metadata": {
+        "description": "",
+        "tags": []
+      }
+    },
+    {
+      "id": "xr2_stator_0001",
+      "name": "X导轨2-定子",
+      "type": "MechanicalObject",
+      "parentId": "group_msskz7ic_n7g6q2",
+      "visible": true,
+      "locked": false,
+      "transform": {
+        "position": [
+          25,
+          470,
+          2.4
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "geometry": {
+        "type": "Box",
+        "width": 1020,
+        "height": 0.8,
+        "depth": 12
+      },
+      "material": {
+        "id": "stainless-steel",
+        "name": "不锈钢",
+        "category": "金属",
+        "color": "#4a4f55",
+        "metalness": 0.85,
+        "roughness": 0.35,
+        "opacity": 1,
+        "presetId": "stainless-steel",
+        "emissive": "#000000"
+      },
+      "metadata": {
+        "description": "",
+        "tags": []
+      }
+    },
+    {
+      "id": "group_mssl0re6_ppzut0",
+      "name": "Y导轨",
+      "type": "Group",
+      "parentId": "group_msske7sa_02k07b",
+      "visible": true,
+      "locked": false,
+      "transform": {
+        "position": [
+          0,
+          0,
+          7.5
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "geometry": null,
+      "material": null,
+      "metadata": {
+        "description": "",
+        "tags": []
+      },
+      "motionBase": {
+        "position": [
+          0,
+          0,
+          7.5
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "id": "y_slider_1_0001",
+      "name": "X轴滑块1",
+      "type": "MechanicalObject",
+      "parentId": "group_mssl0re6_ppzut0",
+      "visible": true,
+      "locked": false,
+      "transform": {
+        "position": [
+          289.5,
+          486,
+          -17.75
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "geometry": {
+        "type": "Box",
+        "width": 70,
+        "height": 12.5,
+        "depth": 34
+      },
+      "material": {
+        "id": "stainless-steel",
+        "name": "不锈钢",
+        "category": "金属",
+        "color": "#4a4f55",
+        "metalness": 0.85,
+        "roughness": 0.35,
+        "opacity": 1,
+        "presetId": "stainless-steel",
+        "emissive": "#000000"
+      },
+      "metadata": {
+        "description": "",
+        "tags": []
+      }
+    },
+    {
+      "id": "y_slider_2_0001",
+      "name": "X轴滑块2",
+      "type": "MechanicalObject",
+      "parentId": "group_mssl0re6_ppzut0",
+      "visible": true,
+      "locked": false,
+      "transform": {
+        "position": [
+          289.5,
+          -486,
+          -17.75
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "geometry": {
+        "type": "Box",
+        "width": 70,
+        "height": 12.5,
+        "depth": 34
+      },
+      "material": {
+        "id": "stainless-steel",
+        "name": "不锈钢",
+        "category": "金属",
+        "color": "#4a4f55",
+        "metalness": 0.85,
+        "roughness": 0.35,
+        "opacity": 1,
+        "presetId": "stainless-steel",
+        "emissive": "#000000"
+      },
+      "metadata": {
+        "description": "",
+        "tags": []
+      }
+    },
+    {
+      "id": "y_slider_3_0001",
+      "name": "X轴滑块3",
+      "type": "MechanicalObject",
+      "parentId": "group_mssl0re6_ppzut0",
+      "visible": true,
+      "locked": false,
+      "transform": {
+        "position": [
+          -289.5,
+          486,
+          -17.75
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "geometry": {
+        "type": "Box",
+        "width": 70,
+        "height": 12.5,
+        "depth": 34
+      },
+      "material": {
+        "id": "stainless-steel",
+        "name": "不锈钢",
+        "category": "金属",
+        "color": "#4a4f55",
+        "metalness": 0.85,
+        "roughness": 0.35,
+        "opacity": 1,
+        "presetId": "stainless-steel",
+        "emissive": "#000000"
+      },
+      "metadata": {
+        "description": "",
+        "tags": []
+      }
+    },
+    {
+      "id": "y_slider_4_0001",
+      "name": "X轴滑块4",
+      "type": "MechanicalObject",
+      "parentId": "group_mssl0re6_ppzut0",
+      "visible": true,
+      "locked": false,
+      "transform": {
+        "position": [
+          -289.5,
+          -486,
+          -17.75
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "geometry": {
+        "type": "Box",
+        "width": 70,
+        "height": 12.5,
+        "depth": 34
+      },
+      "material": {
+        "id": "stainless-steel",
+        "name": "不锈钢",
+        "category": "金属",
+        "color": "#4a4f55",
+        "metalness": 0.85,
+        "roughness": 0.35,
+        "opacity": 1,
+        "presetId": "stainless-steel",
+        "emissive": "#000000"
+      },
+      "metadata": {
+        "description": "",
+        "tags": []
+      }
+    },
+    {
+      "id": "yr1_base_0001",
+      "name": "Y导轨1-基座",
+      "type": "MechanicalObject",
+      "parentId": "group_mssl0re6_ppzut0",
+      "visible": true,
+      "locked": false,
+      "transform": {
+        "position": [
+          -289.5,
+          0,
+          -5
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "geometry": {
+        "type": "Box",
+        "width": 89,
+        "height": 13,
+        "depth": 1040
+      },
+      "material": {
+        "id": "stainless-steel",
+        "name": "不锈钢",
+        "category": "金属",
+        "color": "#6b7076",
+        "metalness": 0.85,
+        "roughness": 0.35,
+        "opacity": 1,
+        "presetId": "stainless-steel",
+        "emissive": "#000000"
+      },
+      "metadata": {
+        "description": "",
+        "tags": []
+      }
+    },
+    {
+      "id": "yr1_rail_0001",
+      "name": "Y导轨1-轨道",
+      "type": "MechanicalObject",
+      "parentId": "group_mssl0re6_ppzut0",
+      "visible": true,
+      "locked": false,
+      "transform": {
+        "position": [
+          -289.5,
+          0,
+          6.5
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "geometry": {
+        "type": "Box",
+        "width": 24,
+        "height": 10,
+        "depth": 1040
+      },
+      "material": {
+        "id": "stainless-steel",
+        "name": "不锈钢",
+        "category": "金属",
+        "color": "#9aa1a8",
+        "metalness": 0.9,
+        "roughness": 0.22,
+        "opacity": 1,
+        "presetId": "stainless-steel",
+        "emissive": "#000000"
+      },
+      "metadata": {
+        "description": "",
+        "tags": []
+      }
+    },
+    {
+      "id": "yr1_stator_0001",
+      "name": "Y导轨1-定子",
+      "type": "MechanicalObject",
+      "parentId": "group_mssl0re6_ppzut0",
+      "visible": true,
+      "locked": false,
+      "transform": {
+        "position": [
+          -261.5,
+          0,
+          1.9
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "geometry": {
+        "type": "Box",
+        "width": 30,
+        "height": 0.8,
+        "depth": 1040
+      },
+      "material": {
+        "id": "stainless-steel",
+        "name": "不锈钢",
+        "category": "金属",
+        "color": "#4a4f55",
+        "metalness": 0.85,
+        "roughness": 0.35,
+        "opacity": 1,
+        "presetId": "stainless-steel",
+        "emissive": "#000000"
+      },
+      "metadata": {
+        "description": "",
+        "tags": []
+      }
+    },
+    {
+      "id": "yr2_base_0001",
+      "name": "Y导轨2-基座",
+      "type": "MechanicalObject",
+      "parentId": "group_mssl0re6_ppzut0",
+      "visible": true,
+      "locked": false,
+      "transform": {
+        "position": [
+          289.5,
+          0,
+          -5
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "geometry": {
+        "type": "Box",
+        "width": 89,
+        "height": 13,
+        "depth": 1040
+      },
+      "material": {
+        "id": "stainless-steel",
+        "name": "不锈钢",
+        "category": "金属",
+        "color": "#6b7076",
+        "metalness": 0.85,
+        "roughness": 0.35,
+        "opacity": 1,
+        "presetId": "stainless-steel",
+        "emissive": "#000000"
+      },
+      "metadata": {
+        "description": "",
+        "tags": []
+      }
+    },
+    {
+      "id": "yr2_rail_0001",
+      "name": "Y导轨2-轨道",
+      "type": "MechanicalObject",
+      "parentId": "group_mssl0re6_ppzut0",
+      "visible": true,
+      "locked": false,
+      "transform": {
+        "position": [
+          289.5,
+          0,
+          6.5
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "geometry": {
+        "type": "Box",
+        "width": 24,
+        "height": 10,
+        "depth": 1040
+      },
+      "material": {
+        "id": "stainless-steel",
+        "name": "不锈钢",
+        "category": "金属",
+        "color": "#9aa1a8",
+        "metalness": 0.9,
+        "roughness": 0.22,
+        "opacity": 1,
+        "presetId": "stainless-steel",
+        "emissive": "#000000"
+      },
+      "metadata": {
+        "description": "",
+        "tags": []
+      }
+    },
+    {
+      "id": "yr2_stator_0001",
+      "name": "Y导轨2-定子",
+      "type": "MechanicalObject",
+      "parentId": "group_mssl0re6_ppzut0",
+      "visible": true,
+      "locked": false,
+      "transform": {
+        "position": [
+          261.5,
+          0,
+          1.9
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "geometry": {
+        "type": "Box",
+        "width": 30,
+        "height": 0.8,
+        "depth": 1040
+      },
+      "material": {
+        "id": "stainless-steel",
+        "name": "不锈钢",
+        "category": "金属",
+        "color": "#4a4f55",
+        "metalness": 0.85,
+        "roughness": 0.35,
+        "opacity": 1,
+        "presetId": "stainless-steel",
+        "emissive": "#000000"
+      },
+      "metadata": {
+        "description": "",
+        "tags": []
+      }
+    },
+    {
+      "id": "box_mssl7mh8_x6ugcu",
+      "name": "微动基座",
+      "type": "Group",
+      "parentId": "group_mssl0re6_ppzut0",
+      "visible": true,
+      "locked": false,
+      "transform": {
+        "position": [
+          0,
+          0,
+          19
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "geometry": {
+        "type": "RoundedBox",
+        "width": 640,
+        "height": 15,
+        "depth": 570,
+        "segments": 3,
+        "radius": 2
+      },
+      "material": {
+        "id": "aluminum-6061",
+        "name": "铝合金 6061-T6",
+        "category": "金属",
+        "color": "#b8c2ca",
+        "metalness": 0.72,
+        "roughness": 0.3,
+        "opacity": 1,
+        "presetId": "aluminum-6061",
+        "emissive": "#000000"
+      },
+      "metadata": {
+        "description": "",
+        "tags": []
+      },
+      "motionBase": {
+        "position": [
+          0,
+          0,
+          19
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "id": "cylinder_msslion7_fntuht",
+      "name": "Rz旋转组件",
+      "type": "Group",
+      "parentId": "box_mssl7mh8_x6ugcu",
+      "visible": true,
+      "locked": false,
+      "transform": {
+        "position": [
+          0,
+          0,
+          9.5
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "geometry": {
+        "type": "Lathe",
+        "segments": 48,
+        "profile": [
+          [
+            0,
+            -3.9
+          ],
+          [
+            226.25,
+            -3.9
+          ],
+          [
+            226.25,
+            -2
+          ],
+          [
+            220,
+            -2
+          ],
+          [
+            220,
+            2
+          ],
+          [
+            226.25,
+            2
+          ],
+          [
+            226.25,
+            3.9
+          ],
+          [
+            0,
+            3.9
+          ]
+        ]
+      },
+      "material": {
+        "id": "aluminum-7075",
+        "name": "自定义材料",
+        "category": "金属",
+        "color": "#aeb8bf",
+        "metalness": 0.72,
+        "roughness": 0.26,
+        "opacity": 1,
+        "presetId": "custom",
+        "emissive": "#000000"
+      },
+      "metadata": {
+        "description": "",
+        "tags": []
+      },
+      "motionBase": {
+        "position": [
+          0,
+          0,
+          9.5
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "id": "wafer_chuck_msslygtz_gaeah4",
+      "name": "晶圆吸盘",
+      "type": "Module",
+      "parentId": "cylinder_msslion7_fntuht",
+      "visible": true,
+      "locked": false,
+      "transform": {
+        "position": [
+          0,
+          0,
+          3.9
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "geometry": null,
+      "material": null,
+      "metadata": {
+        "description": "带真空分区、孔阵列和接头的晶圆吸盘，盘面在 0°/120°/240° 各有一个 Epin Z 轴活动缺口",
+        "tags": [],
+        "libraryVersion": "v0.9-distinct",
+        "assetId": "wafer-chuck",
+        "spec": "Ø320 × 38 mm",
+        "reference": "TwinDOM 直给型可编辑零件",
+        "assetLevel": "零件",
+        "assetFamily": "晶圆吸盘",
+        "quality": "标准",
+        "algorithmPorts": [],
+        "partCount": 13,
+        "sourcePartCount": 13,
+        "assetConfig": {
+          "detail": "standard",
+          "scale": 1,
+          "lockChildren": true,
+          "form": "standard",
+          "condition": "home"
+        },
+        "availableForms": [
+          "standard",
+          "compact",
+          "heavy"
+        ],
+        "availableConditions": [
+          "home",
+          "working",
+          "limit",
+          "maintenance"
+        ],
+        "assemblyPorts": [
+          {
+            "id": "mount",
+            "name": "安装基准面",
+            "face": "-Z",
+            "position": [
+              0,
+              0,
+              0
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ]
+          },
+          {
+            "id": "work",
+            "name": "工作接口",
+            "face": "+Z",
+            "position": [
+              0,
+              0,
+              38
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ]
+          }
+        ],
+        "referenceDimensions": {
+          "width": 320,
+          "depth": 320,
+          "height": 38
+        },
+        "qaVersion": "v1.0"
+      }
+    },
+    {
+      "id": "ceramic_msslygtz_8wc595",
+      "name": "多孔陶瓷面",
+      "type": "MechanicalObject",
+      "parentId": "wafer_chuck_msslygtz_gaeah4",
+      "visible": true,
+      "locked": true,
+      "transform": {
+        "position": [
+          0,
+          0,
+          35
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "geometry": {
+        "type": "Extrude",
+        "shape": [
+          [
+            149.787,
+            8
+          ],
+          [
+            149.408,
+            13.31
+          ],
+          [
+            148.842,
+            18.604
+          ],
+          [
+            148.088,
+            23.874
+          ],
+          [
+            147.147,
+            29.114
+          ],
+          [
+            146.022,
+            34.318
+          ],
+          [
+            144.712,
+            39.478
+          ],
+          [
+            143.22,
+            44.589
+          ],
+          [
+            141.547,
+            49.643
+          ],
+          [
+            139.696,
+            54.635
+          ],
+          [
+            137.67,
+            59.558
+          ],
+          [
+            135.469,
+            64.406
+          ],
+          [
+            133.098,
+            69.172
+          ],
+          [
+            130.56,
+            73.852
+          ],
+          [
+            127.857,
+            78.439
+          ],
+          [
+            124.993,
+            82.926
+          ],
+          [
+            121.971,
+            87.31
+          ],
+          [
+            118.796,
+            91.583
+          ],
+          [
+            115.471,
+            95.741
+          ],
+          [
+            112.001,
+            99.779
+          ],
+          [
+            108.39,
+            103.69
+          ],
+          [
+            104.642,
+            107.471
+          ],
+          [
+            100.762,
+            111.117
+          ],
+          [
+            96.755,
+            114.623
+          ],
+          [
+            92.627,
+            117.984
+          ],
+          [
+            88.382,
+            121.197
+          ],
+          [
+            84.025,
+            124.257
+          ],
+          [
+            79.563,
+            127.16
+          ],
+          [
+            75,
+            129.904
+          ],
+          [
+            70.343,
+            132.483
+          ],
+          [
+            65.597,
+            134.896
+          ],
+          [
+            60.769,
+            137.139
+          ],
+          [
+            55.864,
+            139.209
+          ],
+          [
+            50.889,
+            141.104
+          ],
+          [
+            45.849,
+            142.821
+          ],
+          [
+            40.752,
+            144.358
+          ],
+          [
+            35.604,
+            145.713
+          ],
+          [
+            30.41,
+            146.885
+          ],
+          [
+            25.179,
+            147.872
+          ],
+          [
+            19.915,
+            148.672
+          ],
+          [
+            14.627,
+            149.285
+          ],
+          [
+            9.32,
+            149.71
+          ],
+          [
+            4.001,
+            149.947
+          ],
+          [
+            -1.322,
+            149.994
+          ],
+          [
+            -6.644,
+            149.853
+          ],
+          [
+            -11.958,
+            149.523
+          ],
+          [
+            -17.256,
+            149.004
+          ],
+          [
+            -22.533,
+            148.298
+          ],
+          [
+            -27.782,
+            147.405
+          ],
+          [
+            -32.995,
+            146.326
+          ],
+          [
+            -38.167,
+            145.063
+          ],
+          [
+            -43.291,
+            143.617
+          ],
+          [
+            -48.36,
+            141.991
+          ],
+          [
+            -53.368,
+            140.185
+          ],
+          [
+            -58.309,
+            138.203
+          ],
+          [
+            -63.177,
+            136.047
+          ],
+          [
+            -67.965,
+            133.719
+          ],
+          [
+            -52.072,
+            106.191
+          ],
+          [
+            -65.928,
+            98.191
+          ],
+          [
+            -81.821,
+            125.719
+          ],
+          [
+            -86.231,
+            122.736
+          ],
+          [
+            -90.532,
+            119.599
+          ],
+          [
+            -94.72,
+            116.311
+          ],
+          [
+            -98.787,
+            112.876
+          ],
+          [
+            -102.731,
+            109.299
+          ],
+          [
+            -106.545,
+            105.585
+          ],
+          [
+            -110.225,
+            101.738
+          ],
+          [
+            -113.766,
+            97.762
+          ],
+          [
+            -117.163,
+            93.663
+          ],
+          [
+            -120.413,
+            89.446
+          ],
+          [
+            -123.511,
+            85.117
+          ],
+          [
+            -126.454,
+            80.68
+          ],
+          [
+            -129.238,
+            76.142
+          ],
+          [
+            -131.858,
+            71.508
+          ],
+          [
+            -134.313,
+            66.784
+          ],
+          [
+            -136.598,
+            61.975
+          ],
+          [
+            -138.711,
+            57.089
+          ],
+          [
+            -140.65,
+            52.13
+          ],
+          [
+            -142.411,
+            47.106
+          ],
+          [
+            -143.993,
+            42.023
+          ],
+          [
+            -145.394,
+            36.887
+          ],
+          [
+            -146.611,
+            31.704
+          ],
+          [
+            -147.644,
+            26.481
+          ],
+          [
+            -148.491,
+            21.225
+          ],
+          [
+            -149.15,
+            15.942
+          ],
+          [
+            -149.622,
+            10.639
+          ],
+          [
+            -149.906,
+            5.323
+          ],
+          [
+            -150,
+            0
+          ],
+          [
+            -149.906,
+            -5.323
+          ],
+          [
+            -149.622,
+            -10.639
+          ],
+          [
+            -149.15,
+            -15.942
+          ],
+          [
+            -148.491,
+            -21.225
+          ],
+          [
+            -147.644,
+            -26.481
+          ],
+          [
+            -146.611,
+            -31.704
+          ],
+          [
+            -145.394,
+            -36.887
+          ],
+          [
+            -143.993,
+            -42.023
+          ],
+          [
+            -142.411,
+            -47.106
+          ],
+          [
+            -140.65,
+            -52.13
+          ],
+          [
+            -138.711,
+            -57.089
+          ],
+          [
+            -136.598,
+            -61.975
+          ],
+          [
+            -134.313,
+            -66.784
+          ],
+          [
+            -131.858,
+            -71.508
+          ],
+          [
+            -129.238,
+            -76.142
+          ],
+          [
+            -126.454,
+            -80.68
+          ],
+          [
+            -123.511,
+            -85.117
+          ],
+          [
+            -120.413,
+            -89.446
+          ],
+          [
+            -117.163,
+            -93.663
+          ],
+          [
+            -113.766,
+            -97.762
+          ],
+          [
+            -110.225,
+            -101.738
+          ],
+          [
+            -106.545,
+            -105.585
+          ],
+          [
+            -102.731,
+            -109.299
+          ],
+          [
+            -98.787,
+            -112.876
+          ],
+          [
+            -94.72,
+            -116.311
+          ],
+          [
+            -90.532,
+            -119.599
+          ],
+          [
+            -86.231,
+            -122.736
+          ],
+          [
+            -81.821,
+            -125.719
+          ],
+          [
+            -65.928,
+            -98.191
+          ],
+          [
+            -52.072,
+            -106.191
+          ],
+          [
+            -67.965,
+            -133.719
+          ],
+          [
+            -63.177,
+            -136.047
+          ],
+          [
+            -58.309,
+            -138.203
+          ],
+          [
+            -53.368,
+            -140.185
+          ],
+          [
+            -48.36,
+            -141.991
+          ],
+          [
+            -43.291,
+            -143.617
+          ],
+          [
+            -38.167,
+            -145.063
+          ],
+          [
+            -32.995,
+            -146.326
+          ],
+          [
+            -27.782,
+            -147.405
+          ],
+          [
+            -22.533,
+            -148.298
+          ],
+          [
+            -17.256,
+            -149.004
+          ],
+          [
+            -11.958,
+            -149.523
+          ],
+          [
+            -6.644,
+            -149.853
+          ],
+          [
+            -1.322,
+            -149.994
+          ],
+          [
+            4.001,
+            -149.947
+          ],
+          [
+            9.32,
+            -149.71
+          ],
+          [
+            14.627,
+            -149.285
+          ],
+          [
+            19.915,
+            -148.672
+          ],
+          [
+            25.179,
+            -147.872
+          ],
+          [
+            30.41,
+            -146.885
+          ],
+          [
+            35.604,
+            -145.713
+          ],
+          [
+            40.752,
+            -144.358
+          ],
+          [
+            45.849,
+            -142.821
+          ],
+          [
+            50.889,
+            -141.104
+          ],
+          [
+            55.864,
+            -139.209
+          ],
+          [
+            60.769,
+            -137.139
+          ],
+          [
+            65.597,
+            -134.896
+          ],
+          [
+            70.343,
+            -132.483
+          ],
+          [
+            75,
+            -129.904
+          ],
+          [
+            79.563,
+            -127.16
+          ],
+          [
+            84.025,
+            -124.257
+          ],
+          [
+            88.382,
+            -121.197
+          ],
+          [
+            92.627,
+            -117.984
+          ],
+          [
+            96.755,
+            -114.623
+          ],
+          [
+            100.762,
+            -111.117
+          ],
+          [
+            104.642,
+            -107.471
+          ],
+          [
+            108.39,
+            -103.69
+          ],
+          [
+            112.001,
+            -99.779
+          ],
+          [
+            115.471,
+            -95.741
+          ],
+          [
+            118.796,
+            -91.583
+          ],
+          [
+            121.971,
+            -87.31
+          ],
+          [
+            124.993,
+            -82.926
+          ],
+          [
+            127.857,
+            -78.439
+          ],
+          [
+            130.56,
+            -73.852
+          ],
+          [
+            133.098,
+            -69.172
+          ],
+          [
+            135.469,
+            -64.406
+          ],
+          [
+            137.67,
+            -59.558
+          ],
+          [
+            139.696,
+            -54.635
+          ],
+          [
+            141.547,
+            -49.643
+          ],
+          [
+            143.22,
+            -44.589
+          ],
+          [
+            144.712,
+            -39.478
+          ],
+          [
+            146.022,
+            -34.318
+          ],
+          [
+            147.147,
+            -29.114
+          ],
+          [
+            148.088,
+            -23.874
+          ],
+          [
+            148.842,
+            -18.604
+          ],
+          [
+            149.408,
+            -13.31
+          ],
+          [
+            149.787,
+            -8
+          ],
+          [
+            118,
+            -8
+          ],
+          [
+            118,
+            8
+          ]
+        ],
+        "depth": 6,
+        "bevelSize": 0,
+        "segments": 24
+      },
+      "material": {
+        "id": "porous-alumina",
+        "name": "多孔氧化铝陶瓷",
+        "category": "陶瓷",
+        "color": "#d9d2bd",
+        "metalness": 0.01,
+        "roughness": 0.62,
+        "opacity": 1,
+        "presetId": "porous-alumina",
+        "emissive": "#000000"
+      },
+      "metadata": {
+        "description": "",
+        "tags": [],
+        "libraryVersion": "v0.9-distinct"
+      }
+    },
+    {
+      "id": "groove_0_msslygtz_t5uv5k",
+      "name": "真空槽 1",
+      "type": "MechanicalObject",
+      "parentId": "wafer_chuck_msslygtz_gaeah4",
+      "visible": true,
+      "locked": true,
+      "transform": {
+        "position": [
+          0,
+          0,
+          38.1
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "geometry": {
+        "type": "Ring",
+        "innerRadius": 47,
+        "outerRadius": 49,
+        "segments": 64
+      },
+      "material": {
+        "id": "vacuum-black",
+        "name": "真空黑色涂层",
+        "category": "表面处理",
+        "color": "#11161a",
+        "metalness": 0.42,
+        "roughness": 0.5,
+        "opacity": 1,
+        "presetId": "vacuum-black",
+        "emissive": "#000000"
+      },
+      "metadata": {
+        "description": "",
+        "tags": [],
+        "libraryVersion": "v0.9-distinct"
+      }
+    },
+    {
+      "id": "groove_1_msslygtz_egfb0v",
+      "name": "真空槽 2",
+      "type": "MechanicalObject",
+      "parentId": "wafer_chuck_msslygtz_gaeah4",
+      "visible": true,
+      "locked": true,
+      "transform": {
+        "position": [
+          0,
+          0,
+          38.1
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "geometry": {
+        "type": "Ring",
+        "innerRadius": 91.8,
+        "outerRadius": 93.8,
+        "segments": 64
+      },
+      "material": {
+        "id": "vacuum-black",
+        "name": "真空黑色涂层",
+        "category": "表面处理",
+        "color": "#11161a",
+        "metalness": 0.42,
+        "roughness": 0.5,
+        "opacity": 1,
+        "presetId": "vacuum-black",
+        "emissive": "#000000"
+      },
+      "metadata": {
+        "description": "",
+        "tags": [],
+        "libraryVersion": "v0.9-distinct"
+      }
+    },
+    {
+      "id": "cylinder_mssmg2rx_jsjzxg",
+      "name": "气浮台",
+      "type": "MechanicalObject",
+      "parentId": "cylinder_msslion7_fntuht",
+      "visible": true,
+      "locked": false,
+      "transform": {
+        "position": [
+          0,
+          0,
+          -51.000001
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "geometry": {
+        "type": "Lathe",
+        "segments": 48,
+        "profile": [
+          [
+            0,
+            -34
+          ],
+          [
+            200,
+            -34
+          ],
+          [
+            200,
+            -28
+          ],
+          [
+            188,
+            -28
+          ],
+          [
+            188,
+            28
+          ],
+          [
+            200,
+            28
+          ],
+          [
+            200,
+            34
+          ],
+          [
+            0,
+            34
+          ]
+        ]
+      },
+      "material": {
+        "id": "aluminum-7075",
+        "name": "铝合金 7075-T6",
+        "category": "金属",
+        "color": "#c7ccd1",
+        "metalness": 0.76,
+        "roughness": 0.26,
+        "opacity": 1,
+        "presetId": "aluminum-7075",
+        "emissive": "#000000"
+      },
+      "metadata": {
+        "description": "",
+        "tags": []
+      }
+    },
+    {
+      "id": "chuck_base_notched_0001",
+      "name": "吸盘基座（带Epin缺口）",
+      "type": "MechanicalObject",
+      "parentId": "wafer_chuck_msslygtz_gaeah4",
+      "visible": true,
+      "locked": true,
+      "transform": {
+        "position": [
+          0,
+          0,
+          16
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "geometry": {
+        "type": "Extrude",
+        "shape": [
+          [
+            159.8,
+            8
+          ],
+          [
+            159.422,
+            13.585
+          ],
+          [
+            158.849,
+            19.154
+          ],
+          [
+            158.082,
+            24.699
+          ],
+          [
+            157.121,
+            30.214
+          ],
+          [
+            155.968,
+            35.691
+          ],
+          [
+            154.624,
+            41.126
+          ],
+          [
+            153.091,
+            46.509
+          ],
+          [
+            151.37,
+            51.836
+          ],
+          [
+            149.464,
+            57.1
+          ],
+          [
+            147.376,
+            62.293
+          ],
+          [
+            145.106,
+            67.411
+          ],
+          [
+            142.659,
+            72.445
+          ],
+          [
+            140.038,
+            77.391
+          ],
+          [
+            137.245,
+            82.243
+          ],
+          [
+            134.284,
+            86.994
+          ],
+          [
+            131.158,
+            91.638
+          ],
+          [
+            127.873,
+            96.17
+          ],
+          [
+            124.43,
+            100.584
+          ],
+          [
+            120.835,
+            104.875
+          ],
+          [
+            117.093,
+            109.038
+          ],
+          [
+            113.207,
+            113.067
+          ],
+          [
+            109.182,
+            116.958
+          ],
+          [
+            105.024,
+            120.706
+          ],
+          [
+            100.737,
+            124.306
+          ],
+          [
+            96.327,
+            127.754
+          ],
+          [
+            91.799,
+            131.045
+          ],
+          [
+            87.159,
+            134.177
+          ],
+          [
+            82.412,
+            137.143
+          ],
+          [
+            77.564,
+            139.942
+          ],
+          [
+            72.621,
+            142.57
+          ],
+          [
+            67.589,
+            145.023
+          ],
+          [
+            62.475,
+            147.299
+          ],
+          [
+            57.284,
+            149.394
+          ],
+          [
+            52.023,
+            151.306
+          ],
+          [
+            46.698,
+            153.034
+          ],
+          [
+            41.316,
+            154.574
+          ],
+          [
+            35.883,
+            155.924
+          ],
+          [
+            30.407,
+            157.084
+          ],
+          [
+            24.893,
+            158.052
+          ],
+          [
+            19.349,
+            158.826
+          ],
+          [
+            13.781,
+            159.405
+          ],
+          [
+            8.197,
+            159.79
+          ],
+          [
+            2.602,
+            159.979
+          ],
+          [
+            -2.996,
+            159.972
+          ],
+          [
+            -8.59,
+            159.769
+          ],
+          [
+            -14.174,
+            159.371
+          ],
+          [
+            -19.74,
+            158.778
+          ],
+          [
+            -25.282,
+            157.99
+          ],
+          [
+            -30.794,
+            157.009
+          ],
+          [
+            -36.267,
+            155.835
+          ],
+          [
+            -41.696,
+            154.471
+          ],
+          [
+            -47.074,
+            152.918
+          ],
+          [
+            -52.395,
+            151.178
+          ],
+          [
+            -57.651,
+            149.253
+          ],
+          [
+            -62.837,
+            147.144
+          ],
+          [
+            -67.946,
+            144.856
+          ],
+          [
+            -72.972,
+            142.391
+          ],
+          [
+            -52.072,
+            106.191
+          ],
+          [
+            -65.928,
+            98.191
+          ],
+          [
+            -86.828,
+            134.391
+          ],
+          [
+            -91.476,
+            131.271
+          ],
+          [
+            -96.012,
+            127.991
+          ],
+          [
+            -100.431,
+            124.554
+          ],
+          [
+            -104.726,
+            120.964
+          ],
+          [
+            -108.894,
+            117.227
+          ],
+          [
+            -112.928,
+            113.346
+          ],
+          [
+            -116.824,
+            109.326
+          ],
+          [
+            -120.577,
+            105.172
+          ],
+          [
+            -124.182,
+            100.89
+          ],
+          [
+            -127.635,
+            96.484
+          ],
+          [
+            -130.932,
+            91.96
+          ],
+          [
+            -134.069,
+            87.324
+          ],
+          [
+            -137.042,
+            82.58
+          ],
+          [
+            -139.847,
+            77.736
+          ],
+          [
+            -142.48,
+            72.796
+          ],
+          [
+            -144.94,
+            67.768
+          ],
+          [
+            -147.222,
+            62.656
+          ],
+          [
+            -149.323,
+            57.468
+          ],
+          [
+            -151.242,
+            52.209
+          ],
+          [
+            -152.976,
+            46.886
+          ],
+          [
+            -154.523,
+            41.506
+          ],
+          [
+            -155.88,
+            36.075
+          ],
+          [
+            -157.047,
+            30.6
+          ],
+          [
+            -158.021,
+            25.088
+          ],
+          [
+            -158.802,
+            19.545
+          ],
+          [
+            -159.388,
+            13.978
+          ],
+          [
+            -159.78,
+            8.393
+          ],
+          [
+            -159.976,
+            2.799
+          ],
+          [
+            -159.976,
+            -2.799
+          ],
+          [
+            -159.78,
+            -8.393
+          ],
+          [
+            -159.388,
+            -13.978
+          ],
+          [
+            -158.802,
+            -19.545
+          ],
+          [
+            -158.021,
+            -25.088
+          ],
+          [
+            -157.047,
+            -30.6
+          ],
+          [
+            -155.88,
+            -36.075
+          ],
+          [
+            -154.523,
+            -41.506
+          ],
+          [
+            -152.976,
+            -46.886
+          ],
+          [
+            -151.242,
+            -52.209
+          ],
+          [
+            -149.323,
+            -57.468
+          ],
+          [
+            -147.222,
+            -62.656
+          ],
+          [
+            -144.94,
+            -67.768
+          ],
+          [
+            -142.48,
+            -72.796
+          ],
+          [
+            -139.847,
+            -77.736
+          ],
+          [
+            -137.042,
+            -82.58
+          ],
+          [
+            -134.069,
+            -87.324
+          ],
+          [
+            -130.932,
+            -91.96
+          ],
+          [
+            -127.635,
+            -96.484
+          ],
+          [
+            -124.182,
+            -100.89
+          ],
+          [
+            -120.577,
+            -105.172
+          ],
+          [
+            -116.824,
+            -109.326
+          ],
+          [
+            -112.928,
+            -113.346
+          ],
+          [
+            -108.894,
+            -117.227
+          ],
+          [
+            -104.726,
+            -120.964
+          ],
+          [
+            -100.431,
+            -124.554
+          ],
+          [
+            -96.012,
+            -127.991
+          ],
+          [
+            -91.476,
+            -131.271
+          ],
+          [
+            -86.828,
+            -134.391
+          ],
+          [
+            -65.928,
+            -98.191
+          ],
+          [
+            -52.072,
+            -106.191
+          ],
+          [
+            -72.972,
+            -142.391
+          ],
+          [
+            -67.946,
+            -144.856
+          ],
+          [
+            -62.837,
+            -147.144
+          ],
+          [
+            -57.651,
+            -149.253
+          ],
+          [
+            -52.395,
+            -151.178
+          ],
+          [
+            -47.074,
+            -152.918
+          ],
+          [
+            -41.696,
+            -154.471
+          ],
+          [
+            -36.267,
+            -155.835
+          ],
+          [
+            -30.794,
+            -157.009
+          ],
+          [
+            -25.282,
+            -157.99
+          ],
+          [
+            -19.74,
+            -158.778
+          ],
+          [
+            -14.174,
+            -159.371
+          ],
+          [
+            -8.59,
+            -159.769
+          ],
+          [
+            -2.996,
+            -159.972
+          ],
+          [
+            2.602,
+            -159.979
+          ],
+          [
+            8.197,
+            -159.79
+          ],
+          [
+            13.781,
+            -159.405
+          ],
+          [
+            19.349,
+            -158.826
+          ],
+          [
+            24.893,
+            -158.052
+          ],
+          [
+            30.407,
+            -157.084
+          ],
+          [
+            35.883,
+            -155.924
+          ],
+          [
+            41.316,
+            -154.574
+          ],
+          [
+            46.698,
+            -153.034
+          ],
+          [
+            52.023,
+            -151.306
+          ],
+          [
+            57.284,
+            -149.394
+          ],
+          [
+            62.475,
+            -147.299
+          ],
+          [
+            67.589,
+            -145.023
+          ],
+          [
+            72.621,
+            -142.57
+          ],
+          [
+            77.564,
+            -139.942
+          ],
+          [
+            82.412,
+            -137.143
+          ],
+          [
+            87.159,
+            -134.177
+          ],
+          [
+            91.799,
+            -131.045
+          ],
+          [
+            96.327,
+            -127.754
+          ],
+          [
+            100.737,
+            -124.306
+          ],
+          [
+            105.024,
+            -120.706
+          ],
+          [
+            109.182,
+            -116.958
+          ],
+          [
+            113.207,
+            -113.067
+          ],
+          [
+            117.093,
+            -109.038
+          ],
+          [
+            120.835,
+            -104.875
+          ],
+          [
+            124.43,
+            -100.584
+          ],
+          [
+            127.873,
+            -96.17
+          ],
+          [
+            131.158,
+            -91.638
+          ],
+          [
+            134.284,
+            -86.994
+          ],
+          [
+            137.245,
+            -82.243
+          ],
+          [
+            140.038,
+            -77.391
+          ],
+          [
+            142.659,
+            -72.445
+          ],
+          [
+            145.106,
+            -67.411
+          ],
+          [
+            147.376,
+            -62.293
+          ],
+          [
+            149.464,
+            -57.1
+          ],
+          [
+            151.37,
+            -51.836
+          ],
+          [
+            153.091,
+            -46.509
+          ],
+          [
+            154.624,
+            -41.126
+          ],
+          [
+            155.968,
+            -35.691
+          ],
+          [
+            157.121,
+            -30.214
+          ],
+          [
+            158.082,
+            -24.699
+          ],
+          [
+            158.849,
+            -19.154
+          ],
+          [
+            159.422,
+            -13.585
+          ],
+          [
+            159.8,
+            -8
+          ],
+          [
+            118,
+            -8
+          ],
+          [
+            118,
+            8
+          ]
+        ],
+        "depth": 32,
+        "bevelSize": 0,
+        "segments": 24
+      },
+      "material": {
+        "id": "aluminum-7075",
+        "name": "铝合金 7075-T6",
+        "category": "金属",
+        "color": "#aeb8bf",
+        "metalness": 0.76,
+        "roughness": 0.26,
+        "opacity": 1,
+        "presetId": "aluminum-7075",
+        "emissive": "#000000"
+      },
+      "metadata": {
+        "description": "",
+        "tags": []
+      }
+    },
+    {
+      "id": "group_epin1_0001",
+      "name": "Epin1",
+      "type": "Group",
+      "parentId": "wafer_chuck_msslygtz_gaeah4",
+      "visible": true,
+      "locked": false,
+      "transform": {
+        "position": [
+          144,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "geometry": null,
+      "material": null,
+      "metadata": {
+        "description": "Epin1：晶圆上片时顶起晶圆边缘，下降后将晶圆过渡到吸盘",
+        "tags": []
+      },
+      "motionBase": {
+        "position": [
+          144,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "id": "epin1_zrail_0001",
+      "name": "Epin1 Z轴导轨",
+      "type": "MechanicalObject",
+      "parentId": "group_epin1_0001",
+      "visible": true,
+      "locked": true,
+      "transform": {
+        "position": [
+          0,
+          0,
+          -5
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "geometry": {
+        "type": "RoundedBox",
+        "width": 10,
+        "height": 30,
+        "depth": 12,
+        "segments": 2,
+        "radius": 1
+      },
+      "material": {
+        "id": "stainless-steel",
+        "name": "不锈钢",
+        "category": "金属",
+        "color": "#6b7076",
+        "metalness": 0.85,
+        "roughness": 0.35,
+        "opacity": 1,
+        "presetId": "stainless-steel",
+        "emissive": "#000000"
+      },
+      "metadata": {
+        "description": "",
+        "tags": []
+      }
+    },
+    {
+      "id": "epin1_slider_0001",
+      "name": "Epin1 导轨滑块",
+      "type": "MechanicalObject",
+      "parentId": "group_epin1_0001",
+      "visible": true,
+      "locked": true,
+      "transform": {
+        "position": [
+          0,
+          0,
+          8
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "geometry": {
+        "type": "RoundedBox",
+        "width": 12,
+        "height": 8,
+        "depth": 12,
+        "segments": 2,
+        "radius": 1
+      },
+      "material": {
+        "id": "aluminum-6061",
+        "name": "铝合金 6061-T6",
+        "category": "金属",
+        "color": "#b8c2ca",
+        "metalness": 0.72,
+        "roughness": 0.3,
+        "opacity": 1,
+        "presetId": "aluminum-6061",
+        "emissive": "#000000"
+      },
+      "metadata": {
+        "description": "",
+        "tags": []
+      }
+    },
+    {
+      "id": "epin1_pin_0001",
+      "name": "Epin1 顶针",
+      "type": "MechanicalObject",
+      "parentId": "group_epin1_0001",
+      "visible": true,
+      "locked": true,
+      "transform": {
+        "position": [
+          0,
+          0,
+          19
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "geometry": {
+        "type": "Cylinder",
+        "radius": 3,
+        "height": 22,
+        "segments": 24
+      },
+      "material": {
+        "id": "stainless-steel",
+        "name": "不锈钢",
+        "category": "金属",
+        "color": "#9aa1a8",
+        "metalness": 0.9,
+        "roughness": 0.22,
+        "opacity": 1,
+        "presetId": "stainless-steel",
+        "emissive": "#000000"
+      },
+      "metadata": {
+        "description": "",
+        "tags": []
+      }
+    },
+    {
+      "id": "epin1_tab_0001",
+      "name": "Epin1 半己型片压",
+      "type": "MechanicalObject",
+      "parentId": "group_epin1_0001",
+      "visible": true,
+      "locked": true,
+      "transform": {
+        "position": [
+          0,
+          0,
+          31.5
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "geometry": {
+        "type": "Extrude",
+        "shape": [
+          [
+            0,
+            7
+          ],
+          [
+            -1.366,
+            6.865
+          ],
+          [
+            -2.679,
+            6.467
+          ],
+          [
+            -3.889,
+            5.82
+          ],
+          [
+            -4.95,
+            4.95
+          ],
+          [
+            -5.82,
+            3.889
+          ],
+          [
+            -6.467,
+            2.679
+          ],
+          [
+            -6.865,
+            1.366
+          ],
+          [
+            -7,
+            0
+          ],
+          [
+            -6.865,
+            -1.366
+          ],
+          [
+            -6.467,
+            -2.679
+          ],
+          [
+            -5.82,
+            -3.889
+          ],
+          [
+            -4.95,
+            -4.95
+          ],
+          [
+            -3.889,
+            -5.82
+          ],
+          [
+            -2.679,
+            -6.467
+          ],
+          [
+            -1.366,
+            -6.865
+          ],
+          [
+            0,
+            -7
+          ]
+        ],
+        "depth": 3,
+        "bevelSize": 0,
+        "segments": 16
+      },
+      "material": {
+        "id": "epin-tab",
+        "name": "自定义材料",
+        "category": "金属",
+        "color": "#e08a2e",
+        "metalness": 0.45,
+        "roughness": 0.35,
+        "opacity": 1,
+        "presetId": "custom",
+        "emissive": "#000000"
+      },
+      "metadata": {
+        "description": "",
+        "tags": []
+      }
+    },
+    {
+      "id": "group_epin2_0001",
+      "name": "Epin2",
+      "type": "Group",
+      "parentId": "wafer_chuck_msslygtz_gaeah4",
+      "visible": true,
+      "locked": false,
+      "transform": {
+        "position": [
+          -72,
+          124.708,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          120
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "geometry": null,
+      "material": null,
+      "metadata": {
+        "description": "Epin2：晶圆上片时顶起晶圆边缘，下降后将晶圆过渡到吸盘",
+        "tags": []
+      },
+      "motionBase": {
+        "position": [
+          -72,
+          124.708,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          120
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "id": "epin2_zrail_0001",
+      "name": "Epin2 Z轴导轨",
+      "type": "MechanicalObject",
+      "parentId": "group_epin2_0001",
+      "visible": true,
+      "locked": true,
+      "transform": {
+        "position": [
+          0,
+          0,
+          -5
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "geometry": {
+        "type": "RoundedBox",
+        "width": 10,
+        "height": 30,
+        "depth": 12,
+        "segments": 2,
+        "radius": 1
+      },
+      "material": {
+        "id": "stainless-steel",
+        "name": "不锈钢",
+        "category": "金属",
+        "color": "#6b7076",
+        "metalness": 0.85,
+        "roughness": 0.35,
+        "opacity": 1,
+        "presetId": "stainless-steel",
+        "emissive": "#000000"
+      },
+      "metadata": {
+        "description": "",
+        "tags": []
+      }
+    },
+    {
+      "id": "epin2_slider_0001",
+      "name": "Epin2 导轨滑块",
+      "type": "MechanicalObject",
+      "parentId": "group_epin2_0001",
+      "visible": true,
+      "locked": true,
+      "transform": {
+        "position": [
+          0,
+          0,
+          8
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "geometry": {
+        "type": "RoundedBox",
+        "width": 12,
+        "height": 8,
+        "depth": 12,
+        "segments": 2,
+        "radius": 1
+      },
+      "material": {
+        "id": "aluminum-6061",
+        "name": "铝合金 6061-T6",
+        "category": "金属",
+        "color": "#b8c2ca",
+        "metalness": 0.72,
+        "roughness": 0.3,
+        "opacity": 1,
+        "presetId": "aluminum-6061",
+        "emissive": "#000000"
+      },
+      "metadata": {
+        "description": "",
+        "tags": []
+      }
+    },
+    {
+      "id": "epin2_pin_0001",
+      "name": "Epin2 顶针",
+      "type": "MechanicalObject",
+      "parentId": "group_epin2_0001",
+      "visible": true,
+      "locked": true,
+      "transform": {
+        "position": [
+          0,
+          0,
+          19
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "geometry": {
+        "type": "Cylinder",
+        "radius": 3,
+        "height": 22,
+        "segments": 24
+      },
+      "material": {
+        "id": "stainless-steel",
+        "name": "不锈钢",
+        "category": "金属",
+        "color": "#9aa1a8",
+        "metalness": 0.9,
+        "roughness": 0.22,
+        "opacity": 1,
+        "presetId": "stainless-steel",
+        "emissive": "#000000"
+      },
+      "metadata": {
+        "description": "",
+        "tags": []
+      }
+    },
+    {
+      "id": "epin2_tab_0001",
+      "name": "Epin2 半己型片压",
+      "type": "MechanicalObject",
+      "parentId": "group_epin2_0001",
+      "visible": true,
+      "locked": true,
+      "transform": {
+        "position": [
+          0,
+          0,
+          31.5
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "geometry": {
+        "type": "Extrude",
+        "shape": [
+          [
+            0,
+            7
+          ],
+          [
+            -1.366,
+            6.865
+          ],
+          [
+            -2.679,
+            6.467
+          ],
+          [
+            -3.889,
+            5.82
+          ],
+          [
+            -4.95,
+            4.95
+          ],
+          [
+            -5.82,
+            3.889
+          ],
+          [
+            -6.467,
+            2.679
+          ],
+          [
+            -6.865,
+            1.366
+          ],
+          [
+            -7,
+            0
+          ],
+          [
+            -6.865,
+            -1.366
+          ],
+          [
+            -6.467,
+            -2.679
+          ],
+          [
+            -5.82,
+            -3.889
+          ],
+          [
+            -4.95,
+            -4.95
+          ],
+          [
+            -3.889,
+            -5.82
+          ],
+          [
+            -2.679,
+            -6.467
+          ],
+          [
+            -1.366,
+            -6.865
+          ],
+          [
+            0,
+            -7
+          ]
+        ],
+        "depth": 3,
+        "bevelSize": 0,
+        "segments": 16
+      },
+      "material": {
+        "id": "epin-tab",
+        "name": "自定义材料",
+        "category": "金属",
+        "color": "#e08a2e",
+        "metalness": 0.45,
+        "roughness": 0.35,
+        "opacity": 1,
+        "presetId": "custom",
+        "emissive": "#000000"
+      },
+      "metadata": {
+        "description": "",
+        "tags": []
+      }
+    },
+    {
+      "id": "group_epin3_0001",
+      "name": "Epin3",
+      "type": "Group",
+      "parentId": "wafer_chuck_msslygtz_gaeah4",
+      "visible": true,
+      "locked": false,
+      "transform": {
+        "position": [
+          -72,
+          -124.708,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          -120
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "geometry": null,
+      "material": null,
+      "metadata": {
+        "description": "Epin3：晶圆上片时顶起晶圆边缘，下降后将晶圆过渡到吸盘",
+        "tags": []
+      },
+      "motionBase": {
+        "position": [
+          -72,
+          -124.708,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          240
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "id": "epin3_zrail_0001",
+      "name": "Epin3 Z轴导轨",
+      "type": "MechanicalObject",
+      "parentId": "group_epin3_0001",
+      "visible": true,
+      "locked": true,
+      "transform": {
+        "position": [
+          0,
+          0,
+          -5
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "geometry": {
+        "type": "RoundedBox",
+        "width": 10,
+        "height": 30,
+        "depth": 12,
+        "segments": 2,
+        "radius": 1
+      },
+      "material": {
+        "id": "stainless-steel",
+        "name": "不锈钢",
+        "category": "金属",
+        "color": "#6b7076",
+        "metalness": 0.85,
+        "roughness": 0.35,
+        "opacity": 1,
+        "presetId": "stainless-steel",
+        "emissive": "#000000"
+      },
+      "metadata": {
+        "description": "",
+        "tags": []
+      }
+    },
+    {
+      "id": "epin3_slider_0001",
+      "name": "Epin3 导轨滑块",
+      "type": "MechanicalObject",
+      "parentId": "group_epin3_0001",
+      "visible": true,
+      "locked": true,
+      "transform": {
+        "position": [
+          0,
+          0,
+          8
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "geometry": {
+        "type": "RoundedBox",
+        "width": 12,
+        "height": 8,
+        "depth": 12,
+        "segments": 2,
+        "radius": 1
+      },
+      "material": {
+        "id": "aluminum-6061",
+        "name": "铝合金 6061-T6",
+        "category": "金属",
+        "color": "#b8c2ca",
+        "metalness": 0.72,
+        "roughness": 0.3,
+        "opacity": 1,
+        "presetId": "aluminum-6061",
+        "emissive": "#000000"
+      },
+      "metadata": {
+        "description": "",
+        "tags": []
+      }
+    },
+    {
+      "id": "epin3_pin_0001",
+      "name": "Epin3 顶针",
+      "type": "MechanicalObject",
+      "parentId": "group_epin3_0001",
+      "visible": true,
+      "locked": true,
+      "transform": {
+        "position": [
+          0,
+          0,
+          19
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "geometry": {
+        "type": "Cylinder",
+        "radius": 3,
+        "height": 22,
+        "segments": 24
+      },
+      "material": {
+        "id": "stainless-steel",
+        "name": "不锈钢",
+        "category": "金属",
+        "color": "#9aa1a8",
+        "metalness": 0.9,
+        "roughness": 0.22,
+        "opacity": 1,
+        "presetId": "stainless-steel",
+        "emissive": "#000000"
+      },
+      "metadata": {
+        "description": "",
+        "tags": []
+      }
+    },
+    {
+      "id": "epin3_tab_0001",
+      "name": "Epin3 半己型片压",
+      "type": "MechanicalObject",
+      "parentId": "group_epin3_0001",
+      "visible": true,
+      "locked": true,
+      "transform": {
+        "position": [
+          0,
+          0,
+          31.5
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "geometry": {
+        "type": "Extrude",
+        "shape": [
+          [
+            0,
+            7
+          ],
+          [
+            -1.366,
+            6.865
+          ],
+          [
+            -2.679,
+            6.467
+          ],
+          [
+            -3.889,
+            5.82
+          ],
+          [
+            -4.95,
+            4.95
+          ],
+          [
+            -5.82,
+            3.889
+          ],
+          [
+            -6.467,
+            2.679
+          ],
+          [
+            -6.865,
+            1.366
+          ],
+          [
+            -7,
+            0
+          ],
+          [
+            -6.865,
+            -1.366
+          ],
+          [
+            -6.467,
+            -2.679
+          ],
+          [
+            -5.82,
+            -3.889
+          ],
+          [
+            -4.95,
+            -4.95
+          ],
+          [
+            -3.889,
+            -5.82
+          ],
+          [
+            -2.679,
+            -6.467
+          ],
+          [
+            -1.366,
+            -6.865
+          ],
+          [
+            0,
+            -7
+          ]
+        ],
+        "depth": 3,
+        "bevelSize": 0,
+        "segments": 16
+      },
+      "material": {
+        "id": "epin-tab",
+        "name": "自定义材料",
+        "category": "金属",
+        "color": "#e08a2e",
+        "metalness": 0.45,
+        "roughness": 0.35,
+        "opacity": 1,
+        "presetId": "custom",
+        "emissive": "#000000"
+      },
+      "metadata": {
+        "description": "",
+        "tags": []
+      }
+    },
+    {
+      "id": "box_mssnz9ya_pdnd24",
+      "name": "Tray盘座",
+      "type": "Group",
+      "parentId": "box_mssl7mh8_x6ugcu",
+      "visible": true,
+      "locked": false,
+      "transform": {
+        "position": [
+          -255,
+          0,
+          20.5
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "geometry": {
+        "type": "RoundedBox",
+        "width": 80,
+        "height": 29.5,
+        "depth": 380,
+        "segments": 3,
+        "radius": 2
+      },
+      "material": {
+        "id": "aluminum-6061",
+        "name": "铝合金 6061-T6",
+        "category": "金属",
+        "color": "#b8c2ca",
+        "metalness": 0.72,
+        "roughness": 0.3,
+        "opacity": 1,
+        "presetId": "aluminum-6061",
+        "emissive": "#000000"
+      },
+      "metadata": {
+        "description": "",
+        "tags": []
+      }
+    },
+    {
+      "id": "plane_msso5x9z_gj2m7r",
+      "name": "Tray盘1",
+      "type": "MechanicalObject",
+      "parentId": "box_mssnz9ya_pdnd24",
+      "visible": true,
+      "locked": false,
+      "transform": {
+        "position": [
+          0,
+          115,
+          14.75
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "geometry": {
+        "type": "Extrude",
+        "depth": 2,
+        "bevelSize": 0,
+        "segments": 24,
+        "shape": [
+          [
+            -29.5,
+            -29.5
+          ],
+          [
+            29.5,
+            -29.5
+          ],
+          [
+            29.5,
+            21.3
+          ],
+          [
+            21.3,
+            29.5
+          ],
+          [
+            -29.5,
+            29.5
+          ]
+        ]
+      },
+      "material": {
+        "id": "esd-plastic",
+        "name": "防静电树脂",
+        "category": "塑料",
+        "color": "#2b2f33",
+        "metalness": 0.0,
+        "roughness": 0.6,
+        "opacity": 1,
+        "presetId": "custom",
+        "emissive": "#000000"
+      },
+      "metadata": {
+        "description": "",
+        "tags": []
+      }
+    },
+    {
+      "id": "mechanicalobject_msso9ff5_wwcgbe",
+      "name": "Tray盘2",
+      "type": "MechanicalObject",
+      "parentId": "box_mssnz9ya_pdnd24",
+      "visible": true,
+      "locked": false,
+      "transform": {
+        "position": [
+          0,
+          -5,
+          14.75
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "geometry": {
+        "type": "Extrude",
+        "depth": 2,
+        "bevelSize": 0,
+        "segments": 24,
+        "shape": [
+          [
+            -29.5,
+            -29.5
+          ],
+          [
+            29.5,
+            -29.5
+          ],
+          [
+            29.5,
+            21.3
+          ],
+          [
+            21.3,
+            29.5
+          ],
+          [
+            -29.5,
+            29.5
+          ]
+        ]
+      },
+      "material": {
+        "id": "esd-plastic",
+        "name": "防静电树脂",
+        "category": "塑料",
+        "color": "#2b2f33",
+        "metalness": 0.0,
+        "roughness": 0.6,
+        "opacity": 1,
+        "presetId": "custom",
+        "emissive": "#000000"
+      },
+      "metadata": {
+        "description": "",
+        "tags": []
+      }
+    },
+    {
+      "id": "mechanicalobject_msso9ff6_tu00yq",
+      "name": "Tray盘3",
+      "type": "MechanicalObject",
+      "parentId": "box_mssnz9ya_pdnd24",
+      "visible": true,
+      "locked": false,
+      "transform": {
+        "position": [
+          0,
+          -125,
+          14.75
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "geometry": {
+        "type": "Extrude",
+        "depth": 2,
+        "bevelSize": 0,
+        "segments": 24,
+        "shape": [
+          [
+            -29.5,
+            -29.5
+          ],
+          [
+            29.5,
+            -29.5
+          ],
+          [
+            29.5,
+            21.3
+          ],
+          [
+            21.3,
+            29.5
+          ],
+          [
+            -29.5,
+            29.5
+          ]
+        ]
+      },
+      "material": {
+        "id": "esd-plastic",
+        "name": "防静电树脂",
+        "category": "塑料",
+        "color": "#2b2f33",
+        "metalness": 0.0,
+        "roughness": 0.6,
+        "opacity": 1,
+        "presetId": "custom",
+        "emissive": "#000000"
+      },
+      "metadata": {
+        "description": "",
+        "tags": []
+      }
+    },
+    {
+      "id": "box_mssolgz4_yl7vre",
+      "name": "键合臂横梁",
+      "type": "MechanicalObject",
+      "parentId": "machine_mssjivym_9mhbzz",
+      "visible": true,
+      "locked": true,
+      "transform": {
+        "position": [
+          -80,
+          295,
+          752
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "geometry": {
+        "type": "RoundedBox",
+        "width": 1613,
+        "height": 200,
+        "depth": 300,
+        "segments": 3,
+        "radius": 5
+      },
+      "material": {
+        "id": "cast-iron",
+        "name": "铸铁",
+        "category": "金属",
+        "color": "#555b60",
+        "metalness": 0.66,
+        "roughness": 0.58,
+        "opacity": 1,
+        "presetId": "cast-iron",
+        "emissive": "#000000"
+      },
+      "metadata": {
+        "description": "",
+        "tags": []
+      }
+    },
+    {
+      "id": "box_mssoxg8g_bnpy7g",
+      "name": "键合臂平台架1",
+      "type": "MechanicalObject",
+      "parentId": "machine_mssjivym_9mhbzz",
+      "visible": true,
+      "locked": true,
+      "transform": {
+        "position": [
+          -830,
+          295,
+          418.5
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "geometry": {
+        "type": "RoundedBox",
+        "width": 115,
+        "height": 467,
+        "depth": 300,
+        "segments": 3,
+        "radius": 5
+      },
+      "material": {
+        "id": "cast-iron",
+        "name": "铸铁",
+        "category": "金属",
+        "color": "#555b60",
+        "metalness": 0.66,
+        "roughness": 0.58,
+        "opacity": 1,
+        "presetId": "cast-iron",
+        "emissive": "#000000"
+      },
+      "metadata": {
+        "description": "",
+        "tags": []
+      }
+    },
+    {
+      "id": "mechanicalobject_mssp0h0p_vvd7df",
+      "name": "键合臂平台架2",
+      "type": "MechanicalObject",
+      "parentId": "machine_mssjivym_9mhbzz",
+      "visible": true,
+      "locked": true,
+      "transform": {
+        "position": [
+          666,
+          295,
+          418.5
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "geometry": {
+        "type": "RoundedBox",
+        "width": 115,
+        "height": 467,
+        "depth": 300,
+        "segments": 3,
+        "radius": 5
+      },
+      "material": {
+        "id": "cast-iron",
+        "name": "铸铁",
+        "category": "金属",
+        "color": "#555b60",
+        "metalness": 0.66,
+        "roughness": 0.58,
+        "opacity": 1,
+        "presetId": "cast-iron",
+        "emissive": "#000000"
+      },
+      "metadata": {
+        "description": "",
+        "tags": []
+      }
+    },
+    {
+      "id": "box_msspbl4e_x4ueyr",
+      "name": "连接板",
+      "type": "Group",
+      "parentId": "group_msspk4l6_8kpu9x",
+      "visible": true,
+      "locked": false,
+      "transform": {
+        "position": [
+          0,
+          159,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "geometry": {
+        "type": "RoundedBox",
+        "width": 395,
+        "height": 338,
+        "depth": 220,
+        "segments": 3,
+        "radius": 4
+      },
+      "material": {
+        "id": "granite",
+        "name": "精密花岗岩",
+        "category": "结构材料",
+        "color": "#34383d",
+        "metalness": 0.08,
+        "roughness": 0.72,
+        "opacity": 1,
+        "presetId": "granite",
+        "emissive": "#000000"
+      },
+      "metadata": {
+        "description": "",
+        "tags": []
+      }
+    },
+    {
+      "id": "group_msspk4l6_8kpu9x",
+      "name": "键合臂模块",
+      "type": "Module",
+      "parentId": "machine_mssjivym_9mhbzz",
+      "visible": true,
+      "locked": true,
+      "transform": {
+        "position": [
+          -42.5,
+          34,
+          1021
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "geometry": null,
+      "material": null,
+      "metadata": {
+        "description": "",
+        "tags": []
+      }
+    },
+    {
+      "id": "box_msspmjzt_krvpvx",
+      "name": "键合臂底座",
+      "type": "Group",
+      "parentId": "box_msspbl4e_x4ueyr",
+      "visible": true,
+      "locked": false,
+      "transform": {
+        "position": [
+          0,
+          -160,
+          10
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "geometry": {
+        "type": "RoundedBox",
+        "width": 395,
+        "height": 318,
+        "depth": 99,
+        "segments": 3,
+        "radius": 4
+      },
+      "material": {
+        "id": "aluminum-7075",
+        "name": "自定义材料",
+        "category": "金属",
+        "color": "#bac0c4",
+        "metalness": 0.72,
+        "roughness": 0.26,
+        "opacity": 1,
+        "presetId": "custom",
+        "emissive": "#000000"
+      },
+      "metadata": {
+        "description": "",
+        "tags": []
+      }
+    },
+    {
+      "id": "box_mssptvdy_4guv68",
+      "name": "升降臂",
+      "type": "Group",
+      "parentId": "box_msspmjzt_krvpvx",
+      "visible": true,
+      "locked": false,
+      "transform": {
+        "position": [
+          0,
+          -71.5,
+          -23
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "geometry": {
+        "type": "RoundedBox",
+        "width": 330,
+        "height": 368,
+        "depth": 44,
+        "segments": 3,
+        "radius": 4
+      },
+      "material": {
+        "id": "aluminum-7075",
+        "name": "铝合金 7075-T6",
+        "category": "金属",
+        "color": "#aeb8bf",
+        "metalness": 0.76,
+        "roughness": 0.26,
+        "opacity": 1,
+        "presetId": "aluminum-7075",
+        "emissive": "#000000"
+      },
+      "metadata": {
+        "description": "",
+        "tags": []
+      },
+      "motionBase": {
+        "position": [
+          0,
+          -71.5,
+          -23
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "id": "box_mssqcuna_avt1yh",
+      "name": "升降臂L",
+      "type": "MechanicalObject",
+      "parentId": "box_mssptvdy_4guv68",
+      "visible": true,
+      "locked": false,
+      "transform": {
+        "position": [
+          0,
+          67,
+          -162
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "geometry": {
+        "type": "RoundedBox",
+        "width": 180,
+        "height": 44,
+        "depth": 90,
+        "segments": 3,
+        "radius": 4
+      },
+      "material": {
+        "id": "aluminum-7075",
+        "name": "铝合金 7075-T6",
+        "category": "金属",
+        "color": "#aeb8bf",
+        "metalness": 0.76,
+        "roughness": 0.26,
+        "opacity": 1,
+        "presetId": "aluminum-7075",
+        "emissive": "#000000"
+      },
+      "metadata": {
+        "description": "",
+        "tags": []
+      }
+    },
+    {
+      "id": "box_mssqyue6_3jgqev",
+      "name": "压力传感器",
+      "type": "Group",
+      "parentId": "box_mssptvdy_4guv68",
+      "visible": true,
+      "locked": false,
+      "transform": {
+        "position": [
+          0,
+          45.5,
+          -187.5
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "geometry": {
+        "type": "RoundedBox",
+        "width": 120,
+        "height": 7,
+        "depth": 120,
+        "segments": 3,
+        "radius": 2
+      },
+      "material": {
+        "id": "invar-36",
+        "name": "因瓦合金 Invar-36",
+        "category": "金属",
+        "color": "#9fb2ba",
+        "metalness": 0.6,
+        "roughness": 0.4,
+        "opacity": 1,
+        "presetId": "custom",
+        "emissive": "#000000"
+      },
+      "metadata": {
+        "description": "",
+        "tags": []
+      }
+    },
+    {
+      "id": "cylinder_mssrakr3_y2opyb",
+      "name": "RxRy调整球座",
+      "type": "Group",
+      "parentId": "box_mssqyue6_3jgqev",
+      "visible": true,
+      "locked": false,
+      "transform": {
+        "position": [
+          0,
+          0,
+          -75.25
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "geometry": {
+        "type": "Lathe",
+        "segments": 48,
+        "profile": [
+          [
+            0,
+            -71.75
+          ],
+          [
+            72.5,
+            -71.75
+          ],
+          [
+            72.5,
+            -64
+          ],
+          [
+            60,
+            -64
+          ],
+          [
+            60,
+            36
+          ],
+          [
+            72.5,
+            36
+          ],
+          [
+            72.5,
+            64
+          ],
+          [
+            64,
+            64
+          ],
+          [
+            64,
+            71.75
+          ],
+          [
+            0,
+            71.75
+          ]
+        ]
+      },
+      "material": {
+        "id": "invar-36",
+        "name": "自定义材料",
+        "category": "金属",
+        "color": "#6da4c0",
+        "metalness": 0.78,
+        "roughness": 0.38,
+        "opacity": 1,
+        "presetId": "custom",
+        "emissive": "#000000"
+      },
+      "metadata": {
+        "description": "",
+        "tags": []
+      },
+      "motionBase": {
+        "position": [
+          0,
+          0,
+          -75.25
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "id": "rxry_level_screw1_0001",
+      "name": "调平螺钉1",
+      "type": "MechanicalObject",
+      "parentId": "cylinder_mssrakr3_y2opyb",
+      "visible": true,
+      "locked": false,
+      "transform": {
+        "position": [
+          66,
+          0,
+          36
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "geometry": {
+        "type": "Lathe",
+        "segments": 24,
+        "profile": [
+          [
+            0,
+            0
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            4,
+            24
+          ],
+          [
+            6,
+            24
+          ],
+          [
+            6,
+            29
+          ],
+          [
+            0,
+            29
+          ]
+        ]
+      },
+      "material": {
+        "id": "stainless-steel",
+        "name": "不锈钢",
+        "category": "金属",
+        "color": "#4a4f55",
+        "metalness": 0.85,
+        "roughness": 0.35,
+        "opacity": 1,
+        "presetId": "stainless-steel",
+        "emissive": "#000000"
+      },
+      "metadata": {
+        "description": "",
+        "tags": []
+      }
+    },
+    {
+      "id": "rxry_level_screw2_0001",
+      "name": "调平螺钉2",
+      "type": "MechanicalObject",
+      "parentId": "cylinder_mssrakr3_y2opyb",
+      "visible": true,
+      "locked": false,
+      "transform": {
+        "position": [
+          -33,
+          57.158,
+          36
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "geometry": {
+        "type": "Lathe",
+        "segments": 24,
+        "profile": [
+          [
+            0,
+            0
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            4,
+            24
+          ],
+          [
+            6,
+            24
+          ],
+          [
+            6,
+            29
+          ],
+          [
+            0,
+            29
+          ]
+        ]
+      },
+      "material": {
+        "id": "stainless-steel",
+        "name": "不锈钢",
+        "category": "金属",
+        "color": "#4a4f55",
+        "metalness": 0.85,
+        "roughness": 0.35,
+        "opacity": 1,
+        "presetId": "stainless-steel",
+        "emissive": "#000000"
+      },
+      "metadata": {
+        "description": "",
+        "tags": []
+      }
+    },
+    {
+      "id": "rxry_level_screw3_0001",
+      "name": "调平螺钉3",
+      "type": "MechanicalObject",
+      "parentId": "cylinder_mssrakr3_y2opyb",
+      "visible": true,
+      "locked": false,
+      "transform": {
+        "position": [
+          -33,
+          -57.158,
+          36
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "geometry": {
+        "type": "Lathe",
+        "segments": 24,
+        "profile": [
+          [
+            0,
+            0
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            4,
+            24
+          ],
+          [
+            6,
+            24
+          ],
+          [
+            6,
+            29
+          ],
+          [
+            0,
+            29
+          ]
+        ]
+      },
+      "material": {
+        "id": "stainless-steel",
+        "name": "不锈钢",
+        "category": "金属",
+        "color": "#4a4f55",
+        "metalness": 0.85,
+        "roughness": 0.35,
+        "opacity": 1,
+        "presetId": "stainless-steel",
+        "emissive": "#000000"
+      },
+      "metadata": {
+        "description": "",
+        "tags": []
+      }
+    },
+    {
+      "id": "box_mssriiqy_ihe0nb",
+      "name": "键合头底座",
+      "type": "Group",
+      "parentId": "cylinder_mssrakr3_y2opyb",
+      "visible": true,
+      "locked": false,
+      "transform": {
+        "position": [
+          0,
+          0,
+          -92
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "geometry": {
+        "type": "RoundedBox",
+        "width": 108,
+        "height": 40.5,
+        "depth": 108,
+        "segments": 3,
+        "radius": 3
+      },
+      "material": {
+        "id": "invar-36",
+        "name": "因瓦合金 Invar-36",
+        "category": "金属",
+        "color": "#9fb2ba",
+        "metalness": 0.6,
+        "roughness": 0.4,
+        "opacity": 1,
+        "presetId": "custom",
+        "emissive": "#000000"
+      },
+      "metadata": {
+        "description": "",
+        "tags": []
+      }
+    },
+    {
+      "id": "box_mssrlpi1_r5asng",
+      "name": "上气环",
+      "type": "Group",
+      "parentId": "box_mssriiqy_ihe0nb",
+      "visible": true,
+      "locked": false,
+      "transform": {
+        "position": [
+          0,
+          0,
+          -44.5
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "geometry": null,
+      "material": null,
+      "metadata": {
+        "description": "",
+        "tags": []
+      }
+    },
+    {
+      "id": "airring_left_0001",
+      "name": "上气环-左",
+      "type": "MechanicalObject",
+      "parentId": "box_mssrlpi1_r5asng",
+      "visible": true,
+      "locked": false,
+      "transform": {
+        "position": [
+          -40.25,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "geometry": {
+        "type": "Box",
+        "width": 24.5,
+        "height": 48.5,
+        "depth": 105
+      },
+      "material": {
+        "id": "aluminum-7075",
+        "name": "自定义材料",
+        "category": "金属",
+        "color": "#fafafa",
+        "metalness": 0.3,
+        "roughness": 0.26,
+        "opacity": 1,
+        "presetId": "custom",
+        "emissive": "#000000"
+      },
+      "metadata": {
+        "description": "",
+        "tags": []
+      }
+    },
+    {
+      "id": "airring_right_0001",
+      "name": "上气环-右",
+      "type": "MechanicalObject",
+      "parentId": "box_mssrlpi1_r5asng",
+      "visible": true,
+      "locked": false,
+      "transform": {
+        "position": [
+          40.25,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "geometry": {
+        "type": "Box",
+        "width": 24.5,
+        "height": 48.5,
+        "depth": 105
+      },
+      "material": {
+        "id": "aluminum-7075",
+        "name": "自定义材料",
+        "category": "金属",
+        "color": "#fafafa",
+        "metalness": 0.3,
+        "roughness": 0.26,
+        "opacity": 1,
+        "presetId": "custom",
+        "emissive": "#000000"
+      },
+      "metadata": {
+        "description": "",
+        "tags": []
+      }
+    },
+    {
+      "id": "airring_front_0001",
+      "name": "上气环-前",
+      "type": "MechanicalObject",
+      "parentId": "box_mssrlpi1_r5asng",
+      "visible": true,
+      "locked": false,
+      "transform": {
+        "position": [
+          0,
+          40.25,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "geometry": {
+        "type": "Box",
+        "width": 56,
+        "height": 48.5,
+        "depth": 24.5
+      },
+      "material": {
+        "id": "aluminum-7075",
+        "name": "自定义材料",
+        "category": "金属",
+        "color": "#fafafa",
+        "metalness": 0.3,
+        "roughness": 0.26,
+        "opacity": 1,
+        "presetId": "custom",
+        "emissive": "#000000"
+      },
+      "metadata": {
+        "description": "",
+        "tags": []
+      }
+    },
+    {
+      "id": "airring_back_0001",
+      "name": "上气环-后",
+      "type": "MechanicalObject",
+      "parentId": "box_mssrlpi1_r5asng",
+      "visible": true,
+      "locked": false,
+      "transform": {
+        "position": [
+          0,
+          -40.25,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "geometry": {
+        "type": "Box",
+        "width": 56,
+        "height": 48.5,
+        "depth": 24.5
+      },
+      "material": {
+        "id": "aluminum-7075",
+        "name": "自定义材料",
+        "category": "金属",
+        "color": "#fafafa",
+        "metalness": 0.3,
+        "roughness": 0.26,
+        "opacity": 1,
+        "presetId": "custom",
+        "emissive": "#000000"
+      },
+      "metadata": {
+        "description": "",
+        "tags": []
+      }
+    },
+    {
+      "id": "box_mssrsdpg_u0q0bi",
+      "name": "键合头吸盘",
+      "type": "Group",
+      "parentId": "box_mssrlpi1_r5asng",
+      "visible": true,
+      "locked": false,
+      "transform": {
+        "position": [
+          0,
+          0,
+          -24.325
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "geometry": {
+        "type": "Box",
+        "width": 54,
+        "height": 1,
+        "depth": 54
+      },
+      "material": {
+        "id": "silicon-carbide",
+        "name": "碳化硅陶瓷 SiC",
+        "category": "陶瓷",
+        "color": "#3f4441",
+        "metalness": 0.08,
+        "roughness": 0.32,
+        "opacity": 1,
+        "presetId": "silicon-carbide",
+        "emissive": "#000000"
+      },
+      "metadata": {
+        "description": "",
+        "tags": []
+      }
+    },
+    {
+      "id": "box_msssaimq_8w6yv8",
+      "name": "对准台底座",
+      "type": "Group",
+      "parentId": "group_msssqnbg_cvi3bv",
+      "visible": true,
+      "locked": false,
+      "transform": {
+        "position": [
+          0,
+          -44,
+          91.75
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "geometry": {
+        "type": "RoundedBox",
+        "width": 370,
+        "height": 44.5,
+        "depth": 200,
+        "segments": 3,
+        "radius": 3
+      },
+      "material": {
+        "id": "aluminum-7075",
+        "name": "自定义材料",
+        "category": "金属",
+        "color": "#aeb8bf",
+        "metalness": 0.72,
+        "roughness": 0.26,
+        "opacity": 1,
+        "presetId": "custom",
+        "emissive": "#000000"
+      },
+      "metadata": {
+        "description": "",
+        "tags": []
+      }
+    },
+    {
+      "id": "mechanicalobject_msssjh6b_teh3bf",
+      "name": "对准台X轴承接板",
+      "type": "Group",
+      "parentId": "box_msssaimq_8w6yv8",
+      "visible": true,
+      "locked": false,
+      "transform": {
+        "position": [
+          0,
+          44,
+          -44.5
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "geometry": {
+        "type": "RoundedBox",
+        "width": 200,
+        "height": 44.5,
+        "depth": 380,
+        "segments": 3,
+        "radius": 3
+      },
+      "material": {
+        "id": "aluminum-7075",
+        "name": "自定义材料",
+        "category": "金属",
+        "color": "#aeb8bf",
+        "metalness": 0.72,
+        "roughness": 0.26,
+        "opacity": 1,
+        "presetId": "custom",
+        "emissive": "#000000"
+      },
+      "metadata": {
+        "description": "",
+        "tags": []
+      },
+      "motionBase": {
+        "position": [
+          0,
+          44,
+          -44.5
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "id": "group_msssqnbg_cvi3bv",
+      "name": "对准台模块",
+      "type": "Module",
+      "parentId": "machine_mssjivym_9mhbzz",
+      "visible": true,
+      "locked": false,
+      "transform": {
+        "position": [
+          -302.5,
+          291,
+          538
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "geometry": null,
+      "material": null,
+      "metadata": {
+        "description": "",
+        "tags": []
+      }
+    },
+    {
+      "id": "box_msst6r7i_ppzlv5",
+      "name": "对准台Y轴承接板",
+      "type": "Group",
+      "parentId": "mechanicalobject_msssjh6b_teh3bf",
+      "visible": true,
+      "locked": false,
+      "transform": {
+        "position": [
+          0,
+          0,
+          -72
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "geometry": {
+        "type": "RoundedBox",
+        "width": 220,
+        "height": 99.5,
+        "depth": 166,
+        "segments": 3,
+        "radius": 3
+      },
+      "material": {
+        "id": "aluminum-6061",
+        "name": "铝合金 6061-T6",
+        "category": "金属",
+        "color": "#b8c2ca",
+        "metalness": 0.72,
+        "roughness": 0.3,
+        "opacity": 1,
+        "presetId": "aluminum-6061",
+        "emissive": "#000000"
+      },
+      "metadata": {
+        "description": "",
+        "tags": []
+      },
+      "motionBase": {
+        "position": [
+          0,
+          0,
+          -72
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "id": "box_msste6e0_1aao3m",
+      "name": "对准台承接板2",
+      "type": "Group",
+      "parentId": "mechanicalobject_msstt4h6_10bqi4",
+      "visible": true,
+      "locked": false,
+      "transform": {
+        "position": [
+          183,
+          -94,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "geometry": null,
+      "material": null,
+      "metadata": {
+        "description": "",
+        "tags": []
+      }
+    },
+    {
+      "id": "mechanicalobject_msstt4h6_10bqi4",
+      "name": "对准台承接板1",
+      "type": "Group",
+      "parentId": "box_msst6r7i_ppzlv5",
+      "visible": true,
+      "locked": false,
+      "transform": {
+        "position": [
+          29.5,
+          -30,
+          -57.25
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "geometry": {
+        "type": "Extrude",
+        "depth": 13,
+        "bevelSize": 1,
+        "bevelSegments": 2,
+        "segments": 24,
+        "shape": [
+          [
+            -124,
+            84
+          ],
+          [
+            124,
+            84
+          ],
+          [
+            124,
+            -10
+          ],
+          [
+            307,
+            -10
+          ],
+          [
+            307,
+            -178
+          ],
+          [
+            59,
+            -178
+          ],
+          [
+            59,
+            -84
+          ],
+          [
+            -124,
+            -84
+          ]
+        ]
+      },
+      "material": {
+        "id": "aluminum-6061",
+        "name": "铝合金 6061-T6",
+        "category": "金属",
+        "color": "#b8c2ca",
+        "metalness": 0.72,
+        "roughness": 0.3,
+        "opacity": 1,
+        "presetId": "aluminum-6061",
+        "emissive": "#000000"
+      },
+      "metadata": {
+        "description": "",
+        "tags": []
+      }
+    },
+    {
+      "id": "box_mssty4oj_u3pj08",
+      "name": "对准相机承载台",
+      "type": "Group",
+      "parentId": "box_msste6e0_1aao3m",
+      "visible": true,
+      "locked": false,
+      "transform": {
+        "position": [
+          47.5,
+          -143.5,
+          -16
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "geometry": {
+        "type": "RoundedBox",
+        "width": 191,
+        "height": 30,
+        "depth": 117,
+        "segments": 3,
+        "radius": 2
+      },
+      "material": {
+        "id": "aluminum-6061",
+        "name": "自定义材料",
+        "category": "金属",
+        "color": "#e7ebee",
+        "metalness": 0.72,
+        "roughness": 0.3,
+        "opacity": 1,
+        "presetId": "custom",
+        "emissive": "#000000"
+      },
+      "metadata": {
+        "description": "",
+        "tags": []
+      },
+      "motionBase": {
+        "position": [
+          47.5,
+          -143.5,
+          -16
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "id": "cam_up_bezel_0001",
+      "name": "上相机压圈",
+      "type": "MechanicalObject",
+      "parentId": "box_mssty4oj_u3pj08",
+      "visible": true,
+      "locked": false,
+      "transform": {
+        "position": [
+          0,
+          -22.5,
+          15.1
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "geometry": {
+        "type": "Ring",
+        "innerRadius": 4.5,
+        "outerRadius": 7,
+        "segments": 48
+      },
+      "material": {
+        "id": "stainless-steel",
+        "name": "不锈钢",
+        "category": "金属",
+        "color": "#8a9199",
+        "metalness": 0.85,
+        "roughness": 0.35,
+        "opacity": 1,
+        "presetId": "stainless-steel",
+        "emissive": "#000000"
+      },
+      "metadata": {
+        "description": "",
+        "tags": []
+      }
+    },
+    {
+      "id": "cam_dn_bezel_0001",
+      "name": "下相机压圈",
+      "type": "MechanicalObject",
+      "parentId": "box_mssty4oj_u3pj08",
+      "visible": true,
+      "locked": false,
+      "transform": {
+        "position": [
+          0,
+          -22.5,
+          -15.1
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "geometry": {
+        "type": "Ring",
+        "innerRadius": 4.5,
+        "outerRadius": 7,
+        "segments": 48
+      },
+      "material": {
+        "id": "stainless-steel",
+        "name": "不锈钢",
+        "category": "金属",
+        "color": "#8a9199",
+        "metalness": 0.85,
+        "roughness": 0.35,
+        "opacity": 1,
+        "presetId": "stainless-steel",
+        "emissive": "#000000"
+      },
+      "metadata": {
+        "description": "",
+        "tags": []
+      }
+    },
+    {
+      "id": "conf_up_bezel_0001",
+      "name": "上光谱共焦探头压圈",
+      "type": "MechanicalObject",
+      "parentId": "box_mssty4oj_u3pj08",
+      "visible": true,
+      "locked": false,
+      "transform": {
+        "position": [
+          0,
+          -47.5,
+          15.1
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "geometry": {
+        "type": "Ring",
+        "innerRadius": 2.5,
+        "outerRadius": 4,
+        "segments": 48
+      },
+      "material": {
+        "id": "stainless-steel",
+        "name": "不锈钢",
+        "category": "金属",
+        "color": "#8a9199",
+        "metalness": 0.85,
+        "roughness": 0.35,
+        "opacity": 1,
+        "presetId": "stainless-steel",
+        "emissive": "#000000"
+      },
+      "metadata": {
+        "description": "",
+        "tags": []
+      }
+    },
+    {
+      "id": "conf_dn_bezel_0001",
+      "name": "下光谱共焦探头压圈",
+      "type": "MechanicalObject",
+      "parentId": "box_mssty4oj_u3pj08",
+      "visible": true,
+      "locked": false,
+      "transform": {
+        "position": [
+          0,
+          -47.5,
+          -15.1
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "geometry": {
+        "type": "Ring",
+        "innerRadius": 2.5,
+        "outerRadius": 4,
+        "segments": 48
+      },
+      "material": {
+        "id": "stainless-steel",
+        "name": "不锈钢",
+        "category": "金属",
+        "color": "#8a9199",
+        "metalness": 0.85,
+        "roughness": 0.35,
+        "opacity": 1,
+        "presetId": "stainless-steel",
+        "emissive": "#000000"
+      },
+      "metadata": {
+        "description": "",
+        "tags": []
+      }
+    },
+    {
+      "id": "circle_mssuehmv_q0y9ws",
+      "name": "上相机镜头",
+      "type": "MechanicalObject",
+      "parentId": "box_mssty4oj_u3pj08",
+      "visible": true,
+      "locked": false,
+      "transform": {
+        "position": [
+          0,
+          -22.5,
+          15
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "geometry": {
+        "type": "Circle",
+        "radius": 4,
+        "segments": 64
+      },
+      "material": {
+        "id": "optical-glass",
+        "name": "光学玻璃",
+        "category": "光学",
+        "color": "#10303c",
+        "metalness": 0.25,
+        "roughness": 0.05,
+        "opacity": 1,
+        "presetId": "custom",
+        "emissive": "#000000"
+      },
+      "metadata": {
+        "description": "",
+        "tags": []
+      }
+    },
+    {
+      "id": "mechanicalobject_mssulatg_dwmc6r",
+      "name": "下相机镜头",
+      "type": "MechanicalObject",
+      "parentId": "box_mssty4oj_u3pj08",
+      "visible": true,
+      "locked": false,
+      "transform": {
+        "position": [
+          0,
+          -22.5,
+          -15
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "geometry": {
+        "type": "Circle",
+        "radius": 4,
+        "segments": 64
+      },
+      "material": {
+        "id": "optical-glass",
+        "name": "光学玻璃",
+        "category": "光学",
+        "color": "#10303c",
+        "metalness": 0.25,
+        "roughness": 0.05,
+        "opacity": 1,
+        "presetId": "custom",
+        "emissive": "#000000"
+      },
+      "metadata": {
+        "description": "",
+        "tags": []
+      }
+    },
+    {
+      "id": "mechanicalobject_mssulwzt_9nstr9",
+      "name": "上光谱共焦传感器",
+      "type": "MechanicalObject",
+      "parentId": "box_mssty4oj_u3pj08",
+      "visible": true,
+      "locked": false,
+      "transform": {
+        "position": [
+          0,
+          -47.5,
+          15
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "geometry": {
+        "type": "Circle",
+        "radius": 2,
+        "segments": 64
+      },
+      "material": {
+        "id": "optical-glass",
+        "name": "光学玻璃",
+        "category": "光学",
+        "color": "#10303c",
+        "metalness": 0.25,
+        "roughness": 0.05,
+        "opacity": 1,
+        "presetId": "custom",
+        "emissive": "#000000"
+      },
+      "metadata": {
+        "description": "",
+        "tags": []
+      }
+    },
+    {
+      "id": "mechanicalobject_mssunli6_ah605m",
+      "name": "下光谱共焦传感器",
+      "type": "MechanicalObject",
+      "parentId": "box_mssty4oj_u3pj08",
+      "visible": true,
+      "locked": false,
+      "transform": {
+        "position": [
+          0,
+          -47.5,
+          -15
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "geometry": {
+        "type": "Circle",
+        "radius": 2,
+        "segments": 64
+      },
+      "material": {
+        "id": "optical-glass",
+        "name": "光学玻璃",
+        "category": "光学",
+        "color": "#10303c",
+        "metalness": 0.25,
+        "roughness": 0.05,
+        "opacity": 1,
+        "presetId": "custom",
+        "emissive": "#000000"
+      },
+      "metadata": {
+        "description": "",
+        "tags": []
+      }
+    }
+  ],
+  "axes": [
+    {
+      "id": "axis_mssl5svn_ols740",
+      "movingObjectId": "group_mssl0re6_ppzut0",
+      "directionSign": 1,
+      "current": 0,
+      "name": "Y导轨 Axis",
+      "type": "linear",
+      "direction": "X",
+      "directionSpace": "authored-world",
+      "min": -200,
+      "max": 200,
+      "home": 0,
+      "speed": 600,
+      "unit": "mm",
+      "pivotMode": "object-origin",
+      "pivotSpace": "parent",
+      "pivotReferenceId": "group_msske7sa_02k07b",
+      "pivot": [
+        0,
+        0,
+        7.5
+      ]
+    },
+    {
+      "id": "axis_msslggo6_6d6mzm",
+      "movingObjectId": "box_mssl7mh8_x6ugcu",
+      "directionSign": 1,
+      "current": 0,
+      "name": "微动基座 Axis",
+      "type": "linear",
+      "direction": "Y",
+      "directionSpace": "authored-world",
+      "min": -200,
+      "max": 200,
+      "home": 0,
+      "speed": 600,
+      "unit": "mm",
+      "pivotMode": "object-origin",
+      "pivotSpace": "parent",
+      "pivotReferenceId": "group_mssl0re6_ppzut0",
+      "pivot": [
+        0,
+        0,
+        19
+      ]
+    },
+    {
+      "id": "axis_msslrthn_qbthvp",
+      "movingObjectId": "cylinder_msslion7_fntuht",
+      "directionSign": 1,
+      "current": 0,
+      "name": "Rz旋转组件 Axis",
+      "type": "rotary",
+      "direction": "Z",
+      "directionSpace": "authored-world",
+      "min": -1,
+      "max": 1,
+      "home": 0,
+      "speed": 90,
+      "unit": "deg",
+      "pivotMode": "object-origin",
+      "pivotSpace": "parent",
+      "pivotReferenceId": "box_mssl7mh8_x6ugcu",
+      "pivot": [
+        0,
+        0,
+        12.5
+      ]
+    },
+    {
+      "id": "axis_epin1_z_0001",
+      "movingObjectId": "group_epin1_0001",
+      "directionSign": 1,
+      "current": 0,
+      "name": "Epin1 Z Axis",
+      "type": "linear",
+      "direction": "Z",
+      "directionSpace": "authored-world",
+      "min": 0,
+      "max": 30,
+      "home": 0,
+      "speed": 25,
+      "unit": "mm",
+      "pivotMode": "object-origin",
+      "pivotSpace": "parent",
+      "pivotReferenceId": "wafer_chuck_msslygtz_gaeah4",
+      "pivot": [
+        144,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "axis_epin2_z_0001",
+      "movingObjectId": "group_epin2_0001",
+      "directionSign": 1,
+      "current": 0,
+      "name": "Epin2 Z Axis",
+      "type": "linear",
+      "direction": "Z",
+      "directionSpace": "authored-world",
+      "min": 0,
+      "max": 30,
+      "home": 0,
+      "speed": 25,
+      "unit": "mm",
+      "pivotMode": "object-origin",
+      "pivotSpace": "parent",
+      "pivotReferenceId": "wafer_chuck_msslygtz_gaeah4",
+      "pivot": [
+        -72,
+        124.708,
+        0
+      ]
+    },
+    {
+      "id": "axis_epin3_z_0001",
+      "movingObjectId": "group_epin3_0001",
+      "directionSign": 1,
+      "current": 0,
+      "name": "Epin3 Z Axis",
+      "type": "linear",
+      "direction": "Z",
+      "directionSpace": "authored-world",
+      "min": 0,
+      "max": 30,
+      "home": 0,
+      "speed": 25,
+      "unit": "mm",
+      "pivotMode": "object-origin",
+      "pivotSpace": "parent",
+      "pivotReferenceId": "wafer_chuck_msslygtz_gaeah4",
+      "pivot": [
+        -72,
+        -124.708,
+        0
+      ]
+    },
+    {
+      "id": "axis_mssq9yhm_gmwadb",
+      "movingObjectId": "box_mssptvdy_4guv68",
+      "directionSign": 1,
+      "current": 0,
+      "name": "升降臂 Axis",
+      "type": "linear",
+      "direction": "Z",
+      "directionSpace": "authored-world",
+      "min": -190,
+      "max": 0,
+      "home": 0,
+      "speed": 200,
+      "unit": "mm",
+      "pivotMode": "object-origin",
+      "pivotSpace": "parent",
+      "pivotReferenceId": "box_msspmjzt_krvpvx",
+      "pivot": [
+        0,
+        -71.5,
+        -23
+      ]
+    },
+    {
+      "id": "axis_mssrgvw5_7ds4bo",
+      "movingObjectId": "cylinder_mssrakr3_y2opyb",
+      "directionSign": 1,
+      "current": 0,
+      "name": "RxRy调整球座 Axis",
+      "type": "rotary",
+      "direction": "X",
+      "directionSpace": "authored-world",
+      "min": -0.1,
+      "max": 0.1,
+      "home": 0,
+      "speed": 90,
+      "unit": "deg",
+      "pivotMode": "object-origin",
+      "pivotSpace": "parent",
+      "pivotReferenceId": "box_mssqyue6_3jgqev",
+      "pivot": [
+        0,
+        0,
+        -75.25
+      ]
+    },
+    {
+      "id": "axis_mssrheu1_cfw18w",
+      "movingObjectId": "cylinder_mssrakr3_y2opyb",
+      "directionSign": 1,
+      "current": 0,
+      "name": "RxRy调整球座 Axis",
+      "type": "rotary",
+      "direction": "Y",
+      "directionSpace": "authored-world",
+      "min": -0.1,
+      "max": 0.1,
+      "home": 0,
+      "speed": 90,
+      "unit": "deg",
+      "pivotMode": "object-origin",
+      "pivotSpace": "parent",
+      "pivotReferenceId": "box_mssqyue6_3jgqev",
+      "pivot": [
+        0,
+        0,
+        -75.25
+      ]
+    },
+    {
+      "id": "axis_msst4og7_eby5r6",
+      "movingObjectId": "mechanicalobject_msssjh6b_teh3bf",
+      "directionSign": 1,
+      "current": 0,
+      "name": "对准台X轴承接板 Axis",
+      "type": "linear",
+      "direction": "X",
+      "directionSpace": "authored-world",
+      "min": -30,
+      "max": 80,
+      "home": 0,
+      "speed": 600,
+      "unit": "mm",
+      "pivotMode": "object-origin",
+      "pivotSpace": "parent",
+      "pivotReferenceId": "box_msssaimq_8w6yv8",
+      "pivot": [
+        0,
+        44,
+        -44.5
+      ]
+    },
+    {
+      "id": "axis_msstd5bj_poz6p6",
+      "movingObjectId": "box_msst6r7i_ppzlv5",
+      "directionSign": 1,
+      "current": 0,
+      "name": "对准台Y轴承接板 Axis",
+      "type": "linear",
+      "direction": "Y",
+      "directionSpace": "authored-world",
+      "min": -30,
+      "max": 120,
+      "home": 0,
+      "speed": 500,
+      "unit": "mm",
+      "pivotMode": "object-origin",
+      "pivotSpace": "parent",
+      "pivotReferenceId": "mechanicalobject_msssjh6b_teh3bf",
+      "pivot": [
+        0,
+        0,
+        -72
+      ]
+    },
+    {
+      "id": "axis_mssu8pry_ijkgc7",
+      "movingObjectId": "box_mssty4oj_u3pj08",
+      "directionSign": 1,
+      "current": 0,
+      "name": "对准相机承载台 Axis",
+      "type": "rotary",
+      "direction": "X",
+      "directionSpace": "authored-world",
+      "min": -0.1,
+      "max": 0.1,
+      "home": 0,
+      "speed": 90,
+      "unit": "deg",
+      "pivotMode": "object-origin",
+      "pivotSpace": "parent",
+      "pivotReferenceId": "box_msste6e0_1aao3m",
+      "pivot": [
+        47.5,
+        -143.5,
+        -16
+      ]
+    },
+    {
+      "id": "axis_mssu8zgl_vi1rbv",
+      "movingObjectId": "box_mssty4oj_u3pj08",
+      "directionSign": 1,
+      "current": 0,
+      "name": "对准相机承载台 Axis",
+      "type": "rotary",
+      "direction": "Y",
+      "directionSpace": "authored-world",
+      "min": -0.1,
+      "max": 0.1,
+      "home": 0,
+      "speed": 90,
+      "unit": "deg",
+      "pivotMode": "object-origin",
+      "pivotSpace": "parent",
+      "pivotReferenceId": "box_msste6e0_1aao3m",
+      "pivot": [
+        47.5,
+        -143.5,
+        -16
+      ]
+    }
+  ],
+  "processes": [
+    {
+      "id": "process_mssjivym_zqb1vl",
+      "name": "Main Process",
+      "steps": []
+    }
+  ]
+}

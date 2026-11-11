@@ -1,0 +1,114 @@
+[0] QFactoryLoader::QFactoryLoader() checking directory path "C:/Users/e-hao.wu/Desktop/script/零散的数据分析/venv/Lib/site-packages/PyQt5/Qt5/[3] This application failed to start because no Qt platform plugin could be initialized. Reinstalling the application may fix this problem.
+
+ackages/PyQt5/Qt5/plugins/platforms/qminimal.dll"
+[1] Found metadata in lib C:/Users/e-hao.wu/Desktop/script/��ɢ�����ݷ���/venv/Lib/site-packages/PyQt5/Qt5/plugins/platforms/qminimal.dll, metadata=
+{
+    "IID": "org.qt-project.Qt.QPA.QPlatformIntegrationFactoryInterface.5.3",
+    "MetaData": {
+        "Keys": [
+            "minimal"
+        ]
+    },
+    "archreq": 0,
+    "className": "QMinimalIntegrationPlugin",
+    "debug": false,
+    "version": 331520
+}
+
+
+[0] Got keys from plugin meta data ("minimal")
+[0] QFactoryLoader::QFactoryLoader() looking at "C:/Users/e-hao.wu/Desktop/script/零散的数据分析/venv/Lib/site-packages/PyQt5/Qt5/plugins/platforms/qoffscreen.dll"
+[1] Found metadata in lib C:/Users/e-hao.wu/Desktop/script/��ɢ�����ݷ���/venv/Lib/site-packages/PyQt5/Qt5/plugins/platforms/qoffscreen.dll, metadata=
+{
+    "IID": "org.qt-project.Qt.QPA.QPlatformIntegrationFactoryInterface.5.3",
+    "MetaData": {
+        "Keys": [
+            "offscreen"
+        ]
+    },
+    "archreq": 0,
+    "className": "QOffscreenIntegrationPlugin",
+    "debug": false,
+    "version": 331520
+}
+
+
+[0] Got keys from plugin meta data ("offscreen")
+[0] QFactoryLoader::QFactoryLoader() looking at "C:/Users/e-hao.wu/Desktop/script/零散的数据分析/venv/Lib/site-packages/PyQt5/Qt5/plugins/platforms/qwebgl.dll"
+[1] Found metadata in lib C:/Users/e-hao.wu/Desktop/script/��ɢ�����ݷ���/venv/Lib/site-packages/PyQt5/Qt5/plugins/platforms/qwebgl.dll, metadata=
+{
+    "IID": "org.qt-project.Qt.QPA.QPlatformIntegrationFactoryInterface.5.3",
+    "MetaData": {
+        "Keys": [
+            "webgl"
+        ]
+    },
+    "archreq": 0,
+    "className": "QWebGLIntegrationPlugin",
+    "debug": false,
+    "version": 331520
+}
+
+
+[0] Got keys from plugin meta data ("webgl")
+[0] QFactoryLoader::QFactoryLoader() looking at "C:/Users/e-hao.wu/Desktop/script/零散的数据分析/venv/Lib/site-packages/PyQt5/Qt5/plugins/platforms/qwindows.dll"
+[1] Found metadata in lib C:/Users/e-hao.wu/Desktop/script/��ɢ�����ݷ���/venv/Lib/site-packages/PyQt5/Qt5/plugins/platforms/qwindows.dll, metadata=
+{
+    "IID": "org.qt-project.Qt.QPA.QPlatformIntegrationFactoryInterface.5.3",
+    "MetaData": {
+        "Keys": [
+            "windows"
+        ]
+    },
+    "archreq": 0,
+    "className": "QWindowsIntegrationPlugin",
+    "debug": false,
+    "version": 331520
+}
+
+
+[0] Got keys from plugin meta data ("windows")
+[0] QFactoryLoader::QFactoryLoader() checking directory path "C:/Python311/platforms" ...
+[0] loaded library "C:/Users/e-hao.wu/Desktop/script/零散的数据分析/venv/Lib/site-packages/PyQt5/Qt5/plugins/platforms/qwindows.dll"
+[0] QFactoryLoader::QFactoryLoader() checking directory path "C:/Users/e-hao.wu/Desktop/script/零散的数据分析/venv/Lib/site-packages/PyQt5/Qt5/plugins/platformthemes" ...
+[0] QFactoryLoader::QFactoryLoader() looking at "C:/Users/e-hao.wu/Desktop/script/零散的数据分析/venv/Lib/site-packages/PyQt5/Qt5/plugins/platformthemes/qxdgdesktopportal.dll"
+[1] Found metadata in lib C:/Users/e-hao.wu/Desktop/script/��ɢ�����ݷ���/venv/Lib/site-packages/PyQt5/Qt5/plugins/platformthemes/qxdgdesktopportal.dll, metadata=
+{
+    "IID": "org.qt-project.Qt.QPA.QPlatformThemeFactoryInterface.5.1",
+    "MetaData": {
+        "Keys": [
+            "xdgdesktopportal",
+            "flatpak",
+            "snap"
+        ]
+    },
+    "archreq": 0,
+    "className": "QXdgDesktopPortalThemePlugin",
+    "debug": false,
+    "version": 331520
+}
+
+
+[0] Got keys from plugin meta data ("xdgdesktopportal", "flatpak", "snap")
+[0] QFactoryLoader::QFactoryLoader() checking directory path "C:/Python311/platformthemes" ...
+[0] QFactoryLoader::QFactoryLoader() checking directory path "C:/Users/e-hao.wu/Desktop/script/零散的数据分析/venv/Lib/site-packages/PyQt5/Qt5/plugins/styles" ...
+[0] QFactoryLoader::QFactoryLoader() looking at "C:/Users/e-hao.wu/Desktop/script/零散的数据分析/venv/Lib/site-packages/PyQt5/Qt5/plugins/styles/qwindowsvistastyle.dll"
+[1] Found metadata in lib C:/Users/e-hao.wu/Desktop/script/��ɢ�����ݷ���/venv/Lib/site-packages/PyQt5/Qt5/plugins/styles/qwindowsvistastyle.dll, metadata=
+{
+    "IID": "org.qt-project.Qt.QStyleFactoryInterface",
+    "MetaData": {
+        "Keys": [
+            "windowsvista"
+        ]
+    },
+    "archreq": 0,
+    "className": "QWindowsVistaStylePlugin",
+    "debug": false,
+    "version": 331520
+}
+
+
+[0] Got keys from plugin meta data ("windowsvista")
+[0] QFactoryLoader::QFactoryLoader() checking directory path "C:/Python311/styles" ...
+[0] loaded library "C:/Users/e-hao.wu/Desktop/script/零散的数据分析/venv/Lib/site-packages/PyQt5/Qt5/plugins/styles/qwindowsvistastyle.dll"
+OK: QApplication created

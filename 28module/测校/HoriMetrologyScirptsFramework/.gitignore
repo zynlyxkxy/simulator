@@ -1,0 +1,17 @@
+venv/*
+
+*.pyc
+*/*.pyc
+
+test_directory/*
+
+EGA/*
+
+.idea/*
+
+data/*
+
+test_*.py
+
+*.csv
+*/*.csv

@@ -1,0 +1,329 @@
+
+########## sheet: PLC_IO_点表名称定义 ##########
+B4=EK1100_2 | O4=EK1100_3
+B5=DI | N5=芯片传输分系统 | O5=DI | Y5=EL1889-1 | Z5=说明（多个请说明具体方位） | AA5=详细介绍 | AB5=IO动作正常 | AC5=PLC侧变量名定义 | AD5=Cordis侧变量名定义(DashBoard)(Observe) | AE5=Cordis侧变量名定义(DashBoard)(Command) | AF5=备注 | AI5=EL2889-1 | AJ5=说明（多个请说明具体方位） | AK5=详细介绍 | AL5=IO动作正常 | AM5=PLC侧变量名定义 | AN5=Cordis侧变量名定义(DashBoard)(Observe) | AO5=Cordis侧变量名定义(DashBoard)(Command) | AP5=备注
+A6=键合分系统 | B6=EL1889 | C6=说明（多个请说明具体方位） | D6=详细介绍 | E6=IO动作正常 | F6=PLC侧变量名定义 | G6=Cordis侧变量名定义(DashBoard)(Observe) | I6=备注 | O6=EL1889 | P6=说明（多个请说明具体方位） | Q6=详细介绍 | R6=IO动作正常 | S6=PLC侧变量名定义 | T6=Cordis侧变量名定义(DashBoard)(Observer) | V6=备注 | Y6=DI1_1 | Z6=System ON | AA6=系统上电 | AC6=GVL_IO.iSystemOn | AD6=SystemMachine.SS_ME.M_PowerSwitch.iSystemOn | AI6=DO1_1 | AJ6=备用
+B7=DI1 | C7=键合臂Z轴交接位信号 | D7=键合臂交接位（可调节位置及用法） | G7=SystemMachine.SS_Bonding.M_BS.iArm_Z_HandOffSignal | O7=DI1 | P7=翻转吸盘吸盘位置信号1 | Q7=翻转模块Z轴位置信号（某个位置True） | T7=SystemMachine.SS_CH.M_FA.iFA_ChuckPos_1 | Y7=DI1_2 | Z7=System OFF | AA7=系统断电 | AC7=GVL_IO.iSystemOff | AD7=SystemMachine.SS_ME.M_PowerSwitch.iSystemOff | AI7=DO1_2 | AJ7=System OFF 指示灯（红） | AM7=GVL_IO.oSystemOff_Ind | AN7=SystemMachine.SS_ME.M_PowerSwitchoSystemOff_Ind | AO7=SystemMachine.SS_ME.M_PowerSwitch.SystemOff_Ind
+B8=DI2 | C8=键合臂转台Rx零位信号 | D8=Rx零位（可调节位置及用法） | G8=SystemMachine.SS_Bonding.M_BS.iRxZeroSignal | O8=DI2 | T8=SystemMachine.SS_CH.M_FA.iFA_ChuckPos_Z1 | Y8=DI1_3 | Z8=照明灯 | AA8=照明灯开关 | AC8=GVL_IO.iLightOn | AD8=SystemMachine.SS_ME.M_PowerSwitch.iLightOn | AI8=DO1_3 | AJ8=照明灯指示灯（白） | AM8=GVL_IO.oILLight_Ind | AN8=SystemMachine.SS_ME.M_PowerSwitch.oILLight_Ind | AO8=SystemMachine.SS_ME.M_PowerSwitch.ILLight_Ind
+B9=DI3 | C9=键合臂转台Rx正限位 | E9=NC状态 | G9=SystemMachine.SS_Bonding.M_BS.iRxPosSignal | O9=DI3 | P9=翻转吸盘压力信号1 | Q9=气压阈值可调,大于就True | T9=SystemMachine.SS_CH.M_FA.iFA_Chuck_ForceSig | Y9=DI1_4 | Z9=Mute | AA9=静音 | AC9=GVL_IO.iMuteOn | AD9=SystemMachine.SS_ME.M_PowerSwitch.iMuteOn | AI9=DO1_4 | AJ9=Mute 指示灯（白） | AM9=GVL_IO.oMuteLight_Ind | AN9=SystemMachine.SS_ME.M_PowerSwitch.oMuteLight_Ind | AO9=SystemMachine.SS_ME.M_PowerSwitch.MuteLight_Ind
+B10=DI4 | C10=键合臂转台Rx负限位 | E10=NC状态 | G10=SystemMachine.SS_Bonding.M_BS.iRxNegSignal | O10=DI4 | P10=翻转吸盘气流量信号 | Q10=流量阈值可调，大于就True | T10=SystemMachine.SS_CH.M_FA.iFA_Chuck_FlowMeterSig | Y10=DI1_5 | Z10=Interlock Reset | AA10=门锁复位 | AC10=GVL_IO.iInterlock_Reset | AD10=SystemMachine.SS_ME.M_InterLock.iInterlock_Reset | AI10=DO1_5 | AJ10=Interlock Reset指示灯（白） | AM10=GVL_IO.oResetLight_Ind | AN10=SystemMachine.SS_ME.M_PowerSwitch.oResetLight_Ind | AO10=SystemMachine.SS_ME.M_PowerSwitch.ResetLight_Ind
+B11=DI5 | C11=键合臂转台Ry零位 | D11=Ry零位（可调节位置及用法） | G11=SystemMachine.SS_Bonding.M_BS.iRyZeroSignal | O11=DI5 | Y11=DI1_6 | Z11=Interlock Override | AA11=门锁屏蔽 | AC11=GVL_IO.iInterlock_Mask | AD11=SystemMachine.SS_ME.M_InterLock.iInterlock_Mask | AI11=DO1_6 | AJ11=备用
+B12=DI6 | C12=键合臂转台Ry正限位 | E12=NC状态 | G12=SystemMachine.SS_Bonding.M_BS.iRyPosSignal | O12=DI6 | Y12=DI1_7 | Z12=备用 | AI12=DO1_7 | AJ12=灯塔_绿灯 | AM12=GVL_IO.oSignalTower_GreenLight | AN12=SystemMachine.SS_ME.M_SLAM.E_SignalTower.GreenLight.oLightOn | AO12=SystemMachine.SS_ME.M_SLAM.E_SignalTower.GreenLight.UpdateMode(INT32 FlashOnPeriod, INT32 FlashOffPeriod)
+B13=DI7 | C13=键合臂转台Ry负限位 | E13=NC状态 | G13=SystemMachine.SS_Bonding.M_BS.iRyNegSignal | O13=DI7 | Y13=DI1_8 | Z13=整机OIU_EMO | AA13=EMO触发 | AC13=GVL_IO.iMachine_EMO | AD13=SystemMachine.SS_ME.M_EMO.iMachine_EMO | AI13=DO1_8 | AJ13=灯塔_黄灯 | AM13=GVL_IO.oSignalTower_YellowLight | AN13=SystemMachine.SS_ME.M_SLAM.E_SignalTower.YellowLight.oLightOn | AO13=SystemMachine.SS_ME.M_SLAM.E_SignalTower.YellowLight.UpdateMode(INT32 FlashOnPeriod, INT32 FlashOffPeriod)
+B14=DI8 | C14=键合臂Rx位置HH(High High) | D14=键合臂Rx位移传感器的反馈信号 | G14=SystemMachine.SS_Bonding.M_BS.iArm_Z_HH_Rx | O14=DI8 | Y14=DI1_9 | Z14=电控箱_EMO | AA14=EMO触发 | AC14=GVL_IO.iPowerControl_EMO | AD14=SystemMachine.SS_ME.M_EMO.iPowerControl_EMO | AI14=DO1_9 | AJ14=灯塔_红灯 | AM14=GVL_IO.oSignalTower_RedLight | AN14=SystemMachine.SS_ME.M_SLAM.E_SignalTower.RedLight.oLightOn | AO14=SystemMachine.SS_ME.M_SLAM.E_SignalTower.RedLight.UpdateMode(INT32 FlashOnPeriod, INT32 FlashOffPeriod)
+B15=DI9 | C15=键合臂Rx位置1HO(High Over) | G15=SystemMachine.SS_Bonding.M_BS.iArm_Z_HO_Rx | O15=DI9 | Y15=DI1_10 | Z15=整机右侧__EMO | AA15=EMO触发 | AC15=GVL_IO.iMachine_Right_EMO | AD15=SystemMachine.SS_ME.M_EMO.iMachine_Right_EMO | AI15=DO1_10 | AJ15=灯塔_蓝灯 | AM15=GVL_IO.oSignalTower_BlueLight | AN15=SystemMachine.SS_ME.M_SLAM.E_SignalTower.BlueLight.oLightOn | AO15=SystemMachine.SS_ME.M_SLAM.E_SignalTower.BlueLight.UpdateMode(INT32 FlashOnPeriod, INT32 FlashOffPeriod)
+B16=DI10 | C16=键合臂Rx位置1OK（Operating Key ） | G16=SystemMachine.SS_Bonding.M_BS.iArm_Z_OK_Rx | O16=DI10 | Y16=DI1_11 | Z16=EFFM框架_EMO | AA16=EMO触发 | AC16=GVL_IO.iEFEM_EMO | AD16=SystemMachine.SS_ME.M_EMO.iEFEM_EMO | AI16=DO1_11 | AJ16=灯塔_蜂鸣器 | AM16=GVL_IO.oSignalTower_Buzzer | AN16=SystemMachine.SS_ME.M_SLAM.E_SignalTower.Buzzer.oBuzzOn | AO16=SystemMachine.SS_ME.M_SLAM.E_SignalTower.Buzzer.UpdateMode(INT32 BuzzerOnPeriod, INT32 BuzzerOffPeriod)
+B17=DI11 | C17=键合臂Rx位置1LL(Low Low) | G17=SystemMachine.SS_Bonding.M_BS.iArm_Z_LL_Rx | O17=DI11 | Y17=DI1_12 | Z17=备用 | AI17=DO1_12 | AJ17=照明灯 | AM17=GVL_IO.oILLightOn | AN17=SystemMachine.SS_ME.M_PowerSwitch.oILLightOn | AO17=SystemMachine.SS_ME.M_PowerSwitch.ILLightOn
+B18=DI12 | C18=键合臂Rx位置1LO(Low Over) | G18=SystemMachine.SS_Bonding.M_BS.iArm_Z_LO_Rx | O18=DI12 | Y18=DI1_13 | Z18=三相过电压1 | AA18=高报警 | AC18=GVL_IO.i3PH_OV_High | AD18=SystemMachine.SS_ME.M_Voltage_Warning.i3PH_OV_High | AI18=DO1_13 | AJ18=安全门锁_所有门_复位 | AM18=GVL_IO.oInterLock_AllDoors_Reset | AN18=SystemMachine.SS_ME.M_InterLock.oAllDoors_Reset | AO18=SystemMachine.SS_ME.M_InterLock.AllDoors_Reset
+B19=DI13 | C19=键合臂Ry位置2HH(High High) | D19=键合臂Ry位移传感器的反馈信号 | G19=SystemMachine.SS_Bonding.M_BS.iArm_Z_HH_Ry | O19=DI13 | Y19=DI1_14 | Z19=三相欠电压1 | AA19=低报警 | AC19=GVL_IO.i3PH_UV1_Low | AD19=SystemMachine.SS_ME.M_Voltage_Warning.i3PH_UV1_Low | AI19=DO1_14 | AJ19=安全门锁_所有门_屏蔽 | AM19=GVL_IO.oInterLock_AllDoors_Mask | AN19=SystemMachine.SS_ME.M_InterLock.oAllDoors_Mask | AO19=SystemMachine.SS_ME.M_InterLock.AllDoors_Mask
+B20=DI14 | C20=键合臂Ry位置2HO(High Over) | G20=SystemMachine.SS_Bonding.M_BS.iArm_Z_HO_Ry | O20=DI14 | Y20=DI1_15 | Z20=三相过电压2 | AA20=高高报警 | AC20=GVL_IO.i3PH_OV2_HighHigh | AD20=SystemMachine.SS_ME.M_Voltage_Warning.i3PH_OV2_HighHigh | AI20=DO1_15 | AJ20=离子棒 | AM20=GVL_IO.oIonBar | AN20=SystemMachine.SS_ME.M_PowerSwitch.oIonBar | AO20=SystemMachine.SS_ME.M_PowerSwitch.IonBar
+B21=DI15 | C21=键合臂Ry位置2OK（Operating Key ） | G21=SystemMachine.SS_Bonding.M_BS.iArm_Z_OK_Ry | O21=DI15 | Y21=DI1_16 | Z21=三相欠电压2 | AA21=低低报警 | AC21=GVL_IO.i3PH_UV2_LowLow | AD21=SystemMachine.SS_ME.M_Voltage_Warning.i3PH_UV2_LowLow | AI21=DO1_16 | AJ21=框架风扇 | AM21=GVL_IO.oFan | AN21=SystemMachine.SS_ME.M_PowerSwitch.oFan | AO21=SystemMachine.SS_ME.M_PowerSwitch.Fan
+B22=DI16 | C22=键合臂Ry位置2LL(Low Low) | G22=SystemMachine.SS_Bonding.M_BS.iArm_Z_LL_Ry | O22=DI16
+Y23=EL1889-2 | Z23=说明（多个请说明具体方位） | AA23=详细介绍 | AB23=IO动作正常 | AC23=PLC侧变量名定义 | AD23=Cordis侧变量名定义(DashBoard)(Observe) | AE23=Cordis侧变量名定义(DashBoard)(Command) | AF23=备注 | AI23=EL2889-2 | AJ23=说明（多个请说明具体方位） | AK23=详细介绍 | AL23=IO动作正常 | AM23=PLC侧变量名定义 | AN23=Cordis侧变量名定义(DashBoard)(Observe) | AO23=Cordis侧变量名定义(DashBoard)(Command) | AP23=备注
+Y24=DI2_1 | Z24=备用 | AI24=DO2_1 | AJ24=键合 供电On | AM24=GVL_IO.oBonding_PowerOn | AN24=SystemMachine.SS_ME.M_PowerSwitch.oBonding_PowerOn | AO24=SystemMachine.SS_ME.M_PowerSwitch.Bonding_PowerOn
+B25=DI | O25=DO | Y25=DI2_2 | Z25=备用 | AI25=DO2_2 | AJ25=键合 供电Off | AM25=GVL_IO.oBonding_PowerOff | AN25=SystemMachine.SS_ME.M_PowerSwitch.oBonding_PowerOff | AO25=SystemMachine.SS_ME.M_PowerSwitch.Bonding_PowerOff
+B26=EL1889 | C26=说明（多个请说明具体方位） | D26=详细介绍 | E26=IO动作正常 | F26=PLC侧变量名定义 | G26=Cordis侧变量名定义(DashBoard)(Observer) | I26=备注 | O26=EL2889 | P26=说明 | Q26=详细介绍 | R26=IO动作正常 | S26=PLC侧变量名定义 | T26=Cordis侧变量名定义(DashBoard)(Observer) | U26=Cordis侧变量名定义(DashBoard)(Command) | V26=备注 | Y26=DI2_3 | Z26=备用 | AI26=DO2_3 | AJ26=芯片传输 供电On | AM26=GVL_IO.oCH_PowerOn | AN26=SystemMachine.SS_ME.M_PowerSwitch.oCH_PowerOn | AO26=SystemMachine.SS_ME.M_PowerSwitch.CH_PowerOn
+B27=DI1 | C27=键合臂Ry位置2LO(Low Over) | D27=键合臂位移传感器的反馈信号 | G27=SystemMachine.SS_Bonding.M_BS.iArm_Z_LO_Ry | O27=DO1 | P27=粗对准光源触发 | T27=SystemMachine.SS_Bonding.M_AS.oAS_LightOn | U27=SystemMachine.SS_Bonding.M_AS.AS_LightOn | Y27=DI2_4 | Z27=备用 | AI27=DO2_4 | AJ27=芯片传输 供电Off | AM27=GVL_IO.oCH_PowerOff | AN27=SystemMachine.SS_ME.M_PowerSwitch.oCH_PowerOff | AO27=SystemMachine.SS_ME.M_PowerSwitch.CH_PowerOff
+B28=DI2 | C28=硅片加热盘电力调整器报警信号 | G28=SystemMachine.SS_Bonding.M_WS.iHeaterPlatePowerCtrl_Alarm | O28=DO2 | P28=粗对准相机触发信号 | T28=SystemMachine.SS_Bonding.M_AS.oAS_CameraOn | U28=SystemMachine.SS_Bonding.M_AS.oAS_CameraOn | Y28=DI2_5 | Z28=备用 | AI28=DO2_5 | AJ28=PLASMA&甲酸 供电On | AM28=GVL_IO.oPLASMA_Acid_PowerOn | AN28=SystemMachine.SS_ME.M_PowerSwitch.oPLASMA_Acid_PowerOn | AO28=SystemMachine.SS_ME.M_PowerSwitch.PLASMA_Acid_PowerOn
+B29=DI3 | C29=硅片加热盘温控器报警 | G29=SystemMachine.SS_Bonding.M_WS.iHeaterPlate_TC_Alarm | O29=DO3 | P29=芯片吸附电磁阀远端(先开) | Q29=两者先后开使用 | T29=SystemMachine.SS_Bonding.M_BS.oChipVacValveRemote | U29=SystemMachine.SS_Bonding.M_BS.ChipVacValveRemote | Y29=DI2_6 | Z29=备用 | AI29=DO2_6 | AJ29=PLASMA&甲酸 供电Off | AM29=GVL_IO.oPLASMA_Acid_PowerOff | AN29=SystemMachine.SS_ME.M_PowerSwitch.oPLASMA_Acid_PowerOff | AO29=SystemMachine.SS_ME.M_PowerSwitch.PLASMA_Acid_PowerOff
+B30=DI4 | C30=硅片申请流入 | D30=预留 | G30=SystemMachine.SS_Bonding.M_WS.iWaferRequestIn | O30=DO4 | P30=芯片吸附电磁阀近端（后开） | Q30=两者先后开使用 | T30=SystemMachine.SS_Bonding.M_BS.oChipVacValveNear | U30=SystemMachine.SS_Bonding.M_BS.ChipVacValveNear | Y30=DI2_7 | Z30=备用 | AI30=DO2_7 | AJ30=框架 供电On | AM30=GVL_IO.oEV_PowerOn | AN30=SystemMachine.SS_ME.M_PowerSwitch.oEV_PowerOn | AO30=SystemMachine.SS_ME.M_PowerSwitch.EV_PowerOn
+B31=DI5 | C31=硅片对接预留信号 | D31=预留 | G31=SystemMachine.SS_Bonding.M_WS.iWaferHandoffResSig | O31=DO5 | Y31=DI2_8 | Z31=备用 | AI31=DO2_8 | AJ31=框架 供电Off | AM31=GVL_IO.oEV_PowerOff | AN31=SystemMachine.SS_ME.M_PowerSwitch.oEV_PowerOff | AO31=SystemMachine.SS_ME.M_PowerSwitch.EV_PowerOff
+B32=DI6 | C32=EPin零位1 | G32=SystemMachine.SS_Bonding.M_WS.iZeroEpin_Z | O32=DO6 | Y32=DI2_9 | Z32=备用 | AI32=DO2_9 | AJ32=备用供电On | AM32=GVL_IO.oBackup_PowerOn | AN32=SystemMachine.SS_ME.M_PowerSwitch.oBackup_PowerOn | AO32=SystemMachine.SS_ME.M_PowerSwitch.Backup_PowerOn
+B33=DI7 | C33=EPin零位2 | O33=DO7 | Y33=DI2_10 | Z33=备用 | AI33=DO2_10 | AJ33=备用供电Off | AM33=GVL_IO.oBackup_PowerOff | AN33=SystemMachine.SS_ME.M_PowerSwitch.oBackup_PowerOff | AO33=SystemMachine.SS_ME.M_PowerSwitch.Backup_PowerOff
+B34=DI8 | C34=EPin零位3 | O34=DO8 | Y34=DI2_11 | Z34=备用 | AI34=DO2_11 | AJ34=备用
+B35=DI9 | C35=伺服回路上电监控 | D35=常开信号 | G35=SystemMachine.SS_Bonding.M_WS.iServoPowerOnMonitor | O35=DO9 | Y35=DI2_12 | Z35=备用 | AI35=DO2_12 | AJ35=备用
+B36=DI10 | C36=加热回路上电监控 | D36=常开信号 | G36=SystemMachine.SS_Bonding.M_WS.iHeaterPowerOnMonitor | O36=DO10 | Y36=DI2_13 | Z36=备用 | AI36=DO2_13 | AJ36=备用
+B37=DI11 | O37=DO11 | Y37=DI2_14 | Z37=备用 | AI37=DO2_14 | AJ37=备用
+B38=DI12 | O38=DO12 | Y38=DI2_15 | Z38=备用 | AI38=DO2_15 | AJ38=备用
+B39=DI13 | O39=DO13 | Y39=DI2_16 | Z39=备用 | AI39=DO2_16 | AJ39=备用
+B40=DI14 | O40=DO14
+B41=DI15 | O41=DO15 | Y41=EL1889-3 | Z41=说明（多个请说明具体方位） | AA41=详细介绍 | AB41=IO动作正常 | AC41=PLC侧变量名定义 | AD41=Cordis侧变量名定义(DashBoard)(Observe) | AE41=Cordis侧变量名定义(DashBoard)(Command) | AF41=备注 | AI41=EL2889-3 | AJ41=说明（多个请说明具体方位） | AK41=详细介绍 | AL41=IO动作正常 | AM41=PLC侧变量名定义 | AN41=Cordis侧变量名定义(DashBoard)(Observe) | AO41=Cordis侧变量名定义(DashBoard)(Command) | AP41=备注
+B42=DI16 | O42=DO16 | Y42=DI3_1 | Z42=安全门锁1_左门状态1 | AC42=GVL_IO.iLeftLock_DoorStatus_1 | AD42=SystemMachine.SS_ME.M_InterLock.iLeftDoorStatus_1 | AI42=DO3_1 | AJ42=左侧安全门锁_电磁锁 | AK42=左门1+左门2 | AM42=GVL_IO.oInterLock_Left | AN42=SystemMachine.SS_ME.M_InterLock.oInterLock_Left | AO42=SystemMachine.SS_ME.M_InterLock.InterLock_Left
+Y43=DI3_2 | Z43=安全门锁1_左锁状态1 | AC43=GVL_IO.iLeftLock_LockStatus_1 | AD43=SystemMachine.SS_ME.M_InterLock.iLeftLockStatus_1 | AI43=DO3_2 | AJ43=前侧安全门锁_电磁锁 | AK43=前门1+前门2 | AM43=GVL_IO.oInterLock_Front | AN43=SystemMachine.SS_ME.M_InterLock.oInterLock_Front | AO43=SystemMachine.SS_ME.M_InterLock.InterLock_Front
+Y44=DI3_3 | Z44=安全门锁2_左门状态2 | AC44=GVL_IO.iLeftLock_DoorStatus_2 | AD44=SystemMachine.SS_ME.M_InterLock.iLeftDoorStatus_2 | AI44=DO3_3 | AJ44=右侧安全门锁_电磁锁 | AK44=右门1 | AM44=GVL_IO.oInterLock_Right | AN44=SystemMachine.SS_ME.M_InterLock.oInterLock_Right | AO44=SystemMachine.SS_ME.M_InterLock.InterLock_Right
+B45=DO | O45=AI | Y45=DI3_4 | Z45=安全门锁2_左锁状态2 | AC45=GVL_IO.iLeftLock_LockStatus_2 | AD45=SystemMachine.SS_ME.M_InterLock.iLeftLockStatus_2 | AI45=DO3_4 | AJ45=备用
+B46=EL2889 | C46=说明 | D46=详细介绍 | E46=IO动作正常 | F46=PLC侧变量名定义 | G46=Cordis侧变量名定义(DashBoard)(Observer) | H46=Cordis侧变量名定义(DashBoard)(Command) | I46=备注 | O46=EL3068 | P46=说明 | Q46=详细介绍 | R46=IO动作正常 | S46=PLC侧变量名定义 | T46=Cordis侧变量名定义(DashBoard)(Observer) | V46=备注 | Y46=DI3_5 | Z46=安全门锁3_前门状态1 | AC46=GVL_IO.iFrontLock_DoorStatus_1 | AD46=SystemMachine.SS_ME.M_InterLock.iFrontDoorStatus_1 | AI46=DO3_5 | AJ46=备用
+B47=DO1 | C47=对准相机触发信号1 | D47=具体功能交互双方定义 | G47=SystemMachine.SS_Bonding.M_AS.oAlignCameraTigger_1 | H47=SystemMachine.SS_Bonding.M_AS.AlignCameraTigger_1 | O47=AI1 | P47=翻转芯片吸附模拟量信号 | T47=SystemMachine.SS_CH.M_FA.ChipVacValue | Y47=DI3_6 | Z47=安全门锁3_前锁状态1 | AC47=GVL_IO.iFrontLock_LockStatus_1 | AD47=SystemMachine.SS_ME.M_InterLock.iFrontLockStatus_1 | AI47=DO3_6 | AJ47=备用
+B48=DO2 | C48=对准相机触发2 | D48=具体功能交互双方定义 | G48=SystemMachine.SS_Bonding.M_AS.oAlignCameraTigger_2 | H48=SystemMachine.SS_Bonding.M_AS.AlignCameraTigger_2 | O48=AI2 | Y48=DI3_7 | Z48=安全门锁4_前门状态2 | AC48=GVL_IO.iFrontLock_DoorStatus_2 | AD48=SystemMachine.SS_ME.M_InterLock.iFrontDoorStatus_2 | AI48=DO3_7 | AJ48=备用
+B49=DO3 | C49=光源触发1 | D49=具体功能交互双方定义 | G49=SystemMachine.SS_Bonding.M_AS.oLightOn_1 | H49=SystemMachine.SS_Bonding.M_AS.LightOn_1 | O49=AI3 | Y49=DI3_8 | Z49=安全门锁4_前锁状态2 | AC49=GVL_IO.iFrontLock_LockStatus_2 | AD49=SystemMachine.SS_ME.M_InterLock.iFrontockStatus_2 | AI49=DO3_8 | AJ49=备用
+B50=DO4 | C50=光源触发2 | D50=具体功能交互双方定义 | G50=SystemMachine.SS_Bonding.M_AS.oLightOn_2 | H50=SystemMachine.SS_Bonding.M_AS.LightOn_2 | O50=AI4 | Y50=DI3_9 | Z50=安全门锁5_右门状态1 | AC50=GVL_IO.iRightLock_DoorStatus_1 | AD50=SystemMachine.SS_ME.M_InterLock.iRightDoorStatus_1 | AI50=DO3_9 | AJ50=备用
+B51=DO5 | C51=加热输出 | G51=SystemMachine.SS_Bonding.M_AS.oHeatOn | H51=SystemMachine.SS_Bonding.M_AS.HeatOn | O51=AI5 | Y51=DI3_10 | Z51=安全门锁5_右锁状态1 | AC51=GVL_IO.iRightLock_LockStatus_1 | AD51=SystemMachine.SS_ME.M_InterLock.iRightLockStatus_1 | AI51=DO3_10 | AJ51=备用
+B52=DO6 | C52=允许硅片流入 | D52=预留 | G52=SystemMachine.SS_Bonding.M_AS.oAllowWaferIn | H52=SystemMachine.SS_Bonding.M_AS.AllowWaferIn | O52=AI6 | S52=  | Y52=DI3_11 | Z52=备用 | AI52=DO3_11 | AJ52=备用
+B53=DO7 | C53=对接信号预留 | D53=预留 | G53=SystemMachine.SS_Bonding.M_AS.oHandOffRes | H53=SystemMachine.SS_Bonding.M_AS.HandOffRes | O53=AI7 | Y53=DI3_12 | Z53=备用 | AI53=DO3_12 | AJ53=备用
+B54=DO8 | C54=硅片加热复位信号 | G54=SystemMachine.SS_Bonding.M_AS.oWaferHeatReset | H54=SystemMachine.SS_Bonding.M_AS.WaferHeatReset | O54=AI8 | Y54=DI3_13 | Z54=备用 | AI54=DO3_13 | AJ54=备用
+B55=DO9 | C55=键合臂位置传感器校准1 | G55=SystemMachine.SS_Bonding.M_WS.oAramPosSensorCalibrate_1 | H55=SystemMachine.SS_Bonding.M_WS.AramPosSensorCalibrate_1 | Y55=DI3_14 | Z55=备用 | AI55=DO3_14 | AJ55=备用
+B56=DO10 | C56=键合臂位置传感器校准2 | G56=SystemMachine.SS_Bonding.M_WS.oAramPosSensorCalibrate_1 | H56=SystemMachine.SS_Bonding.M_WS.AramPosSensorCalibrate_1 | Y56=DI3_15 | Z56=备用 | AI56=DO3_15 | AJ56=备用
+B57=DO11 | Y57=DI3_16 | Z57=备用 | AI57=DO3_16 | AJ57=备用
+B58=DO12
+B59=DO13
+B60=DO14
+B61=DO15
+B62=DO16
+B65=AI
+A66=AI | B66=EL3208_0010 | C66=说明 | D66=详细介绍 | E66=IO动作正常 | F66=PLC侧变量名定义 | G66=Cordis侧变量名定义(DashBoard)(Observer) | I66=备注
+B67=AI1 | C67=粗动台X1轴电机温度PTC | D67=仪器量程1K，采集模块位数16位 | G67=SystemMachine.SS_Bonding.M_WS.iLS_XP_PTC
+B68=AI2 | C68=粗动台X2轴电机温度PTC | D68=仪器量程1K，采集模块位数16位 | G68=SystemMachine.SS_Bonding.M_WS.iLS_XN_PTC
+B69=AI3 | C69=粗动台Y1轴电机温度PTC | D69=仪器量程1K，采集模块位数16位 | G69=SystemMachine.SS_Bonding.M_WS.iLS_YP_PTC
+B70=AI4 | C70=粗动台Y2轴电机温度PTC | D70=仪器量程1K，采集模块位数16位 | G70=SystemMachine.SS_Bonding.M_WS.iLS_YN_PTC
+B71=AI5 | C71=粗动台RZ1电机温度PTC | G71=SystemMachine.SS_Bonding.M_WS.iLS_Rz1_PTC
+B72=AI6 | C72=粗动台RZ2电机温度PTC | G72=SystemMachine.SS_Bonding.M_WS.iLS_Rz2_PTC
+B73=AI7
+B74=AI8
+B76=AI
+A77=采集模块位数16位 | B77=EL3208_0010 | C77=说明 | D77=详细介绍 | E77=IO动作正常 | F77=PLC侧变量名定义 | G77=Cordis侧变量名定义(DashBoard)(Observer) | I77=备注
+B78=AI1 | C78=粗动台X1轴电机温度NTC | G78=SystemMachine.SS_Bonding.M_WS.iLS_XP_NTC
+B79=AI2 | C79=粗动台X2轴电机温度NTC | G79=SystemMachine.SS_Bonding.M_WS.iLS_XN_NTC
+B80=AI3 | C80=粗动台Y1轴电机温度NTC | G80=SystemMachine.SS_Bonding.M_WS.iLS_YP_NTC
+B81=AI4 | C81=粗动台Y2轴电机温度NTC | G81=SystemMachine.SS_Bonding.M_WS.iLS_YN_NTC
+B82=AI5 | C82=粗动台RZ1电机温度NTC | G82=SystemMachine.SS_Bonding.M_WS.iLS_Rz1_NTC
+B83=AI6 | C83=粗动台RZ2电机温度NTC | F83=  | G83=SystemMachine.SS_Bonding.M_WS.iLS_Rz2_NTC
+B84=AI7
+B85=AI8
+B87=AI
+A88=采集模块位数16位 | B88=EL3314 | C88=说明 | D88=详细介绍 | E88=IO动作正常 | F88=PLC侧变量名定义 | G88=Cordis侧变量名定义(DashBoard)(Observer) | I88=备注
+B89=AI1 | C89=硅片台加热边缘温度K型热偶 | D89=K型热偶 | G89=SystemMachine.SS_Bonding.M_WS.iHeatingEdgeTemper
+B90=AI2
+B91=AI3
+B92=AI4
+B93=AI5
+B94=AI6 | F94= 
+B95=AI7
+B96=AI8
+B98=AI
+B99=EL3208 | C99=说明 | D99=详细介绍 | E99=IO动作正常 | F99=PLC侧变量名定义 | G99=Cordis侧变量名定义(DashBoard)(Observer) | I99=备注
+A100=采集模块位数16位 | B100=AI1 | C100=翻转X电机温度 | G100=SystemMachine.SS_CH.M_FA.iFA_X_Temper
+B101=AI2
+B102=AI3
+B103=AI4
+B104=AI5 | C104=对准X电机PT100 | G104=SystemMachine.SS_Bonding.M_AS.iAS_X_PT100
+B105=AI6 | C105=对准Y电机PT100 | F105=  | G105=SystemMachine.SS_Bonding.M_AS.iAS_Y_PT100
+B106=AI7
+B107=AI8
+A110=EK1100-1
+B111=模块型号+位置+编号
+A112=16位 | B112=EL5042 | C112=说明（多个请说明具体方位） | D112=详细介绍 | E112=IO动作正常 | F112=PLC侧变量名定义 | G112=Cordis侧变量名定义(observer) | H112=备注
+B113=Dat1+ | C113=Z键合臂侧摆位置反馈1 | G113=SystemMachine.SS_Bonding.M_BS.iArm_Z_SwingFpos_1
+B114=clck1+
+B115=5V
+B116=S
+B117=Dat1-
+B118=Clck1-
+B119=GND 
+B120=S 
+B121=Dat2+ | C121=Z键合臂侧摆位置反馈2 | G121=SystemMachine.SS_Bonding.M_BS.iArm_Z_SwingFpos_2
+B122=clck2+
+B123=5V
+B124=S
+B125=Dat2-
+B126=Clck2-
+B127=GND 
+B128=S 
+B132=模块型号+位置+编号
+A133=16位 | B133=EL5042 | C133=说明（多个请说明具体方位） | D133=详细介绍 | E133=IO动作正常 | F133=PLC侧变量名定义 | G133=Cordis侧变量名定义(observer) | H133=备注
+B134=Dat1+ | C134=Z键合臂俯仰位置反馈1 | G134=SystemMachine.SS_Bonding.M_BS.iArm_Z_PitchFpos_1
+B135=clck1+
+B136=5V
+B137=S
+B138=Dat1-
+B139=Clck1-
+B140=GND 
+B141=S 
+B142=Dat2+ | C142=Z键合臂俯仰位置反馈2 | G142=SystemMachine.SS_Bonding.M_BS.iArm_Z_PitchFpos_1
+B143=clck2+
+B144=5V
+B145=S
+B146=Dat2-
+B147=Clck2-
+B148=GND 
+B149=S 
+
+########## sheet: 气控箱 ##########
+B4=气控箱 IO 
+A5=1 | B5=XB6-0032A(32位数字量输出) | C5=说明（多个请说明具体方位） | D5=详细介绍 | E5=IO动作正常 | F5=PLC侧变量名定义 | G5=Cordis侧变量名定义(Command) | H5=Command | I5=备注
+B6=DO1 | C6=对准台1X轴气冷 | E6=0断1通 | G6=SystemMachine.SS_ME.M_AIR.AS_X_Cooling | H6=OpenPositive、OpenAir | I6=Observer说明：
+每一路气都有oPositiveState,oNegativeState，oAirState三种状态，
+比如DO1的Observer正压就是SystemMachine.SS_ME.M_AIR.AS_X_Cooling.oPositiveState,
+大气是SystemMachine.SS_ME.M_AIR.AS_X_Cooling.oAirState,
+这一路只要看这两种，以此类推。
+以DO18, DO19 WT-晶圆吸附为例：
+SystemMachine.SS_ME.M_AIR.WT_WaferVac.oPositiveState,
+SystemMachine.SS_ME.M_AIR.WT_WaferVac.oNegtiveState,
+SystemMachine.SS_ME.M_AIR.WT_WaferVac.oAirState
+有这三种状态
+
+B7=DO2 | C7=对准台1Y轴气冷 | E7=0断1通 | G7=SystemMachine.SS_ME.M_AIR.AS_Y_Cooling | H7=OpenPositive、OpenAir
+B8=DO3 | C8=脉冲加热冷却1 | E8=0断1通 | G8=SystemMachine.SS_ME.M_AIR.PulseHeatCooling_1 | H8=OpenPositive、OpenAir
+B9=DO4 | C9=脉冲加热冷却2 | E9=0断1通 | G9=SystemMachine.SS_ME.M_AIR.PulseHeatCooling_2 | H9=OpenPositive、OpenAir
+B10=DO5 | C10=微晶玻璃冷却进气 | E10=0断1通 | G10=SystemMachine.SS_ME.M_AIR.GlassCoolingIn | H10=OpenPositive、OpenAir
+B11=DO6 | C11=微晶玻璃冷却出气 | E11=0断1通 | G11=SystemMachine.SS_ME.M_AIR.GlassCoolingOut | H11=OpenPositive、OpenAir
+B12=DO7 | C12=离子棒正压 | E12=0断1通 | G12=SystemMachine.SS_ME.M_AIR.IonicBarPositive | H12=OpenPositive、OpenAir
+B13=DO8 | C13=正压预留1 | E13=0断1通 | G13=SystemMachine.SS_ME.M_AIR.PosPressureReserve_1 | H13=OpenPositive、OpenAir
+B14=DO9 | C14=正压预留2 | E14=0断1通 | G14=SystemMachine.SS_ME.M_AIR.PosPressureReserve_2 | H14=OpenPositive、OpenAir
+B15=DO10 | C15=WT-气浮组件正压1 | E15=0断1通 | G15=SystemMachine.SS_ME.M_AIR.WT_AirfootCompPos | H15=OpenPositive、OpenAir
+B16=DO11 | C16=WT-气浮组件正压2 | E16=0断1通 | H16=OpenPositive、OpenAir
+B17=DO12 | C17=WT-气浮组件正压3 | E17=0断1通
+B18=DO13 | C18=WT-晶圆吸附破真空 | E18=0真空1破真空 | G18=SystemMachine.SS_ME.M_AIR.WT_WaferVac | H18=OpenPositive、OpenNegtive、OpenAir
+B19=DO14 | C19=WT-晶圆吸附通断 | E19=0断1通
+B20=DO15 | C20=WT-气浮组件吸附破真空 | E20=0真空1破真空 | G20=SystemMachine.SS_ME.M_AIR.WT_AirfootCompVac | H20=OpenPositive、OpenNegtive、OpenAir
+B21=DO16 | C21=WT-气浮组件吸附通断 | E21=0断1通
+B22=DO17 | C22=WT-键合头吸盘吸附1破真空 | E22=0真空1破真空 | G22=SystemMachine.SS_ME.M_AIR.WT_BondingVac_1 | H22=OpenPositive、OpenNegtive、OpenAir
+B23=DO18 | C23=WT-键合头吸盘吸附1通断 | E23=0断1通 | I23=Command说明：
+每一路气都OpenPositive,OpenNegtive，OpenAir三种command，
+比如DO1的Command正压就是SystemMachine.SS_ME.M_AIR.AS_X_Cooling.OpenPositive,
+大气是SystemMachine.SS_ME.M_AIR.AS_X_Cooling.OpenAir,
+这一路只用了其中两种以此类推。
+以DO18, DO19 WT-晶圆吸附为例：
+开正压SystemMachine.SS_ME.M_AIR.WT_WaferVac.OpenPositive,
+开负压SystemMachine.SS_ME.M_AIR.WT_WaferVac.OpenNegtive,
+开大气SystemMachine.SS_ME.M_AIR.WT_WaferVac.OpenAir
+有这三种command,以此类推
+B24=DO19 | C24=WT-键合头吸盘吸附2破真空 | E24=0真空1破真空 | G24=SystemMachine.SS_ME.M_AIR.WT_BondingVac_2 | H24=OpenPositive、OpenNegtive、OpenAir
+B25=DO20 | C25=WT-键合头吸盘吸附2通断 | E25=0断1通
+B26=DO21 | C26=WT-键合头吸盘吸附3破真空 | E26=0真空1破真空 | G26=SystemMachine.SS_ME.M_AIR.WT_BondingVac_3 | H26=OpenPositive、OpenNegtive、OpenAir
+B27=DO22 | C27=WT-键合头吸盘吸附3通断 | E27=0断1通
+B28=DO23 | C28=WT-Tray盘吸附1破真空 | E28=0真空1破真空 | G28=SystemMachine.SS_ME.M_AIR.WT_TrayVac_1 | H28=OpenPositive、OpenNegtive、OpenAir
+B29=DO24 | C29=WT-Tray盘吸附1通断 | E29=0断1通
+B30=DO25 | C30=WT-Tray盘吸附2破真空 | E30=0真空1破真空 | G30=SystemMachine.SS_ME.M_AIR.WT_TrayVac_2 | H30=OpenPositive、OpenNegtive、OpenAir
+B31=DO26 | C31=WT-Tray盘吸附2通断 | E31=0断1通
+B32=DO27 | C32=WT-Tray盘吸附3破真空 | E32=0真空1破真空 | G32=SystemMachine.SS_ME.M_AIR.WT_TrayVac_3 | H32=OpenPositive、OpenNegtive、OpenAir
+B33=DO28 | C33=WT-Tray盘吸附3通断 | E33=0断1通
+B34=DO29 | C34=WT-Tray盘吸附4破真空 | E34=0真空1破真空 | G34=SystemMachine.SS_ME.M_AIR.WT_TrayVac_4 | H34=OpenPositive、OpenNegtive、OpenAir
+B35=DO30 | C35=WT-Tray盘吸附4通断 | E35=0断1通
+B36=DO31 | C36=WT-芯片吸附破真空 | E36=0真空1破真空 | G36=SystemMachine.SS_ME.M_AIR.WT_ChipVac | H36=OpenPositive、OpenNegtive、OpenAir
+B37=DO32 | C37=WT-芯片吸附通断 | E37=0断1通
+A41=2 | B41=XB6-0032A(32位数字量输出) | C41=说明（多个请说明具体方位） | D41=详细介绍 | E41=IO动作正常 | F41=PLC侧变量名定义 | G41=Cordis侧变量名定义(Command) | H41=备注
+B42=DO33 | C42=吸盘吸附破真空 | E42=0真空1破真空 | G42=SystemMachine.SS_ME.M_AIR.ChuckVac | H42=OpenPositive、OpenNegtive、OpenAir
+B43=DO34 | C43=吸盘吸附通断 | E43=0断1通
+B44=DO35 | C44=芯片吸附破真空 | E44=0真空1破真空 | G44=SystemMachine.SS_ME.M_AIR.ChipVac | H44=OpenPositive、OpenNegtive、OpenAir
+B45=DO36 | C45=芯片吸附通断 | E45=0断1通
+B46=DO37 | C46=负压预留1破真空 | E46=0真空1破真空 | G46=SystemMachine.SS_ME.M_AIR.NegReserveVac_1 | H46=OpenPositive、OpenNegtive、OpenAir
+B47=DO38 | C47=负压预留1通断 | E47=0断1通
+B48=DO39 | C48=负压预留2破真空 | E48=0真空1破真空 | G48=SystemMachine.SS_ME.M_AIR.NegReserveVac_2 | H48=OpenPositive、OpenNegtive、OpenAir
+B49=DO40 | C49=负压预留2通断 | E49=0断1通
+B50=DO41 | C50=氮气密封 | E50=0断1通 | G50=SystemMachine.SS_ME.M_AIR.N2Seal | H50=OpenPositive、OpenAir
+B51=DO42 | C51=氮气预留1 | E51=0断1通 | G51=SystemMachine.SS_ME.M_AIR.N2Reserve_1 | H51=OpenPositive、OpenAir
+B52=DO43 | C52=氮气预留2 | E52=0断1通 | G52=SystemMachine.SS_ME.M_AIR.N2Reserve_2 | H52=OpenPositive、OpenAir
+A58=3 | B58=XB6-A80V | C58=说明（多个请说明具体方位） | D58=详细介绍 | E58=IO动作正常 | F58=PLC侧变量名定义 | G58=Cordis侧变量名定义(Observer) | I58=备注
+B59=AI1 | C59=正压总表（压强） | D59=报警阈值≤0.5Mpa，≥0.9Mpa，停机阈值≤0.3Mpa，≥1Mpa | G59=SystemMachine.SS_ME.M_AIR.Facility_PosPressure.oValue
+B60=AI2 | C60=负压总表（压强） | D60=报警阈值≥-50Kpa，≤-100Kpa，停机阈值≥-30Kpa | G60=SystemMachine.SS_ME.M_AIR.Facility_NegPressure.oValue
+B61=AI3 | C61=氮气总表（压强） | G61=SystemMachine.SS_ME.M_AIR.Facility_N2Pressure.oValue
+B62=AI4 | C62=正压预留1（压强） | G62=SystemMachine.SS_ME.M_AIR.PosPressurePreserve_1.PressureSwitch.oValue
+B63=AI5 | C63=正压预留2（压强） | G63=SystemMachine.SS_ME.M_AIR.PosPressurePreserve_2.PressureSwitch.oValue
+B64=AI6 | C64=WT-气浮组件正压1（压强） | G64=SystemMachine.SS_ME.M_AIR.WT_AirFootComPos_1.PressureSwitch.oValue
+B65=AI7 | C65=WT-气浮组件正压2（压强） | G65=SystemMachine.SS_ME.M_AIR.WT_AirFootComPos_2.PressureSwitch.oValue
+B66=AI8 | C66=WT-气浮组件正压3（压强） | G66=SystemMachine.SS_ME.M_AIR.WT_AirFootComPos_3.PressureSwitch.oValue
+B69=气控箱 IO ——AI
+A70=4 | B70=XB6-A80V | C70=说明（多个请说明具体方位） | D70=详细介绍 | E70=IO动作正常 | F70=PLC侧变量名定义 | G70=Cordis侧变量名定义(Observer) | I70=备注
+B71=AI9 | C71=芯片传输正压（压强） | G71=SystemMachine.SS_ME.M_AIR.ChipTransferPos.PressureSwitch.oValue
+B72=AI10 | C72=芯片传输负压（压强） | G72=SystemMachine.SS_ME.M_AIR.ChipTransferNeg.PressureSwitch.oValue
+B73=AI11 | C73=WT-晶圆吸附（压强） | G73=SystemMachine.SS_ME.M_AIR.WT_WaferVac.PressureSwitch.oValue
+B74=AI12 | C74=WT-气浮组件吸附（压强） | G74=SystemMachine.SS_ME.M_AIR.WT_AirfootCompVac.PressureSwitch.oValue
+B75=AI13 | C75=WT-键合头吸盘吸附1（压强） | G75=SystemMachine.SS_ME.M_AIR.WT_BondingVac_1.PressureSwitch.oValue
+B76=AI14 | C76=WT-键合头吸盘吸附2（压强） | G76=SystemMachine.SS_ME.M_AIR.WT_BondingVac_2.PressureSwitch.oValue
+B77=AI15 | C77=WT-键合头吸盘吸附3（压强） | G77=SystemMachine.SS_ME.M_AIR.WT_BondingVac_3.PressureSwitch.oValue
+B78=AI16 | C78=WT-Tray盘吸附1（压强） | G78=SystemMachine.SS_ME.M_AIR.WT_TrayVac_1.PressureSwitch.oValue
+B81=气控箱 IO ——AI
+A82=5 | B82=XB6-A80V | C82=说明（多个请说明具体方位） | D82=详细介绍 | E82=IO动作正常 | F82=PLC侧变量名定义 | G82=Cordis侧变量名定义(Observer) | I82=备注
+B83=AI17 | C83=WT-Tray盘吸附2（压强） | G83=SystemMachine.SS_ME.M_AIR.WT_TrayVac_2.PressureSwitch.oValue
+B84=AI18 | C84=WT-Tray盘吸附3（压强） | G84=SystemMachine.SS_ME.M_AIR.WT_TrayVac_3.PressureSwitch.oValue
+B85=AI19 | C85=WT-Tray盘吸附4（压强） | G85=SystemMachine.SS_ME.M_AIR.WT_TrayVac_4.PressureSwitch.oValue
+B86=AI20 | C86=WT-芯片吸附（压强） | G86=SystemMachine.SS_ME.M_AIR.WT_ChipVac.PressureSwitch.oValue
+B87=AI21 | C87=吸盘吸附（压强） | G87=SystemMachine.SS_ME.M_AIR.ChuckVac.PressureSwitch.oValue
+B88=AI22 | C88=芯片吸附（压强） | G88=SystemMachine.SS_ME.M_AIR.ChipVacOpen.PressureSwitch.oValue
+B89=AI23 | C89=负压预留1（压强） | G89=SystemMachine.SS_ME.M_AIR.NegReserveVac_1.PressureSwitch.oValue
+B90=AI24 | C90=负压预留2（压强） | G90=SystemMachine.SS_ME.M_AIR.NegReserveVac_2.PressureSwitch.oValue
+A93=6 | B93=XB6-A80V | C93=说明（多个请说明具体方位） | D93=详细介绍 | E93=IO动作正常 | F93=PLC侧变量名定义 | G93=Cordis侧变量名定义(Observer) | I93=备注
+B94=AI25 | C94=WT-晶圆吸附（流量） | G94=SystemMachine.SS_ME.M_AIR.WT_WaferVac.FlowMeter.oValue
+B95=AI26 | C95=WT-气浮组件吸附（流量） | G95=SystemMachine.SS_ME.M_AIR.WT_AirfootCompVac.FlowMeter.oValue
+B96=AI27 | C96=WT-键合头吸盘吸附1（流量） | G96=SystemMachine.SS_ME.M_AIR.WT_BondingVac_1.FlowMeter.oValue
+B97=AI28 | C97=WT-键合头吸盘吸附2（流量） | G97=SystemMachine.SS_ME.M_AIR.WT_BondingVac_2.FlowMeter.oValue
+B98=AI29 | C98=WT-键合头吸盘吸附3（流量） | G98=SystemMachine.SS_ME.M_AIR.WT_BondingVac_3.FlowMeter.oValue
+B99=AI30 | C99=WT-Tray盘吸附1（流量） | G99=SystemMachine.SS_ME.M_AIR.WT_TrayVac_1.FlowMeter.oValue
+B100=AI31 | C100=WT-Tray盘吸附2（流量） | G100=SystemMachine.SS_ME.M_AIR.WT_TrayVac_2.FlowMeter.oValue
+B101=AI32 | C101=WT-Tray盘吸附3（流量） | G101=SystemMachine.SS_ME.M_AIR.WT_TrayVac_3.FlowMeter.oValue
+A104=7 | B104=XB6-A80V | C104=说明（多个请说明具体方位） | D104=详细介绍 | E104=IO动作正常 | F104=PLC侧变量名定义 | G104=Cordis侧变量名定义(Observer) | I104=备注
+B105=AI33 | C105=WT-Tray盘吸附4（流量） | G105=SystemMachine.SS_ME.M_AIR.WT_TrayVac_4.FlowMeter.oValue
+B106=AI34 | C106=WT-芯片吸附（流量） | G106=SystemMachine.SS_ME.M_AIR.WT_ChipVac.FlowMeter.oValue
+B107=AI35 | C107=吸盘吸附(流量) | G107=SystemMachine.SS_ME.M_AIR.ChuckVac.FlowMeter.oValue
+B108=AI36 | C108=芯片吸附（流量） | G108=SystemMachine.SS_ME.M_AIR.ChipVac.FlowMeter.oValue
+B109=AI37 | C109=负压预留1（流量） | G109=SystemMachine.SS_ME.M_AIR.NegReserveVac_1.FlowMeter.oValue
+B110=AI38 | C110=负压预留2（流量） | G110=SystemMachine.SS_ME.M_AIR.NegReserveVac_2.FlowMeter.oValue
+B111=AI39 | C111=对准台1X轴气冷（流量） | G111=SystemMachine.SS_ME.M_AIR.AS_X_Cooling.FlowMeter.oValue
+B112=AI40 | C112=对准台1Y轴气冷（流量） | G112=SystemMachine.SS_ME.M_AIR.AS_Y_Cooling.FlowMeter.oValue
+A115=8 | B115=XB6-A80V | C115=说明（多个请说明具体方位） | D115=详细介绍 | E115=IO动作正常 | F115=PLC侧变量名定义 | G115=Cordis侧变量名定义(Observer) | I115=备注
+B116=AI41 | C116=脉冲加热冷却1（流量） | G116=SystemMachine.SS_ME.M_AIR.PulseHeatCooling_1.FlowMeter.oValue
+B117=AI42 | C117=脉冲加热冷却2（流量） | G117=SystemMachine.SS_ME.M_AIR.PulseHeatCooling_2.FlowMeter.oValue
+B118=AI43 | C118=微晶玻璃冷却进气（流量） | G118=SystemMachine.SS_ME.M_AIR.GlassCoolingIn.FlowMeter.oValue
+B119=AI44 | C119=微晶玻璃冷却出气（流量） | G119=SystemMachine.SS_ME.M_AIR.GlassCoolingOut.FlowMeter.oValue
+B120=AI45 | C120=正压预留1（流量） | G120=SystemMachine.SS_ME.M_AIR.PosPressureReserve_1.FlowMeter.oValue
+B121=AI46 | C121=正压预留2（流量） | G121=SystemMachine.SS_ME.M_AIR.PosPressureReserve_2.FlowMeter.oValue
+B122=AI47 | C122=对准1相机气冷1（流量） | G122=SystemMachine.SS_ME.M_AIR.AS_CameraCooling_1.oValue
+B123=AI48 | C123=对准1相机气冷2（流量） | G123=SystemMachine.SS_ME.M_AIR.AS_CameraCooling_2.oValue
+A126=9 | B126=XB6-A80V | C126=说明（多个请说明具体方位） | D126=详细介绍 | E126=IO动作正常 | F126=PLC侧变量名定义 | G126=Cordis侧变量名定义(Observer) | I126=备注
+B127=AI49 | C127=对准1相机气冷3（流量） | G127=SystemMachine.SS_ME.M_AIR.AS_CameraCooling_3.oValue
+B128=AI50 | C128=对准1相机气冷4（流量） | G128=SystemMachine.SS_ME.M_AIR.AS_CameraCooling_4.oValue
+B129=AI51 | C129=翻转抽排（流量） | G129=SystemMachine.SS_ME.M_AIR.FA_Exhaust.oValue
+B130=AI52 | C130=抽排预留1（流量） | G130=SystemMachine.SS_ME.M_AIR.ExhaustReserve_1.oValue
+B131=AI53 | C131=抽排预留2（流量） | G131=SystemMachine.SS_ME.M_AIR.ExhaustReserve_2.oValue
+B132=AI54 | C132=氮气密封（流量） | G132=SystemMachine.SS_ME.M_AIR.N2Seal.FlowMeter.oValue
+B133=AI55 | C133=氮气预留1（流量） | G133=SystemMachine.SS_ME.M_AIR.N2Reserve_1.FlowMeter.oValue
+B134=AI56 | C134=氮气预留2（流量） | G134=SystemMachine.SS_ME.M_AIR.N2Reserve_2.FlowMeter.oValue
+
+########## sheet: 轴名定义 ##########
+A1=序号 | B1=轴所属区域 | D1=轴名称 | E1=Cordis/ACS侧名称 | H1=电机选型 | L1=运动相关参数 | U1=编码器&光栅尺选型 | Y1=驱动器选型
+C2=轴号 | F2=控制器名称 | G2=回零方式 | H2=电机型号 | I2=电机类型 | J2=电机品牌 | K2=抱闸 | L2=连续电流(A) | M2=实际最大电流(A) | N2=实际所需电压(V) | O2=实际所需功率(W) | P2=运动负载(Kg) | Q2=运动行程(mm) | R2=最大速度(m/s) | S2=最大加速度(m/s^2) | T2=最大加加速度(m/s^2) | U2=读数头型号 | V2=读数头品牌 | W2=光栅尺类型 | X2=光栅尺分辨率 | Y2=驱动器型号 | Z2=驱动器品牌 | AA2=控制电电压等级(V) | AB2=动力电电压等级(V) | AC2=IO信号
+B3=键合分系统
+A4=1 | B4=硅片台模块(WS) | C4=0 | D4=硅片台模块X轴1 | E4=WS_LS_X | F4=ACS | G4=18（正回零）
+A5=2 | D5=硅片台模块X轴2
+A6=3 | C6=2 | D6=硅片台模块Y轴1 | E6=WS_LS_Y | G6=18（正回零）
+A7=4 | D7=硅片台模块Y轴2
+A8=5 | C8=4 | D8=硅片台模块RZ1 | E8=WS_Rz | G8=18（正回零）
+A9=6 | D9=硅片台模块RZ2
+A10=7 | D10=硅片台模块Epin轴1 | E10=SystemMachine.SS_Bonding.M_WS.E_EPIN_Z
+（Epin有三轴但是只有Z向，PLC控制三个轴同步运动） | F10=PLC | G10=17（负回零）
+A11=8 | D11=硅片台模块Epin轴2
+A12=9 | D12=硅片台模块Epin轴3
+A14=1 | B14=键合模块(BS) | D14=键合臂模块Z | E14=SystemMachine.SS_Bonding.M_BS.Arm_Z | F14=PLC | G14=18（正回零）
+A15=2 | D15=键合模块校准工作台Rx | E15=SystemMachine.SS_Bonding.M_BS.E_CAL.Rx | G15=18（正回零）
+A16=3 | D16=键合模块校准工作台Ry | E16=SystemMachine.SS_Bonding.M_BS.E_CAL.Ry | G16=18（正回零）
+A18=1 | B18=对准模块(AS) | C18=6 | D18=对准模块X轴 | E18=AS_Y | F18=ACS | G18=18（正回零）
+A19=2 | C19=7 | D19=对准模块Y轴 | E19=AS_X | G19=18（正回零）
+A20=3 | C20=8 | D20=对准模块Z轴 | E20=AS_Z | G20=18（正回零）
+C21=10 | D21=蓝膜台模块顶针 | E21=ES_PunchZ | F21=ACS | G21=17（负回零）
+B23=芯片传输分系统
+A24=1 | B24=芯片传输(CH) | C24=9 | D24=翻转模块X轴 | E24=FA_X | F24=ACS | G24=18（正回零）
+A25=3 | D25=翻转模块RX | E25=SystemMachine.SS_CH.M_FA.Rx | F25=PLC | G25=18（正回零）
+A26=4 | D26=翻转模块Z | E26=SystemMachine.SS_CH.M_FA.Z | G26=18（正回零）
+A27=5 | D27=翻转模块RZ | E27=SystemMachine.SS_CH.M_CH.Rz | G27=18（正回零）
+B29=注：PLC中轴的Command和Observer同1920, ACS同理。
+
+########## sheet: 温控 ##########
+C3=键合头脉冲加热温控器
+C4=Cordis(Command) | D4=Cordis(Command) | E4=Cordis(Observer) | F4=Cordis(Observer)
+C5=开始加热 | D5=SystemMachine.PulseHeat_Up.SetTargetTempWithPlan(Real Steady_Time, Int16 Temperature) | E5=预热完成标志位（TRUE完成） | F5=SystemMachine.M_Heater.PulseHeat_Up.PreHeatFinish
+C6=停止加热 | D6=SystemMachine.PulseHeat_Up.StopTargetTempWithPlan | E6=再次预热剩余时间 | F6=SystemMachine.M_Heater.PulseHeat_Up.PreHeatTime
+C7=开始预热 | D7=SystemMachine.PulseHeat_Up.StartPreHeat | E7=当前温度 | F7=SystemMachine.M_Heater.PulseHeat_Up.oCurTemp
+C14=硅片台加热温控器
+C15=Cordis(Command) | D15=Cordis(Command) | E15=Cordis(Observer) | F15=Cordis(Observer)
+C16=开始加热 | D16=SystemMachine.Heat_Dw.SetTargetTempWithPlan(Real Steady_Time, Int16 Temperature) | E16=当前温度 | F16=SystemMachine.M_Heater.Heat_Dw.oCurTemp
+C17=停止加热 | D17=SystemMachine.Heat_Dw.StopTargetTempWithPlan
+
+########## sheet: 蓝膜台翻转及加压 ##########
+C4=蓝膜台控制(类似于3000)
+C5=Cordis(Command) | D5=Cordis(Command) | E5=Cordis(Observer) | F5=Cordis(Observer)
+C6=开始 | D6=SystemMachine.SS_Bonding.M_ES.ES_Start | E6=X轴当前位置 | F6=SystemMachine.SS_Bonding.M_ES.oX_CurrentPos
+C7=停止 | D7=SystemMachine.SS_Bonding.M_ES.ES_Stop | E7=Y轴当前位置 | F7=SystemMachine.SS_Bonding.M_ES.oY_CurrentPos
+C8=重置 | D8=SystemMachine.SS_Bonding.M_ES.ES_Reset | E8=Rz轴当前位置 | F8=SystemMachine.SS_Bonding.M_ES.oRz_CurentPos
+C9=紧急停止 | D9=SystemMachine.SS_Bonding.M_ES.ES_EmergencyStop
+C10=一键退片 | D10=SystemMachine.SS_Bonding.M_ES.ES_GvieBackDie
+C11=移动至下一芯片 | D11=SystemMachine.SS_Bonding.M_ES.ES_MoveToNextChip
+C14=翻转
+C15=Cordis(Command) | D15=Cordis(Command) | E15=Cordis(Observer) | F15=Cordis(Observer)
+C16=设置运行buffer号 | D16=SystemMachine.M_ACS_Buffer.SetBufferNumber(Int16 BufferNumber) | E16=是否正在运行buffer | F16=SystemMachine.M_ACS_Buffer.oBufferDo
+C17=停止buffer | D17=SystemMachine.M_ACS_Buffer.StopBuffer | E17=正在运行的buffer号 | F17=SystemMachine.M_ACS_Buffer.oBufferNum
+C18=运行buffer | D18=SystemMachine.M_ACS_Buffer.RunBuffer
+C19=暂停buffer | D19=SystemMachine.M_ACS_Buffer.ResumeBuffer
+D22=注：蓝膜台外包，只有这几个接口，翻转交接芯片逻辑流程写在buffer里，plc调用buffer执行交接流程。
+D24=加压沿用1920模块，没有区别，以下是命令举例：
+D25=Cordis(Command) | E25=Cordis(Observer)
+D26=SystemMachine.SS_Bonding.M_BS.BondingByForceManual(Real Force, Real Speed) | E26=SystemMachine.SS_Bonding.M_BS.oActualForce

@@ -1,0 +1,539 @@
+{
+ "_note": "组件级热仿真参数（thermal.py 加载，启动校验+构建预检）。groups=组件子树根→热节点归并表（组件向上找首个已登记祖先）；links=邻接导热（G=kc·λA/L，kc 接触系数工程估值，l_mm/a_mm2 可选覆盖）；conv=对流（h W/m²K，area_factor 表面积折算）；heaters=加热器功率源+锚定（rated_w 额定 W、anchor_w_per_k 大电导锚定 heater.cur，温控环零改动）；motors=轴组电机损耗（P_fl 满载 W，活动度 0.65(v/vmax)²+0.35(a/amax)²，lp_tau_s 低通）；electronics=机架电子件恒定功率虚拟节点；env=环境（base_c 默认 25℃=加热器环境/机器冷态基准（冷态自洽，结构节点 ΔT≈0），波动档 off/fine/typical/coarse/custom 正弦 period_s，random_walk 可选；deform_ref_c=热变形 ΔT 基准）；deform_map=热变形 6DOF 映射（nodes 均值源+pair 温差弯曲+scale_axes ppm+expand 膨胀）；开关 enabled 是运行时内存态（POST /api/thermal），不写入本文件。全部 CTE/接触系数/额定功率为工程估值，待真机热态实测标定。",
+ "groups": {
+  "granite_low": {
+   "label": "花岗岩基座-下",
+   "members": [
+    "machine_mssjivym_9mhbzz"
+   ]
+  },
+  "granite_up": {
+   "label": "花岗岩基座-上",
+   "members": [
+    "box_mssjmmim_1tklq3"
+   ]
+  },
+  "wafer_xy_stage": {
+   "label": "硅片台XY导轨",
+   "members": [
+    "group_msske7sa_02k07b"
+   ]
+  },
+  "wafer_fine_stage": {
+   "label": "硅片台微动基座",
+   "members": [
+    "box_mssl7mh8_x6ugcu"
+   ]
+  },
+  "wafer_chuck": {
+   "label": "晶圆吸盘（Heat_Dw 锚定）",
+   "members": [
+    "wafer_chuck_msslygtz_gaeah4"
+   ]
+  },
+  "air_bearing": {
+   "label": "气浮台",
+   "members": [
+    "cylinder_mssmg2rx_jsjzxg"
+   ]
+  },
+  "tray": {
+   "label": "Tray盘座",
+   "members": [
+    "box_mssnz9ya_pdnd24"
+   ]
+  },
+  "bond_beam_a": {
+   "label": "键合臂横梁",
+   "members": [
+    "box_mssolgz4_yl7vre"
+   ]
+  },
+  "bond_beam_b": {
+   "label": "键合臂平台架",
+   "members": [
+    "box_mssoxg8g_bnpy7g",
+    "mechanicalobject_mssp0h0p_vvd7df"
+   ]
+  },
+  "bond_arm": {
+   "label": "键合臂模块",
+   "members": [
+    "group_msspk4l6_8kpu9x"
+   ]
+  },
+  "bond_head": {
+   "label": "键合头（PulseHeat_Up 锚定）",
+   "members": [
+    "box_mssriiqy_ihe0nb"
+   ]
+  },
+  "align_stage": {
+   "label": "对准台体",
+   "members": [
+    "group_msssqnbg_cvi3bv"
+   ]
+  },
+  "align_optics": {
+   "label": "对准相机承载台",
+   "members": [
+    "box_mssty4oj_u3pj08"
+   ]
+  },
+  "flip_arm": {
+   "label": "翻转臂",
+   "members": [
+    "group_mswkixk3_w71c02"
+   ]
+  },
+  "flip_frame": {
+   "label": "翻转模块基座",
+   "members": [
+    "box_mswm5i05_kjqr7e",
+    "box_mswm7jly_sqnw3l"
+   ]
+  },
+  "die_chuck": {
+   "label": "芯片吸盘",
+   "members": [
+    "box_mswlxr6w_tkxtwz"
+   ]
+  },
+  "coarse_cam": {
+   "label": "粗对准相机",
+   "members": [
+    "coarsecam_0001"
+   ]
+  },
+  "film_frame": {
+   "label": "蓝膜台框架",
+   "members": [
+    "box_mswmqsvb_c7q1z6"
+   ]
+  },
+  "film_stage": {
+   "label": "蓝膜台滑台",
+   "members": [
+    "filmstage_x_0001"
+   ]
+  },
+  "base_frame": {
+   "label": "铸铁底座",
+   "members": [
+    "baseframe_0001"
+   ]
+  }
+ },
+ "links": [
+  {
+   "a": "granite_low",
+   "b": "granite_up",
+   "kc": 0.5
+  },
+  {
+   "a": "granite_low",
+   "b": "base_frame",
+   "kc": 0.5
+  },
+  {
+   "a": "granite_up",
+   "b": "wafer_xy_stage",
+   "kc": 0.3
+  },
+  {
+   "a": "granite_up",
+   "b": "bond_beam_a",
+   "kc": 0.3
+  },
+  {
+   "a": "granite_up",
+   "b": "align_stage",
+   "kc": 0.3
+  },
+  {
+   "a": "granite_up",
+   "b": "flip_frame",
+   "kc": 0.3
+  },
+  {
+   "a": "granite_up",
+   "b": "film_frame",
+   "kc": 0.3
+  },
+  {
+   "a": "wafer_xy_stage",
+   "b": "wafer_fine_stage",
+   "kc": 0.3
+  },
+  {
+   "a": "wafer_fine_stage",
+   "b": "air_bearing",
+   "kc": 0.3
+  },
+  {
+   "a": "air_bearing",
+   "b": "wafer_chuck",
+   "kc": 0.3
+  },
+  {
+   "a": "wafer_fine_stage",
+   "b": "tray",
+   "kc": 0.3
+  },
+  {
+   "a": "bond_beam_a",
+   "b": "bond_beam_b",
+   "kc": 0.3
+  },
+  {
+   "a": "bond_beam_b",
+   "b": "bond_arm",
+   "kc": 0.3
+  },
+  {
+   "a": "bond_arm",
+   "b": "bond_head",
+   "kc": 0.3
+  },
+  {
+   "a": "align_stage",
+   "b": "align_optics",
+   "kc": 0.3
+  },
+  {
+   "a": "flip_frame",
+   "b": "flip_arm",
+   "kc": 0.3
+  },
+  {
+   "a": "flip_arm",
+   "b": "die_chuck",
+   "kc": 0.3
+  },
+  {
+   "a": "flip_arm",
+   "b": "coarse_cam",
+   "kc": 0.3
+  },
+  {
+   "a": "film_frame",
+   "b": "film_stage",
+   "kc": 0.3
+  },
+  {
+   "a": "base_frame",
+   "b": "electronics",
+   "kc": 0.3
+  }
+ ],
+ "conv": {
+  "h_w_m2k": 5.0,
+  "area_factor": 0.7
+ },
+ "heaters": {
+  "PulseHeat_Up": {
+   "node": "bond_head",
+   "rated_w": 300.0,
+   "anchor_w_per_k": 300.0
+  },
+  "Heat_Dw": {
+   "node": "wafer_chuck",
+   "rated_w": 500.0,
+   "anchor_w_per_k": 2000.0
+  }
+ },
+ "motors": {
+  "lp_tau_s": 30.0,
+  "groups": {
+   "wafer_stage": {
+    "node": "wafer_xy_stage",
+    "p_full_w": 40.0,
+    "axes": [
+     "WS_LS_X",
+     "WS_LS_Y",
+     "WS_Rz",
+     "E_EPIN_Z_1",
+     "E_EPIN_Z_2",
+     "E_EPIN_Z_3"
+    ]
+   },
+   "align_stage": {
+    "node": "align_stage",
+    "p_full_w": 20.0,
+    "axes": [
+     "AS_X",
+     "AS_Y",
+     "AS_Z",
+     "AS_Rx",
+     "AS_Ry"
+    ]
+   },
+   "bond_arm": {
+    "node": "bond_arm",
+    "p_full_w": 15.0,
+    "axes": [
+     "BS_Arm_Z",
+     "BS_CAL_Rx",
+     "BS_CAL_Ry"
+    ]
+   },
+   "flip": {
+    "node": "flip_arm",
+    "p_full_w": 20.0,
+    "axes": [
+     "FA_X",
+     "FA_Z",
+     "FA_Rx",
+     "CH_Rz"
+    ]
+   },
+   "film_stage": {
+    "node": "film_stage",
+    "p_full_w": 15.0,
+    "axes": [
+     "ES_X",
+     "ES_Y",
+     "ES_PunchZ"
+    ]
+   }
+  }
+ },
+ "electronics": {
+  "node": "electronics",
+  "label": "机架电子件",
+  "const_w": 100.0,
+  "mass_kg": 30.0,
+  "material": "ss_304",
+  "area_m2": 1.5
+ },
+ "env": {
+  "base_c": 25.0,
+  "wave": "typical",
+  "custom_amp_c": 0.1,
+  "period_s": 600.0,
+  "random_walk": false,
+  "deform_ref_c": 25.0
+ },
+ "deform_map": {
+  "granite_pair": {
+   "enable": true,
+   "nodes": [
+    "granite_low",
+    "granite_up"
+   ],
+   "scale_axes": {
+    "WS_LS_X": 1.0,
+    "WS_LS_Y": 1.0
+   },
+   "module": "wafer_stage",
+   "expand_dir": [
+    0.5,
+    0.5,
+    0.0
+   ],
+   "expand_len_mm": 300.0,
+   "pair": [
+    "granite_low",
+    "granite_up"
+   ],
+   "bend_axis": [
+    1.0,
+    0.0,
+    0.0
+   ],
+   "bend_len_mm": 1000.0,
+   "bend_h_mm": 285.0,
+   "bend_trans_dir": [
+    0.0,
+    0.0,
+    1.0
+   ],
+   "bend_lever_mm": 300.0
+  },
+  "chuck_die_pitch": {
+   "enable": true,
+   "nodes": [
+    "wafer_chuck"
+   ],
+   "scale_axes": {
+    "WS_LS_X": 1.0,
+    "WS_LS_Y": 1.0
+   }
+  },
+  "beam_to_head": {
+   "enable": true,
+   "nodes": [
+    "bond_beam_a",
+    "bond_beam_b"
+   ],
+   "module": "bond_head",
+   "expand_dir": [
+    1.0,
+    0.0,
+    0.0
+   ],
+   "expand_len_mm": 800.0,
+   "pair": [
+    "bond_beam_a",
+    "bond_beam_b"
+   ],
+   "bend_axis": [
+    0.0,
+    1.0,
+    0.0
+   ],
+   "bend_len_mm": 800.0,
+   "bend_h_mm": 500.0,
+   "bend_trans_dir": [
+    0.0,
+    0.0,
+    1.0
+   ],
+   "bend_lever_mm": 400.0
+  },
+  "head_z_growth": {
+   "enable": true,
+   "nodes": [
+    "bond_head"
+   ],
+   "module": "bond_head",
+   "expand_dir": [
+    0.0,
+    0.0,
+    -1.0
+   ],
+   "expand_len_mm": 150.0
+  },
+  "align_optics_drift": {
+   "enable": true,
+   "nodes": [
+    "align_optics"
+   ],
+   "module": "align_stage",
+   "expand_dir": [
+    1.0,
+    0.0,
+    0.0
+   ],
+   "expand_len_mm": 100.0
+  },
+  "chuck_z_growth": {
+   "enable": true,
+   "nodes": [
+    "wafer_chuck"
+   ],
+   "module": "wafer_stage",
+   "expand_dir": [
+    0.0,
+    0.0,
+    1.0
+   ],
+   "expand_len_mm": 30.0
+  }
+ },
+ "rad_links": [
+  {
+   "a": "bond_head",
+   "b": "align_optics",
+   "enable": true,
+   "note": "键合头→上（对准）相机：头压到相机上方时辐射加热相机承载台",
+   "eps_a": 0.8,
+   "eps_b": 0.9,
+   "area_mm2": 2000.0,
+   "f_max": 0.4,
+   "r_eff_mm": 25.0,
+   "gap_axis": {
+    "name": "BS_Arm_Z",
+    "pos_ref_mm": -119.83,
+    "dir": 1.0
+   },
+   "gap0_mm": 10.0,
+   "gap_min_mm": 1.0,
+   "lat_axes": [
+    {
+     "name": "AS_X",
+     "ref_mm": 0.0
+    },
+    {
+     "name": "AS_Y",
+     "ref_mm": 6.0
+    }
+   ]
+  },
+  {
+   "a": "wafer_chuck",
+   "b": "align_optics",
+   "enable": true,
+   "note": "热吸盘→下（对准）相机：吸盘行至下相机下方时辐射（间隙恒定）",
+   "eps_a": 0.8,
+   "eps_b": 0.9,
+   "area_mm2": 2000.0,
+   "f_max": 0.4,
+   "r_eff_mm": 60.0,
+   "gap0_mm": 13.0,
+   "gap_min_mm": 1.0,
+   "lat_axes": [
+    {
+     "name": "WS_LS_X",
+     "ref_mm": -42.394
+    },
+    {
+     "name": "WS_LS_Y",
+     "ref_mm": 7.0
+    }
+   ]
+  },
+  {
+   "a": "bond_head",
+   "b": "wafer_chuck",
+   "enable": true,
+   "note": "键合头→晶圆吸盘：键合接近/接触期辐射加热晶圆与 die",
+   "eps_a": 0.8,
+   "eps_b": 0.9,
+   "area_mm2": 2000.0,
+   "f_max": 0.5,
+   "r_eff_mm": 25.0,
+   "gap_axis": {
+    "name": "BS_Arm_Z",
+    "pos_ref_mm": -168.93,
+    "dir": 1.0
+   },
+   "gap0_mm": 0.5,
+   "gap_min_mm": 0.2,
+   "lat_axes": [
+    {
+     "name": "WS_LS_X",
+     "ref_mm": -42.394
+    },
+    {
+     "name": "WS_LS_Y",
+     "ref_mm": 7.0
+    }
+   ]
+  },
+  {
+   "a": "bond_head",
+   "b": "die_chuck",
+   "enable": true,
+   "note": "键合头→flip 芯片吸盘：交接位辐射（FA_X 对齐时视角最大）",
+   "eps_a": 0.8,
+   "eps_b": 0.9,
+   "area_mm2": 800.0,
+   "f_max": 0.4,
+   "r_eff_mm": 15.0,
+   "gap_axis": {
+    "name": "BS_Arm_Z",
+    "pos_ref_mm": -51.43,
+    "dir": 1.0
+   },
+   "gap0_mm": 1.0,
+   "gap_min_mm": 0.2,
+   "lat_axes": [
+    {
+     "name": "FA_X",
+     "ref_mm": -1242.35
+    }
+   ]
+  }
+ ]
+}

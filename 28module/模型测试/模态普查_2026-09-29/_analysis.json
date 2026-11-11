@@ -1,0 +1,502 @@
+{
+ "floor_rms_um": "typical",
+ "floor_baseline_modes_um": {
+  "granite_sway_x": 0.24150993103448276,
+  "granite_sway_y": 0.23215402298850574,
+  "gantry_yaw": 0.3284619425287357,
+  "gantry_sway_y": 0.1966084827586207,
+  "head_z_bounce": 0.09453131034482759,
+  "align_bridge": 0.11931221839080464,
+  "frame_film": 0.10178093103448277,
+  "wafer_stage_rock": 0.17397526436781613,
+  "flip_arm_sway": 0.10033139080459769
+ },
+ "axes": {
+  "WS_LS_X": {
+   "fn": 45.0,
+   "zeta": 0.05,
+   "rotary": false,
+   "chain_rms": 21.147392523364488,
+   "chain_peak": 916.441,
+   "jog_peak": 747.5920000000001
+  },
+  "WS_LS_Y": {
+   "fn": 45.0,
+   "zeta": 0.05,
+   "rotary": false,
+   "chain_rms": 14.35359579439253,
+   "chain_peak": 2559.97,
+   "jog_peak": 1773.12
+  },
+  "WS_Rz": {
+   "fn": 70.0,
+   "zeta": 0.08,
+   "rotary": true,
+   "chain_rms": 7.009345794392523e-05,
+   "chain_peak": 0.004,
+   "jog_peak": 0.45499999999999996
+  },
+  "E_EPIN_Z_1": {
+   "fn": 20.0,
+   "zeta": 0.07,
+   "rotary": false,
+   "chain_rms": 0.0,
+   "chain_peak": 0.0,
+   "jog_peak": 402.536
+  },
+  "E_EPIN_Z_2": {
+   "fn": 20.0,
+   "zeta": 0.07,
+   "rotary": false,
+   "chain_rms": 0.0,
+   "chain_peak": 0.0,
+   "jog_peak": 471.818
+  },
+  "E_EPIN_Z_3": {
+   "fn": 20.0,
+   "zeta": 0.07,
+   "rotary": false,
+   "chain_rms": 0.0,
+   "chain_peak": 0.0,
+   "jog_peak": 375.12
+  },
+  "BS_Arm_Z": {
+   "fn": 95.0,
+   "zeta": 0.08,
+   "rotary": false,
+   "chain_rms": 7.712822429906543,
+   "chain_peak": 466.039,
+   "jog_peak": 2.3819999999999997
+  },
+  "BS_CAL_Rx": {
+   "fn": 110.0,
+   "zeta": 0.08,
+   "rotary": true,
+   "chain_rms": 6.074766355140188e-05,
+   "chain_peak": 0.0,
+   "jog_peak": 0.111
+  },
+  "BS_CAL_Ry": {
+   "fn": 110.0,
+   "zeta": 0.08,
+   "rotary": true,
+   "chain_rms": 0.00015186915887850465,
+   "chain_peak": 0.006,
+   "jog_peak": 0.09699999999999999
+  },
+  "AS_X": {
+   "fn": 65.0,
+   "zeta": 0.06,
+   "rotary": false,
+   "chain_rms": 57.841035046728976,
+   "chain_peak": 708.841,
+   "jog_peak": 152.662
+  },
+  "AS_Y": {
+   "fn": 65.0,
+   "zeta": 0.06,
+   "rotary": false,
+   "chain_rms": 124.32380373831776,
+   "chain_peak": 1031.114,
+   "jog_peak": 818.384
+  },
+  "AS_Z": {
+   "fn": 90.0,
+   "zeta": 0.08,
+   "rotary": false,
+   "chain_rms": 0.009390186915887848,
+   "chain_peak": 0.053,
+   "jog_peak": 83.04
+  },
+  "AS_Rx": {
+   "fn": 85.0,
+   "zeta": 0.08,
+   "rotary": true,
+   "chain_rms": 0.0,
+   "chain_peak": 0.0,
+   "jog_peak": 0.09
+  },
+  "AS_Ry": {
+   "fn": 85.0,
+   "zeta": 0.08,
+   "rotary": true,
+   "chain_rms": 0.0,
+   "chain_peak": 0.0,
+   "jog_peak": 0.23900000000000002
+  },
+  "FA_X": {
+   "fn": 40.0,
+   "zeta": 0.05,
+   "rotary": false,
+   "chain_rms": 0.0,
+   "chain_peak": 0.0,
+   "jog_peak": 31.447
+  },
+  "FA_Z": {
+   "fn": 80.0,
+   "zeta": 0.08,
+   "rotary": false,
+   "chain_rms": 0.0,
+   "chain_peak": 0.0,
+   "jog_peak": 90.038
+  },
+  "FA_Rx": {
+   "fn": 25.0,
+   "zeta": 0.06,
+   "rotary": true,
+   "chain_rms": 0.0,
+   "chain_peak": 0.0,
+   "jog_peak": 4.3950000000000005
+  },
+  "CH_Rz": {
+   "fn": 60.0,
+   "zeta": 0.08,
+   "rotary": true,
+   "chain_rms": 0.0,
+   "chain_peak": 0.0,
+   "jog_peak": 0.9309999999999999
+  },
+  "ES_X": {
+   "fn": 30.0,
+   "zeta": 0.06,
+   "rotary": false,
+   "chain_rms": 0.0,
+   "chain_peak": 0.0,
+   "jog_peak": 2008.2189999999998
+  },
+  "ES_Y": {
+   "fn": 30.0,
+   "zeta": 0.06,
+   "rotary": false,
+   "chain_rms": 0.0,
+   "chain_peak": 0.0,
+   "jog_peak": 2184.124
+  },
+  "ES_PunchZ": {
+   "fn": 85.0,
+   "zeta": 0.08,
+   "rotary": false,
+   "chain_rms": 0.0,
+   "chain_peak": 0.0,
+   "jog_peak": 8.854000000000001
+  }
+ },
+ "modes": {
+  "granite_sway_x": {
+   "fn": 36.0,
+   "zeta": 0.04,
+   "chain_rms_um": 0.11532332710280374,
+   "chain_peak_um": 0.965403,
+   "floor_rms_um": 0.24150993103448276,
+   "dom_phase": "focus_level",
+   "inputs": {
+    "WS_LS_X": 0.03,
+    "FA_X": 0.015
+   },
+   "contact": false,
+   "outputs": {
+    "wafer_stage": [
+     1.0,
+     0,
+     0,
+     0,
+     0,
+     2e-06
+    ],
+    "align_stage": [
+     0.7,
+     0,
+     0,
+     0,
+     0,
+     1e-06
+    ],
+    "bond_head": [
+     0.9,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "flip": [
+     0.5,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   }
+  },
+  "granite_sway_y": {
+   "fn": 38.0,
+   "zeta": 0.04,
+   "chain_rms_um": 0.10439199999999997,
+   "chain_peak_um": 2.278146,
+   "floor_rms_um": 0.23215402298850574,
+   "dom_phase": "focus_level",
+   "inputs": {
+    "WS_LS_Y": 0.03
+   },
+   "contact": false,
+   "outputs": {
+    "wafer_stage": [
+     0,
+     1.0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "align_stage": [
+     0,
+     0.6,
+     0,
+     0,
+     0,
+     0
+    ],
+    "bond_head": [
+     0,
+     0.8,
+     0,
+     0,
+     0,
+     0
+    ]
+   }
+  },
+  "gantry_yaw": {
+   "fn": 27.0,
+   "zeta": 0.05,
+   "chain_rms_um": 0.11539448364485984,
+   "chain_peak_um": 1.335864,
+   "floor_rms_um": 0.3284619425287357,
+   "dom_phase": "focus_level",
+   "inputs": {
+    "WS_LS_X": 0.02,
+    "WS_LS_Y": -0.01
+   },
+   "contact": false,
+   "outputs": {
+    "wafer_stage": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     1e-06
+    ],
+    "align_stage": [
+     0.3,
+     0,
+     0,
+     0,
+     0,
+     8e-07
+    ],
+    "bond_head": [
+     0.4,
+     0,
+     0,
+     0,
+     0,
+     6e-07
+    ]
+   }
+  },
+  "gantry_sway_y": {
+   "fn": 31.0,
+   "zeta": 0.05,
+   "chain_rms_um": 0.10628233177570093,
+   "chain_peak_um": 1.5774759999999999,
+   "floor_rms_um": 0.1966084827586207,
+   "dom_phase": "focus_level",
+   "inputs": {
+    "FA_X": 0.025,
+    "WS_LS_Y": 0.015
+   },
+   "contact": false,
+   "outputs": {
+    "bond_head": [
+     0,
+     1.0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "flip": [
+     0,
+     0.8,
+     0,
+     0,
+     0,
+     0
+    ],
+    "wafer_stage": [
+     0,
+     0.4,
+     0,
+     0,
+     0,
+     0
+    ]
+   }
+  },
+  "head_z_bounce": {
+   "fn": 58.0,
+   "zeta": 0.06,
+   "chain_rms_um": 0.11341735514018696,
+   "chain_peak_um": 1.267472,
+   "floor_rms_um": 0.09453131034482759,
+   "dom_phase": "",
+   "inputs": {
+    "BS_Arm_Z": 0.05
+   },
+   "contact": true,
+   "outputs": {
+    "bond_head": [
+     0,
+     0,
+     1.0,
+     1e-06,
+     0,
+     0
+    ],
+    "wafer_stage": [
+     0,
+     0,
+     0.3,
+     0,
+     0,
+     0
+    ]
+   }
+  },
+  "align_bridge": {
+   "fn": 52.0,
+   "zeta": 0.05,
+   "chain_rms_um": 0.24398354672897213,
+   "chain_peak_um": 1.2746929999999999,
+   "floor_rms_um": 0.11931221839080464,
+   "dom_phase": "focus_level",
+   "inputs": {
+    "AS_X": 0.04,
+    "AS_Y": 0.04
+   },
+   "contact": false,
+   "outputs": {
+    "align_stage": [
+     0.8,
+     0.8,
+     0,
+     0,
+     0,
+     2e-06
+    ],
+    "bond_head": [
+     0.3,
+     0.3,
+     0,
+     0,
+     0,
+     0
+    ]
+   }
+  },
+  "frame_film": {
+   "fn": 18.0,
+   "zeta": 0.06,
+   "chain_rms_um": 0.09928732476635514,
+   "chain_peak_um": 0.415337,
+   "floor_rms_um": 0.10178093103448277,
+   "dom_phase": "__settle__",
+   "inputs": {
+    "ES_X": 0.01,
+    "ES_Y": 0.01
+   },
+   "contact": false,
+   "outputs": {
+    "film_stage": [
+     1.0,
+     1.0,
+     0,
+     0,
+     0,
+     0
+    ]
+   }
+  },
+  "wafer_stage_rock": {
+   "fn": 44.0,
+   "zeta": 0.05,
+   "chain_rms_um": 0.10421468224299059,
+   "chain_peak_um": 1.0498619999999999,
+   "floor_rms_um": 0.17397526436781613,
+   "dom_phase": "focus_level",
+   "inputs": {
+    "WS_LS_X": 0.015,
+    "WS_LS_Y": 0.015
+   },
+   "contact": true,
+   "outputs": {
+    "wafer_stage": [
+     0,
+     0,
+     0.5,
+     2e-06,
+     2e-06,
+     0
+    ]
+   }
+  },
+  "flip_arm_sway": {
+   "fn": 22.0,
+   "zeta": 0.06,
+   "chain_rms_um": 0.0997227406542056,
+   "chain_peak_um": 0.42271600000000004,
+   "floor_rms_um": 0.10033139080459769,
+   "dom_phase": "__settle__",
+   "inputs": {
+    "FA_Rx": 0.005,
+    "FA_X": 0.01,
+    "FA_Z": 0.005
+   },
+   "contact": false,
+   "outputs": {
+    "flip": [
+     0.6,
+     0.6,
+     0.4,
+     0,
+     0,
+     3e-06
+    ]
+   }
+  }
+ },
+ "fft_rows": [
+  [
+   "axis:WS_LS_X",
+   45.0,
+   6.5
+  ],
+  [
+   "mode:granite_sway_x",
+   36.0,
+   36.25
+  ],
+  [
+   "mode:head_z_bounce",
+   58.0,
+   54.875
+  ],
+  [
+   "axis:WS_LS_X",
+   45.0,
+   5.0
+  ]
+ ]
+}

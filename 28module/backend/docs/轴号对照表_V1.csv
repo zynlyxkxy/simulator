@@ -1,0 +1,22 @@
+﻿模块,轴名,控制器,ACS轴号,类型,单位,行程min,行程max,默认速度,回零类型,回零buffer,前端轴id,点位表路径,依据来源,状态
+WS,WS_LS_X,ACS,0（双驱0+1）,直线,mm,-220,220,600,18 正回零（gantry_dual）,18,axis_mssl5svn_ols740,M_WS / ACS名 WS_LS_X,axes_config.py；数据协议§3；config1；点位表；前端json；轴记录表:-162~280(D1),待确认
+WS,WS_LS_Y,ACS,2（双驱2+3）,直线,mm,-220,220,600,18 正回零（gantry_dual）,18,axis_msslggo6_6d6mzm,M_WS / ACS名 WS_LS_Y,axes_config.py；数据协议§3；config1；点位表；前端json；轴记录表:-162~280(D1),待确认
+WS,WS_Rz,ACS,4（双驱4+5）,旋转,rad,-0.0174533,0.0174533,1.5707963,18 正回零（gantry_dual）,18,axis_msslrthn_qbthvp,M_WS / ACS名 WS_Rz,axes_config.py；数据协议§3；config1；点位表；前端json(±1°)；轴记录表:±0.005rad(D1),待确认
+WS,E_EPIN_Z_1,PLC,—（PLC轴不过ACS）,直线,mm,0,30,25,17 负回零（plc_sync_trio）,—（PLC无buffer）,axis_epin1_z_0001,SystemMachine.SS_Bonding.M_WS.E_EPIN_Z（三轴同步）,axes_config.py；数据协议§3；config1/plc；点位表；前端json；轴记录表:±2mm(D3),待确认
+WS,E_EPIN_Z_2,PLC,—（PLC轴不过ACS）,直线,mm,0,30,25,17 负回零（plc_sync_trio）,—（PLC无buffer）,axis_epin2_z_0001,SystemMachine.SS_Bonding.M_WS.E_EPIN_Z（三轴同步）,同 E_EPIN_Z_1,待确认
+WS,E_EPIN_Z_3,PLC,—（PLC轴不过ACS）,直线,mm,0,30,25,17 负回零（plc_sync_trio）,—（PLC无buffer）,axis_epin3_z_0001,SystemMachine.SS_Bonding.M_WS.E_EPIN_Z（三轴同步）,同 E_EPIN_Z_1,待确认
+BS,BS_Arm_Z,PLC,—（PLC轴不过ACS）,直线,mm,-190,0,200,18 正回零,—（PLC无buffer）,axis_mssq9yhm_gmwadb,SystemMachine.SS_Bonding.M_BS.Arm_Z,axes_config.py；数据协议§3；config2/plc；点位表；前端json；轴记录表:≤-150mm（接近，接口规范未列差异）,已对齐
+BS,BS_CAL_Rx,PLC,—（PLC轴不过ACS）,旋转,rad,-0.00174533,0.00174533,1.5707963,18 正回零（zero_sensor）,—（PLC无buffer）,axis_mssrgvw5_7ds4bo,SystemMachine.SS_Bonding.M_BS.E_CAL.Rx,axes_config.py；数据协议§3；config2/plc；点位表；前端json(±0.1°),已对齐
+BS,BS_CAL_Ry,PLC,—（PLC轴不过ACS）,旋转,rad,-0.00174533,0.00174533,1.5707963,18 正回零（zero_sensor）,—（PLC无buffer）,axis_mssrheu1_cfw18w,SystemMachine.SS_Bonding.M_BS.E_CAL.Ry,axes_config.py；数据协议§3；config2/plc；点位表；前端json(±0.1°),已对齐
+AS,AS_X,ACS,6（点位表+config3；注意D2命名交叉）,直线,mm,-30,80,600,18 正回零,18（config3，待上位机对账）,axis_msst4og7_eby5r6,"ACS名 AS_X（点位表将其标为""对准模块Y轴""轴号7，D2）",axes_config.py；数据协议§3；config3；点位表；前端json,待确认
+AS,AS_Y,ACS,7（点位表+config3；注意D2命名交叉）,直线,mm,-30,120,500,18 正回零,18（config3，待上位机对账）,axis_msstd5bj_poz6p6,"ACS名 AS_Y（点位表将其标为""对准模块X轴""轴号6，D2）",axes_config.py；数据协议§3；config3；点位表；前端json,待确认
+AS,AS_Z,ACS,8（点位表+config3）,直线,mm,-2,6,500,18 正回零,18（config3，待上位机对账）,axis_alignz_0001（仿真侧占位，前端模型原无此轴，D5）,"ACS名 AS_Z（点位表""对准模块Z轴""轴号8）",axes_config.py；数据协议§3；config3；点位表,待确认
+AS,AS_Rx,ACS,待整理（点位表未列轴号，D4）,旋转,rad,-0.00174533,0.00174533,1.5707963,18 正回零,—,axis_mssu8pry_ijkgc7,—（点位表轴名定义未列，D4）,axes_config.py；数据协议§3；前端json(±0.1°),待确认
+AS,AS_Ry,ACS,待整理（点位表未列轴号，D4）,旋转,rad,-0.00174533,0.00174533,1.5707963,18 正回零,—,axis_mssu8zgl_vi1rbv,—（点位表轴名定义未列，D4）,axes_config.py；数据协议§3；前端json(±0.1°),待确认
+CH,FA_X,ACS,9（点位表+config4）,直线,mm,-1250,0,600,18 正回零,18（config4，待上位机对账）,axis_mswkylsp_nmcvcb,"ACS名 FA_X（点位表""翻转模块X轴""轴号9）",axes_config.py；数据协议§3；config4；点位表；前端json,待确认
+CH,FA_Z,PLC,—（PLC轴不过ACS）,直线,mm,-40,40,600,18 正回零,—（PLC无buffer）,axis_mswlez0m_3z4lwg,SystemMachine.SS_CH.M_FA.Z,axes_config.py；数据协议§3；config4/plc；点位表；前端json,已对齐
+CH,FA_Rx,PLC,—（PLC轴不过ACS）,旋转,rad,-3.1415927,3.1415927,1.5707963,18 正回零,—（PLC无buffer）,axis_mswlx2e6_v4wbj4,SystemMachine.SS_CH.M_FA.Rx,axes_config.py；数据协议§3；config4/plc；点位表；前端json(±180°),已对齐
+CH,CH_Rz,PLC,—（PLC轴不过ACS）,旋转,rad,-3.1415927,3.1415927,1.5707963,18 正回零,—（PLC无buffer）,axis_mswlzliz_t1ybur,SystemMachine.SS_CH.M_CH.Rz,axes_config.py；数据协议§3；config4/plc(FA_Rz.json)；点位表；前端json(±180°),已对齐
+ES,ES_X,PLC(外包),—（外包模块高层命令，D6）,直线,mm,-285,85,600,17 负回零（vendor_es 外包模块，占位）,—（外包模块）,axis_filmstage_x_0001,SystemMachine.SS_Bonding.M_ES（观测 oX_CurrentPos，命令集 ES_Start 等，D6）,axes_config.py；数据协议§3；点位表；前端json,已对齐
+ES,ES_Y,PLC(外包),—（外包模块高层命令，D6）,直线,mm,-175,195,600,17 负回零（vendor_es 外包模块，占位）,—（外包模块）,axis_filmstage_y_0001,SystemMachine.SS_Bonding.M_ES（观测 oY_CurrentPos，D6）,axes_config.py；数据协议§3；点位表；前端json,已对齐
+ES,ES_PunchZ,ACS,10（点位表+config3）,直线,mm,0,5,10,17 负回零,17（config3，待上位机对账）,axis_filmpin_z_0001,"ACS名 ES_PunchZ（点位表""蓝膜台模块顶针""轴号10）",axes_config.py；数据协议§3；config3；点位表；前端json,待确认

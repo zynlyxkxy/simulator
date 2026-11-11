@@ -1,0 +1,2283 @@
+{
+ "schema_version": 1,
+ "dataset_id": "d2w-1928-all-axes-synthetic-v1",
+ "source_type": "synthetic_engineering_representative",
+ "measured_data": false,
+ "warning": "仿真与接口验证数据，不得作为实机标定或验收结论。",
+ "coordinate_frame": "axis_parent_component_frame",
+ "sign_convention": "actual_minus_nominal",
+ "interpolation": "piecewise_linear_inside_coverage",
+ "outside_coverage": "ideal_zero_unmeasured",
+ "axis_count": 21,
+ "map_count": 126,
+ "maps": [
+  {
+   "filename": "WS_LS_X_dx_simulated.csv",
+   "axis": "WS_LS_X",
+   "component": "dx",
+   "axis_class": "precision",
+   "controller": "ACS",
+   "command_unit": "mm",
+   "value_unit": "um",
+   "node_count": 24,
+   "coverage": [
+    -203.094242,
+    212.834602
+   ],
+   "error_min": -0.2487,
+   "error_max": 0.6147,
+   "sha256": "5B7114251EA89C9EC1AFFBD3734E31B470DD35FBC5BBB2C12E2FE0EE6AB2776F",
+   "generation_seed": 9280853992016914901
+  },
+  {
+   "filename": "WS_LS_X_dy_simulated.csv",
+   "axis": "WS_LS_X",
+   "component": "dy",
+   "axis_class": "precision",
+   "controller": "ACS",
+   "command_unit": "mm",
+   "value_unit": "um",
+   "node_count": 34,
+   "coverage": [
+    -200.107653,
+    190.579962
+   ],
+   "error_min": -0.3325,
+   "error_max": 0.8304,
+   "sha256": "AF5E718771B9B8F2C7823C302AB823B6E321573FF3B0BECBD122B6E067FD4F52",
+   "generation_seed": 15593777140257371061
+  },
+  {
+   "filename": "WS_LS_X_dz_simulated.csv",
+   "axis": "WS_LS_X",
+   "component": "dz",
+   "axis_class": "precision",
+   "controller": "ACS",
+   "command_unit": "mm",
+   "value_unit": "um",
+   "node_count": 35,
+   "coverage": [
+    -191.695215,
+    186.809245
+   ],
+   "error_min": -0.4603,
+   "error_max": 0.2564,
+   "sha256": "594A21991632C8860FA5CA781FD7667A4CF4B54C0916208D9C99F07CC847D4F0",
+   "generation_seed": 352192259555560158
+  },
+  {
+   "filename": "WS_LS_X_rx_simulated.csv",
+   "axis": "WS_LS_X",
+   "component": "rx",
+   "axis_class": "precision",
+   "controller": "ACS",
+   "command_unit": "mm",
+   "value_unit": "urad",
+   "node_count": 39,
+   "coverage": [
+    -188.036595,
+    185.079822
+   ],
+   "error_min": -7.302,
+   "error_max": 3.198,
+   "sha256": "38B69CE1D8A649CF1C347873209AC3161D582133146829B4AC44941371A4FB3A",
+   "generation_seed": 10193432377330392110
+  },
+  {
+   "filename": "WS_LS_X_ry_simulated.csv",
+   "axis": "WS_LS_X",
+   "component": "ry",
+   "axis_class": "precision",
+   "controller": "ACS",
+   "command_unit": "mm",
+   "value_unit": "urad",
+   "node_count": 38,
+   "coverage": [
+    -187.444625,
+    214.306966
+   ],
+   "error_min": -3.6,
+   "error_max": 6.875,
+   "sha256": "C4D97AF745E73AEF4ECF3ED8C6E12640EA427E1905D7688764DAC366F64BB7F5",
+   "generation_seed": 13345485956032723269
+  },
+  {
+   "filename": "WS_LS_X_rz_simulated.csv",
+   "axis": "WS_LS_X",
+   "component": "rz",
+   "axis_class": "precision",
+   "controller": "ACS",
+   "command_unit": "mm",
+   "value_unit": "urad",
+   "node_count": 37,
+   "coverage": [
+    -213.794875,
+    197.46315
+   ],
+   "error_min": -2.674,
+   "error_max": 1.403,
+   "sha256": "51671EAE77F2A80F5419BE6B518CC5327CBD388257B5373B77FFFEAFAB2463A3",
+   "generation_seed": 1924208520828709696
+  },
+  {
+   "filename": "WS_LS_Y_dx_simulated.csv",
+   "axis": "WS_LS_Y",
+   "component": "dx",
+   "axis_class": "precision",
+   "controller": "ACS",
+   "command_unit": "mm",
+   "value_unit": "um",
+   "node_count": 30,
+   "coverage": [
+    -185.392187,
+    213.477551
+   ],
+   "error_min": -1.5845,
+   "error_max": 0.4562,
+   "sha256": "031144C3CFE2FA28BA70F297A4A825D36EF6BD92811EA6C325365496DA21FDDB",
+   "generation_seed": 7578187538126540441
+  },
+  {
+   "filename": "WS_LS_Y_dy_simulated.csv",
+   "axis": "WS_LS_Y",
+   "component": "dy",
+   "axis_class": "precision",
+   "controller": "ACS",
+   "command_unit": "mm",
+   "value_unit": "um",
+   "node_count": 31,
+   "coverage": [
+    -195.894611,
+    212.018524
+   ],
+   "error_min": -0.3042,
+   "error_max": 0.9888,
+   "sha256": "C682C263BD4EC663E0379BDEFD1E9442C3B986576CD704F14467483F5C0516D6",
+   "generation_seed": 5043619911937121804
+  },
+  {
+   "filename": "WS_LS_Y_dz_simulated.csv",
+   "axis": "WS_LS_Y",
+   "component": "dz",
+   "axis_class": "precision",
+   "controller": "ACS",
+   "command_unit": "mm",
+   "value_unit": "um",
+   "node_count": 32,
+   "coverage": [
+    -208.09564,
+    189.252174
+   ],
+   "error_min": -0.2061,
+   "error_max": 0.5954,
+   "sha256": "22014C67C51451F285434E8A613A9C4C44480863A605FB79C65DA2A34666AAB8",
+   "generation_seed": 9868443864721580389
+  },
+  {
+   "filename": "WS_LS_Y_rx_simulated.csv",
+   "axis": "WS_LS_Y",
+   "component": "rx",
+   "axis_class": "precision",
+   "controller": "ACS",
+   "command_unit": "mm",
+   "value_unit": "urad",
+   "node_count": 29,
+   "coverage": [
+    -213.404804,
+    210.830345
+   ],
+   "error_min": -5.665,
+   "error_max": 3.388,
+   "sha256": "98FC1E8C4C021C389D5D21A39D95113B2E7B487982A245627D407ED8E0298ACE",
+   "generation_seed": 1990234670168545750
+  },
+  {
+   "filename": "WS_LS_Y_ry_simulated.csv",
+   "axis": "WS_LS_Y",
+   "component": "ry",
+   "axis_class": "precision",
+   "controller": "ACS",
+   "command_unit": "mm",
+   "value_unit": "urad",
+   "node_count": 19,
+   "coverage": [
+    -205.276261,
+    209.200961
+   ],
+   "error_min": -1.148,
+   "error_max": 2.42,
+   "sha256": "ED5BD758CBB7DBECB7653F35F9A9E4C45F7F9D31DDB56834ECCBD016727B8E35",
+   "generation_seed": 17827733319633326626
+  },
+  {
+   "filename": "WS_LS_Y_rz_simulated.csv",
+   "axis": "WS_LS_Y",
+   "component": "rz",
+   "axis_class": "precision",
+   "controller": "ACS",
+   "command_unit": "mm",
+   "value_unit": "urad",
+   "node_count": 34,
+   "coverage": [
+    -193.607915,
+    198.049613
+   ],
+   "error_min": -1.132,
+   "error_max": 2.71,
+   "sha256": "3D7DBC6FC1DD446061D0264DEEA2E8C22735CD0778ABDEC24BFB176FCF90814D",
+   "generation_seed": 16210738705405250909
+  },
+  {
+   "filename": "WS_Rz_dx_simulated.csv",
+   "axis": "WS_Rz",
+   "component": "dx",
+   "axis_class": "precision",
+   "controller": "ACS",
+   "command_unit": "rad",
+   "value_unit": "um",
+   "node_count": 34,
+   "coverage": [
+    -0.016726832,
+    0.014846831
+   ],
+   "error_min": -0.3706,
+   "error_max": 0.5975,
+   "sha256": "A785E7782D26A3DBCC11429EC62D39C291D576B1BDC2103C31FAFB373E9FCEF1",
+   "generation_seed": 61584165105033707
+  },
+  {
+   "filename": "WS_Rz_dy_simulated.csv",
+   "axis": "WS_Rz",
+   "component": "dy",
+   "axis_class": "precision",
+   "controller": "ACS",
+   "command_unit": "rad",
+   "value_unit": "um",
+   "node_count": 21,
+   "coverage": [
+    -0.014832134,
+    0.014999731
+   ],
+   "error_min": -0.3059,
+   "error_max": 0.8464,
+   "sha256": "9D035AD83E2FBE1F360C83E507C7572CA9F391E66EBC6CD0740A683518B994F0",
+   "generation_seed": 829659043326094858
+  },
+  {
+   "filename": "WS_Rz_dz_simulated.csv",
+   "axis": "WS_Rz",
+   "component": "dz",
+   "axis_class": "precision",
+   "controller": "ACS",
+   "command_unit": "rad",
+   "value_unit": "um",
+   "node_count": 18,
+   "coverage": [
+    -0.014705215,
+    0.015104061
+   ],
+   "error_min": -1.1121,
+   "error_max": 0.6619,
+   "sha256": "F189828B0CE27C0E5F9BB42CDE1C0DB20A1B8FD635010CBE8F2F9E20ED8BB815",
+   "generation_seed": 2804952113707941603
+  },
+  {
+   "filename": "WS_Rz_rx_simulated.csv",
+   "axis": "WS_Rz",
+   "component": "rx",
+   "axis_class": "precision",
+   "controller": "ACS",
+   "command_unit": "rad",
+   "value_unit": "urad",
+   "node_count": 37,
+   "coverage": [
+    -0.01525387,
+    0.015957778
+   ],
+   "error_min": -1.718,
+   "error_max": 2.15,
+   "sha256": "78D2C8DBD401CA91A85A71DA069D4169CA74032C2E95D3CF5BE3DFC5D28C103D",
+   "generation_seed": 927862213938442766
+  },
+  {
+   "filename": "WS_Rz_ry_simulated.csv",
+   "axis": "WS_Rz",
+   "component": "ry",
+   "axis_class": "precision",
+   "controller": "ACS",
+   "command_unit": "rad",
+   "value_unit": "urad",
+   "node_count": 31,
+   "coverage": [
+    -0.016844602,
+    0.015910657
+   ],
+   "error_min": -1.401,
+   "error_max": 2.825,
+   "sha256": "2C18C5C4E08B65CC7770DB995FDABC5EC307CDE49317C50D6322B9E96101FCC5",
+   "generation_seed": 13155612939137827382
+  },
+  {
+   "filename": "WS_Rz_rz_simulated.csv",
+   "axis": "WS_Rz",
+   "component": "rz",
+   "axis_class": "precision",
+   "controller": "ACS",
+   "command_unit": "rad",
+   "value_unit": "urad",
+   "node_count": 20,
+   "coverage": [
+    -0.015128445,
+    0.016717256
+   ],
+   "error_min": -1.876,
+   "error_max": 0.712,
+   "sha256": "65A720836923F474A619446477C4C27D32CA2A3197957D5AD91863C610F73090",
+   "generation_seed": 8257764459258835903
+  },
+  {
+   "filename": "E_EPIN_Z_1_dx_simulated.csv",
+   "axis": "E_EPIN_Z_1",
+   "component": "dx",
+   "axis_class": "auxiliary",
+   "controller": "PLC",
+   "command_unit": "mm",
+   "value_unit": "um",
+   "node_count": 36,
+   "coverage": [
+    2.181149,
+    27.849339
+   ],
+   "error_min": -1.5077,
+   "error_max": 4.9919,
+   "sha256": "BA4818ACADF82D65E9AA9C249BB9BA8E3D9906F8F03C9A5BFC7398C210DDE47A",
+   "generation_seed": 9318370152684468559
+  },
+  {
+   "filename": "E_EPIN_Z_1_dy_simulated.csv",
+   "axis": "E_EPIN_Z_1",
+   "component": "dy",
+   "axis_class": "auxiliary",
+   "controller": "PLC",
+   "command_unit": "mm",
+   "value_unit": "um",
+   "node_count": 36,
+   "coverage": [
+    1.302086,
+    28.675438
+   ],
+   "error_min": -1.9325,
+   "error_max": 0.3012,
+   "sha256": "04D1B37BBA42A0F59E75E526480FE65A553004719FF1C93932D7A30263E7A037",
+   "generation_seed": 12891363564021983789
+  },
+  {
+   "filename": "E_EPIN_Z_1_dz_simulated.csv",
+   "axis": "E_EPIN_Z_1",
+   "component": "dz",
+   "axis_class": "auxiliary",
+   "controller": "PLC",
+   "command_unit": "mm",
+   "value_unit": "um",
+   "node_count": 20,
+   "coverage": [
+    1.013314,
+    27.605987
+   ],
+   "error_min": -3.8846,
+   "error_max": 5.5881,
+   "sha256": "E4D3318A27A91C6E948570F80706E76A85159F18CAB6113FB6DE96CBBED08485",
+   "generation_seed": 845603233789924173
+  },
+  {
+   "filename": "E_EPIN_Z_1_rx_simulated.csv",
+   "axis": "E_EPIN_Z_1",
+   "component": "rx",
+   "axis_class": "auxiliary",
+   "controller": "PLC",
+   "command_unit": "mm",
+   "value_unit": "urad",
+   "node_count": 24,
+   "coverage": [
+    1.998785,
+    28.589717
+   ],
+   "error_min": -18.817,
+   "error_max": 42.056,
+   "sha256": "F1E0625A9B30472B05F87C7491C971654C5004739455A4FFAD90454161345DAA",
+   "generation_seed": 11097870674351836241
+  },
+  {
+   "filename": "E_EPIN_Z_1_ry_simulated.csv",
+   "axis": "E_EPIN_Z_1",
+   "component": "ry",
+   "axis_class": "auxiliary",
+   "controller": "PLC",
+   "command_unit": "mm",
+   "value_unit": "urad",
+   "node_count": 26,
+   "coverage": [
+    2.131567,
+    28.995911
+   ],
+   "error_min": -30.651,
+   "error_max": 17.435,
+   "sha256": "631DFB22E500370A17EDBAB77CFDF4E9D3E28D32EFAE5BE043ABA02212CDCFCD",
+   "generation_seed": 1907614981397783123
+  },
+  {
+   "filename": "E_EPIN_Z_1_rz_simulated.csv",
+   "axis": "E_EPIN_Z_1",
+   "component": "rz",
+   "axis_class": "auxiliary",
+   "controller": "PLC",
+   "command_unit": "mm",
+   "value_unit": "urad",
+   "node_count": 36,
+   "coverage": [
+    1.60635,
+    28.103883
+   ],
+   "error_min": -7.334,
+   "error_max": 13.369,
+   "sha256": "C5D61EDDC4FA5E872685F7ECF9C7AC14C4F95DC5F62B21AB5B00AC2A12C5DEF3",
+   "generation_seed": 12130183016497668377
+  },
+  {
+   "filename": "E_EPIN_Z_2_dx_simulated.csv",
+   "axis": "E_EPIN_Z_2",
+   "component": "dx",
+   "axis_class": "auxiliary",
+   "controller": "PLC",
+   "command_unit": "mm",
+   "value_unit": "um",
+   "node_count": 18,
+   "coverage": [
+    1.338016,
+    27.884901
+   ],
+   "error_min": -2.0883,
+   "error_max": 3.8017,
+   "sha256": "1707FCCA395A12DF34FB82DCF135B2E5110A3A99B45C849994BD86330FEDE5F9",
+   "generation_seed": 14781723594559991605
+  },
+  {
+   "filename": "E_EPIN_Z_2_dy_simulated.csv",
+   "axis": "E_EPIN_Z_2",
+   "component": "dy",
+   "axis_class": "auxiliary",
+   "controller": "PLC",
+   "command_unit": "mm",
+   "value_unit": "um",
+   "node_count": 19,
+   "coverage": [
+    1.029483,
+    29.066803
+   ],
+   "error_min": -6.6481,
+   "error_max": 2.3705,
+   "sha256": "FED8D411E9D22B42E70272FDF943848F5C3D1D1C166E2E277AED1A1CB36DF582",
+   "generation_seed": 16464601160666374304
+  },
+  {
+   "filename": "E_EPIN_Z_2_dz_simulated.csv",
+   "axis": "E_EPIN_Z_2",
+   "component": "dz",
+   "axis_class": "auxiliary",
+   "controller": "PLC",
+   "command_unit": "mm",
+   "value_unit": "um",
+   "node_count": 23,
+   "coverage": [
+    1.555134,
+    28.95419
+   ],
+   "error_min": -1.195,
+   "error_max": 4.596,
+   "sha256": "49F76F9DD94766A7B0D989EAA28E9924BADEF005A600B568EA4ABCE3344972B7",
+   "generation_seed": 13386943557296255292
+  },
+  {
+   "filename": "E_EPIN_Z_2_rx_simulated.csv",
+   "axis": "E_EPIN_Z_2",
+   "component": "rx",
+   "axis_class": "auxiliary",
+   "controller": "PLC",
+   "command_unit": "mm",
+   "value_unit": "urad",
+   "node_count": 23,
+   "coverage": [
+    1.875011,
+    28.532317
+   ],
+   "error_min": -19.945,
+   "error_max": 31.302,
+   "sha256": "4466FDBE25695CF3582DEBAE862D8377B7F7EA7E9918A3E27D60D17E47150A5B",
+   "generation_seed": 10275526798119742596
+  },
+  {
+   "filename": "E_EPIN_Z_2_ry_simulated.csv",
+   "axis": "E_EPIN_Z_2",
+   "component": "ry",
+   "axis_class": "auxiliary",
+   "controller": "PLC",
+   "command_unit": "mm",
+   "value_unit": "urad",
+   "node_count": 27,
+   "coverage": [
+    1.186719,
+    27.78561
+   ],
+   "error_min": -10.832,
+   "error_max": 22.163,
+   "sha256": "5A6FE5E8FA8B1B2DEDC577094EEF4D443F18941C48848A24A849033A44F784A9",
+   "generation_seed": 17682487690985346826
+  },
+  {
+   "filename": "E_EPIN_Z_2_rz_simulated.csv",
+   "axis": "E_EPIN_Z_2",
+   "component": "rz",
+   "axis_class": "auxiliary",
+   "controller": "PLC",
+   "command_unit": "mm",
+   "value_unit": "urad",
+   "node_count": 31,
+   "coverage": [
+    2.357399,
+    28.339874
+   ],
+   "error_min": -17.701,
+   "error_max": 9.954,
+   "sha256": "466647584954DCCE8D5F4883B3B81EE6C9DDD00911C8E162B688DE47EEA558BC",
+   "generation_seed": 7991057171913612046
+  },
+  {
+   "filename": "E_EPIN_Z_3_dx_simulated.csv",
+   "axis": "E_EPIN_Z_3",
+   "component": "dx",
+   "axis_class": "auxiliary",
+   "controller": "PLC",
+   "command_unit": "mm",
+   "value_unit": "um",
+   "node_count": 17,
+   "coverage": [
+    1.575043,
+    28.968122
+   ],
+   "error_min": -6.2221,
+   "error_max": 2.7854,
+   "sha256": "7C618E5F65AFFE699FA9D1257FBE16475B90E454CCC76EC7001670FAC98039BD",
+   "generation_seed": 5421198144177905910
+  },
+  {
+   "filename": "E_EPIN_Z_3_dy_simulated.csv",
+   "axis": "E_EPIN_Z_3",
+   "component": "dy",
+   "axis_class": "auxiliary",
+   "controller": "PLC",
+   "command_unit": "mm",
+   "value_unit": "um",
+   "node_count": 24,
+   "coverage": [
+    2.252843,
+    28.617135
+   ],
+   "error_min": -4.7076,
+   "error_max": 1.055,
+   "sha256": "5F6AEFB2CFFA2112CDF991EF5E771429A3872F8DB287B5DA2F2F356B8D356CA7",
+   "generation_seed": 4463070965928231133
+  },
+  {
+   "filename": "E_EPIN_Z_3_dz_simulated.csv",
+   "axis": "E_EPIN_Z_3",
+   "component": "dz",
+   "axis_class": "auxiliary",
+   "controller": "PLC",
+   "command_unit": "mm",
+   "value_unit": "um",
+   "node_count": 18,
+   "coverage": [
+    1.027176,
+    28.798719
+   ],
+   "error_min": -1.8628,
+   "error_max": 1.3364,
+   "sha256": "8C31815FB426E91EEBFF9FABE648B8F73D3DB5F90398A9F3885294393F0DAC06",
+   "generation_seed": 14111668394948603157
+  },
+  {
+   "filename": "E_EPIN_Z_3_rx_simulated.csv",
+   "axis": "E_EPIN_Z_3",
+   "component": "rx",
+   "axis_class": "auxiliary",
+   "controller": "PLC",
+   "command_unit": "mm",
+   "value_unit": "urad",
+   "node_count": 38,
+   "coverage": [
+    0.530198,
+    28.378605
+   ],
+   "error_min": -9.301,
+   "error_max": 22.917,
+   "sha256": "0253A4E06AEE54EA0C4FE531DAE72B32B941CA3BF22E0A01D01F58219E164999",
+   "generation_seed": 15295408612989780207
+  },
+  {
+   "filename": "E_EPIN_Z_3_ry_simulated.csv",
+   "axis": "E_EPIN_Z_3",
+   "component": "ry",
+   "axis_class": "auxiliary",
+   "controller": "PLC",
+   "command_unit": "mm",
+   "value_unit": "urad",
+   "node_count": 18,
+   "coverage": [
+    1.130297,
+    28.649516
+   ],
+   "error_min": -23.202,
+   "error_max": 9.453,
+   "sha256": "CD2941963E4E7F7403DC9B0D6DAAABC404DB82CC16672721520617C6D92EC0E3",
+   "generation_seed": 10185955520734394105
+  },
+  {
+   "filename": "E_EPIN_Z_3_rz_simulated.csv",
+   "axis": "E_EPIN_Z_3",
+   "component": "rz",
+   "axis_class": "auxiliary",
+   "controller": "PLC",
+   "command_unit": "mm",
+   "value_unit": "urad",
+   "node_count": 21,
+   "coverage": [
+    1.419651,
+    29.516312
+   ],
+   "error_min": -33.895,
+   "error_max": 21.041,
+   "sha256": "227707209BCD7EC33D31A061368D18802D55E924F9A2FE2DEC86F6BA8D402B7B",
+   "generation_seed": 1589672379568631156
+  },
+  {
+   "filename": "BS_Arm_Z_dx_simulated.csv",
+   "axis": "BS_Arm_Z",
+   "component": "dx",
+   "axis_class": "auxiliary",
+   "controller": "PLC",
+   "command_unit": "mm",
+   "value_unit": "um",
+   "node_count": 40,
+   "coverage": [
+    -179.274307,
+    -9.138327
+   ],
+   "error_min": -2.4847,
+   "error_max": 1.3244,
+   "sha256": "D02F6BA72538A0432EB3AA7DC37E301D7C7A4F0079B964A3DE4D85F79E2E255C",
+   "generation_seed": 3280433631139536351
+  },
+  {
+   "filename": "BS_Arm_Z_dy_simulated.csv",
+   "axis": "BS_Arm_Z",
+   "component": "dy",
+   "axis_class": "auxiliary",
+   "controller": "PLC",
+   "command_unit": "mm",
+   "value_unit": "um",
+   "node_count": 23,
+   "coverage": [
+    -180.945528,
+    -10.390459
+   ],
+   "error_min": -5.433,
+   "error_max": 2.5437,
+   "sha256": "AF226E20FDC939341AB43AEC374FAF0D2CF25A07BBC736E00B11C85F5CA3D210",
+   "generation_seed": 4088616989967600020
+  },
+  {
+   "filename": "BS_Arm_Z_dz_simulated.csv",
+   "axis": "BS_Arm_Z",
+   "component": "dz",
+   "axis_class": "auxiliary",
+   "controller": "PLC",
+   "command_unit": "mm",
+   "value_unit": "um",
+   "node_count": 22,
+   "coverage": [
+    -185.126271,
+    -9.945288
+   ],
+   "error_min": -3.3478,
+   "error_max": 1.3893,
+   "sha256": "6D6F6F432FDE502417CBCCCD6BDC0A5965E2072ED317624436FD2E2E99788098",
+   "generation_seed": 15141311161526663861
+  },
+  {
+   "filename": "BS_Arm_Z_rx_simulated.csv",
+   "axis": "BS_Arm_Z",
+   "component": "rx",
+   "axis_class": "auxiliary",
+   "controller": "PLC",
+   "command_unit": "mm",
+   "value_unit": "urad",
+   "node_count": 31,
+   "coverage": [
+    -185.155411,
+    -4.724264
+   ],
+   "error_min": -33.605,
+   "error_max": 16.648,
+   "sha256": "8C5BEC61095F0EB19434FAC7109472353E4C2E15EC2887AD5647DC85EF905A05",
+   "generation_seed": 2423288723793178036
+  },
+  {
+   "filename": "BS_Arm_Z_ry_simulated.csv",
+   "axis": "BS_Arm_Z",
+   "component": "ry",
+   "axis_class": "auxiliary",
+   "controller": "PLC",
+   "command_unit": "mm",
+   "value_unit": "urad",
+   "node_count": 40,
+   "coverage": [
+    -182.74961,
+    -14.102401
+   ],
+   "error_min": -17.529,
+   "error_max": 37.134,
+   "sha256": "716CC9149BA87FCE5F0BBF465692E6FBB5CAC1918AB596A3E0F0F0AA43DFA767",
+   "generation_seed": 2569400213996691321
+  },
+  {
+   "filename": "BS_Arm_Z_rz_simulated.csv",
+   "axis": "BS_Arm_Z",
+   "component": "rz",
+   "axis_class": "auxiliary",
+   "controller": "PLC",
+   "command_unit": "mm",
+   "value_unit": "urad",
+   "node_count": 37,
+   "coverage": [
+    -176.063763,
+    -9.647954
+   ],
+   "error_min": -28.341,
+   "error_max": 12.213,
+   "sha256": "ACF9EFD50EBF85CEB74E8B048DD06FD0A56AEB30661F10D6153A0E6818BE14D5",
+   "generation_seed": 8044198117724508892
+  },
+  {
+   "filename": "BS_CAL_Rx_dx_simulated.csv",
+   "axis": "BS_CAL_Rx",
+   "component": "dx",
+   "axis_class": "auxiliary",
+   "controller": "PLC",
+   "command_unit": "rad",
+   "value_unit": "um",
+   "node_count": 18,
+   "coverage": [
+    -0.001485038,
+    0.001607077
+   ],
+   "error_min": -0.9856,
+   "error_max": 6.1427,
+   "sha256": "9D8CCF4166E49D73854194EC0E344011D7B2DEB9701CCD176DF1F41B871A99D1",
+   "generation_seed": 3013703126116561843
+  },
+  {
+   "filename": "BS_CAL_Rx_dy_simulated.csv",
+   "axis": "BS_CAL_Rx",
+   "component": "dy",
+   "axis_class": "auxiliary",
+   "controller": "PLC",
+   "command_unit": "rad",
+   "value_unit": "um",
+   "node_count": 36,
+   "coverage": [
+    -0.001522564,
+    0.001624155
+   ],
+   "error_min": -1.8755,
+   "error_max": 1.3092,
+   "sha256": "F19E1FE48573D236051028BBA739DC74B122E85E36B0C7A7F75B108E0D25E2EF",
+   "generation_seed": 4152916694561277105
+  },
+  {
+   "filename": "BS_CAL_Rx_dz_simulated.csv",
+   "axis": "BS_CAL_Rx",
+   "component": "dz",
+   "axis_class": "auxiliary",
+   "controller": "PLC",
+   "command_unit": "rad",
+   "value_unit": "um",
+   "node_count": 21,
+   "coverage": [
+    -0.00150173,
+    0.001545052
+   ],
+   "error_min": -3.3921,
+   "error_max": 1.7013,
+   "sha256": "8D181DCC757F3DCD31706DF0320B494916BA7EF3166A18607CC0219D54D217AD",
+   "generation_seed": 3283641881941661714
+  },
+  {
+   "filename": "BS_CAL_Rx_rx_simulated.csv",
+   "axis": "BS_CAL_Rx",
+   "component": "rx",
+   "axis_class": "auxiliary",
+   "controller": "PLC",
+   "command_unit": "rad",
+   "value_unit": "urad",
+   "node_count": 31,
+   "coverage": [
+    -0.001525714,
+    0.001528735
+   ],
+   "error_min": -8.951,
+   "error_max": 16.578,
+   "sha256": "F689684B51A42B64C715F35AA13350041D218E890AD0BA45A5C79101C610212F",
+   "generation_seed": 16041581500618808904
+  },
+  {
+   "filename": "BS_CAL_Rx_ry_simulated.csv",
+   "axis": "BS_CAL_Rx",
+   "component": "ry",
+   "axis_class": "auxiliary",
+   "controller": "PLC",
+   "command_unit": "rad",
+   "value_unit": "urad",
+   "node_count": 27,
+   "coverage": [
+    -0.001631992,
+    0.001686902
+   ],
+   "error_min": -11.291,
+   "error_max": 46.859,
+   "sha256": "5A7F232EA385A08D712280943A2F9E79693F83AB2E7899C99EE9095F58D91657",
+   "generation_seed": 8293945299160928952
+  },
+  {
+   "filename": "BS_CAL_Rx_rz_simulated.csv",
+   "axis": "BS_CAL_Rx",
+   "component": "rz",
+   "axis_class": "auxiliary",
+   "controller": "PLC",
+   "command_unit": "rad",
+   "value_unit": "urad",
+   "node_count": 27,
+   "coverage": [
+    -0.001661017,
+    0.001625942
+   ],
+   "error_min": -32.155,
+   "error_max": 19.708,
+   "sha256": "40ED095B4BF8741E0235E81EBEED507A374F1E770AD888AB675301262D94217D",
+   "generation_seed": 16112902315417390976
+  },
+  {
+   "filename": "BS_CAL_Ry_dx_simulated.csv",
+   "axis": "BS_CAL_Ry",
+   "component": "dx",
+   "axis_class": "auxiliary",
+   "controller": "PLC",
+   "command_unit": "rad",
+   "value_unit": "um",
+   "node_count": 30,
+   "coverage": [
+    -0.001694785,
+    0.001539328
+   ],
+   "error_min": -4.6697,
+   "error_max": 1.6064,
+   "sha256": "BAB5402DE2BB6FE714F785EBB9841D1E7C5F76B2D844CF3FD71CEDB1783ACD47",
+   "generation_seed": 4694342216040581171
+  },
+  {
+   "filename": "BS_CAL_Ry_dy_simulated.csv",
+   "axis": "BS_CAL_Ry",
+   "component": "dy",
+   "axis_class": "auxiliary",
+   "controller": "PLC",
+   "command_unit": "rad",
+   "value_unit": "um",
+   "node_count": 17,
+   "coverage": [
+    -0.001646475,
+    0.001577404
+   ],
+   "error_min": -2.1796,
+   "error_max": 1.3846,
+   "sha256": "C0A879AA2BAD47817436C62B0E2E849B280EC71CA1B4D5F2A19DF2C4A9B4C78A",
+   "generation_seed": 14770810987178989784
+  },
+  {
+   "filename": "BS_CAL_Ry_dz_simulated.csv",
+   "axis": "BS_CAL_Ry",
+   "component": "dz",
+   "axis_class": "auxiliary",
+   "controller": "PLC",
+   "command_unit": "rad",
+   "value_unit": "um",
+   "node_count": 37,
+   "coverage": [
+    -0.001578018,
+    0.001622242
+   ],
+   "error_min": -1.8422,
+   "error_max": 7.1989,
+   "sha256": "6516F0F2CA4A8F63F38E147668C54C90B657A6B6AE333B82AC1220DB2FD75610",
+   "generation_seed": 9062969317383912004
+  },
+  {
+   "filename": "BS_CAL_Ry_rx_simulated.csv",
+   "axis": "BS_CAL_Ry",
+   "component": "rx",
+   "axis_class": "auxiliary",
+   "controller": "PLC",
+   "command_unit": "rad",
+   "value_unit": "urad",
+   "node_count": 24,
+   "coverage": [
+    -0.001529545,
+    0.001574764
+   ],
+   "error_min": -16.175,
+   "error_max": 9.749,
+   "sha256": "76C3E5B1EAEB19A5CD7FD299F9250EA7A1F33D7857790A51183BDEF9B4578388",
+   "generation_seed": 5521939525839996775
+  },
+  {
+   "filename": "BS_CAL_Ry_ry_simulated.csv",
+   "axis": "BS_CAL_Ry",
+   "component": "ry",
+   "axis_class": "auxiliary",
+   "controller": "PLC",
+   "command_unit": "rad",
+   "value_unit": "urad",
+   "node_count": 36,
+   "coverage": [
+    -0.001619455,
+    0.001559172
+   ],
+   "error_min": -23.084,
+   "error_max": 11.52,
+   "sha256": "C7C7CC6965ABEC910840AB2D38D05A2BF58CAA6508F649D012883DFD9A001B2C",
+   "generation_seed": 5850366710173744351
+  },
+  {
+   "filename": "BS_CAL_Ry_rz_simulated.csv",
+   "axis": "BS_CAL_Ry",
+   "component": "rz",
+   "axis_class": "auxiliary",
+   "controller": "PLC",
+   "command_unit": "rad",
+   "value_unit": "urad",
+   "node_count": 31,
+   "coverage": [
+    -0.00164329,
+    0.001466512
+   ],
+   "error_min": -20.038,
+   "error_max": 34.206,
+   "sha256": "EADC3FAF4B91104B6069F3276EEB6113F36EE21C3A31C4E29C8BF7C4DB9B46A9",
+   "generation_seed": 14520294187363521118
+  },
+  {
+   "filename": "AS_X_dx_simulated.csv",
+   "axis": "AS_X",
+   "component": "dx",
+   "axis_class": "precision",
+   "controller": "ACS",
+   "command_unit": "mm",
+   "value_unit": "um",
+   "node_count": 28,
+   "coverage": [
+    -28.329377,
+    76.212518
+   ],
+   "error_min": -1.0439,
+   "error_max": 0.5197,
+   "sha256": "4C4B05F7A00F2A2F68B7C8463539139091C1F265352DAE5BB4E798CB2B9E7C48",
+   "generation_seed": 4607236501064463019
+  },
+  {
+   "filename": "AS_X_dy_simulated.csv",
+   "axis": "AS_X",
+   "component": "dy",
+   "axis_class": "precision",
+   "controller": "ACS",
+   "command_unit": "mm",
+   "value_unit": "um",
+   "node_count": 17,
+   "coverage": [
+    -26.403142,
+    75.901551
+   ],
+   "error_min": -0.381,
+   "error_max": 0.8904,
+   "sha256": "FF43436E66DC0584608A1A18E08E08F7E6D953FCD55F0A2497C6F3D643CE2DAA",
+   "generation_seed": 5647347732338978824
+  },
+  {
+   "filename": "AS_X_dz_simulated.csv",
+   "axis": "AS_X",
+   "component": "dz",
+   "axis_class": "precision",
+   "controller": "ACS",
+   "command_unit": "mm",
+   "value_unit": "um",
+   "node_count": 36,
+   "coverage": [
+    -25.743538,
+    78.810049
+   ],
+   "error_min": -0.2487,
+   "error_max": 1.0811,
+   "sha256": "7E5E2E66AAC2030666B0D344A5E17BECAC5A965FA4F274134AF9244F4E2403C9",
+   "generation_seed": 6631832919569140265
+  },
+  {
+   "filename": "AS_X_rx_simulated.csv",
+   "axis": "AS_X",
+   "component": "rx",
+   "axis_class": "precision",
+   "controller": "ACS",
+   "command_unit": "mm",
+   "value_unit": "urad",
+   "node_count": 29,
+   "coverage": [
+    -22.721521,
+    75.246312
+   ],
+   "error_min": -3.843,
+   "error_max": 1.817,
+   "sha256": "9F0CBC0AECC5BA4C6391F028E427111AC37C196526418156127262EC9FFF8BB2",
+   "generation_seed": 5904611604502365496
+  },
+  {
+   "filename": "AS_X_ry_simulated.csv",
+   "axis": "AS_X",
+   "component": "ry",
+   "axis_class": "precision",
+   "controller": "ACS",
+   "command_unit": "mm",
+   "value_unit": "urad",
+   "node_count": 26,
+   "coverage": [
+    -28.596851,
+    71.909602
+   ],
+   "error_min": -1.797,
+   "error_max": 7.146,
+   "sha256": "909E28FAA996339F73A2DB57B77E379CBD21284C3DD2B1F12C692FD3D4944C8C",
+   "generation_seed": 9328265917472127845
+  },
+  {
+   "filename": "AS_X_rz_simulated.csv",
+   "axis": "AS_X",
+   "component": "rz",
+   "axis_class": "precision",
+   "controller": "ACS",
+   "command_unit": "mm",
+   "value_unit": "urad",
+   "node_count": 19,
+   "coverage": [
+    -26.070228,
+    73.77254
+   ],
+   "error_min": -1.661,
+   "error_max": 2.598,
+   "sha256": "C9E15F0D2A82AD08F553F7E68ADD2A8CF24132065F966F576D51FA0D2362CA45",
+   "generation_seed": 14036315510271015186
+  },
+  {
+   "filename": "AS_Y_dx_simulated.csv",
+   "axis": "AS_Y",
+   "component": "dx",
+   "axis_class": "precision",
+   "controller": "ACS",
+   "command_unit": "mm",
+   "value_unit": "um",
+   "node_count": 39,
+   "coverage": [
+    -18.439401,
+    108.695726
+   ],
+   "error_min": -0.3538,
+   "error_max": 0.1839,
+   "sha256": "57724AF57325A36D2DA4C685AB38F76F500AC26F93349DD023FA1049CCA177AF",
+   "generation_seed": 13261319035994783076
+  },
+  {
+   "filename": "AS_Y_dy_simulated.csv",
+   "axis": "AS_Y",
+   "component": "dy",
+   "axis_class": "precision",
+   "controller": "ACS",
+   "command_unit": "mm",
+   "value_unit": "um",
+   "node_count": 28,
+   "coverage": [
+    -18.586169,
+    115.30503
+   ],
+   "error_min": -0.1721,
+   "error_max": 0.6725,
+   "sha256": "8C6787B14090A2B18F57D5BFAF0E9A9F12E8A14388A6FCFA673D8B91EBBE5A82",
+   "generation_seed": 16855792721668604951
+  },
+  {
+   "filename": "AS_Y_dz_simulated.csv",
+   "axis": "AS_Y",
+   "component": "dz",
+   "axis_class": "precision",
+   "controller": "ACS",
+   "command_unit": "mm",
+   "value_unit": "um",
+   "node_count": 17,
+   "coverage": [
+    -23.752446,
+    116.979694
+   ],
+   "error_min": -0.4977,
+   "error_max": 0.7494,
+   "sha256": "CA2D4B77A9743F86BE6D9C4641EBAE9E650E2D7E4C509B1098DDAAABCD985516",
+   "generation_seed": 16783464336355597532
+  },
+  {
+   "filename": "AS_Y_rx_simulated.csv",
+   "axis": "AS_Y",
+   "component": "rx",
+   "axis_class": "precision",
+   "controller": "ACS",
+   "command_unit": "mm",
+   "value_unit": "urad",
+   "node_count": 31,
+   "coverage": [
+    -19.782559,
+    115.950352
+   ],
+   "error_min": -7.064,
+   "error_max": 1.951,
+   "sha256": "0CDD918E86DE9DA270DEC03685DD70E20DB0A7BFFBFBCDC49CDC696E45BD099D",
+   "generation_seed": 4075384200805387616
+  },
+  {
+   "filename": "AS_Y_ry_simulated.csv",
+   "axis": "AS_Y",
+   "component": "ry",
+   "axis_class": "precision",
+   "controller": "ACS",
+   "command_unit": "mm",
+   "value_unit": "urad",
+   "node_count": 22,
+   "coverage": [
+    -26.943177,
+    114.536264
+   ],
+   "error_min": -2.674,
+   "error_max": 4.507,
+   "sha256": "E06D58F6A558AC8F7492868B7E2F30AB1CDEE5FE42A40555AFE65B97CCD988AA",
+   "generation_seed": 16568794148495888839
+  },
+  {
+   "filename": "AS_Y_rz_simulated.csv",
+   "axis": "AS_Y",
+   "component": "rz",
+   "axis_class": "precision",
+   "controller": "ACS",
+   "command_unit": "mm",
+   "value_unit": "urad",
+   "node_count": 29,
+   "coverage": [
+    -27.223883,
+    115.276633
+   ],
+   "error_min": -1.759,
+   "error_max": 0.868,
+   "sha256": "D4C69A8AA074CB03460B2958D86C5CCC99B17A1801C2C454BD07C1A77D9A6BF8",
+   "generation_seed": 8594522944813730744
+  },
+  {
+   "filename": "AS_Z_dx_simulated.csv",
+   "axis": "AS_Z",
+   "component": "dx",
+   "axis_class": "precision",
+   "controller": "ACS",
+   "command_unit": "mm",
+   "value_unit": "um",
+   "node_count": 20,
+   "coverage": [
+    -1.379976,
+    5.515846
+   ],
+   "error_min": -0.622,
+   "error_max": 0.3351,
+   "sha256": "052B1680F88639231BAFB8FFA9AF9FD095102F78B19B22A44E0E56A5C8963A8A",
+   "generation_seed": 9509636570063822951
+  },
+  {
+   "filename": "AS_Z_dy_simulated.csv",
+   "axis": "AS_Z",
+   "component": "dy",
+   "axis_class": "precision",
+   "controller": "ACS",
+   "command_unit": "mm",
+   "value_unit": "um",
+   "node_count": 30,
+   "coverage": [
+    -1.855741,
+    5.639594
+   ],
+   "error_min": -1.545,
+   "error_max": 0.5441,
+   "sha256": "02AFD842B83A05B0DE7C9BE0E517CCC1B1CD0698AF3E9B965E484A195F0E30E5",
+   "generation_seed": 2598223785978581347
+  },
+  {
+   "filename": "AS_Z_dz_simulated.csv",
+   "axis": "AS_Z",
+   "component": "dz",
+   "axis_class": "precision",
+   "controller": "ACS",
+   "command_unit": "mm",
+   "value_unit": "um",
+   "node_count": 24,
+   "coverage": [
+    -1.606509,
+    5.804289
+   ],
+   "error_min": -0.1422,
+   "error_max": 0.5239,
+   "sha256": "FF0792C81C3BA58267B4272BF737E5262D526800786167F3ED21592DDD995CE3",
+   "generation_seed": 14480477855078502523
+  },
+  {
+   "filename": "AS_Z_rx_simulated.csv",
+   "axis": "AS_Z",
+   "component": "rx",
+   "axis_class": "precision",
+   "controller": "ACS",
+   "command_unit": "mm",
+   "value_unit": "urad",
+   "node_count": 31,
+   "coverage": [
+    -1.526168,
+    5.380348
+   ],
+   "error_min": -1.638,
+   "error_max": 5.155,
+   "sha256": "17717A72D7701F8DF5A39C3D6C129FAC4E8F31DCE3E91B23C9E089B96AB251B4",
+   "generation_seed": 498711589074631806
+  },
+  {
+   "filename": "AS_Z_ry_simulated.csv",
+   "axis": "AS_Z",
+   "component": "ry",
+   "axis_class": "precision",
+   "controller": "ACS",
+   "command_unit": "mm",
+   "value_unit": "urad",
+   "node_count": 17,
+   "coverage": [
+    -1.422725,
+    5.797469
+   ],
+   "error_min": -8.649,
+   "error_max": 2.12,
+   "sha256": "C616CF5A3B0EF26A51174C2C9900A6AB28270B5D9C7405C1B490B8CAB8CD9B5D",
+   "generation_seed": 12064908465420052452
+  },
+  {
+   "filename": "AS_Z_rz_simulated.csv",
+   "axis": "AS_Z",
+   "component": "rz",
+   "axis_class": "precision",
+   "controller": "ACS",
+   "command_unit": "mm",
+   "value_unit": "urad",
+   "node_count": 28,
+   "coverage": [
+    -1.809837,
+    5.852262
+   ],
+   "error_min": -3.693,
+   "error_max": 2.141,
+   "sha256": "0DF87F24A9AD2B2127E3B43DE78C41D4638B6E73ABCA814169E015B251331C53",
+   "generation_seed": 4702653132288631247
+  },
+  {
+   "filename": "AS_Rx_dx_simulated.csv",
+   "axis": "AS_Rx",
+   "component": "dx",
+   "axis_class": "precision",
+   "controller": "ACS",
+   "command_unit": "rad",
+   "value_unit": "um",
+   "node_count": 24,
+   "coverage": [
+    -0.001659478,
+    0.001627066
+   ],
+   "error_min": -0.5714,
+   "error_max": 0.3101,
+   "sha256": "7A16C2B3DF465BDD11DA03820CC7931B6F0AD3BDB98EE3B4404F3E1BEF3E2EBF",
+   "generation_seed": 13241269695225984291
+  },
+  {
+   "filename": "AS_Rx_dy_simulated.csv",
+   "axis": "AS_Rx",
+   "component": "dy",
+   "axis_class": "precision",
+   "controller": "ACS",
+   "command_unit": "rad",
+   "value_unit": "um",
+   "node_count": 15,
+   "coverage": [
+    -0.001542868,
+    0.001652624
+   ],
+   "error_min": -0.4175,
+   "error_max": 1.3445,
+   "sha256": "A72D698EF5C3D92EF2908B589571AB835ECC01B38088B472A683E375330D90A6",
+   "generation_seed": 15647012182519604744
+  },
+  {
+   "filename": "AS_Rx_dz_simulated.csv",
+   "axis": "AS_Rx",
+   "component": "dz",
+   "axis_class": "precision",
+   "controller": "ACS",
+   "command_unit": "rad",
+   "value_unit": "um",
+   "node_count": 37,
+   "coverage": [
+    -0.001549016,
+    0.001632829
+   ],
+   "error_min": -1.2137,
+   "error_max": 0.4727,
+   "sha256": "3FB36F99630B0757FBB034212F75B21AFDA6890B8FF9AF4B952FADC123284931",
+   "generation_seed": 9880268166804538720
+  },
+  {
+   "filename": "AS_Rx_rx_simulated.csv",
+   "axis": "AS_Rx",
+   "component": "rx",
+   "axis_class": "precision",
+   "controller": "ACS",
+   "command_unit": "rad",
+   "value_unit": "urad",
+   "node_count": 21,
+   "coverage": [
+    -0.001502074,
+    0.00164701
+   ],
+   "error_min": -7.029,
+   "error_max": 1.816,
+   "sha256": "67224531BB68F8364AB9805D7486A83925082D62AF18224D733C873686C0796E",
+   "generation_seed": 1868993470242285848
+  },
+  {
+   "filename": "AS_Rx_ry_simulated.csv",
+   "axis": "AS_Rx",
+   "component": "ry",
+   "axis_class": "precision",
+   "controller": "ACS",
+   "command_unit": "rad",
+   "value_unit": "urad",
+   "node_count": 22,
+   "coverage": [
+    -0.001626363,
+    0.001580159
+   ],
+   "error_min": -4.75,
+   "error_max": 1.857,
+   "sha256": "A42157604E88BAD223C2C13F358777D5D1EE646C38D1B1642759472328F6868C",
+   "generation_seed": 15343114682618325441
+  },
+  {
+   "filename": "AS_Rx_rz_simulated.csv",
+   "axis": "AS_Rx",
+   "component": "rz",
+   "axis_class": "precision",
+   "controller": "ACS",
+   "command_unit": "rad",
+   "value_unit": "urad",
+   "node_count": 28,
+   "coverage": [
+    -0.001678622,
+    0.001692658
+   ],
+   "error_min": -5.249,
+   "error_max": 2.002,
+   "sha256": "E1A14E44E2872DAE72226F108AABD1937E36A25D3988FC08FBF9C6DD1416D18E",
+   "generation_seed": 17054640026762646789
+  },
+  {
+   "filename": "AS_Ry_dx_simulated.csv",
+   "axis": "AS_Ry",
+   "component": "dx",
+   "axis_class": "precision",
+   "controller": "ACS",
+   "command_unit": "rad",
+   "value_unit": "um",
+   "node_count": 24,
+   "coverage": [
+    -0.001476911,
+    0.001501459
+   ],
+   "error_min": -0.0594,
+   "error_max": 0.3968,
+   "sha256": "84EFD512A7DC79FF57AC89307A57D0004C68CD01D5BCF63AEDB359725825B003",
+   "generation_seed": 3600213166301504385
+  },
+  {
+   "filename": "AS_Ry_dy_simulated.csv",
+   "axis": "AS_Ry",
+   "component": "dy",
+   "axis_class": "precision",
+   "controller": "ACS",
+   "command_unit": "rad",
+   "value_unit": "um",
+   "node_count": 21,
+   "coverage": [
+    -0.001606763,
+    0.0015097
+   ],
+   "error_min": -0.31,
+   "error_max": 0.1308,
+   "sha256": "C6A699A3D720DD093828E00AADEAB1148670B6AB4717C97663B8CD58CA71B4FF",
+   "generation_seed": 3927950549851056696
+  },
+  {
+   "filename": "AS_Ry_dz_simulated.csv",
+   "axis": "AS_Ry",
+   "component": "dz",
+   "axis_class": "precision",
+   "controller": "ACS",
+   "command_unit": "rad",
+   "value_unit": "um",
+   "node_count": 28,
+   "coverage": [
+    -0.001614261,
+    0.001489873
+   ],
+   "error_min": -0.6011,
+   "error_max": 1.3993,
+   "sha256": "53B10F3AB08FDF2F6DCC9AF3F1A5D0296E3E19CDB26004A25AF92EE04561C6DC",
+   "generation_seed": 2268527513241162641
+  },
+  {
+   "filename": "AS_Ry_rx_simulated.csv",
+   "axis": "AS_Ry",
+   "component": "rx",
+   "axis_class": "precision",
+   "controller": "ACS",
+   "command_unit": "rad",
+   "value_unit": "urad",
+   "node_count": 30,
+   "coverage": [
+    -0.001529577,
+    0.001684722
+   ],
+   "error_min": -5.597,
+   "error_max": 2.291,
+   "sha256": "81E14741089901874FC28964C9D50A2A8BD2DDD9C5E1153E455E6FF9A9B6488E",
+   "generation_seed": 16073689711251693601
+  },
+  {
+   "filename": "AS_Ry_ry_simulated.csv",
+   "axis": "AS_Ry",
+   "component": "ry",
+   "axis_class": "precision",
+   "controller": "ACS",
+   "command_unit": "rad",
+   "value_unit": "urad",
+   "node_count": 16,
+   "coverage": [
+    -0.001591052,
+    0.001528363
+   ],
+   "error_min": -4.588,
+   "error_max": 2.145,
+   "sha256": "4AF7AF26DB3B18A31699F3A0CCF909C3C3221AF113815EFD17ED3C82D445BE45",
+   "generation_seed": 4484790519468128143
+  },
+  {
+   "filename": "AS_Ry_rz_simulated.csv",
+   "axis": "AS_Ry",
+   "component": "rz",
+   "axis_class": "precision",
+   "controller": "ACS",
+   "command_unit": "rad",
+   "value_unit": "urad",
+   "node_count": 16,
+   "coverage": [
+    -0.001701279,
+    0.001669133
+   ],
+   "error_min": -2.152,
+   "error_max": 7.474,
+   "sha256": "947C6F289C74EA9D834031E898D851060CE1D5CA867E4F8ADE7F5727F9D6CE7F",
+   "generation_seed": 8031269559531528363
+  },
+  {
+   "filename": "FA_X_dx_simulated.csv",
+   "axis": "FA_X",
+   "component": "dx",
+   "axis_class": "precision",
+   "controller": "ACS",
+   "command_unit": "mm",
+   "value_unit": "um",
+   "node_count": 31,
+   "coverage": [
+    -1201.026069,
+    -23.452855
+   ],
+   "error_min": -0.5599,
+   "error_max": 0.7994,
+   "sha256": "746D770FAB31F10197B85C2D40E91AF8BCDA50B211F270DB31500681F1AB5CC7",
+   "generation_seed": 11461792817709276786
+  },
+  {
+   "filename": "FA_X_dy_simulated.csv",
+   "axis": "FA_X",
+   "component": "dy",
+   "axis_class": "precision",
+   "controller": "ACS",
+   "command_unit": "mm",
+   "value_unit": "um",
+   "node_count": 23,
+   "coverage": [
+    -1223.798587,
+    -66.739
+   ],
+   "error_min": -0.1782,
+   "error_max": 0.3746,
+   "sha256": "CBC342F11F1BB5B27CA0699347B354C275965C4D01A2D208AB07674FD06E4D5D",
+   "generation_seed": 9067973540741243838
+  },
+  {
+   "filename": "FA_X_dz_simulated.csv",
+   "axis": "FA_X",
+   "component": "dz",
+   "axis_class": "precision",
+   "controller": "ACS",
+   "command_unit": "mm",
+   "value_unit": "um",
+   "node_count": 39,
+   "coverage": [
+    -1177.334401,
+    -44.913472
+   ],
+   "error_min": -0.7738,
+   "error_max": 0.4541,
+   "sha256": "063ABCD1FD6C6F46A0B6F877B59A36A8306EF18D587BA3FE482DFC09BE32E047",
+   "generation_seed": 3283766050151446494
+  },
+  {
+   "filename": "FA_X_rx_simulated.csv",
+   "axis": "FA_X",
+   "component": "rx",
+   "axis_class": "precision",
+   "controller": "ACS",
+   "command_unit": "mm",
+   "value_unit": "urad",
+   "node_count": 25,
+   "coverage": [
+    -1197.608151,
+    -70.854953
+   ],
+   "error_min": -5.216,
+   "error_max": 0.918,
+   "sha256": "0ADF6D32344E037DDA4905E428540A592E852740C525A280CA8F7705222DABCF",
+   "generation_seed": 14547916674494895546
+  },
+  {
+   "filename": "FA_X_ry_simulated.csv",
+   "axis": "FA_X",
+   "component": "ry",
+   "axis_class": "precision",
+   "controller": "ACS",
+   "command_unit": "mm",
+   "value_unit": "urad",
+   "node_count": 19,
+   "coverage": [
+    -1208.965,
+    -34.9624
+   ],
+   "error_min": -6.016,
+   "error_max": 3.097,
+   "sha256": "7FCD1F307B4C6BD19F4C13D01C83C5092EEAFB97ED498977EF11A9F4C8051E8A",
+   "generation_seed": 11323228021419411530
+  },
+  {
+   "filename": "FA_X_rz_simulated.csv",
+   "axis": "FA_X",
+   "component": "rz",
+   "axis_class": "precision",
+   "controller": "ACS",
+   "command_unit": "mm",
+   "value_unit": "urad",
+   "node_count": 34,
+   "coverage": [
+    -1209.397669,
+    -27.594683
+   ],
+   "error_min": -1.503,
+   "error_max": 2.533,
+   "sha256": "9176FC175AA6C62D282257583757145CA6AF7AAC7C324E1371603367C675FD8D",
+   "generation_seed": 14861291224318559871
+  },
+  {
+   "filename": "FA_Z_dx_simulated.csv",
+   "axis": "FA_Z",
+   "component": "dx",
+   "axis_class": "auxiliary",
+   "controller": "PLC",
+   "command_unit": "mm",
+   "value_unit": "um",
+   "node_count": 38,
+   "coverage": [
+    -33.631092,
+    34.290663
+   ],
+   "error_min": -6.1518,
+   "error_max": 2.1145,
+   "sha256": "15438B3C20B074C204E287B556FE1648886CBA936375DA59EB204EF7C5600910",
+   "generation_seed": 10312866783209063863
+  },
+  {
+   "filename": "FA_Z_dy_simulated.csv",
+   "axis": "FA_Z",
+   "component": "dy",
+   "axis_class": "auxiliary",
+   "controller": "PLC",
+   "command_unit": "mm",
+   "value_unit": "um",
+   "node_count": 24,
+   "coverage": [
+    -38.894638,
+    36.518262
+   ],
+   "error_min": -2.3022,
+   "error_max": 4.7098,
+   "sha256": "6F76B92C1D1EFB02E07703A597C04A9DED1E9F1A4268D457536AC33DF9EAA528",
+   "generation_seed": 7521950694529982993
+  },
+  {
+   "filename": "FA_Z_dz_simulated.csv",
+   "axis": "FA_Z",
+   "component": "dz",
+   "axis_class": "auxiliary",
+   "controller": "PLC",
+   "command_unit": "mm",
+   "value_unit": "um",
+   "node_count": 38,
+   "coverage": [
+    -38.56918,
+    35.777465
+   ],
+   "error_min": -6.8109,
+   "error_max": 2.2203,
+   "sha256": "D796F0B54EE6C66586E6D4919AE007E449360BB1C72FE04BA7CC0EE7DC87E614",
+   "generation_seed": 679369575473052799
+  },
+  {
+   "filename": "FA_Z_rx_simulated.csv",
+   "axis": "FA_Z",
+   "component": "rx",
+   "axis_class": "auxiliary",
+   "controller": "PLC",
+   "command_unit": "mm",
+   "value_unit": "urad",
+   "node_count": 23,
+   "coverage": [
+    -35.630302,
+    37.437369
+   ],
+   "error_min": -13.436,
+   "error_max": 24.558,
+   "sha256": "FBF5079E81275CF81998009A339C10596725BDCE1F8EA80C180E4BFA62E6F4C4",
+   "generation_seed": 15979384052463531448
+  },
+  {
+   "filename": "FA_Z_ry_simulated.csv",
+   "axis": "FA_Z",
+   "component": "ry",
+   "axis_class": "auxiliary",
+   "controller": "PLC",
+   "command_unit": "mm",
+   "value_unit": "urad",
+   "node_count": 23,
+   "coverage": [
+    -34.116971,
+    38.382906
+   ],
+   "error_min": -15.588,
+   "error_max": 7.025,
+   "sha256": "51DC11CCBFD721CA60AA5672C3548324E53DD70EC00932EF908CF8E6B4B3CC9F",
+   "generation_seed": 6437977207295193490
+  },
+  {
+   "filename": "FA_Z_rz_simulated.csv",
+   "axis": "FA_Z",
+   "component": "rz",
+   "axis_class": "auxiliary",
+   "controller": "PLC",
+   "command_unit": "mm",
+   "value_unit": "urad",
+   "node_count": 34,
+   "coverage": [
+    -38.922688,
+    35.429629
+   ],
+   "error_min": -26.896,
+   "error_max": 9.335,
+   "sha256": "BD60C3C3960491D69BF8675FB8D495018AF54781EDF259AB5D0128690637899E",
+   "generation_seed": 11079375232848637981
+  },
+  {
+   "filename": "FA_Rx_dx_simulated.csv",
+   "axis": "FA_Rx",
+   "component": "dx",
+   "axis_class": "auxiliary",
+   "controller": "PLC",
+   "command_unit": "rad",
+   "value_unit": "um",
+   "node_count": 19,
+   "coverage": [
+    -2.949428496,
+    2.936491409
+   ],
+   "error_min": -2.2225,
+   "error_max": 0.463,
+   "sha256": "903650075849BE7C0DBBB10CFE6C6372F099EB2A7D15C9012941009675783040",
+   "generation_seed": 1919684097981437558
+  },
+  {
+   "filename": "FA_Rx_dy_simulated.csv",
+   "axis": "FA_Rx",
+   "component": "dy",
+   "axis_class": "auxiliary",
+   "controller": "PLC",
+   "command_unit": "rad",
+   "value_unit": "um",
+   "node_count": 23,
+   "coverage": [
+    -2.904276244,
+    2.852366273
+   ],
+   "error_min": -2.3245,
+   "error_max": 6.5479,
+   "sha256": "6F31FCDB85DEC1750E8363883039C75C2AC21FF533E56BBAB4CDD32A8A3C7699",
+   "generation_seed": 15842975145536291514
+  },
+  {
+   "filename": "FA_Rx_dz_simulated.csv",
+   "axis": "FA_Rx",
+   "component": "dz",
+   "axis_class": "auxiliary",
+   "controller": "PLC",
+   "command_unit": "rad",
+   "value_unit": "um",
+   "node_count": 36,
+   "coverage": [
+    -2.804181905,
+    2.691120305
+   ],
+   "error_min": -1.5844,
+   "error_max": 3.5595,
+   "sha256": "CDF2BE482797BE053605A007C621380CC4E566C90659BF65FA2BAB2D54D754B3",
+   "generation_seed": 14633106484621909019
+  },
+  {
+   "filename": "FA_Rx_rx_simulated.csv",
+   "axis": "FA_Rx",
+   "component": "rx",
+   "axis_class": "auxiliary",
+   "controller": "PLC",
+   "command_unit": "rad",
+   "value_unit": "urad",
+   "node_count": 16,
+   "coverage": [
+    -2.652529985,
+    2.973039707
+   ],
+   "error_min": -12.026,
+   "error_max": 28.892,
+   "sha256": "3A7AA7AF84F32C7E0CAB40236AA62DDF45B0969796DECB288AE897297794C829",
+   "generation_seed": 8906141243895862799
+  },
+  {
+   "filename": "FA_Rx_ry_simulated.csv",
+   "axis": "FA_Rx",
+   "component": "ry",
+   "axis_class": "auxiliary",
+   "controller": "PLC",
+   "command_unit": "rad",
+   "value_unit": "urad",
+   "node_count": 39,
+   "coverage": [
+    -2.79465707,
+    2.780364343
+   ],
+   "error_min": -22.422,
+   "error_max": 29.014,
+   "sha256": "D9BDA26C2FF94B2A0F8882489843589A4559BCE7F2D6CF2174422136E7DB3E99",
+   "generation_seed": 8696572389705264400
+  },
+  {
+   "filename": "FA_Rx_rz_simulated.csv",
+   "axis": "FA_Rx",
+   "component": "rz",
+   "axis_class": "auxiliary",
+   "controller": "PLC",
+   "command_unit": "rad",
+   "value_unit": "urad",
+   "node_count": 39,
+   "coverage": [
+    -2.853696475,
+    2.911427632
+   ],
+   "error_min": -22.327,
+   "error_max": 33.617,
+   "sha256": "FA215DF657BDEFE17AC51A66BE428AFB08F725833153A8DCF7FD7B1358222DB2",
+   "generation_seed": 10556118762292763788
+  },
+  {
+   "filename": "CH_Rz_dx_simulated.csv",
+   "axis": "CH_Rz",
+   "component": "dx",
+   "axis_class": "auxiliary",
+   "controller": "PLC",
+   "command_unit": "rad",
+   "value_unit": "um",
+   "node_count": 32,
+   "coverage": [
+    -2.993182033,
+    2.945167288
+   ],
+   "error_min": -1.1675,
+   "error_max": 2.6836,
+   "sha256": "E4C55DD11DB86CFC2C3B0B9BB9BC4DEDB6F3D2F7654A4707524214FDA123B292",
+   "generation_seed": 5477559795586612101
+  },
+  {
+   "filename": "CH_Rz_dy_simulated.csv",
+   "axis": "CH_Rz",
+   "component": "dy",
+   "axis_class": "auxiliary",
+   "controller": "PLC",
+   "command_unit": "rad",
+   "value_unit": "um",
+   "node_count": 40,
+   "coverage": [
+    -2.674482758,
+    2.701976174
+   ],
+   "error_min": -5.6128,
+   "error_max": 2.9435,
+   "sha256": "57E2771C7C24C80FDFAA6BF4AB193AA9FF18AF1972450A6B2E58A697EFE36AA2",
+   "generation_seed": 11937030674109698897
+  },
+  {
+   "filename": "CH_Rz_dz_simulated.csv",
+   "axis": "CH_Rz",
+   "component": "dz",
+   "axis_class": "auxiliary",
+   "controller": "PLC",
+   "command_unit": "rad",
+   "value_unit": "um",
+   "node_count": 33,
+   "coverage": [
+    -2.933915809,
+    2.671756965
+   ],
+   "error_min": -1.0529,
+   "error_max": 2.4855,
+   "sha256": "3DFE1F6E653837A46B7CB05379C7342A40F64C99E9D3C5C10D09145C0AF0B8E0",
+   "generation_seed": 9384487979757133352
+  },
+  {
+   "filename": "CH_Rz_rx_simulated.csv",
+   "axis": "CH_Rz",
+   "component": "rx",
+   "axis_class": "auxiliary",
+   "controller": "PLC",
+   "command_unit": "rad",
+   "value_unit": "urad",
+   "node_count": 35,
+   "coverage": [
+    -2.727664329,
+    3.042695382
+   ],
+   "error_min": -14.992,
+   "error_max": 34.089,
+   "sha256": "E0202AC02F4FFD9CFC8B857637E23936BA19E8087CED1D68ABE183A7B81550EB",
+   "generation_seed": 15430559484196548712
+  },
+  {
+   "filename": "CH_Rz_ry_simulated.csv",
+   "axis": "CH_Rz",
+   "component": "ry",
+   "axis_class": "auxiliary",
+   "controller": "PLC",
+   "command_unit": "rad",
+   "value_unit": "urad",
+   "node_count": 35,
+   "coverage": [
+    -3.023350308,
+    2.797292507
+   ],
+   "error_min": -14.765,
+   "error_max": 9.79,
+   "sha256": "46FC2A3F97CFB4F937D74ACA97C831DCF1CE0AE45ECF8B9C0DBBE04BFF32DC4B",
+   "generation_seed": 820082361950627926
+  },
+  {
+   "filename": "CH_Rz_rz_simulated.csv",
+   "axis": "CH_Rz",
+   "component": "rz",
+   "axis_class": "auxiliary",
+   "controller": "PLC",
+   "command_unit": "rad",
+   "value_unit": "urad",
+   "node_count": 36,
+   "coverage": [
+    -2.725865137,
+    3.032403685
+   ],
+   "error_min": -10.845,
+   "error_max": 25.004,
+   "sha256": "31999C5B0B475D7CD7E40643E470494A4A5AA6A9066263184AF52710DC77A401",
+   "generation_seed": 3786706699699856759
+  },
+  {
+   "filename": "ES_X_dx_simulated.csv",
+   "axis": "ES_X",
+   "component": "dx",
+   "axis_class": "auxiliary",
+   "controller": "PLC",
+   "command_unit": "mm",
+   "value_unit": "um",
+   "node_count": 40,
+   "coverage": [
+    -270.523431,
+    77.655773
+   ],
+   "error_min": -3.1372,
+   "error_max": 8.4016,
+   "sha256": "F5FEB5CB1094530FBD9CBDFF77E29AABF260EA364710D08F5A413F99ECCE95A4",
+   "generation_seed": 14898166503368456671
+  },
+  {
+   "filename": "ES_X_dy_simulated.csv",
+   "axis": "ES_X",
+   "component": "dy",
+   "axis_class": "auxiliary",
+   "controller": "PLC",
+   "command_unit": "mm",
+   "value_unit": "um",
+   "node_count": 27,
+   "coverage": [
+    -266.491757,
+    79.827589
+   ],
+   "error_min": -3.4667,
+   "error_max": 2.2816,
+   "sha256": "17EB05B7A5C0CF64D6EEF5F37D3BAAE6CB2958B4A2E300F43F4162791F0F51F4",
+   "generation_seed": 3376435709680041852
+  },
+  {
+   "filename": "ES_X_dz_simulated.csv",
+   "axis": "ES_X",
+   "component": "dz",
+   "axis_class": "auxiliary",
+   "controller": "PLC",
+   "command_unit": "mm",
+   "value_unit": "um",
+   "node_count": 30,
+   "coverage": [
+    -269.77454,
+    79.343104
+   ],
+   "error_min": -2.6553,
+   "error_max": 0.5873,
+   "sha256": "C1C7C768C0C2B0EC63A1804C0BF5F79CC2850885BEA161A9AEBF35A768BCEE27",
+   "generation_seed": 11685507645335883855
+  },
+  {
+   "filename": "ES_X_rx_simulated.csv",
+   "axis": "ES_X",
+   "component": "rx",
+   "axis_class": "auxiliary",
+   "controller": "PLC",
+   "command_unit": "mm",
+   "value_unit": "urad",
+   "node_count": 39,
+   "coverage": [
+    -259.946145,
+    73.148201
+   ],
+   "error_min": -34.002,
+   "error_max": 10.479,
+   "sha256": "A3BEC33F905B72B85B47A5F2DA4D7945137706A7EF18575A0643701D14FD9E95",
+   "generation_seed": 15803445823669571260
+  },
+  {
+   "filename": "ES_X_ry_simulated.csv",
+   "axis": "ES_X",
+   "component": "ry",
+   "axis_class": "auxiliary",
+   "controller": "PLC",
+   "command_unit": "mm",
+   "value_unit": "urad",
+   "node_count": 20,
+   "coverage": [
+    -272.126785,
+    71.440074
+   ],
+   "error_min": -39.581,
+   "error_max": 7.56,
+   "sha256": "7F7EA0B27BCD38B510C53BB09352FACFA812D5E040483CB49BCDD8DB3015DD3D",
+   "generation_seed": 3457113954104197665
+  },
+  {
+   "filename": "ES_X_rz_simulated.csv",
+   "axis": "ES_X",
+   "component": "rz",
+   "axis_class": "auxiliary",
+   "controller": "PLC",
+   "command_unit": "mm",
+   "value_unit": "urad",
+   "node_count": 31,
+   "coverage": [
+    -262.258469,
+    64.719454
+   ],
+   "error_min": -9.848,
+   "error_max": 29.027,
+   "sha256": "8783B11DFD3C944B8523D17712B3E8E71B72EC5C506DAC0D2BDA0C56DAABA9E1",
+   "generation_seed": 17508177457389305872
+  },
+  {
+   "filename": "ES_Y_dx_simulated.csv",
+   "axis": "ES_Y",
+   "component": "dx",
+   "axis_class": "auxiliary",
+   "controller": "PLC",
+   "command_unit": "mm",
+   "value_unit": "um",
+   "node_count": 29,
+   "coverage": [
+    -148.223911,
+    180.549117
+   ],
+   "error_min": -3.8925,
+   "error_max": 2.2668,
+   "sha256": "446FB251877081990CD00BFC3135FF6ED55C37FFB11991AAC36C67A45BD7DC66",
+   "generation_seed": 650032877925736124
+  },
+  {
+   "filename": "ES_Y_dy_simulated.csv",
+   "axis": "ES_Y",
+   "component": "dy",
+   "axis_class": "auxiliary",
+   "controller": "PLC",
+   "command_unit": "mm",
+   "value_unit": "um",
+   "node_count": 36,
+   "coverage": [
+    -170.135948,
+    179.042523
+   ],
+   "error_min": -5.8803,
+   "error_max": 2.2519,
+   "sha256": "7AF75E2C515065C10BB82550A9721289F78C01D987B297D6286052420D11ECE9",
+   "generation_seed": 17857839363904050623
+  },
+  {
+   "filename": "ES_Y_dz_simulated.csv",
+   "axis": "ES_Y",
+   "component": "dz",
+   "axis_class": "auxiliary",
+   "controller": "PLC",
+   "command_unit": "mm",
+   "value_unit": "um",
+   "node_count": 37,
+   "coverage": [
+    -145.433349,
+    179.766058
+   ],
+   "error_min": -1.85,
+   "error_max": 1.0365,
+   "sha256": "D16E74646E4E1BD6A40E15509BB309C16862978987CF1C50B2F54F90CC4A6DD9",
+   "generation_seed": 15184002503048067620
+  },
+  {
+   "filename": "ES_Y_rx_simulated.csv",
+   "axis": "ES_Y",
+   "component": "rx",
+   "axis_class": "auxiliary",
+   "controller": "PLC",
+   "command_unit": "mm",
+   "value_unit": "urad",
+   "node_count": 31,
+   "coverage": [
+    -151.266439,
+    171.887484
+   ],
+   "error_min": -29.89,
+   "error_max": 15.199,
+   "sha256": "CCC6B1DB6F541B2438A049FCDB0BBDBFEA786A2132CE763538767797ED79E9A7",
+   "generation_seed": 14191788984450443590
+  },
+  {
+   "filename": "ES_Y_ry_simulated.csv",
+   "axis": "ES_Y",
+   "component": "ry",
+   "axis_class": "auxiliary",
+   "controller": "PLC",
+   "command_unit": "mm",
+   "value_unit": "urad",
+   "node_count": 27,
+   "coverage": [
+    -149.043944,
+    174.112303
+   ],
+   "error_min": -10.73,
+   "error_max": 25.252,
+   "sha256": "CD5ABA394338D6BEC44D78382F219C93E88A808FFBCAD557C4FEAF86A7179B76",
+   "generation_seed": 12548376150991696768
+  },
+  {
+   "filename": "ES_Y_rz_simulated.csv",
+   "axis": "ES_Y",
+   "component": "rz",
+   "axis_class": "auxiliary",
+   "controller": "PLC",
+   "command_unit": "mm",
+   "value_unit": "urad",
+   "node_count": 32,
+   "coverage": [
+    -162.187433,
+    181.744381
+   ],
+   "error_min": -14.024,
+   "error_max": 31.049,
+   "sha256": "E8CB8A9FDF55F187EBAD92E9F999AA2D5210B9E96FD3F1E49AA22403945752F8",
+   "generation_seed": 17940431241462503583
+  },
+  {
+   "filename": "ES_PunchZ_dx_simulated.csv",
+   "axis": "ES_PunchZ",
+   "component": "dx",
+   "axis_class": "auxiliary",
+   "controller": "ACS",
+   "command_unit": "mm",
+   "value_unit": "um",
+   "node_count": 24,
+   "coverage": [
+    0.327593,
+    4.649831
+   ],
+   "error_min": -1.1098,
+   "error_max": 4.0647,
+   "sha256": "50826667CFCC02493751F614F96C886D28D7C28DD0AEE0F8FC42A771045A0E00",
+   "generation_seed": 6072483976551313083
+  },
+  {
+   "filename": "ES_PunchZ_dy_simulated.csv",
+   "axis": "ES_PunchZ",
+   "component": "dy",
+   "axis_class": "auxiliary",
+   "controller": "ACS",
+   "command_unit": "mm",
+   "value_unit": "um",
+   "node_count": 23,
+   "coverage": [
+    0.388326,
+    4.793937
+   ],
+   "error_min": -4.4405,
+   "error_max": 1.6203,
+   "sha256": "4E3A480F89F75E567FE787AE97CF8410A3784223C1841D3400CBB30F4E02DC65",
+   "generation_seed": 17687993609902394566
+  },
+  {
+   "filename": "ES_PunchZ_dz_simulated.csv",
+   "axis": "ES_PunchZ",
+   "component": "dz",
+   "axis_class": "auxiliary",
+   "controller": "ACS",
+   "command_unit": "mm",
+   "value_unit": "um",
+   "node_count": 19,
+   "coverage": [
+    0.191046,
+    4.842805
+   ],
+   "error_min": -6.1559,
+   "error_max": 3.2659,
+   "sha256": "8B360F97769FE6049BB918C2BEDDE36947236C943A42FC7C816D8A0FB4E47A9A",
+   "generation_seed": 3602814404176740926
+  },
+  {
+   "filename": "ES_PunchZ_rx_simulated.csv",
+   "axis": "ES_PunchZ",
+   "component": "rx",
+   "axis_class": "auxiliary",
+   "controller": "ACS",
+   "command_unit": "mm",
+   "value_unit": "urad",
+   "node_count": 20,
+   "coverage": [
+    0.127651,
+    4.903448
+   ],
+   "error_min": -34.848,
+   "error_max": 9.483,
+   "sha256": "E62923C3CBDAF508E58BBB783039D97C03DE30A73EC8F7E2E75E1124FB87326B",
+   "generation_seed": 11215043872381498323
+  },
+  {
+   "filename": "ES_PunchZ_ry_simulated.csv",
+   "axis": "ES_PunchZ",
+   "component": "ry",
+   "axis_class": "auxiliary",
+   "controller": "ACS",
+   "command_unit": "mm",
+   "value_unit": "urad",
+   "node_count": 19,
+   "coverage": [
+    0.382068,
+    4.7856
+   ],
+   "error_min": -8.202,
+   "error_max": 17.552,
+   "sha256": "450B449D7E62800FBD403011628E2A8C90466DB05D45B8A2CAB2C59773DF9CC1",
+   "generation_seed": 15672039619279707070
+  },
+  {
+   "filename": "ES_PunchZ_rz_simulated.csv",
+   "axis": "ES_PunchZ",
+   "component": "rz",
+   "axis_class": "auxiliary",
+   "controller": "ACS",
+   "command_unit": "mm",
+   "value_unit": "urad",
+   "node_count": 23,
+   "coverage": [
+    0.27922,
+    4.657444
+   ],
+   "error_min": -11.276,
+   "error_max": 19.8,
+   "sha256": "BA4EF7E216294CA288CCF79E45AD34326F35D5B7AC29132FF07E2D37EBC6E5F5",
+   "generation_seed": 11575858016320623410
+  }
+ ]
+}

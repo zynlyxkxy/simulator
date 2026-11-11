@@ -1,0 +1,9224 @@
+{
+ "_comment": "零件级沙盒（AABB）表——由 tools/gen_sandboxes.py v2 从 TwinDOM 模型自动生成，勿手改；模型更新后重新运行生成脚本。盒=零件零位世界 AABB（旋转轴已按零件扫掠成不变盒）；运行时按 linear 贡献平移；判撞=三向最小重叠深度 > depth_eps。",
+ "schema": 2,
+ "depth_eps": 2.0,
+ "source": "d2w_front.json",
+ "boxes": [
+  {
+   "name": "pt:box_mssjj329_9ocxvw",
+   "label": "大理石基座1〔固定〕",
+   "part": "大理石基座1",
+   "kind": "fixed",
+   "group": "fixed",
+   "object": "box_mssjj329_9ocxvw",
+   "min": [
+    -886.5,
+    -599.5,
+    470.0
+   ],
+   "max": [
+    726.5,
+    799.5,
+    655.0
+   ],
+   "linear": {},
+   "rotary": []
+  },
+  {
+   "name": "pt:box_mssjmmim_1tklq3",
+   "label": "大理石基座2〔固定〕",
+   "part": "大理石基座2",
+   "kind": "fixed",
+   "group": "fixed",
+   "object": "box_mssjmmim_1tklq3",
+   "min": [
+    -605.0,
+    -540.0,
+    655.0
+   ],
+   "max": [
+    605.0,
+    540.0,
+    755.0
+   ],
+   "linear": {},
+   "rotary": []
+  },
+  {
+   "name": "pt:xr1_mount_0001",
+   "label": "X导轨1-安装座〔固定〕",
+   "part": "X导轨1-安装座",
+   "kind": "fixed",
+   "group": "fixed",
+   "object": "xr1_mount_0001",
+   "min": [
+    -510.0,
+    -508.5,
+    755.0
+   ],
+   "max": [
+    510.0,
+    -463.5,
+    767.5
+   ],
+   "linear": {},
+   "rotary": []
+  },
+  {
+   "name": "pt:xr2_mount_0001",
+   "label": "X导轨2-安装座〔固定〕",
+   "part": "X导轨2-安装座",
+   "kind": "fixed",
+   "group": "fixed",
+   "object": "xr2_mount_0001",
+   "min": [
+    -485.0,
+    463.5,
+    755.0
+   ],
+   "max": [
+    535.0,
+    508.5,
+    767.5
+   ],
+   "linear": {},
+   "rotary": []
+  },
+  {
+   "name": "pt:xr1_base_0001",
+   "label": "X导轨1-基座〔固定〕",
+   "part": "X导轨1-基座",
+   "kind": "fixed",
+   "group": "fixed",
+   "object": "xr1_base_0001",
+   "min": [
+    -510.0,
+    -508.5,
+    767.5
+   ],
+   "max": [
+    510.0,
+    -463.5,
+    779.5
+   ],
+   "linear": {},
+   "rotary": []
+  },
+  {
+   "name": "pt:xr1_rail_0001",
+   "label": "X导轨1-轨道〔固定〕",
+   "part": "X导轨1-轨道",
+   "kind": "fixed",
+   "group": "fixed",
+   "object": "xr1_rail_0001",
+   "min": [
+    -510.0,
+    -494.0,
+    779.5
+   ],
+   "max": [
+    510.0,
+    -478.0,
+    787.5
+   ],
+   "linear": {},
+   "rotary": []
+  },
+  {
+   "name": "pt:xr1_stator_0001",
+   "label": "X导轨1-定子〔固定〕",
+   "part": "X导轨1-定子",
+   "kind": "fixed",
+   "group": "fixed",
+   "object": "xr1_stator_0001",
+   "min": [
+    -510.0,
+    -476.0,
+    779.5
+   ],
+   "max": [
+    510.0,
+    -464.0,
+    780.3
+   ],
+   "linear": {},
+   "rotary": []
+  },
+  {
+   "name": "pt:xr2_base_0001",
+   "label": "X导轨2-基座〔固定〕",
+   "part": "X导轨2-基座",
+   "kind": "fixed",
+   "group": "fixed",
+   "object": "xr2_base_0001",
+   "min": [
+    -485.0,
+    463.5,
+    767.5
+   ],
+   "max": [
+    535.0,
+    508.5,
+    779.5
+   ],
+   "linear": {},
+   "rotary": []
+  },
+  {
+   "name": "pt:xr2_rail_0001",
+   "label": "X导轨2-轨道〔固定〕",
+   "part": "X导轨2-轨道",
+   "kind": "fixed",
+   "group": "fixed",
+   "object": "xr2_rail_0001",
+   "min": [
+    -485.0,
+    478.0,
+    779.5
+   ],
+   "max": [
+    535.0,
+    494.0,
+    787.5
+   ],
+   "linear": {},
+   "rotary": []
+  },
+  {
+   "name": "pt:xr2_stator_0001",
+   "label": "X导轨2-定子〔固定〕",
+   "part": "X导轨2-定子",
+   "kind": "fixed",
+   "group": "fixed",
+   "object": "xr2_stator_0001",
+   "min": [
+    -485.0,
+    464.0,
+    779.5
+   ],
+   "max": [
+    535.0,
+    476.0,
+    780.3
+   ],
+   "linear": {},
+   "rotary": []
+  },
+  {
+   "name": "pt:y_slider_1_0001",
+   "label": "X轴滑块1〔Y导轨组（轴:WS_LS_X）〕",
+   "part": "X轴滑块1",
+   "kind": "moving",
+   "group": "grp:group_mssl0re6_ppzut0",
+   "object": "y_slider_1_0001",
+   "min": [
+    254.5,
+    469.0,
+    787.5
+   ],
+   "max": [
+    324.5,
+    503.0,
+    800.0
+   ],
+   "linear": {
+    "WS_LS_X": [
+     1.0,
+     0.0,
+     0.0,
+     -220,
+     220
+    ]
+   },
+   "rotary": []
+  },
+  {
+   "name": "pt:y_slider_2_0001",
+   "label": "X轴滑块2〔Y导轨组（轴:WS_LS_X）〕",
+   "part": "X轴滑块2",
+   "kind": "moving",
+   "group": "grp:group_mssl0re6_ppzut0",
+   "object": "y_slider_2_0001",
+   "min": [
+    254.5,
+    -503.0,
+    787.5
+   ],
+   "max": [
+    324.5,
+    -469.0,
+    800.0
+   ],
+   "linear": {
+    "WS_LS_X": [
+     1.0,
+     0.0,
+     0.0,
+     -220,
+     220
+    ]
+   },
+   "rotary": []
+  },
+  {
+   "name": "pt:y_slider_3_0001",
+   "label": "X轴滑块3〔Y导轨组（轴:WS_LS_X）〕",
+   "part": "X轴滑块3",
+   "kind": "moving",
+   "group": "grp:group_mssl0re6_ppzut0",
+   "object": "y_slider_3_0001",
+   "min": [
+    -324.5,
+    469.0,
+    787.5
+   ],
+   "max": [
+    -254.5,
+    503.0,
+    800.0
+   ],
+   "linear": {
+    "WS_LS_X": [
+     1.0,
+     0.0,
+     0.0,
+     -220,
+     220
+    ]
+   },
+   "rotary": []
+  },
+  {
+   "name": "pt:y_slider_4_0001",
+   "label": "X轴滑块4〔Y导轨组（轴:WS_LS_X）〕",
+   "part": "X轴滑块4",
+   "kind": "moving",
+   "group": "grp:group_mssl0re6_ppzut0",
+   "object": "y_slider_4_0001",
+   "min": [
+    -324.5,
+    -503.0,
+    787.5
+   ],
+   "max": [
+    -254.5,
+    -469.0,
+    800.0
+   ],
+   "linear": {
+    "WS_LS_X": [
+     1.0,
+     0.0,
+     0.0,
+     -220,
+     220
+    ]
+   },
+   "rotary": []
+  },
+  {
+   "name": "pt:yr1_base_0001",
+   "label": "Y导轨1-基座〔Y导轨组（轴:WS_LS_X）〕",
+   "part": "Y导轨1-基座",
+   "kind": "moving",
+   "group": "grp:group_mssl0re6_ppzut0",
+   "object": "yr1_base_0001",
+   "min": [
+    -334.0,
+    -520.0,
+    800.0
+   ],
+   "max": [
+    -245.0,
+    520.0,
+    813.0
+   ],
+   "linear": {
+    "WS_LS_X": [
+     1.0,
+     0.0,
+     0.0,
+     -220,
+     220
+    ]
+   },
+   "rotary": []
+  },
+  {
+   "name": "pt:yr1_rail_0001",
+   "label": "Y导轨1-轨道〔Y导轨组（轴:WS_LS_X）〕",
+   "part": "Y导轨1-轨道",
+   "kind": "moving",
+   "group": "grp:group_mssl0re6_ppzut0",
+   "object": "yr1_rail_0001",
+   "min": [
+    -301.5,
+    -520.0,
+    813.0
+   ],
+   "max": [
+    -277.5,
+    520.0,
+    823.0
+   ],
+   "linear": {
+    "WS_LS_X": [
+     1.0,
+     0.0,
+     0.0,
+     -220,
+     220
+    ]
+   },
+   "rotary": []
+  },
+  {
+   "name": "pt:yr1_stator_0001",
+   "label": "Y导轨1-定子〔Y导轨组（轴:WS_LS_X）〕",
+   "part": "Y导轨1-定子",
+   "kind": "moving",
+   "group": "grp:group_mssl0re6_ppzut0",
+   "object": "yr1_stator_0001",
+   "min": [
+    -276.5,
+    -520.0,
+    813.0
+   ],
+   "max": [
+    -246.5,
+    520.0,
+    813.8
+   ],
+   "linear": {
+    "WS_LS_X": [
+     1.0,
+     0.0,
+     0.0,
+     -220,
+     220
+    ]
+   },
+   "rotary": []
+  },
+  {
+   "name": "pt:yr2_base_0001",
+   "label": "Y导轨2-基座〔Y导轨组（轴:WS_LS_X）〕",
+   "part": "Y导轨2-基座",
+   "kind": "moving",
+   "group": "grp:group_mssl0re6_ppzut0",
+   "object": "yr2_base_0001",
+   "min": [
+    245.0,
+    -520.0,
+    800.0
+   ],
+   "max": [
+    334.0,
+    520.0,
+    813.0
+   ],
+   "linear": {
+    "WS_LS_X": [
+     1.0,
+     0.0,
+     0.0,
+     -220,
+     220
+    ]
+   },
+   "rotary": []
+  },
+  {
+   "name": "pt:yr2_rail_0001",
+   "label": "Y导轨2-轨道〔Y导轨组（轴:WS_LS_X）〕",
+   "part": "Y导轨2-轨道",
+   "kind": "moving",
+   "group": "grp:group_mssl0re6_ppzut0",
+   "object": "yr2_rail_0001",
+   "min": [
+    277.5,
+    -520.0,
+    813.0
+   ],
+   "max": [
+    301.5,
+    520.0,
+    823.0
+   ],
+   "linear": {
+    "WS_LS_X": [
+     1.0,
+     0.0,
+     0.0,
+     -220,
+     220
+    ]
+   },
+   "rotary": []
+  },
+  {
+   "name": "pt:yr2_stator_0001",
+   "label": "Y导轨2-定子〔Y导轨组（轴:WS_LS_X）〕",
+   "part": "Y导轨2-定子",
+   "kind": "moving",
+   "group": "grp:group_mssl0re6_ppzut0",
+   "object": "yr2_stator_0001",
+   "min": [
+    246.5,
+    -520.0,
+    813.0
+   ],
+   "max": [
+    276.5,
+    520.0,
+    813.8
+   ],
+   "linear": {
+    "WS_LS_X": [
+     1.0,
+     0.0,
+     0.0,
+     -220,
+     220
+    ]
+   },
+   "rotary": []
+  },
+  {
+   "name": "pt:box_mssl7mh8_x6ugcu",
+   "label": "微动基座〔微动基座组（轴:WS_LS_X+WS_LS_Y）〕",
+   "part": "微动基座",
+   "kind": "moving",
+   "group": "grp:box_mssl7mh8_x6ugcu",
+   "object": "box_mssl7mh8_x6ugcu",
+   "min": [
+    -320.0,
+    -285.0,
+    823.0
+   ],
+   "max": [
+    320.0,
+    285.0,
+    838.0
+   ],
+   "linear": {
+    "WS_LS_X": [
+     1.0,
+     0.0,
+     0.0,
+     -220,
+     220
+    ],
+    "WS_LS_Y": [
+     0.0,
+     1.0,
+     0.0,
+     -220,
+     220
+    ]
+   },
+   "rotary": []
+  },
+  {
+   "name": "pt:cylinder_msslion7_fntuht",
+   "label": "Rz旋转组件〔Rz旋转组件组（轴:WS_LS_X+WS_LS_Y+WS_Rz）〕",
+   "part": "Rz旋转组件",
+   "kind": "moving",
+   "group": "grp:cylinder_msslion7_fntuht",
+   "object": "cylinder_msslion7_fntuht",
+   "min": [
+    -230.1641,
+    -230.1641,
+    836.1
+   ],
+   "max": [
+    230.1641,
+    230.1641,
+    843.9
+   ],
+   "linear": {
+    "WS_LS_X": [
+     1.0,
+     0.0,
+     0.0,
+     -220,
+     220
+    ],
+    "WS_LS_Y": [
+     0.0,
+     1.0,
+     0.0,
+     -220,
+     220
+    ]
+   },
+   "rotary": [
+    "WS_Rz"
+   ]
+  },
+  {
+   "name": "pt:ceramic_msslygtz_8wc595",
+   "label": "多孔陶瓷面〔Rz旋转组件组（轴:WS_LS_X+WS_LS_Y+WS_Rz）〕",
+   "part": "多孔陶瓷面",
+   "kind": "moving",
+   "group": "grp:cylinder_msslion7_fntuht",
+   "object": "ceramic_msslygtz_8wc595",
+   "min": [
+    -152.5949,
+    -152.589,
+    878.9
+   ],
+   "max": [
+    152.3819,
+    152.589,
+    884.9
+   ],
+   "linear": {
+    "WS_LS_X": [
+     1.0,
+     0.0,
+     0.0,
+     -220,
+     220
+    ],
+    "WS_LS_Y": [
+     0.0,
+     1.0,
+     0.0,
+     -220,
+     220
+    ]
+   },
+   "rotary": [
+    "WS_Rz"
+   ]
+  },
+  {
+   "name": "pt:groove_0_msslygtz_t5uv5k",
+   "label": "真空槽 1〔Rz旋转组件组（轴:WS_LS_X+WS_LS_Y+WS_Rz）〕",
+   "part": "真空槽 1",
+   "kind": "moving",
+   "group": "grp:cylinder_msslion7_fntuht",
+   "object": "groove_0_msslygtz_t5uv5k",
+   "min": [
+    -49.8477,
+    -49.8477,
+    881.75
+   ],
+   "max": [
+    49.8477,
+    49.8477,
+    882.25
+   ],
+   "linear": {
+    "WS_LS_X": [
+     1.0,
+     0.0,
+     0.0,
+     -220,
+     220
+    ],
+    "WS_LS_Y": [
+     0.0,
+     1.0,
+     0.0,
+     -220,
+     220
+    ]
+   },
+   "rotary": [
+    "WS_Rz"
+   ]
+  },
+  {
+   "name": "pt:groove_1_msslygtz_egfb0v",
+   "label": "真空槽 2〔Rz旋转组件组（轴:WS_LS_X+WS_LS_Y+WS_Rz）〕",
+   "part": "真空槽 2",
+   "kind": "moving",
+   "group": "grp:cylinder_msslion7_fntuht",
+   "object": "groove_1_msslygtz_egfb0v",
+   "min": [
+    -95.4227,
+    -95.4227,
+    881.75
+   ],
+   "max": [
+    95.4227,
+    95.4227,
+    882.25
+   ],
+   "linear": {
+    "WS_LS_X": [
+     1.0,
+     0.0,
+     0.0,
+     -220,
+     220
+    ],
+    "WS_LS_Y": [
+     0.0,
+     1.0,
+     0.0,
+     -220,
+     220
+    ]
+   },
+   "rotary": [
+    "WS_Rz"
+   ]
+  },
+  {
+   "name": "pt:cylinder_mssmg2rx_jsjzxg",
+   "label": "气浮台〔Rz旋转组件组（轴:WS_LS_X+WS_LS_Y+WS_Rz）〕",
+   "part": "气浮台",
+   "kind": "moving",
+   "group": "grp:cylinder_msslion7_fntuht",
+   "object": "cylinder_mssmg2rx_jsjzxg",
+   "min": [
+    -203.46,
+    -203.46,
+    755.0
+   ],
+   "max": [
+    203.46,
+    203.46,
+    823.0
+   ],
+   "linear": {
+    "WS_LS_X": [
+     1.0,
+     0.0,
+     0.0,
+     -220,
+     220
+    ],
+    "WS_LS_Y": [
+     0.0,
+     1.0,
+     0.0,
+     -220,
+     220
+    ]
+   },
+   "rotary": [
+    "WS_Rz"
+   ]
+  },
+  {
+   "name": "pt:chuck_base_notched_0001",
+   "label": "吸盘基座（带Epin缺口）〔Rz旋转组件组（轴:WS_LS_X+WS_LS_Y+WS_Rz）〕",
+   "part": "吸盘基座（带Epin缺口）",
+   "kind": "moving",
+   "group": "grp:cylinder_msslion7_fntuht",
+   "object": "chuck_base_notched_0001",
+   "min": [
+    -162.7437,
+    -162.7466,
+    859.9
+   ],
+   "max": [
+    162.5677,
+    162.7466,
+    891.9
+   ],
+   "linear": {
+    "WS_LS_X": [
+     1.0,
+     0.0,
+     0.0,
+     -220,
+     220
+    ],
+    "WS_LS_Y": [
+     0.0,
+     1.0,
+     0.0,
+     -220,
+     220
+    ]
+   },
+   "rotary": [
+    "WS_Rz"
+   ]
+  },
+  {
+   "name": "pt:epin1_zrail_0001",
+   "label": "Epin1 Z轴导轨〔Epin1组（轴:WS_LS_X+WS_LS_Y+WS_Rz+E_EPIN_Z_1）〕",
+   "part": "Epin1 Z轴导轨",
+   "kind": "moving",
+   "group": "grp:group_epin1_0001",
+   "object": "epin1_zrail_0001",
+   "min": [
+    138.8741,
+    -8.5995,
+    823.9
+   ],
+   "max": [
+    149.082,
+    8.5995,
+    853.9
+   ],
+   "linear": {
+    "WS_LS_X": [
+     1.0,
+     0.0,
+     0.0,
+     -220,
+     220
+    ],
+    "WS_LS_Y": [
+     0.0,
+     1.0,
+     0.0,
+     -220,
+     220
+    ],
+    "E_EPIN_Z_1": [
+     0.0,
+     0.0,
+     1.0,
+     0,
+     30
+    ]
+   },
+   "rotary": [
+    "WS_Rz"
+   ]
+  },
+  {
+   "name": "pt:epin1_slider_0001",
+   "label": "Epin1 导轨滑块〔Epin1组（轴:WS_LS_X+WS_LS_Y+WS_Rz+E_EPIN_Z_1）〕",
+   "part": "Epin1 导轨滑块",
+   "kind": "moving",
+   "group": "grp:group_epin1_0001",
+   "object": "epin1_slider_0001",
+   "min": [
+    137.8743,
+    -8.6169,
+    847.9
+   ],
+   "max": [
+    150.0819,
+    8.6169,
+    855.9
+   ],
+   "linear": {
+    "WS_LS_X": [
+     1.0,
+     0.0,
+     0.0,
+     -220,
+     220
+    ],
+    "WS_LS_Y": [
+     0.0,
+     1.0,
+     0.0,
+     -220,
+     220
+    ],
+    "E_EPIN_Z_1": [
+     0.0,
+     0.0,
+     1.0,
+     0,
+     30
+    ]
+   },
+   "rotary": [
+    "WS_Rz"
+   ]
+  },
+  {
+   "name": "pt:epin1_pin_0001",
+   "label": "Epin1 顶针〔Epin1组（轴:WS_LS_X+WS_LS_Y+WS_Rz+E_EPIN_Z_1）〕",
+   "part": "Epin1 顶针",
+   "kind": "moving",
+   "group": "grp:group_epin1_0001",
+   "object": "epin1_pin_0001",
+   "min": [
+    140.9262,
+    -5.565,
+    851.9
+   ],
+   "max": [
+    147.03,
+    5.565,
+    873.9
+   ],
+   "linear": {
+    "WS_LS_X": [
+     1.0,
+     0.0,
+     0.0,
+     -220,
+     220
+    ],
+    "WS_LS_Y": [
+     0.0,
+     1.0,
+     0.0,
+     -220,
+     220
+    ],
+    "E_EPIN_Z_1": [
+     0.0,
+     0.0,
+     1.0,
+     0,
+     30
+    ]
+   },
+   "rotary": [
+    "WS_Rz"
+   ]
+  },
+  {
+   "name": "pt:epin1_tab_0001",
+   "label": "Epin1 半己型片压〔Epin1组（轴:WS_LS_X+WS_LS_Y+WS_Rz+E_EPIN_Z_1）〕",
+   "part": "Epin1 半己型片压",
+   "kind": "moving",
+   "group": "grp:group_epin1_0001",
+   "object": "epin1_tab_0001",
+   "min": [
+    136.857,
+    -9.5121,
+    875.4
+   ],
+   "max": [
+    144.1002,
+    9.5121,
+    878.4
+   ],
+   "linear": {
+    "WS_LS_X": [
+     1.0,
+     0.0,
+     0.0,
+     -220,
+     220
+    ],
+    "WS_LS_Y": [
+     0.0,
+     1.0,
+     0.0,
+     -220,
+     220
+    ],
+    "E_EPIN_Z_1": [
+     0.0,
+     0.0,
+     1.0,
+     0,
+     30
+    ]
+   },
+   "rotary": [
+    "WS_Rz"
+   ]
+  },
+  {
+   "name": "pt:epin2_zrail_0001",
+   "label": "Epin2 Z轴导轨〔Epin2组（轴:WS_LS_X+WS_LS_Y+WS_Rz+E_EPIN_Z_2）〕",
+   "part": "Epin2 Z轴导轨",
+   "kind": "moving",
+   "group": "grp:group_epin2_0001",
+   "object": "epin2_zrail_0001",
+   "min": [
+    -81.9884,
+    115.9691,
+    823.9
+   ],
+   "max": [
+    -61.9897,
+    133.4089,
+    853.9
+   ],
+   "linear": {
+    "WS_LS_X": [
+     1.0,
+     0.0,
+     0.0,
+     -220,
+     220
+    ],
+    "WS_LS_Y": [
+     0.0,
+     1.0,
+     0.0,
+     -220,
+     220
+    ],
+    "E_EPIN_Z_2": [
+     0.0,
+     0.0,
+     1.0,
+     0,
+     30
+    ]
+   },
+   "rotary": [
+    "WS_Rz"
+   ]
+  },
+  {
+   "name": "pt:epin2_slider_0001",
+   "label": "Epin2 导轨滑块〔Epin2组（轴:WS_LS_X+WS_LS_Y+WS_Rz+E_EPIN_Z_2）〕",
+   "part": "Epin2 导轨滑块",
+   "kind": "moving",
+   "group": "grp:group_epin2_0001",
+   "object": "epin2_slider_0001",
+   "min": [
+    -82.5034,
+    115.0945,
+    847.9
+   ],
+   "max": [
+    -61.4746,
+    134.2835,
+    855.9
+   ],
+   "linear": {
+    "WS_LS_X": [
+     1.0,
+     0.0,
+     0.0,
+     -220,
+     220
+    ],
+    "WS_LS_Y": [
+     0.0,
+     1.0,
+     0.0,
+     -220,
+     220
+    ],
+    "E_EPIN_Z_2": [
+     0.0,
+     0.0,
+     1.0,
+     0,
+     30
+    ]
+   },
+   "rotary": [
+    "WS_Rz"
+   ]
+  },
+  {
+   "name": "pt:epin2_pin_0001",
+   "label": "Epin2 顶针〔Epin2组（轴:WS_LS_X+WS_LS_Y+WS_Rz+E_EPIN_Z_2）〕",
+   "part": "Epin2 顶针",
+   "kind": "moving",
+   "group": "grp:group_epin2_0001",
+   "object": "epin2_pin_0001",
+   "min": [
+    -78.3345,
+    119.2635,
+    851.9
+   ],
+   "max": [
+    -65.6436,
+    130.1146,
+    873.9
+   ],
+   "linear": {
+    "WS_LS_X": [
+     1.0,
+     0.0,
+     0.0,
+     -220,
+     220
+    ],
+    "WS_LS_Y": [
+     0.0,
+     1.0,
+     0.0,
+     -220,
+     220
+    ],
+    "E_EPIN_Z_2": [
+     0.0,
+     0.0,
+     1.0,
+     0,
+     30
+    ]
+   },
+   "rotary": [
+    "WS_Rz"
+   ]
+  },
+  {
+   "name": "pt:epin2_tab_0001",
+   "label": "Epin2 半己型片压〔Epin2组（轴:WS_LS_X+WS_LS_Y+WS_Rz+E_EPIN_Z_2）〕",
+   "part": "Epin2 半己型片压",
+   "kind": "moving",
+   "group": "grp:group_epin2_0001",
+   "object": "epin2_tab_0001",
+   "min": [
+    -80.2878,
+    113.7659,
+    875.4
+   ],
+   "max": [
+    -60.1908,
+    129.5508,
+    878.4
+   ],
+   "linear": {
+    "WS_LS_X": [
+     1.0,
+     0.0,
+     0.0,
+     -220,
+     220
+    ],
+    "WS_LS_Y": [
+     0.0,
+     1.0,
+     0.0,
+     -220,
+     220
+    ],
+    "E_EPIN_Z_2": [
+     0.0,
+     0.0,
+     1.0,
+     0,
+     30
+    ]
+   },
+   "rotary": [
+    "WS_Rz"
+   ]
+  },
+  {
+   "name": "pt:epin3_zrail_0001",
+   "label": "Epin3 Z轴导轨〔Epin3组（轴:WS_LS_X+WS_LS_Y+WS_Rz+E_EPIN_Z_3）〕",
+   "part": "Epin3 Z轴导轨",
+   "kind": "moving",
+   "group": "grp:group_epin3_0001",
+   "object": "epin3_zrail_0001",
+   "min": [
+    -81.9884,
+    -133.4089,
+    823.9
+   ],
+   "max": [
+    -61.9897,
+    -115.9691,
+    853.9
+   ],
+   "linear": {
+    "WS_LS_X": [
+     1.0,
+     0.0,
+     0.0,
+     -220,
+     220
+    ],
+    "WS_LS_Y": [
+     0.0,
+     1.0,
+     0.0,
+     -220,
+     220
+    ],
+    "E_EPIN_Z_3": [
+     0.0,
+     0.0,
+     1.0,
+     0,
+     30
+    ]
+   },
+   "rotary": [
+    "WS_Rz"
+   ]
+  },
+  {
+   "name": "pt:epin3_slider_0001",
+   "label": "Epin3 导轨滑块〔Epin3组（轴:WS_LS_X+WS_LS_Y+WS_Rz+E_EPIN_Z_3）〕",
+   "part": "Epin3 导轨滑块",
+   "kind": "moving",
+   "group": "grp:group_epin3_0001",
+   "object": "epin3_slider_0001",
+   "min": [
+    -82.5034,
+    -134.2835,
+    847.9
+   ],
+   "max": [
+    -61.4746,
+    -115.0945,
+    855.9
+   ],
+   "linear": {
+    "WS_LS_X": [
+     1.0,
+     0.0,
+     0.0,
+     -220,
+     220
+    ],
+    "WS_LS_Y": [
+     0.0,
+     1.0,
+     0.0,
+     -220,
+     220
+    ],
+    "E_EPIN_Z_3": [
+     0.0,
+     0.0,
+     1.0,
+     0,
+     30
+    ]
+   },
+   "rotary": [
+    "WS_Rz"
+   ]
+  },
+  {
+   "name": "pt:epin3_pin_0001",
+   "label": "Epin3 顶针〔Epin3组（轴:WS_LS_X+WS_LS_Y+WS_Rz+E_EPIN_Z_3）〕",
+   "part": "Epin3 顶针",
+   "kind": "moving",
+   "group": "grp:group_epin3_0001",
+   "object": "epin3_pin_0001",
+   "min": [
+    -78.3345,
+    -130.1146,
+    851.9
+   ],
+   "max": [
+    -65.6436,
+    -119.2635,
+    873.9
+   ],
+   "linear": {
+    "WS_LS_X": [
+     1.0,
+     0.0,
+     0.0,
+     -220,
+     220
+    ],
+    "WS_LS_Y": [
+     0.0,
+     1.0,
+     0.0,
+     -220,
+     220
+    ],
+    "E_EPIN_Z_3": [
+     0.0,
+     0.0,
+     1.0,
+     0,
+     30
+    ]
+   },
+   "rotary": [
+    "WS_Rz"
+   ]
+  },
+  {
+   "name": "pt:epin3_tab_0001",
+   "label": "Epin3 半己型片压〔Epin3组（轴:WS_LS_X+WS_LS_Y+WS_Rz+E_EPIN_Z_3）〕",
+   "part": "Epin3 半己型片压",
+   "kind": "moving",
+   "group": "grp:group_epin3_0001",
+   "object": "epin3_tab_0001",
+   "min": [
+    -80.2878,
+    -129.5508,
+    875.4
+   ],
+   "max": [
+    -60.1908,
+    -113.7659,
+    878.4
+   ],
+   "linear": {
+    "WS_LS_X": [
+     1.0,
+     0.0,
+     0.0,
+     -220,
+     220
+    ],
+    "WS_LS_Y": [
+     0.0,
+     1.0,
+     0.0,
+     -220,
+     220
+    ],
+    "E_EPIN_Z_3": [
+     0.0,
+     0.0,
+     1.0,
+     0,
+     30
+    ]
+   },
+   "rotary": [
+    "WS_Rz"
+   ]
+  },
+  {
+   "name": "pt:box_mssnz9ya_pdnd24",
+   "label": "Tray盘座〔微动基座组（轴:WS_LS_X+WS_LS_Y）〕",
+   "part": "Tray盘座",
+   "kind": "moving",
+   "group": "grp:box_mssl7mh8_x6ugcu",
+   "object": "box_mssnz9ya_pdnd24",
+   "min": [
+    -295.0,
+    -190.0,
+    836.25
+   ],
+   "max": [
+    -215.0,
+    190.0,
+    865.75
+   ],
+   "linear": {
+    "WS_LS_X": [
+     1.0,
+     0.0,
+     0.0,
+     -220,
+     220
+    ],
+    "WS_LS_Y": [
+     0.0,
+     1.0,
+     0.0,
+     -220,
+     220
+    ]
+   },
+   "rotary": []
+  },
+  {
+   "name": "pt:plane_msso5x9z_gj2m7r",
+   "label": "Tray盘1〔微动基座组（轴:WS_LS_X+WS_LS_Y）〕",
+   "part": "Tray盘1",
+   "kind": "moving",
+   "group": "grp:box_mssl7mh8_x6ugcu",
+   "object": "plane_msso5x9z_gj2m7r",
+   "min": [
+    -284.5,
+    90.5,
+    865.75
+   ],
+   "max": [
+    -225.5,
+    149.5,
+    867.75
+   ],
+   "linear": {
+    "WS_LS_X": [
+     1.0,
+     0.0,
+     0.0,
+     -220,
+     220
+    ],
+    "WS_LS_Y": [
+     0.0,
+     1.0,
+     0.0,
+     -220,
+     220
+    ]
+   },
+   "rotary": []
+  },
+  {
+   "name": "pt:mechanicalobject_msso9ff5_wwcgbe",
+   "label": "Tray盘2〔微动基座组（轴:WS_LS_X+WS_LS_Y）〕",
+   "part": "Tray盘2",
+   "kind": "moving",
+   "group": "grp:box_mssl7mh8_x6ugcu",
+   "object": "mechanicalobject_msso9ff5_wwcgbe",
+   "min": [
+    -284.5,
+    10.5,
+    865.75
+   ],
+   "max": [
+    -225.5,
+    69.5,
+    867.75
+   ],
+   "linear": {
+    "WS_LS_X": [
+     1.0,
+     0.0,
+     0.0,
+     -220,
+     220
+    ],
+    "WS_LS_Y": [
+     0.0,
+     1.0,
+     0.0,
+     -220,
+     220
+    ]
+   },
+   "rotary": []
+  },
+  {
+   "name": "pt:mechanicalobject_msso9ff6_tu00yq",
+   "label": "Tray盘3〔微动基座组（轴:WS_LS_X+WS_LS_Y）〕",
+   "part": "Tray盘3",
+   "kind": "moving",
+   "group": "grp:box_mssl7mh8_x6ugcu",
+   "object": "mechanicalobject_msso9ff6_tu00yq",
+   "min": [
+    -284.5,
+    -69.5,
+    865.75
+   ],
+   "max": [
+    -225.5,
+    -10.5,
+    867.75
+   ],
+   "linear": {
+    "WS_LS_X": [
+     1.0,
+     0.0,
+     0.0,
+     -220,
+     220
+    ],
+    "WS_LS_Y": [
+     0.0,
+     1.0,
+     0.0,
+     -220,
+     220
+    ]
+   },
+   "rotary": []
+  },
+  {
+   "name": "pt:box_mssolgz4_yl7vre",
+   "label": "键合臂横梁〔固定〕",
+   "part": "键合臂横梁",
+   "kind": "fixed",
+   "group": "fixed",
+   "object": "box_mssolgz4_yl7vre",
+   "min": [
+    -886.5,
+    145.0,
+    1122.0
+   ],
+   "max": [
+    726.5,
+    445.0,
+    1322.0
+   ],
+   "linear": {},
+   "rotary": []
+  },
+  {
+   "name": "pt:box_mssoxg8g_bnpy7g",
+   "label": "键合臂平台架1〔固定〕",
+   "part": "键合臂平台架1",
+   "kind": "fixed",
+   "group": "fixed",
+   "object": "box_mssoxg8g_bnpy7g",
+   "min": [
+    -887.5,
+    145.0,
+    655.0
+   ],
+   "max": [
+    -772.5,
+    445.0,
+    1122.0
+   ],
+   "linear": {},
+   "rotary": []
+  },
+  {
+   "name": "pt:mechanicalobject_mssp0h0p_vvd7df",
+   "label": "键合臂平台架2〔固定〕",
+   "part": "键合臂平台架2",
+   "kind": "fixed",
+   "group": "fixed",
+   "object": "mechanicalobject_mssp0h0p_vvd7df",
+   "min": [
+    608.5,
+    145.0,
+    655.0
+   ],
+   "max": [
+    723.5,
+    445.0,
+    1122.0
+   ],
+   "linear": {},
+   "rotary": []
+  },
+  {
+   "name": "pt:box_msspbl4e_x4ueyr",
+   "label": "连接板〔固定〕",
+   "part": "连接板",
+   "kind": "fixed",
+   "group": "fixed",
+   "object": "box_msspbl4e_x4ueyr",
+   "min": [
+    -240.0,
+    83.0,
+    1322.0
+   ],
+   "max": [
+    155.0,
+    303.0,
+    1660.0
+   ],
+   "linear": {},
+   "rotary": []
+  },
+  {
+   "name": "pt:box_msspmjzt_krvpvx",
+   "label": "键合臂底座〔固定〕",
+   "part": "键合臂底座",
+   "kind": "fixed",
+   "group": "fixed",
+   "object": "box_msspmjzt_krvpvx",
+   "min": [
+    -240.0,
+    -16.5,
+    1342.0
+   ],
+   "max": [
+    155.0,
+    82.5,
+    1660.0
+   ],
+   "linear": {},
+   "rotary": []
+  },
+  {
+   "name": "pt:box_mssptvdy_4guv68",
+   "label": "升降臂〔升降臂组（轴:BS_Arm_Z）〕",
+   "part": "升降臂",
+   "kind": "moving",
+   "group": "grp:box_mssptvdy_4guv68",
+   "object": "box_mssptvdy_4guv68",
+   "min": [
+    -207.5,
+    -60.5,
+    1294.0
+   ],
+   "max": [
+    122.5,
+    -16.5,
+    1662.0
+   ],
+   "linear": {
+    "BS_Arm_Z": [
+     0.0,
+     0.0,
+     1.0,
+     -190,
+     0
+    ]
+   },
+   "rotary": []
+  },
+  {
+   "name": "pt:box_mssqcuna_avt1yh",
+   "label": "升降臂L〔升降臂组（轴:BS_Arm_Z）〕",
+   "part": "升降臂L",
+   "kind": "moving",
+   "group": "grp:box_mssptvdy_4guv68",
+   "object": "box_mssqcuna_avt1yh",
+   "min": [
+    -132.5,
+    -16.5,
+    1294.0
+   ],
+   "max": [
+    47.5,
+    73.5,
+    1338.0
+   ],
+   "linear": {
+    "BS_Arm_Z": [
+     0.0,
+     0.0,
+     1.0,
+     -190,
+     0
+    ]
+   },
+   "rotary": []
+  },
+  {
+   "name": "pt:box_mssqyue6_3jgqev",
+   "label": "压力传感器〔升降臂组（轴:BS_Arm_Z）〕",
+   "part": "压力传感器",
+   "kind": "moving",
+   "group": "grp:box_mssptvdy_4guv68",
+   "object": "box_mssqyue6_3jgqev",
+   "min": [
+    -102.5,
+    -53.0,
+    1287.0
+   ],
+   "max": [
+    17.5,
+    67.0,
+    1294.0
+   ],
+   "linear": {
+    "BS_Arm_Z": [
+     0.0,
+     0.0,
+     1.0,
+     -190,
+     0
+    ]
+   },
+   "rotary": []
+  },
+  {
+   "name": "pt:cylinder_mssrakr3_y2opyb",
+   "label": "RxRy调整球座〔RxRy调整球座组（轴:BS_Arm_Z+BS_CAL_Rx+BS_CAL_Ry）〕",
+   "part": "RxRy调整球座",
+   "kind": "moving",
+   "group": "grp:cylinder_mssrakr3_y2opyb",
+   "object": "cylinder_mssrakr3_y2opyb",
+   "min": [
+    -115.1253,
+    -65.6251,
+    1143.2471
+   ],
+   "max": [
+    30.1253,
+    79.6251,
+    1287.2529
+   ],
+   "linear": {
+    "BS_Arm_Z": [
+     0.0,
+     0.0,
+     1.0,
+     -190,
+     0
+    ]
+   },
+   "rotary": [
+    "BS_CAL_Rx",
+    "BS_CAL_Ry"
+   ]
+  },
+  {
+   "name": "pt:rxry_level_screw1_0001",
+   "label": "调平螺钉1〔RxRy调整球座组（轴:BS_Arm_Z+BS_CAL_Rx+BS_CAL_Ry）〕",
+   "part": "调平螺钉1",
+   "kind": "moving",
+   "group": "grp:cylinder_mssrakr3_y2opyb",
+   "object": "rxry_level_screw1_0001",
+   "min": [
+    17.3864,
+    0.8866,
+    1251.1138
+   ],
+   "max": [
+    29.6134,
+    13.1134,
+    1280.3859
+   ],
+   "linear": {
+    "BS_Arm_Z": [
+     0.0,
+     0.0,
+     1.0,
+     -190,
+     0
+    ]
+   },
+   "rotary": [
+    "BS_CAL_Rx",
+    "BS_CAL_Ry"
+   ]
+  },
+  {
+   "name": "pt:rxry_level_screw2_0001",
+   "label": "调平螺钉2〔RxRy调整球座组（轴:BS_Arm_Z+BS_CAL_Rx+BS_CAL_Ry）〕",
+   "part": "调平螺钉2",
+   "kind": "moving",
+   "group": "grp:cylinder_mssrakr3_y2opyb",
+   "object": "rxry_level_screw2_0001",
+   "min": [
+    -81.6136,
+    58.0445,
+    1251.0716
+   ],
+   "max": [
+    -69.3863,
+    70.2714,
+    1280.4281
+   ],
+   "linear": {
+    "BS_Arm_Z": [
+     0.0,
+     0.0,
+     1.0,
+     -190,
+     0
+    ]
+   },
+   "rotary": [
+    "BS_CAL_Rx",
+    "BS_CAL_Ry"
+   ]
+  },
+  {
+   "name": "pt:rxry_level_screw3_0001",
+   "label": "调平螺钉3〔RxRy调整球座组（轴:BS_Arm_Z+BS_CAL_Rx+BS_CAL_Ry）〕",
+   "part": "调平螺钉3",
+   "kind": "moving",
+   "group": "grp:cylinder_mssrakr3_y2opyb",
+   "object": "rxry_level_screw3_0001",
+   "min": [
+    -81.6136,
+    -56.2714,
+    1251.0716
+   ],
+   "max": [
+    -69.3863,
+    -44.0445,
+    1280.4281
+   ],
+   "linear": {
+    "BS_Arm_Z": [
+     0.0,
+     0.0,
+     1.0,
+     -190,
+     0
+    ]
+   },
+   "rotary": [
+    "BS_CAL_Rx",
+    "BS_CAL_Ry"
+   ]
+  },
+  {
+   "name": "pt:box_mssriiqy_ihe0nb",
+   "label": "键合头底座〔RxRy调整球座组（轴:BS_Arm_Z+BS_CAL_Rx+BS_CAL_Ry）〕",
+   "part": "键合头底座",
+   "kind": "moving",
+   "group": "grp:cylinder_mssrakr3_y2opyb",
+   "object": "box_mssriiqy_ihe0nb",
+   "min": [
+    -96.696,
+    -47.1958,
+    1102.8118
+   ],
+   "max": [
+    11.696,
+    61.1958,
+    1143.6887
+   ],
+   "linear": {
+    "BS_Arm_Z": [
+     0.0,
+     0.0,
+     1.0,
+     -190,
+     0
+    ]
+   },
+   "rotary": [
+    "BS_CAL_Rx",
+    "BS_CAL_Ry"
+   ]
+  },
+  {
+   "name": "pt:airring_left_0001",
+   "label": "上气环-左〔RxRy调整球座组（轴:BS_Arm_Z+BS_CAL_Rx+BS_CAL_Ry）〕",
+   "part": "上气环-左",
+   "kind": "moving",
+   "group": "grp:cylinder_mssrakr3_y2opyb",
+   "object": "airring_left_0001",
+   "min": [
+    -95.2806,
+    -45.7805,
+    1054.3172
+   ],
+   "max": [
+    -70.2192,
+    59.7805,
+    1103.1836
+   ],
+   "linear": {
+    "BS_Arm_Z": [
+     0.0,
+     0.0,
+     1.0,
+     -190,
+     0
+    ]
+   },
+   "rotary": [
+    "BS_CAL_Rx",
+    "BS_CAL_Ry"
+   ]
+  },
+  {
+   "name": "pt:airring_right_0001",
+   "label": "上气环-右〔RxRy调整球座组（轴:BS_Arm_Z+BS_CAL_Rx+BS_CAL_Ry）〕",
+   "part": "上气环-右",
+   "kind": "moving",
+   "group": "grp:cylinder_mssrakr3_y2opyb",
+   "object": "airring_right_0001",
+   "min": [
+    -14.7808,
+    -45.7805,
+    1054.3172
+   ],
+   "max": [
+    10.2806,
+    59.7805,
+    1103.1836
+   ],
+   "linear": {
+    "BS_Arm_Z": [
+     0.0,
+     0.0,
+     1.0,
+     -190,
+     0
+    ]
+   },
+   "rotary": [
+    "BS_CAL_Rx",
+    "BS_CAL_Ry"
+   ]
+  },
+  {
+   "name": "pt:airring_front_0001",
+   "label": "上气环-前〔RxRy调整球座组（轴:BS_Arm_Z+BS_CAL_Rx+BS_CAL_Ry）〕",
+   "part": "上气环-前",
+   "kind": "moving",
+   "group": "grp:cylinder_mssrakr3_y2opyb",
+   "object": "airring_front_0001",
+   "min": [
+    -70.7807,
+    34.7194,
+    1054.36
+   ],
+   "max": [
+    -14.2193,
+    59.7805,
+    1103.1408
+   ],
+   "linear": {
+    "BS_Arm_Z": [
+     0.0,
+     0.0,
+     1.0,
+     -190,
+     0
+    ]
+   },
+   "rotary": [
+    "BS_CAL_Rx",
+    "BS_CAL_Ry"
+   ]
+  },
+  {
+   "name": "pt:airring_back_0001",
+   "label": "上气环-后〔RxRy调整球座组（轴:BS_Arm_Z+BS_CAL_Rx+BS_CAL_Ry）〕",
+   "part": "上气环-后",
+   "kind": "moving",
+   "group": "grp:cylinder_mssrakr3_y2opyb",
+   "object": "airring_back_0001",
+   "min": [
+    -70.7807,
+    -45.7805,
+    1054.36
+   ],
+   "max": [
+    -14.2193,
+    -20.7194,
+    1103.1408
+   ],
+   "linear": {
+    "BS_Arm_Z": [
+     0.0,
+     0.0,
+     1.0,
+     -190,
+     0
+    ]
+   },
+   "rotary": [
+    "BS_CAL_Rx",
+    "BS_CAL_Ry"
+   ]
+  },
+  {
+   "name": "pt:box_mssrsdpg_u0q0bi",
+   "label": "键合头吸盘〔RxRy调整球座组（轴:BS_Arm_Z+BS_CAL_Rx+BS_CAL_Ry）〕",
+   "part": "键合头吸盘",
+   "kind": "moving",
+   "group": "grp:cylinder_mssrakr3_y2opyb",
+   "object": "box_mssrsdpg_u0q0bi",
+   "min": [
+    -69.7816,
+    -20.2815,
+    1053.8312
+   ],
+   "max": [
+    -15.2184,
+    34.2815,
+    1055.0197
+   ],
+   "linear": {
+    "BS_Arm_Z": [
+     0.0,
+     0.0,
+     1.0,
+     -190,
+     0
+    ]
+   },
+   "rotary": [
+    "BS_CAL_Rx",
+    "BS_CAL_Ry"
+   ]
+  },
+  {
+   "name": "pt:box_msssaimq_8w6yv8",
+   "label": "对准台底座〔固定〕",
+   "part": "对准台底座",
+   "kind": "fixed",
+   "group": "fixed",
+   "object": "box_msssaimq_8w6yv8",
+   "min": [
+    -487.5,
+    147.0,
+    1077.5
+   ],
+   "max": [
+    -117.5,
+    347.0,
+    1122.0
+   ],
+   "linear": {},
+   "rotary": []
+  },
+  {
+   "name": "pt:mechanicalobject_msssjh6b_teh3bf",
+   "label": "对准台X轴承接板〔对准台X轴承接板组（轴:AS_X）〕",
+   "part": "对准台X轴承接板",
+   "kind": "moving",
+   "group": "grp:mechanicalobject_msssjh6b_teh3bf",
+   "object": "mechanicalobject_msssjh6b_teh3bf",
+   "min": [
+    -402.5,
+    101.0,
+    1033.0
+   ],
+   "max": [
+    -202.5,
+    481.0,
+    1077.5
+   ],
+   "linear": {
+    "AS_X": [
+     1.0,
+     0.0,
+     0.0,
+     -30,
+     80
+    ]
+   },
+   "rotary": []
+  },
+  {
+   "name": "pt:box_msst6r7i_ppzlv5",
+   "label": "对准台Y轴承接板〔对准台Y轴承接板组（轴:AS_X+AS_Y+AS_Z）〕",
+   "part": "对准台Y轴承接板",
+   "kind": "moving",
+   "group": "grp:box_msst6r7i_ppzlv5",
+   "object": "box_msst6r7i_ppzlv5",
+   "min": [
+    -412.5,
+    208.0,
+    933.5
+   ],
+   "max": [
+    -192.5,
+    374.0,
+    1033.0
+   ],
+   "linear": {
+    "AS_X": [
+     1.0,
+     0.0,
+     0.0,
+     -30,
+     80
+    ],
+    "AS_Y": [
+     0.0,
+     1.0,
+     0.0,
+     -30,
+     120
+    ],
+    "AS_Z": [
+     0.0,
+     0.0,
+     1.0,
+     -2,
+     6
+    ]
+   },
+   "rotary": []
+  },
+  {
+   "name": "pt:mechanicalobject_msstt4h6_10bqi4",
+   "label": "对准台承接板1〔对准台Y轴承接板组（轴:AS_X+AS_Y+AS_Z）〕",
+   "part": "对准台承接板1",
+   "kind": "moving",
+   "group": "grp:box_msst6r7i_ppzlv5",
+   "object": "mechanicalobject_msstt4h6_10bqi4",
+   "min": [
+    -397.0,
+    83.0,
+    926.0
+   ],
+   "max": [
+    34.0,
+    345.0,
+    939.0
+   ],
+   "linear": {
+    "AS_X": [
+     1.0,
+     0.0,
+     0.0,
+     -30,
+     80
+    ],
+    "AS_Y": [
+     0.0,
+     1.0,
+     0.0,
+     -30,
+     120
+    ],
+    "AS_Z": [
+     0.0,
+     0.0,
+     1.0,
+     -2,
+     6
+    ]
+   },
+   "rotary": []
+  },
+  {
+   "name": "pt:box_mssty4oj_u3pj08",
+   "label": "对准相机承载台〔对准相机承载台组（轴:AS_X+AS_Y+AS_Z+AS_Rx+AS_Ry）〕",
+   "part": "对准相机承载台",
+   "kind": "moving",
+   "group": "grp:box_mssty4oj_u3pj08",
+   "object": "box_mssty4oj_u3pj08",
+   "min": [
+    -138.0262,
+    -35.0261,
+    894.7313
+   ],
+   "max": [
+    53.0262,
+    82.0261,
+    925.2687
+   ],
+   "linear": {
+    "AS_X": [
+     1.0,
+     0.0,
+     0.0,
+     -30,
+     80
+    ],
+    "AS_Y": [
+     0.0,
+     1.0,
+     0.0,
+     -30,
+     120
+    ],
+    "AS_Z": [
+     0.0,
+     0.0,
+     1.0,
+     -2,
+     6
+    ]
+   },
+   "rotary": [
+    "AS_Rx",
+    "AS_Ry"
+   ]
+  },
+  {
+   "name": "pt:cam_up_bezel_0001",
+   "label": "上相机压圈〔对准相机承载台组（轴:AS_X+AS_Y+AS_Z+AS_Rx+AS_Ry）〕",
+   "part": "上相机压圈",
+   "kind": "moving",
+   "group": "grp:box_mssty4oj_u3pj08",
+   "object": "cam_up_bezel_0001",
+   "min": [
+    -49.5269,
+    -6.0267,
+    924.7863
+   ],
+   "max": [
+    -35.4731,
+    8.0268,
+    925.4137
+   ],
+   "linear": {
+    "AS_X": [
+     1.0,
+     0.0,
+     0.0,
+     -30,
+     80
+    ],
+    "AS_Y": [
+     0.0,
+     1.0,
+     0.0,
+     -30,
+     120
+    ],
+    "AS_Z": [
+     0.0,
+     0.0,
+     1.0,
+     -2,
+     6
+    ]
+   },
+   "rotary": [
+    "AS_Rx",
+    "AS_Ry"
+   ]
+  },
+  {
+   "name": "pt:cam_dn_bezel_0001",
+   "label": "下相机压圈〔对准相机承载台组（轴:AS_X+AS_Y+AS_Z+AS_Rx+AS_Ry）〕",
+   "part": "下相机压圈",
+   "kind": "moving",
+   "group": "grp:box_mssty4oj_u3pj08",
+   "object": "cam_dn_bezel_0001",
+   "min": [
+    -49.5269,
+    -6.0267,
+    894.5863
+   ],
+   "max": [
+    -35.4731,
+    8.0268,
+    895.2137
+   ],
+   "linear": {
+    "AS_X": [
+     1.0,
+     0.0,
+     0.0,
+     -30,
+     80
+    ],
+    "AS_Y": [
+     0.0,
+     1.0,
+     0.0,
+     -30,
+     120
+    ],
+    "AS_Z": [
+     0.0,
+     0.0,
+     1.0,
+     -2,
+     6
+    ]
+   },
+   "rotary": [
+    "AS_Rx",
+    "AS_Ry"
+   ]
+  },
+  {
+   "name": "pt:conf_up_bezel_0001",
+   "label": "上光谱共焦探头压圈〔对准相机承载台组（轴:AS_X+AS_Y+AS_Z+AS_Rx+AS_Ry）〕",
+   "part": "上光谱共焦探头压圈",
+   "kind": "moving",
+   "group": "grp:box_mssty4oj_u3pj08",
+   "object": "conf_up_bezel_0001",
+   "min": [
+    -46.5269,
+    -28.0267,
+    924.7531
+   ],
+   "max": [
+    -38.4731,
+    -19.9731,
+    925.4468
+   ],
+   "linear": {
+    "AS_X": [
+     1.0,
+     0.0,
+     0.0,
+     -30,
+     80
+    ],
+    "AS_Y": [
+     0.0,
+     1.0,
+     0.0,
+     -30,
+     120
+    ],
+    "AS_Z": [
+     0.0,
+     0.0,
+     1.0,
+     -2,
+     6
+    ]
+   },
+   "rotary": [
+    "AS_Rx",
+    "AS_Ry"
+   ]
+  },
+  {
+   "name": "pt:conf_dn_bezel_0001",
+   "label": "下光谱共焦探头压圈〔对准相机承载台组（轴:AS_X+AS_Y+AS_Z+AS_Rx+AS_Ry）〕",
+   "part": "下光谱共焦探头压圈",
+   "kind": "moving",
+   "group": "grp:box_mssty4oj_u3pj08",
+   "object": "conf_dn_bezel_0001",
+   "min": [
+    -46.5269,
+    -28.0267,
+    894.5532
+   ],
+   "max": [
+    -38.4731,
+    -19.9731,
+    895.2469
+   ],
+   "linear": {
+    "AS_X": [
+     1.0,
+     0.0,
+     0.0,
+     -30,
+     80
+    ],
+    "AS_Y": [
+     0.0,
+     1.0,
+     0.0,
+     -30,
+     120
+    ],
+    "AS_Z": [
+     0.0,
+     0.0,
+     1.0,
+     -2,
+     6
+    ]
+   },
+   "rotary": [
+    "AS_Rx",
+    "AS_Ry"
+   ]
+  },
+  {
+   "name": "pt:circle_mssuehmv_q0y9ws",
+   "label": "上相机镜头〔对准相机承载台组（轴:AS_X+AS_Y+AS_Z+AS_Rx+AS_Ry）〕",
+   "part": "上相机镜头",
+   "kind": "moving",
+   "group": "grp:box_mssty4oj_u3pj08",
+   "object": "circle_mssuehmv_q0y9ws",
+   "min": [
+    -46.5267,
+    -3.0266,
+    924.6967
+   ],
+   "max": [
+    -38.4733,
+    5.0266,
+    925.3032
+   ],
+   "linear": {
+    "AS_X": [
+     1.0,
+     0.0,
+     0.0,
+     -30,
+     80
+    ],
+    "AS_Y": [
+     0.0,
+     1.0,
+     0.0,
+     -30,
+     120
+    ],
+    "AS_Z": [
+     0.0,
+     0.0,
+     1.0,
+     -2,
+     6
+    ]
+   },
+   "rotary": [
+    "AS_Rx",
+    "AS_Ry"
+   ]
+  },
+  {
+   "name": "pt:mechanicalobject_mssulatg_dwmc6r",
+   "label": "下相机镜头〔对准相机承载台组（轴:AS_X+AS_Y+AS_Z+AS_Rx+AS_Ry）〕",
+   "part": "下相机镜头",
+   "kind": "moving",
+   "group": "grp:box_mssty4oj_u3pj08",
+   "object": "mechanicalobject_mssulatg_dwmc6r",
+   "min": [
+    -46.5267,
+    -3.0266,
+    894.6968
+   ],
+   "max": [
+    -38.4733,
+    5.0266,
+    895.3033
+   ],
+   "linear": {
+    "AS_X": [
+     1.0,
+     0.0,
+     0.0,
+     -30,
+     80
+    ],
+    "AS_Y": [
+     0.0,
+     1.0,
+     0.0,
+     -30,
+     120
+    ],
+    "AS_Z": [
+     0.0,
+     0.0,
+     1.0,
+     -2,
+     6
+    ]
+   },
+   "rotary": [
+    "AS_Rx",
+    "AS_Ry"
+   ]
+  },
+  {
+   "name": "pt:mechanicalobject_mssulwzt_9nstr9",
+   "label": "上光谱共焦传感器〔对准相机承载台组（轴:AS_X+AS_Y+AS_Z+AS_Rx+AS_Ry）〕",
+   "part": "上光谱共焦传感器",
+   "kind": "moving",
+   "group": "grp:box_mssty4oj_u3pj08",
+   "object": "mechanicalobject_mssulwzt_9nstr9",
+   "min": [
+    -44.5268,
+    -26.0265,
+    924.6601
+   ],
+   "max": [
+    -40.4732,
+    -21.9733,
+    925.3398
+   ],
+   "linear": {
+    "AS_X": [
+     1.0,
+     0.0,
+     0.0,
+     -30,
+     80
+    ],
+    "AS_Y": [
+     0.0,
+     1.0,
+     0.0,
+     -30,
+     120
+    ],
+    "AS_Z": [
+     0.0,
+     0.0,
+     1.0,
+     -2,
+     6
+    ]
+   },
+   "rotary": [
+    "AS_Rx",
+    "AS_Ry"
+   ]
+  },
+  {
+   "name": "pt:mechanicalobject_mssunli6_ah605m",
+   "label": "下光谱共焦传感器〔对准相机承载台组（轴:AS_X+AS_Y+AS_Z+AS_Rx+AS_Ry）〕",
+   "part": "下光谱共焦传感器",
+   "kind": "moving",
+   "group": "grp:box_mssty4oj_u3pj08",
+   "object": "mechanicalobject_mssunli6_ah605m",
+   "min": [
+    -44.5268,
+    -26.0265,
+    894.6602
+   ],
+   "max": [
+    -40.4732,
+    -21.9733,
+    895.3399
+   ],
+   "linear": {
+    "AS_X": [
+     1.0,
+     0.0,
+     0.0,
+     -30,
+     80
+    ],
+    "AS_Y": [
+     0.0,
+     1.0,
+     0.0,
+     -30,
+     120
+    ],
+    "AS_Z": [
+     0.0,
+     0.0,
+     1.0,
+     -2,
+     6
+    ]
+   },
+   "rotary": [
+    "AS_Rx",
+    "AS_Ry"
+   ]
+  },
+  {
+   "name": "pt:box_mswk7com_hll79m",
+   "label": "翻转模块横梁〔固定〕",
+   "part": "翻转模块横梁",
+   "kind": "fixed",
+   "group": "fixed",
+   "object": "box_mswk7com_hll79m",
+   "min": [
+    5.0,
+    -314.5,
+    996.0
+   ],
+   "max": [
+    1505.0,
+    -167.0,
+    1150.0
+   ],
+   "linear": {},
+   "rotary": []
+  },
+  {
+   "name": "pt:box_mswkp3tr_pw21ne",
+   "label": "翻转模块X承载台〔翻转模块X承载台组（轴:FA_X）〕",
+   "part": "翻转模块X承载台",
+   "kind": "moving",
+   "group": "grp:box_mswkp3tr_pw21ne",
+   "object": "box_mswkp3tr_pw21ne",
+   "min": [
+    1291.0,
+    -166.75,
+    947.5
+   ],
+   "max": [
+    1447.0,
+    -81.25,
+    1187.5
+   ],
+   "linear": {
+    "FA_X": [
+     1.0,
+     0.0,
+     0.0,
+     -1250,
+     0
+    ]
+   },
+   "rotary": []
+  },
+  {
+   "name": "pt:box_mswl2pek_fdn9nq",
+   "label": "翻转模块Z承载台〔翻转模块Z承载台组（轴:FA_X+FA_Z）〕",
+   "part": "翻转模块Z承载台",
+   "kind": "moving",
+   "group": "grp:box_mswl2pek_fdn9nq",
+   "object": "box_mswl2pek_fdn9nq",
+   "min": [
+    1334.0,
+    -81.25,
+    969.5
+   ],
+   "max": [
+    1522.0,
+    29.75,
+    1086.5
+   ],
+   "linear": {
+    "FA_X": [
+     1.0,
+     0.0,
+     0.0,
+     -1250,
+     0
+    ],
+    "FA_Z": [
+     0.0,
+     0.0,
+     1.0,
+     -40,
+     40
+    ]
+   },
+   "rotary": []
+  },
+  {
+   "name": "pt:box_mswll7mj_53sw8e",
+   "label": "翻转模块Rx支架〔翻转模块Z承载台组（轴:FA_X+FA_Z）〕",
+   "part": "翻转模块Rx支架",
+   "kind": "moving",
+   "group": "grp:box_mswl2pek_fdn9nq",
+   "object": "box_mswll7mj_53sw8e",
+   "min": [
+    1226.35,
+    -11.5,
+    907.5
+   ],
+   "max": [
+    1521.65,
+    29.5,
+    969.5
+   ],
+   "linear": {
+    "FA_X": [
+     1.0,
+     0.0,
+     0.0,
+     -1250,
+     0
+    ],
+    "FA_Z": [
+     0.0,
+     0.0,
+     1.0,
+     -40,
+     40
+    ]
+   },
+   "rotary": []
+  },
+  {
+   "name": "pt:box_mswlqc1t_y2vyml",
+   "label": "翻转模块Rx承载台〔翻转模块Rx承载台组（轴:FA_X+FA_Z+FA_Rx）〕",
+   "part": "翻转模块Rx承载台",
+   "kind": "moving",
+   "group": "grp:box_mswlqc1t_y2vyml",
+   "object": "box_mswlqc1t_y2vyml",
+   "min": [
+    1174.5,
+    -33.1,
+    894.9
+   ],
+   "max": [
+    1227.5,
+    51.1,
+    979.1
+   ],
+   "linear": {
+    "FA_X": [
+     1.0,
+     0.0,
+     0.0,
+     -1250,
+     0
+    ],
+    "FA_Z": [
+     0.0,
+     0.0,
+     1.0,
+     -40,
+     40
+    ]
+   },
+   "rotary": [
+    "FA_Rx"
+   ]
+  },
+  {
+   "name": "pt:box_mswlxr6w_tkxtwz",
+   "label": "翻转模块Rz承载台〔翻转模块Rz承载台组（轴:FA_X+FA_Z+FA_Rx+CH_Rz）〕",
+   "part": "翻转模块Rz承载台",
+   "kind": "moving",
+   "group": "grp:box_mswlxr6w_tkxtwz",
+   "object": "box_mswlxr6w_tkxtwz",
+   "min": [
+    1155.45,
+    -35.4,
+    892.6
+   ],
+   "max": [
+    1244.25,
+    53.4,
+    981.4
+   ],
+   "linear": {
+    "FA_X": [
+     1.0,
+     0.0,
+     0.0,
+     -1250,
+     0
+    ],
+    "FA_Z": [
+     0.0,
+     0.0,
+     1.0,
+     -40,
+     40
+    ]
+   },
+   "rotary": [
+    "FA_Rx",
+    "CH_Rz"
+   ]
+  },
+  {
+   "name": "pt:box_mswm5i05_kjqr7e",
+   "label": "翻转模块基座横梁〔固定〕",
+   "part": "翻转模块基座横梁",
+   "kind": "fixed",
+   "group": "fixed",
+   "object": "box_mswm5i05_kjqr7e",
+   "min": [
+    852.5,
+    -492.5,
+    915.25
+   ],
+   "max": [
+    1507.5,
+    -237.5,
+    994.75
+   ],
+   "linear": {},
+   "rotary": []
+  },
+  {
+   "name": "pt:box_mswm7jly_sqnw3l",
+   "label": "翻转模块基座〔固定〕",
+   "part": "翻转模块基座",
+   "kind": "fixed",
+   "group": "fixed",
+   "object": "box_mswm7jly_sqnw3l",
+   "min": [
+    852.5,
+    -492.0,
+    691.25
+   ],
+   "max": [
+    1507.5,
+    -430.0,
+    915.25
+   ],
+   "linear": {},
+   "rotary": []
+  },
+  {
+   "name": "pt:box_mswmqsvb_c7q1z6",
+   "label": "蓝膜台基座〔固定〕",
+   "part": "蓝膜台基座",
+   "kind": "fixed",
+   "group": "fixed",
+   "object": "box_mswmqsvb_c7q1z6",
+   "min": [
+    800.0,
+    -500.0,
+    470.0
+   ],
+   "max": [
+    1800.0,
+    500.0,
+    691.25
+   ],
+   "linear": {},
+   "rotary": []
+  },
+  {
+   "name": "pt:filmstage_riser_0001",
+   "label": "蓝膜台支撑台体〔固定〕",
+   "part": "蓝膜台支撑台体",
+   "kind": "fixed",
+   "group": "fixed",
+   "object": "filmstage_riser_0001",
+   "min": [
+    950.0,
+    -300.0,
+    691.25
+   ],
+   "max": [
+    1650.0,
+    300.0,
+    820.4
+   ],
+   "linear": {},
+   "rotary": []
+  },
+  {
+   "name": "pt:filmstage_xbase_0001",
+   "label": "蓝膜台X底座板〔固定〕",
+   "part": "蓝膜台X底座板",
+   "kind": "fixed",
+   "group": "fixed",
+   "object": "filmstage_xbase_0001",
+   "min": [
+    950.0,
+    -280.0,
+    820.4
+   ],
+   "max": [
+    1650.0,
+    280.0,
+    832.4
+   ],
+   "linear": {},
+   "rotary": []
+  },
+  {
+   "name": "pt:filmstage_xrail1_0001",
+   "label": "蓝膜台X导轨1〔固定〕",
+   "part": "蓝膜台X导轨1",
+   "kind": "fixed",
+   "group": "fixed",
+   "object": "filmstage_xrail1_0001",
+   "min": [
+    950.0,
+    -220.0,
+    832.4
+   ],
+   "max": [
+    1650.0,
+    -200.0,
+    846.4
+   ],
+   "linear": {},
+   "rotary": []
+  },
+  {
+   "name": "pt:filmstage_xrail2_0001",
+   "label": "蓝膜台X导轨2〔固定〕",
+   "part": "蓝膜台X导轨2",
+   "kind": "fixed",
+   "group": "fixed",
+   "object": "filmstage_xrail2_0001",
+   "min": [
+    950.0,
+    200.0,
+    832.4
+   ],
+   "max": [
+    1650.0,
+    220.0,
+    846.4
+   ],
+   "linear": {},
+   "rotary": []
+  },
+  {
+   "name": "pt:filmstage_xplate_0001",
+   "label": "蓝膜台X滑板〔蓝膜台X滑台组（轴:ES_X）〕",
+   "part": "蓝膜台X滑板",
+   "kind": "moving",
+   "group": "grp:filmstage_x_0001",
+   "object": "filmstage_xplate_0001",
+   "min": [
+    1070.0,
+    -230.0,
+    846.4
+   ],
+   "max": [
+    1530.0,
+    230.0,
+    858.4
+   ],
+   "linear": {
+    "ES_X": [
+     1.0,
+     0.0,
+     0.0,
+     -285,
+     85
+    ]
+   },
+   "rotary": []
+  },
+  {
+   "name": "pt:filmstage_yrail1_0001",
+   "label": "蓝膜台Y导轨1〔蓝膜台X滑台组（轴:ES_X）〕",
+   "part": "蓝膜台Y导轨1",
+   "kind": "moving",
+   "group": "grp:filmstage_x_0001",
+   "object": "filmstage_yrail1_0001",
+   "min": [
+    1100.0,
+    -230.0,
+    858.4
+   ],
+   "max": [
+    1120.0,
+    230.0,
+    872.4
+   ],
+   "linear": {
+    "ES_X": [
+     1.0,
+     0.0,
+     0.0,
+     -285,
+     85
+    ]
+   },
+   "rotary": []
+  },
+  {
+   "name": "pt:filmstage_yrail2_0001",
+   "label": "蓝膜台Y导轨2〔蓝膜台X滑台组（轴:ES_X）〕",
+   "part": "蓝膜台Y导轨2",
+   "kind": "moving",
+   "group": "grp:filmstage_x_0001",
+   "object": "filmstage_yrail2_0001",
+   "min": [
+    1480.0,
+    -230.0,
+    858.4
+   ],
+   "max": [
+    1500.0,
+    230.0,
+    872.4
+   ],
+   "linear": {
+    "ES_X": [
+     1.0,
+     0.0,
+     0.0,
+     -285,
+     85
+    ]
+   },
+   "rotary": []
+  },
+  {
+   "name": "pt:filmstage_yplate_0001",
+   "label": "蓝膜台Y滑板〔蓝膜台Y滑台组（轴:ES_X+ES_Y）〕",
+   "part": "蓝膜台Y滑板",
+   "kind": "moving",
+   "group": "grp:filmstage_y_0001",
+   "object": "filmstage_yplate_0001",
+   "min": [
+    1090.0,
+    -210.0,
+    872.4
+   ],
+   "max": [
+    1510.0,
+    210.0,
+    882.4
+   ],
+   "linear": {
+    "ES_X": [
+     1.0,
+     0.0,
+     0.0,
+     -285,
+     85
+    ],
+    "ES_Y": [
+     0.0,
+     1.0,
+     0.0,
+     -175,
+     195
+    ]
+   },
+   "rotary": []
+  },
+  {
+   "name": "pt:filmstage_body_0001",
+   "label": "蓝膜台圆形台体〔蓝膜台Y滑台组（轴:ES_X+ES_Y）〕",
+   "part": "蓝膜台圆形台体",
+   "kind": "moving",
+   "group": "grp:filmstage_y_0001",
+   "object": "filmstage_body_0001",
+   "min": [
+    1105.0,
+    -195.0,
+    882.4
+   ],
+   "max": [
+    1495.0,
+    195.0,
+    885.4
+   ],
+   "linear": {
+    "ES_X": [
+     1.0,
+     0.0,
+     0.0,
+     -285,
+     85
+    ],
+    "ES_Y": [
+     0.0,
+     1.0,
+     0.0,
+     -175,
+     195
+    ]
+   },
+   "rotary": []
+  },
+  {
+   "name": "pt:filmstage_spoke1_0001",
+   "label": "蓝膜台辐条1〔蓝膜台Y滑台组（轴:ES_X+ES_Y）〕",
+   "part": "蓝膜台辐条1",
+   "kind": "moving",
+   "group": "grp:filmstage_y_0001",
+   "object": "filmstage_spoke1_0001",
+   "min": [
+    1320.0,
+    -5.0,
+    884.6
+   ],
+   "max": [
+    1490.0,
+    5.0,
+    886.2
+   ],
+   "linear": {
+    "ES_X": [
+     1.0,
+     0.0,
+     0.0,
+     -285,
+     85
+    ],
+    "ES_Y": [
+     0.0,
+     1.0,
+     0.0,
+     -175,
+     195
+    ]
+   },
+   "rotary": []
+  },
+  {
+   "name": "pt:filmstage_spoke2_0001",
+   "label": "蓝膜台辐条2〔蓝膜台Y滑台组（轴:ES_X+ES_Y）〕",
+   "part": "蓝膜台辐条2",
+   "kind": "moving",
+   "group": "grp:filmstage_y_0001",
+   "object": "filmstage_spoke2_0001",
+   "min": [
+    1310.6064,
+    10.6064,
+    884.6
+   ],
+   "max": [
+    1437.8856,
+    137.8856,
+    886.2
+   ],
+   "linear": {
+    "ES_X": [
+     1.0,
+     0.0,
+     0.0,
+     -285,
+     85
+    ],
+    "ES_Y": [
+     0.0,
+     1.0,
+     0.0,
+     -175,
+     195
+    ]
+   },
+   "rotary": []
+  },
+  {
+   "name": "pt:filmstage_spoke3_0001",
+   "label": "蓝膜台辐条3〔蓝膜台Y滑台组（轴:ES_X+ES_Y）〕",
+   "part": "蓝膜台辐条3",
+   "kind": "moving",
+   "group": "grp:filmstage_y_0001",
+   "object": "filmstage_spoke3_0001",
+   "min": [
+    1295.0,
+    20.0,
+    884.6
+   ],
+   "max": [
+    1305.0,
+    190.0,
+    886.2
+   ],
+   "linear": {
+    "ES_X": [
+     1.0,
+     0.0,
+     0.0,
+     -285,
+     85
+    ],
+    "ES_Y": [
+     0.0,
+     1.0,
+     0.0,
+     -175,
+     195
+    ]
+   },
+   "rotary": []
+  },
+  {
+   "name": "pt:filmstage_spoke4_0001",
+   "label": "蓝膜台辐条4〔蓝膜台Y滑台组（轴:ES_X+ES_Y）〕",
+   "part": "蓝膜台辐条4",
+   "kind": "moving",
+   "group": "grp:filmstage_y_0001",
+   "object": "filmstage_spoke4_0001",
+   "min": [
+    1162.1144,
+    10.6064,
+    884.6
+   ],
+   "max": [
+    1289.3936,
+    137.8856,
+    886.2
+   ],
+   "linear": {
+    "ES_X": [
+     1.0,
+     0.0,
+     0.0,
+     -285,
+     85
+    ],
+    "ES_Y": [
+     0.0,
+     1.0,
+     0.0,
+     -175,
+     195
+    ]
+   },
+   "rotary": []
+  },
+  {
+   "name": "pt:filmstage_spoke5_0001",
+   "label": "蓝膜台辐条5〔蓝膜台Y滑台组（轴:ES_X+ES_Y）〕",
+   "part": "蓝膜台辐条5",
+   "kind": "moving",
+   "group": "grp:filmstage_y_0001",
+   "object": "filmstage_spoke5_0001",
+   "min": [
+    1110.0,
+    -5.0,
+    884.6
+   ],
+   "max": [
+    1280.0,
+    5.0,
+    886.2
+   ],
+   "linear": {
+    "ES_X": [
+     1.0,
+     0.0,
+     0.0,
+     -285,
+     85
+    ],
+    "ES_Y": [
+     0.0,
+     1.0,
+     0.0,
+     -175,
+     195
+    ]
+   },
+   "rotary": []
+  },
+  {
+   "name": "pt:filmstage_spoke6_0001",
+   "label": "蓝膜台辐条6〔蓝膜台Y滑台组（轴:ES_X+ES_Y）〕",
+   "part": "蓝膜台辐条6",
+   "kind": "moving",
+   "group": "grp:filmstage_y_0001",
+   "object": "filmstage_spoke6_0001",
+   "min": [
+    1162.1144,
+    -137.8856,
+    884.6
+   ],
+   "max": [
+    1289.3936,
+    -10.6064,
+    886.2
+   ],
+   "linear": {
+    "ES_X": [
+     1.0,
+     0.0,
+     0.0,
+     -285,
+     85
+    ],
+    "ES_Y": [
+     0.0,
+     1.0,
+     0.0,
+     -175,
+     195
+    ]
+   },
+   "rotary": []
+  },
+  {
+   "name": "pt:filmstage_spoke7_0001",
+   "label": "蓝膜台辐条7〔蓝膜台Y滑台组（轴:ES_X+ES_Y）〕",
+   "part": "蓝膜台辐条7",
+   "kind": "moving",
+   "group": "grp:filmstage_y_0001",
+   "object": "filmstage_spoke7_0001",
+   "min": [
+    1295.0,
+    -190.0,
+    884.6
+   ],
+   "max": [
+    1305.0,
+    -20.0,
+    886.2
+   ],
+   "linear": {
+    "ES_X": [
+     1.0,
+     0.0,
+     0.0,
+     -285,
+     85
+    ],
+    "ES_Y": [
+     0.0,
+     1.0,
+     0.0,
+     -175,
+     195
+    ]
+   },
+   "rotary": []
+  },
+  {
+   "name": "pt:filmstage_spoke8_0001",
+   "label": "蓝膜台辐条8〔蓝膜台Y滑台组（轴:ES_X+ES_Y）〕",
+   "part": "蓝膜台辐条8",
+   "kind": "moving",
+   "group": "grp:filmstage_y_0001",
+   "object": "filmstage_spoke8_0001",
+   "min": [
+    1310.6064,
+    -137.8856,
+    884.6
+   ],
+   "max": [
+    1437.8856,
+    -10.6064,
+    886.2
+   ],
+   "linear": {
+    "ES_X": [
+     1.0,
+     0.0,
+     0.0,
+     -285,
+     85
+    ],
+    "ES_Y": [
+     0.0,
+     1.0,
+     0.0,
+     -175,
+     195
+    ]
+   },
+   "rotary": []
+  },
+  {
+   "name": "pt:filmstage_film_0001",
+   "label": "蓝膜〔蓝膜台Y滑台组（轴:ES_X+ES_Y）〕",
+   "part": "蓝膜",
+   "kind": "moving",
+   "group": "grp:filmstage_y_0001",
+   "object": "filmstage_film_0001",
+   "min": [
+    1120.0,
+    -180.0,
+    886.3
+   ],
+   "max": [
+    1480.0,
+    180.0,
+    886.9
+   ],
+   "linear": {
+    "ES_X": [
+     1.0,
+     0.0,
+     0.0,
+     -285,
+     85
+    ],
+    "ES_Y": [
+     0.0,
+     1.0,
+     0.0,
+     -175,
+     195
+    ]
+   },
+   "rotary": []
+  },
+  {
+   "name": "pt:filmpin_bracket_0001",
+   "label": "蓝膜顶针支架板〔固定〕",
+   "part": "蓝膜顶针支架板",
+   "kind": "fixed",
+   "group": "fixed",
+   "object": "filmpin_bracket_0001",
+   "min": [
+    1149.85,
+    -26.0,
+    810.625
+   ],
+   "max": [
+    1249.85,
+    44.0,
+    820.625
+   ],
+   "linear": {},
+   "rotary": []
+  },
+  {
+   "name": "pt:filmpin_drive_0001",
+   "label": "蓝膜顶针驱动块〔固定〕",
+   "part": "蓝膜顶针驱动块",
+   "kind": "fixed",
+   "group": "fixed",
+   "object": "filmpin_drive_0001",
+   "min": [
+    1179.85,
+    -6.0,
+    832.625
+   ],
+   "max": [
+    1219.85,
+    24.0,
+    852.625
+   ],
+   "linear": {},
+   "rotary": []
+  },
+  {
+   "name": "pt:filmpin_sleeve_0001",
+   "label": "蓝膜顶针导向套〔固定〕",
+   "part": "蓝膜顶针导向套",
+   "kind": "fixed",
+   "group": "fixed",
+   "object": "filmpin_sleeve_0001",
+   "min": [
+    1193.85,
+    3.0,
+    850.625
+   ],
+   "max": [
+    1205.85,
+    15.0,
+    880.625
+   ],
+   "linear": {},
+   "rotary": []
+  },
+  {
+   "name": "pt:filmpin_needle_0001",
+   "label": "蓝膜顶针针体〔蓝膜顶针组（轴:ES_PunchZ）〕",
+   "part": "蓝膜顶针针体",
+   "kind": "moving",
+   "group": "grp:filmpin_z_0001",
+   "object": "filmpin_needle_0001",
+   "min": [
+    1198.35,
+    7.5,
+    844.8
+   ],
+   "max": [
+    1201.35,
+    10.5,
+    884.8
+   ],
+   "linear": {
+    "ES_PunchZ": [
+     0.0,
+     0.0,
+     1.0,
+     0,
+     5
+    ]
+   },
+   "rotary": []
+  },
+  {
+   "name": "pt:filmpin_cap_0001",
+   "label": "蓝膜顶针顶帽〔蓝膜顶针组（轴:ES_PunchZ）〕",
+   "part": "蓝膜顶针顶帽",
+   "kind": "moving",
+   "group": "grp:filmpin_z_0001",
+   "object": "filmpin_cap_0001",
+   "min": [
+    1195.85,
+    5.0,
+    884.8
+   ],
+   "max": [
+    1203.85,
+    13.0,
+    885.8
+   ],
+   "linear": {
+    "ES_PunchZ": [
+     0.0,
+     0.0,
+     1.0,
+     0,
+     5
+    ]
+   },
+   "rotary": []
+  },
+  {
+   "name": "pt:filmstage_frame_0001",
+   "label": "晶圆铁环（蓝膜压环）〔蓝膜台Y滑台组（轴:ES_X+ES_Y）〕",
+   "part": "晶圆铁环（蓝膜压环）",
+   "kind": "moving",
+   "group": "grp:filmstage_y_0001",
+   "object": "filmstage_frame_0001",
+   "min": [
+    1110.0,
+    -190.0,
+    886.9
+   ],
+   "max": [
+    1490.0,
+    190.0,
+    888.4
+   ],
+   "linear": {
+    "ES_X": [
+     1.0,
+     0.0,
+     0.0,
+     -285,
+     85
+    ],
+    "ES_Y": [
+     0.0,
+     1.0,
+     0.0,
+     -175,
+     195
+    ]
+   },
+   "rotary": []
+  },
+  {
+   "name": "pt:baseframe_顶框_f",
+   "label": "底座顶框-前〔固定〕",
+   "part": "底座顶框-前",
+   "kind": "fixed",
+   "group": "fixed",
+   "object": "baseframe_顶框_f",
+   "min": [
+    -886.5,
+    -599.5,
+    350.0
+   ],
+   "max": [
+    1800.0,
+    -479.5,
+    470.0
+   ],
+   "linear": {},
+   "rotary": []
+  },
+  {
+   "name": "pt:baseframe_顶框_b",
+   "label": "底座顶框-后〔固定〕",
+   "part": "底座顶框-后",
+   "kind": "fixed",
+   "group": "fixed",
+   "object": "baseframe_顶框_b",
+   "min": [
+    -886.5,
+    679.5,
+    350.0
+   ],
+   "max": [
+    1800.0,
+    799.5,
+    470.0
+   ],
+   "linear": {},
+   "rotary": []
+  },
+  {
+   "name": "pt:baseframe_顶框_l",
+   "label": "底座顶框-左〔固定〕",
+   "part": "底座顶框-左",
+   "kind": "fixed",
+   "group": "fixed",
+   "object": "baseframe_顶框_l",
+   "min": [
+    -886.5,
+    -479.5,
+    350.0
+   ],
+   "max": [
+    -766.5,
+    679.5,
+    470.0
+   ],
+   "linear": {},
+   "rotary": []
+  },
+  {
+   "name": "pt:baseframe_顶框_r",
+   "label": "底座顶框-右〔固定〕",
+   "part": "底座顶框-右",
+   "kind": "fixed",
+   "group": "fixed",
+   "object": "baseframe_顶框_r",
+   "min": [
+    1680.0,
+    -479.5,
+    350.0
+   ],
+   "max": [
+    1800.0,
+    679.5,
+    470.0
+   ],
+   "linear": {},
+   "rotary": []
+  },
+  {
+   "name": "pt:baseframe_底框_f",
+   "label": "底座底框-前〔固定〕",
+   "part": "底座底框-前",
+   "kind": "fixed",
+   "group": "fixed",
+   "object": "baseframe_底框_f",
+   "min": [
+    -886.5,
+    -599.5,
+    0.0
+   ],
+   "max": [
+    1800.0,
+    -479.5,
+    120.0
+   ],
+   "linear": {},
+   "rotary": []
+  },
+  {
+   "name": "pt:baseframe_底框_b",
+   "label": "底座底框-后〔固定〕",
+   "part": "底座底框-后",
+   "kind": "fixed",
+   "group": "fixed",
+   "object": "baseframe_底框_b",
+   "min": [
+    -886.5,
+    679.5,
+    0.0
+   ],
+   "max": [
+    1800.0,
+    799.5,
+    120.0
+   ],
+   "linear": {},
+   "rotary": []
+  },
+  {
+   "name": "pt:baseframe_底框_l",
+   "label": "底座底框-左〔固定〕",
+   "part": "底座底框-左",
+   "kind": "fixed",
+   "group": "fixed",
+   "object": "baseframe_底框_l",
+   "min": [
+    -886.5,
+    -479.5,
+    0.0
+   ],
+   "max": [
+    -766.5,
+    679.5,
+    120.0
+   ],
+   "linear": {},
+   "rotary": []
+  },
+  {
+   "name": "pt:baseframe_底框_r",
+   "label": "底座底框-右〔固定〕",
+   "part": "底座底框-右",
+   "kind": "fixed",
+   "group": "fixed",
+   "object": "baseframe_底框_r",
+   "min": [
+    1680.0,
+    -479.5,
+    0.0
+   ],
+   "max": [
+    1800.0,
+    679.5,
+    120.0
+   ],
+   "linear": {},
+   "rotary": []
+  },
+  {
+   "name": "pt:baseframe_leg1_0001",
+   "label": "底座支腿-左前〔固定〕",
+   "part": "底座支腿-左前",
+   "kind": "fixed",
+   "group": "fixed",
+   "object": "baseframe_leg1_0001",
+   "min": [
+    -886.5,
+    -599.5,
+    120.0
+   ],
+   "max": [
+    -766.5,
+    -479.5,
+    350.0
+   ],
+   "linear": {},
+   "rotary": []
+  },
+  {
+   "name": "pt:baseframe_leg2_0001",
+   "label": "底座支腿-右前〔固定〕",
+   "part": "底座支腿-右前",
+   "kind": "fixed",
+   "group": "fixed",
+   "object": "baseframe_leg2_0001",
+   "min": [
+    1680.0,
+    -599.5,
+    120.0
+   ],
+   "max": [
+    1800.0,
+    -479.5,
+    350.0
+   ],
+   "linear": {},
+   "rotary": []
+  },
+  {
+   "name": "pt:baseframe_leg3_0001",
+   "label": "底座支腿-左后〔固定〕",
+   "part": "底座支腿-左后",
+   "kind": "fixed",
+   "group": "fixed",
+   "object": "baseframe_leg3_0001",
+   "min": [
+    -886.5,
+    679.5,
+    120.0
+   ],
+   "max": [
+    -766.5,
+    799.5,
+    350.0
+   ],
+   "linear": {},
+   "rotary": []
+  },
+  {
+   "name": "pt:baseframe_leg4_0001",
+   "label": "底座支腿-右后〔固定〕",
+   "part": "底座支腿-右后",
+   "kind": "fixed",
+   "group": "fixed",
+   "object": "baseframe_leg4_0001",
+   "min": [
+    1680.0,
+    679.5,
+    120.0
+   ],
+   "max": [
+    1800.0,
+    799.5,
+    350.0
+   ],
+   "linear": {},
+   "rotary": []
+  },
+  {
+   "name": "pt:baseframe_leg5_0001",
+   "label": "底座支腿-前中〔固定〕",
+   "part": "底座支腿-前中",
+   "kind": "fixed",
+   "group": "fixed",
+   "object": "baseframe_leg5_0001",
+   "min": [
+    396.75,
+    -599.5,
+    120.0
+   ],
+   "max": [
+    516.75,
+    -479.5,
+    350.0
+   ],
+   "linear": {},
+   "rotary": []
+  },
+  {
+   "name": "pt:baseframe_leg6_0001",
+   "label": "底座支腿-后中〔固定〕",
+   "part": "底座支腿-后中",
+   "kind": "fixed",
+   "group": "fixed",
+   "object": "baseframe_leg6_0001",
+   "min": [
+    396.75,
+    679.5,
+    120.0
+   ],
+   "max": [
+    516.75,
+    799.5,
+    350.0
+   ],
+   "linear": {},
+   "rotary": []
+  },
+  {
+   "name": "pt:baseframe_cross_y1_0001",
+   "label": "底座横梁-Y向中1〔固定〕",
+   "part": "底座横梁-Y向中1",
+   "kind": "fixed",
+   "group": "fixed",
+   "object": "baseframe_cross_y1_0001",
+   "min": [
+    -160.0,
+    -539.5,
+    350.0
+   ],
+   "max": [
+    -40.0,
+    739.5,
+    470.0
+   ],
+   "linear": {},
+   "rotary": []
+  },
+  {
+   "name": "pt:baseframe_cross_y2_0001",
+   "label": "底座横梁-Y向中2〔固定〕",
+   "part": "底座横梁-Y向中2",
+   "kind": "fixed",
+   "group": "fixed",
+   "object": "baseframe_cross_y2_0001",
+   "min": [
+    606.5,
+    -539.5,
+    350.0
+   ],
+   "max": [
+    726.5,
+    739.5,
+    470.0
+   ],
+   "linear": {},
+   "rotary": []
+  },
+  {
+   "name": "pt:baseframe_cross_y3_0001",
+   "label": "底座横梁-Y向中3〔固定〕",
+   "part": "底座横梁-Y向中3",
+   "kind": "fixed",
+   "group": "fixed",
+   "object": "baseframe_cross_y3_0001",
+   "min": [
+    770.0,
+    -539.5,
+    350.0
+   ],
+   "max": [
+    890.0,
+    739.5,
+    470.0
+   ],
+   "linear": {},
+   "rotary": []
+  },
+  {
+   "name": "pt:baseframe_cross_y4_0001",
+   "label": "底座横梁-Y向中4〔固定〕",
+   "part": "底座横梁-Y向中4",
+   "kind": "fixed",
+   "group": "fixed",
+   "object": "baseframe_cross_y4_0001",
+   "min": [
+    1240.0,
+    -539.5,
+    350.0
+   ],
+   "max": [
+    1360.0,
+    739.5,
+    470.0
+   ],
+   "linear": {},
+   "rotary": []
+  },
+  {
+   "name": "pt:baseframe_cross_x1_0001",
+   "label": "底座横梁-X向前〔固定〕",
+   "part": "底座横梁-X向前",
+   "kind": "fixed",
+   "group": "fixed",
+   "object": "baseframe_cross_x1_0001",
+   "min": [
+    800.0,
+    -500.0,
+    350.0
+   ],
+   "max": [
+    1800.0,
+    -380.0,
+    470.0
+   ],
+   "linear": {},
+   "rotary": []
+  },
+  {
+   "name": "pt:baseframe_cross_x2_0001",
+   "label": "底座横梁-X向后〔固定〕",
+   "part": "底座横梁-X向后",
+   "kind": "fixed",
+   "group": "fixed",
+   "object": "baseframe_cross_x2_0001",
+   "min": [
+    800.0,
+    380.0,
+    350.0
+   ],
+   "max": [
+    1800.0,
+    500.0,
+    470.0
+   ],
+   "linear": {},
+   "rotary": []
+  },
+  {
+   "name": "pt:tray4_0001",
+   "label": "Tray盘4〔微动基座组（轴:WS_LS_X+WS_LS_Y）〕",
+   "part": "Tray盘4",
+   "kind": "moving",
+   "group": "grp:box_mssl7mh8_x6ugcu",
+   "object": "tray4_0001",
+   "min": [
+    -284.5,
+    -149.5,
+    865.75
+   ],
+   "max": [
+    -225.5,
+    -90.5,
+    867.75
+   ],
+   "linear": {
+    "WS_LS_X": [
+     1.0,
+     0.0,
+     0.0,
+     -220,
+     220
+    ],
+    "WS_LS_Y": [
+     0.0,
+     1.0,
+     0.0,
+     -220,
+     220
+    ]
+   },
+   "rotary": []
+  },
+  {
+   "name": "pt:chuck_cross_h_0001",
+   "label": "十字真空槽-横〔Rz旋转组件组（轴:WS_LS_X+WS_LS_Y+WS_Rz）〕",
+   "part": "十字真空槽-横",
+   "kind": "moving",
+   "group": "grp:cylinder_msslion7_fntuht",
+   "object": "chuck_cross_h_0001",
+   "min": [
+    -132.0,
+    -3.3036,
+    881.75
+   ],
+   "max": [
+    132.0,
+    3.3036,
+    882.25
+   ],
+   "linear": {
+    "WS_LS_X": [
+     1.0,
+     0.0,
+     0.0,
+     -220,
+     220
+    ],
+    "WS_LS_Y": [
+     0.0,
+     1.0,
+     0.0,
+     -220,
+     220
+    ]
+   },
+   "rotary": [
+    "WS_Rz"
+   ]
+  },
+  {
+   "name": "pt:chuck_cross_v_0001",
+   "label": "十字真空槽-纵〔Rz旋转组件组（轴:WS_LS_X+WS_LS_Y+WS_Rz）〕",
+   "part": "十字真空槽-纵",
+   "kind": "moving",
+   "group": "grp:cylinder_msslion7_fntuht",
+   "object": "chuck_cross_v_0001",
+   "min": [
+    -3.3036,
+    -132.0,
+    881.75
+   ],
+   "max": [
+    3.3036,
+    132.0,
+    882.25
+   ],
+   "linear": {
+    "WS_LS_X": [
+     1.0,
+     0.0,
+     0.0,
+     -220,
+     220
+    ],
+    "WS_LS_Y": [
+     0.0,
+     1.0,
+     0.0,
+     -220,
+     220
+    ]
+   },
+   "rotary": [
+    "WS_Rz"
+   ]
+  },
+  {
+   "name": "pt:bondhead_cross_h_0001",
+   "label": "键合头十字真空槽-横〔RxRy调整球座组（轴:BS_Arm_Z+BS_CAL_Rx+BS_CAL_Ry）〕",
+   "part": "键合头十字真空槽-横",
+   "kind": "moving",
+   "group": "grp:cylinder_mssrakr3_y2opyb",
+   "object": "bondhead_cross_h_0001",
+   "min": [
+    -67.7819,
+    5.7181,
+    1053.6801
+   ],
+   "max": [
+    -17.2181,
+    8.2819,
+    1054.0709
+   ],
+   "linear": {
+    "BS_Arm_Z": [
+     0.0,
+     0.0,
+     1.0,
+     -190,
+     0
+    ]
+   },
+   "rotary": [
+    "BS_CAL_Rx",
+    "BS_CAL_Ry"
+   ]
+  },
+  {
+   "name": "pt:bondhead_cross_v_0001",
+   "label": "键合头十字真空槽-纵〔RxRy调整球座组（轴:BS_Arm_Z+BS_CAL_Rx+BS_CAL_Ry）〕",
+   "part": "键合头十字真空槽-纵",
+   "kind": "moving",
+   "group": "grp:cylinder_mssrakr3_y2opyb",
+   "object": "bondhead_cross_v_0001",
+   "min": [
+    -43.782,
+    -18.2819,
+    1053.6801
+   ],
+   "max": [
+    -41.218,
+    32.2819,
+    1054.0709
+   ],
+   "linear": {
+    "BS_Arm_Z": [
+     0.0,
+     0.0,
+     1.0,
+     -190,
+     0
+    ]
+   },
+   "rotary": [
+    "BS_CAL_Rx",
+    "BS_CAL_Ry"
+   ]
+  },
+  {
+   "name": "pt:coarsecam_arm_v_0001",
+   "label": "粗对准相机支架-竖臂〔固定〕",
+   "part": "粗对准相机支架-竖臂",
+   "kind": "fixed",
+   "group": "fixed",
+   "object": "coarsecam_arm_v_0001",
+   "min": [
+    1184.85,
+    -193.25,
+    1150.0
+   ],
+   "max": [
+    1214.85,
+    -178.25,
+    1210.0
+   ],
+   "linear": {},
+   "rotary": []
+  },
+  {
+   "name": "pt:coarsecam_arm_h_0001",
+   "label": "粗对准相机支架-横臂〔固定〕",
+   "part": "粗对准相机支架-横臂",
+   "kind": "fixed",
+   "group": "fixed",
+   "object": "coarsecam_arm_h_0001",
+   "min": [
+    1184.85,
+    -200.75,
+    1210.0
+   ],
+   "max": [
+    1214.85,
+    29.25,
+    1225.0
+   ],
+   "linear": {},
+   "rotary": []
+  },
+  {
+   "name": "pt:coarsecam_body_0001",
+   "label": "粗对准相机机身〔固定〕",
+   "part": "粗对准相机机身",
+   "kind": "fixed",
+   "group": "fixed",
+   "object": "coarsecam_body_0001",
+   "min": [
+    1179.85,
+    -11.0,
+    1195.75
+   ],
+   "max": [
+    1219.85,
+    29.0,
+    1235.75
+   ],
+   "linear": {},
+   "rotary": []
+  },
+  {
+   "name": "pt:coarsecam_lens_0001",
+   "label": "粗对准相机镜头〔固定〕",
+   "part": "粗对准相机镜头",
+   "kind": "fixed",
+   "group": "fixed",
+   "object": "coarsecam_lens_0001",
+   "min": [
+    1185.85,
+    -5.0,
+    1180.75
+   ],
+   "max": [
+    1213.85,
+    23.0,
+    1195.75
+   ],
+   "linear": {},
+   "rotary": []
+  },
+  {
+   "name": "pt:coarsecam_bezel_0001",
+   "label": "粗对准相机镜头压圈〔固定〕",
+   "part": "粗对准相机镜头压圈",
+   "kind": "fixed",
+   "group": "fixed",
+   "object": "coarsecam_bezel_0001",
+   "min": [
+    1184.85,
+    -6.0,
+    1180.7
+   ],
+   "max": [
+    1214.85,
+    24.0,
+    1181.2
+   ],
+   "linear": {},
+   "rotary": []
+  },
+  {
+   "name": "pt:coarsecam_glass_0001",
+   "label": "粗对准相机光学面〔固定〕",
+   "part": "粗对准相机光学面",
+   "kind": "fixed",
+   "group": "fixed",
+   "object": "coarsecam_glass_0001",
+   "min": [
+    1187.85,
+    -3.0,
+    1180.75
+   ],
+   "max": [
+    1211.85,
+    21.0,
+    1181.25
+   ],
+   "linear": {},
+   "rotary": []
+  },
+  {
+   "name": "pt:diechuck_0001",
+   "label": "芯片吸盘〔翻转模块Rz承载台组（轴:FA_X+FA_Z+FA_Rx+CH_Rz）〕",
+   "part": "芯片吸盘",
+   "kind": "moving",
+   "group": "grp:box_mswlxr6w_tkxtwz",
+   "object": "diechuck_0001",
+   "min": [
+    1154.45,
+    -36.4,
+    891.6
+   ],
+   "max": [
+    1245.25,
+    54.4,
+    982.4
+   ],
+   "linear": {
+    "FA_X": [
+     1.0,
+     0.0,
+     0.0,
+     -1250,
+     0
+    ],
+    "FA_Z": [
+     0.0,
+     0.0,
+     1.0,
+     -40,
+     40
+    ]
+   },
+   "rotary": [
+    "FA_Rx",
+    "CH_Rz"
+   ]
+  },
+  {
+   "name": "pt:diechuck_ring_0001",
+   "label": "芯片吸盘圆形真空槽〔翻转模块Rz承载台组（轴:FA_X+FA_Z+FA_Rx+CH_Rz）〕",
+   "part": "芯片吸盘圆形真空槽",
+   "kind": "moving",
+   "group": "grp:box_mswlxr6w_tkxtwz",
+   "object": "diechuck_ring_0001",
+   "min": [
+    1154.15,
+    -36.7,
+    891.3
+   ],
+   "max": [
+    1245.55,
+    54.7,
+    982.7
+   ],
+   "linear": {
+    "FA_X": [
+     1.0,
+     0.0,
+     0.0,
+     -1250,
+     0
+    ],
+    "FA_Z": [
+     0.0,
+     0.0,
+     1.0,
+     -40,
+     40
+    ]
+   },
+   "rotary": [
+    "FA_Rx",
+    "CH_Rz"
+   ]
+  },
+  {
+   "name": "pt:diechuck_cross_h_0001",
+   "label": "芯片吸盘十字真空槽-横〔翻转模块Rz承载台组（轴:FA_X+FA_Z+FA_Rx+CH_Rz）〕",
+   "part": "芯片吸盘十字真空槽-横",
+   "kind": "moving",
+   "group": "grp:box_mswlxr6w_tkxtwz",
+   "object": "diechuck_cross_h_0001",
+   "min": [
+    1154.25,
+    -36.6,
+    891.4
+   ],
+   "max": [
+    1245.45,
+    54.6,
+    982.6
+   ],
+   "linear": {
+    "FA_X": [
+     1.0,
+     0.0,
+     0.0,
+     -1250,
+     0
+    ],
+    "FA_Z": [
+     0.0,
+     0.0,
+     1.0,
+     -40,
+     40
+    ]
+   },
+   "rotary": [
+    "FA_Rx",
+    "CH_Rz"
+   ]
+  },
+  {
+   "name": "pt:diechuck_cross_v_0001",
+   "label": "芯片吸盘十字真空槽-纵〔翻转模块Rz承载台组（轴:FA_X+FA_Z+FA_Rx+CH_Rz）〕",
+   "part": "芯片吸盘十字真空槽-纵",
+   "kind": "moving",
+   "group": "grp:box_mswlxr6w_tkxtwz",
+   "object": "diechuck_cross_v_0001",
+   "min": [
+    1154.25,
+    -36.6,
+    891.4
+   ],
+   "max": [
+    1245.45,
+    54.6,
+    982.6
+   ],
+   "linear": {
+    "FA_X": [
+     1.0,
+     0.0,
+     0.0,
+     -1250,
+     0
+    ],
+    "FA_Z": [
+     0.0,
+     0.0,
+     1.0,
+     -40,
+     40
+    ]
+   },
+   "rotary": [
+    "FA_Rx",
+    "CH_Rz"
+   ]
+  },
+  {
+   "name": "pt:alignz_rail1_0001",
+   "label": "对准台Z轴导轨1〔对准台X轴承接板组（轴:AS_X）〕",
+   "part": "对准台Z轴导轨1",
+   "kind": "moving",
+   "group": "grp:mechanicalobject_msssjh6b_teh3bf",
+   "object": "alignz_rail1_0001",
+   "min": [
+    -422.5,
+    296.4,
+    963.25
+   ],
+   "max": [
+    -412.5,
+    396.4,
+    1003.25
+   ],
+   "linear": {
+    "AS_X": [
+     1.0,
+     0.0,
+     0.0,
+     -30,
+     80
+    ]
+   },
+   "rotary": []
+  },
+  {
+   "name": "pt:alignz_rail2_0001",
+   "label": "对准台Z轴导轨2〔对准台X轴承接板组（轴:AS_X）〕",
+   "part": "对准台Z轴导轨2",
+   "kind": "moving",
+   "group": "grp:mechanicalobject_msssjh6b_teh3bf",
+   "object": "alignz_rail2_0001",
+   "min": [
+    -192.5,
+    296.4,
+    963.25
+   ],
+   "max": [
+    -182.5,
+    396.4,
+    1003.25
+   ],
+   "linear": {
+    "AS_X": [
+     1.0,
+     0.0,
+     0.0,
+     -30,
+     80
+    ]
+   },
+   "rotary": []
+  },
+  {
+   "name": "pt:alignz_slider1_0001",
+   "label": "对准台Z轴滑块1〔对准台Y轴承接板组（轴:AS_X+AS_Y+AS_Z）〕",
+   "part": "对准台Z轴滑块1",
+   "kind": "moving",
+   "group": "grp:box_msst6r7i_ppzlv5",
+   "object": "alignz_slider1_0001",
+   "min": [
+    -421.5,
+    276.0,
+    971.25
+   ],
+   "max": [
+    -409.5,
+    306.0,
+    995.25
+   ],
+   "linear": {
+    "AS_X": [
+     1.0,
+     0.0,
+     0.0,
+     -30,
+     80
+    ],
+    "AS_Y": [
+     0.0,
+     1.0,
+     0.0,
+     -30,
+     120
+    ],
+    "AS_Z": [
+     0.0,
+     0.0,
+     1.0,
+     -2,
+     6
+    ]
+   },
+   "rotary": []
+  },
+  {
+   "name": "pt:alignz_slider2_0001",
+   "label": "对准台Z轴滑块2〔对准台Y轴承接板组（轴:AS_X+AS_Y+AS_Z）〕",
+   "part": "对准台Z轴滑块2",
+   "kind": "moving",
+   "group": "grp:box_msst6r7i_ppzlv5",
+   "object": "alignz_slider2_0001",
+   "min": [
+    -195.5,
+    276.0,
+    971.25
+   ],
+   "max": [
+    -183.5,
+    306.0,
+    995.25
+   ],
+   "linear": {
+    "AS_X": [
+     1.0,
+     0.0,
+     0.0,
+     -30,
+     80
+    ],
+    "AS_Y": [
+     0.0,
+     1.0,
+     0.0,
+     -30,
+     120
+    ],
+    "AS_Z": [
+     0.0,
+     0.0,
+     1.0,
+     -2,
+     6
+    ]
+   },
+   "rotary": []
+  }
+ ],
+ "pairs": [
+  {
+   "a": "pt:yr1_base_0001",
+   "b": "pt:cylinder_mssmg2rx_jsjzxg",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:yr1_rail_0001",
+   "b": "pt:cylinder_mssmg2rx_jsjzxg",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:yr1_stator_0001",
+   "b": "pt:cylinder_mssmg2rx_jsjzxg",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:yr2_base_0001",
+   "b": "pt:cylinder_mssmg2rx_jsjzxg",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:yr2_rail_0001",
+   "b": "pt:cylinder_mssmg2rx_jsjzxg",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:yr2_stator_0001",
+   "b": "pt:cylinder_mssmg2rx_jsjzxg",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:box_mssl7mh8_x6ugcu",
+   "b": "pt:cylinder_msslion7_fntuht",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:ceramic_msslygtz_8wc595",
+   "b": "pt:epin1_zrail_0001",
+   "hit_axes": [
+    "E_EPIN_Z_1"
+   ]
+  },
+  {
+   "a": "pt:ceramic_msslygtz_8wc595",
+   "b": "pt:epin1_slider_0001",
+   "hit_axes": [
+    "E_EPIN_Z_1"
+   ]
+  },
+  {
+   "a": "pt:ceramic_msslygtz_8wc595",
+   "b": "pt:epin2_zrail_0001",
+   "hit_axes": [
+    "E_EPIN_Z_2"
+   ]
+  },
+  {
+   "a": "pt:ceramic_msslygtz_8wc595",
+   "b": "pt:epin2_slider_0001",
+   "hit_axes": [
+    "E_EPIN_Z_2"
+   ]
+  },
+  {
+   "a": "pt:ceramic_msslygtz_8wc595",
+   "b": "pt:epin3_zrail_0001",
+   "hit_axes": [
+    "E_EPIN_Z_3"
+   ]
+  },
+  {
+   "a": "pt:ceramic_msslygtz_8wc595",
+   "b": "pt:epin3_slider_0001",
+   "hit_axes": [
+    "E_EPIN_Z_3"
+   ]
+  },
+  {
+   "a": "pt:ceramic_msslygtz_8wc595",
+   "b": "pt:airring_left_0001",
+   "hit_axes": [
+    "BS_Arm_Z"
+   ]
+  },
+  {
+   "a": "pt:ceramic_msslygtz_8wc595",
+   "b": "pt:airring_right_0001",
+   "hit_axes": [
+    "BS_Arm_Z"
+   ]
+  },
+  {
+   "a": "pt:ceramic_msslygtz_8wc595",
+   "b": "pt:airring_front_0001",
+   "hit_axes": [
+    "BS_Arm_Z"
+   ]
+  },
+  {
+   "a": "pt:ceramic_msslygtz_8wc595",
+   "b": "pt:airring_back_0001",
+   "hit_axes": [
+    "BS_Arm_Z"
+   ]
+  },
+  {
+   "a": "pt:ceramic_msslygtz_8wc595",
+   "b": "pt:box_mssrsdpg_u0q0bi",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:ceramic_msslygtz_8wc595",
+   "b": "pt:box_mswll7mj_53sw8e",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:ceramic_msslygtz_8wc595",
+   "b": "pt:box_mswlqc1t_y2vyml",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:ceramic_msslygtz_8wc595",
+   "b": "pt:box_mswlxr6w_tkxtwz",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:ceramic_msslygtz_8wc595",
+   "b": "pt:bondhead_cross_h_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:ceramic_msslygtz_8wc595",
+   "b": "pt:bondhead_cross_v_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:ceramic_msslygtz_8wc595",
+   "b": "pt:diechuck_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:ceramic_msslygtz_8wc595",
+   "b": "pt:diechuck_ring_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:ceramic_msslygtz_8wc595",
+   "b": "pt:diechuck_cross_h_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:ceramic_msslygtz_8wc595",
+   "b": "pt:diechuck_cross_v_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:groove_0_msslygtz_t5uv5k",
+   "b": "pt:epin1_zrail_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:groove_0_msslygtz_t5uv5k",
+   "b": "pt:epin1_slider_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:groove_0_msslygtz_t5uv5k",
+   "b": "pt:epin1_pin_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:groove_0_msslygtz_t5uv5k",
+   "b": "pt:epin1_tab_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:groove_0_msslygtz_t5uv5k",
+   "b": "pt:epin2_zrail_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:groove_0_msslygtz_t5uv5k",
+   "b": "pt:epin2_slider_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:groove_0_msslygtz_t5uv5k",
+   "b": "pt:epin2_pin_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:groove_0_msslygtz_t5uv5k",
+   "b": "pt:epin2_tab_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:groove_0_msslygtz_t5uv5k",
+   "b": "pt:epin3_zrail_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:groove_0_msslygtz_t5uv5k",
+   "b": "pt:epin3_slider_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:groove_0_msslygtz_t5uv5k",
+   "b": "pt:epin3_pin_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:groove_0_msslygtz_t5uv5k",
+   "b": "pt:epin3_tab_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:groove_0_msslygtz_t5uv5k",
+   "b": "pt:airring_left_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:groove_0_msslygtz_t5uv5k",
+   "b": "pt:airring_right_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:groove_0_msslygtz_t5uv5k",
+   "b": "pt:airring_front_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:groove_0_msslygtz_t5uv5k",
+   "b": "pt:airring_back_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:groove_0_msslygtz_t5uv5k",
+   "b": "pt:box_mssrsdpg_u0q0bi",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:groove_0_msslygtz_t5uv5k",
+   "b": "pt:box_mswll7mj_53sw8e",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:groove_0_msslygtz_t5uv5k",
+   "b": "pt:box_mswlqc1t_y2vyml",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:groove_0_msslygtz_t5uv5k",
+   "b": "pt:box_mswlxr6w_tkxtwz",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:groove_0_msslygtz_t5uv5k",
+   "b": "pt:bondhead_cross_h_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:groove_0_msslygtz_t5uv5k",
+   "b": "pt:bondhead_cross_v_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:groove_0_msslygtz_t5uv5k",
+   "b": "pt:diechuck_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:groove_0_msslygtz_t5uv5k",
+   "b": "pt:diechuck_ring_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:groove_0_msslygtz_t5uv5k",
+   "b": "pt:diechuck_cross_h_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:groove_0_msslygtz_t5uv5k",
+   "b": "pt:diechuck_cross_v_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:groove_1_msslygtz_egfb0v",
+   "b": "pt:epin1_zrail_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:groove_1_msslygtz_egfb0v",
+   "b": "pt:epin1_slider_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:groove_1_msslygtz_egfb0v",
+   "b": "pt:epin1_pin_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:groove_1_msslygtz_egfb0v",
+   "b": "pt:epin1_tab_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:groove_1_msslygtz_egfb0v",
+   "b": "pt:epin2_zrail_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:groove_1_msslygtz_egfb0v",
+   "b": "pt:epin2_slider_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:groove_1_msslygtz_egfb0v",
+   "b": "pt:epin2_pin_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:groove_1_msslygtz_egfb0v",
+   "b": "pt:epin2_tab_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:groove_1_msslygtz_egfb0v",
+   "b": "pt:epin3_zrail_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:groove_1_msslygtz_egfb0v",
+   "b": "pt:epin3_slider_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:groove_1_msslygtz_egfb0v",
+   "b": "pt:epin3_pin_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:groove_1_msslygtz_egfb0v",
+   "b": "pt:epin3_tab_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:groove_1_msslygtz_egfb0v",
+   "b": "pt:airring_left_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:groove_1_msslygtz_egfb0v",
+   "b": "pt:airring_right_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:groove_1_msslygtz_egfb0v",
+   "b": "pt:airring_front_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:groove_1_msslygtz_egfb0v",
+   "b": "pt:airring_back_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:groove_1_msslygtz_egfb0v",
+   "b": "pt:box_mssrsdpg_u0q0bi",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:groove_1_msslygtz_egfb0v",
+   "b": "pt:box_mswll7mj_53sw8e",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:groove_1_msslygtz_egfb0v",
+   "b": "pt:box_mswlqc1t_y2vyml",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:groove_1_msslygtz_egfb0v",
+   "b": "pt:box_mswlxr6w_tkxtwz",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:groove_1_msslygtz_egfb0v",
+   "b": "pt:bondhead_cross_h_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:groove_1_msslygtz_egfb0v",
+   "b": "pt:bondhead_cross_v_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:groove_1_msslygtz_egfb0v",
+   "b": "pt:diechuck_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:groove_1_msslygtz_egfb0v",
+   "b": "pt:diechuck_ring_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:groove_1_msslygtz_egfb0v",
+   "b": "pt:diechuck_cross_h_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:groove_1_msslygtz_egfb0v",
+   "b": "pt:diechuck_cross_v_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:chuck_base_notched_0001",
+   "b": "pt:epin1_zrail_0001",
+   "hit_axes": [
+    "E_EPIN_Z_1"
+   ]
+  },
+  {
+   "a": "pt:chuck_base_notched_0001",
+   "b": "pt:epin1_slider_0001",
+   "hit_axes": [
+    "E_EPIN_Z_1"
+   ]
+  },
+  {
+   "a": "pt:chuck_base_notched_0001",
+   "b": "pt:epin2_zrail_0001",
+   "hit_axes": [
+    "E_EPIN_Z_2"
+   ]
+  },
+  {
+   "a": "pt:chuck_base_notched_0001",
+   "b": "pt:epin2_slider_0001",
+   "hit_axes": [
+    "E_EPIN_Z_2"
+   ]
+  },
+  {
+   "a": "pt:chuck_base_notched_0001",
+   "b": "pt:epin3_zrail_0001",
+   "hit_axes": [
+    "E_EPIN_Z_3"
+   ]
+  },
+  {
+   "a": "pt:chuck_base_notched_0001",
+   "b": "pt:epin3_slider_0001",
+   "hit_axes": [
+    "E_EPIN_Z_3"
+   ]
+  },
+  {
+   "a": "pt:chuck_base_notched_0001",
+   "b": "pt:box_mssnz9ya_pdnd24",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:chuck_base_notched_0001",
+   "b": "pt:plane_msso5x9z_gj2m7r",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:chuck_base_notched_0001",
+   "b": "pt:mechanicalobject_msso9ff5_wwcgbe",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:chuck_base_notched_0001",
+   "b": "pt:mechanicalobject_msso9ff6_tu00yq",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:chuck_base_notched_0001",
+   "b": "pt:box_mswll7mj_53sw8e",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:chuck_base_notched_0001",
+   "b": "pt:box_mswlqc1t_y2vyml",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:chuck_base_notched_0001",
+   "b": "pt:box_mswlxr6w_tkxtwz",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:chuck_base_notched_0001",
+   "b": "pt:tray4_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:chuck_base_notched_0001",
+   "b": "pt:diechuck_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:chuck_base_notched_0001",
+   "b": "pt:diechuck_ring_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:chuck_base_notched_0001",
+   "b": "pt:diechuck_cross_h_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:chuck_base_notched_0001",
+   "b": "pt:diechuck_cross_v_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin1_zrail_0001",
+   "b": "pt:epin2_zrail_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin1_zrail_0001",
+   "b": "pt:epin2_slider_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin1_zrail_0001",
+   "b": "pt:epin2_pin_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin1_zrail_0001",
+   "b": "pt:epin2_tab_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin1_zrail_0001",
+   "b": "pt:epin3_zrail_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin1_zrail_0001",
+   "b": "pt:epin3_slider_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin1_zrail_0001",
+   "b": "pt:epin3_pin_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin1_zrail_0001",
+   "b": "pt:epin3_tab_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin1_zrail_0001",
+   "b": "pt:box_mssnz9ya_pdnd24",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin1_zrail_0001",
+   "b": "pt:plane_msso5x9z_gj2m7r",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin1_zrail_0001",
+   "b": "pt:mechanicalobject_msso9ff5_wwcgbe",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin1_zrail_0001",
+   "b": "pt:mechanicalobject_msso9ff6_tu00yq",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin1_zrail_0001",
+   "b": "pt:airring_left_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin1_zrail_0001",
+   "b": "pt:airring_right_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin1_zrail_0001",
+   "b": "pt:airring_front_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin1_zrail_0001",
+   "b": "pt:airring_back_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin1_zrail_0001",
+   "b": "pt:box_mssrsdpg_u0q0bi",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin1_zrail_0001",
+   "b": "pt:box_mswll7mj_53sw8e",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin1_zrail_0001",
+   "b": "pt:box_mswlqc1t_y2vyml",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin1_zrail_0001",
+   "b": "pt:box_mswlxr6w_tkxtwz",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin1_zrail_0001",
+   "b": "pt:tray4_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin1_zrail_0001",
+   "b": "pt:chuck_cross_h_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin1_zrail_0001",
+   "b": "pt:chuck_cross_v_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin1_zrail_0001",
+   "b": "pt:bondhead_cross_h_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin1_zrail_0001",
+   "b": "pt:bondhead_cross_v_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin1_zrail_0001",
+   "b": "pt:diechuck_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin1_zrail_0001",
+   "b": "pt:diechuck_ring_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin1_zrail_0001",
+   "b": "pt:diechuck_cross_h_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin1_zrail_0001",
+   "b": "pt:diechuck_cross_v_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin1_slider_0001",
+   "b": "pt:epin2_zrail_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin1_slider_0001",
+   "b": "pt:epin2_slider_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin1_slider_0001",
+   "b": "pt:epin2_pin_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin1_slider_0001",
+   "b": "pt:epin2_tab_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin1_slider_0001",
+   "b": "pt:epin3_zrail_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin1_slider_0001",
+   "b": "pt:epin3_slider_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin1_slider_0001",
+   "b": "pt:epin3_pin_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin1_slider_0001",
+   "b": "pt:epin3_tab_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin1_slider_0001",
+   "b": "pt:box_mssnz9ya_pdnd24",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin1_slider_0001",
+   "b": "pt:plane_msso5x9z_gj2m7r",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin1_slider_0001",
+   "b": "pt:mechanicalobject_msso9ff5_wwcgbe",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin1_slider_0001",
+   "b": "pt:mechanicalobject_msso9ff6_tu00yq",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin1_slider_0001",
+   "b": "pt:airring_left_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin1_slider_0001",
+   "b": "pt:airring_right_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin1_slider_0001",
+   "b": "pt:airring_front_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin1_slider_0001",
+   "b": "pt:airring_back_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin1_slider_0001",
+   "b": "pt:box_mssrsdpg_u0q0bi",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin1_slider_0001",
+   "b": "pt:box_mswll7mj_53sw8e",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin1_slider_0001",
+   "b": "pt:box_mswlqc1t_y2vyml",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin1_slider_0001",
+   "b": "pt:box_mswlxr6w_tkxtwz",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin1_slider_0001",
+   "b": "pt:tray4_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin1_slider_0001",
+   "b": "pt:chuck_cross_h_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin1_slider_0001",
+   "b": "pt:chuck_cross_v_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin1_slider_0001",
+   "b": "pt:bondhead_cross_h_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin1_slider_0001",
+   "b": "pt:bondhead_cross_v_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin1_slider_0001",
+   "b": "pt:diechuck_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin1_slider_0001",
+   "b": "pt:diechuck_ring_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin1_slider_0001",
+   "b": "pt:diechuck_cross_h_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin1_slider_0001",
+   "b": "pt:diechuck_cross_v_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin1_pin_0001",
+   "b": "pt:epin2_zrail_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin1_pin_0001",
+   "b": "pt:epin2_slider_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin1_pin_0001",
+   "b": "pt:epin2_pin_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin1_pin_0001",
+   "b": "pt:epin2_tab_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin1_pin_0001",
+   "b": "pt:epin3_zrail_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin1_pin_0001",
+   "b": "pt:epin3_slider_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin1_pin_0001",
+   "b": "pt:epin3_pin_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin1_pin_0001",
+   "b": "pt:epin3_tab_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin1_pin_0001",
+   "b": "pt:box_mssnz9ya_pdnd24",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin1_pin_0001",
+   "b": "pt:plane_msso5x9z_gj2m7r",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin1_pin_0001",
+   "b": "pt:mechanicalobject_msso9ff5_wwcgbe",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin1_pin_0001",
+   "b": "pt:mechanicalobject_msso9ff6_tu00yq",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin1_pin_0001",
+   "b": "pt:airring_left_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin1_pin_0001",
+   "b": "pt:airring_right_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin1_pin_0001",
+   "b": "pt:airring_front_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin1_pin_0001",
+   "b": "pt:airring_back_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin1_pin_0001",
+   "b": "pt:box_mssrsdpg_u0q0bi",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin1_pin_0001",
+   "b": "pt:box_mssty4oj_u3pj08",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin1_pin_0001",
+   "b": "pt:cam_dn_bezel_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin1_pin_0001",
+   "b": "pt:conf_dn_bezel_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin1_pin_0001",
+   "b": "pt:mechanicalobject_mssulatg_dwmc6r",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin1_pin_0001",
+   "b": "pt:mechanicalobject_mssunli6_ah605m",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin1_pin_0001",
+   "b": "pt:box_mswll7mj_53sw8e",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin1_pin_0001",
+   "b": "pt:box_mswlqc1t_y2vyml",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin1_pin_0001",
+   "b": "pt:box_mswlxr6w_tkxtwz",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin1_pin_0001",
+   "b": "pt:tray4_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin1_pin_0001",
+   "b": "pt:chuck_cross_h_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin1_pin_0001",
+   "b": "pt:chuck_cross_v_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin1_pin_0001",
+   "b": "pt:bondhead_cross_h_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin1_pin_0001",
+   "b": "pt:bondhead_cross_v_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin1_pin_0001",
+   "b": "pt:diechuck_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin1_pin_0001",
+   "b": "pt:diechuck_ring_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin1_pin_0001",
+   "b": "pt:diechuck_cross_h_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin1_pin_0001",
+   "b": "pt:diechuck_cross_v_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin1_tab_0001",
+   "b": "pt:epin2_zrail_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin1_tab_0001",
+   "b": "pt:epin2_slider_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin1_tab_0001",
+   "b": "pt:epin2_pin_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin1_tab_0001",
+   "b": "pt:epin2_tab_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin1_tab_0001",
+   "b": "pt:epin3_zrail_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin1_tab_0001",
+   "b": "pt:epin3_slider_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin1_tab_0001",
+   "b": "pt:epin3_pin_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin1_tab_0001",
+   "b": "pt:epin3_tab_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin1_tab_0001",
+   "b": "pt:airring_left_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin1_tab_0001",
+   "b": "pt:airring_right_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin1_tab_0001",
+   "b": "pt:airring_front_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin1_tab_0001",
+   "b": "pt:airring_back_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin1_tab_0001",
+   "b": "pt:box_mssrsdpg_u0q0bi",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin1_tab_0001",
+   "b": "pt:box_mssty4oj_u3pj08",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin1_tab_0001",
+   "b": "pt:cam_dn_bezel_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin1_tab_0001",
+   "b": "pt:conf_dn_bezel_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin1_tab_0001",
+   "b": "pt:mechanicalobject_mssulatg_dwmc6r",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin1_tab_0001",
+   "b": "pt:mechanicalobject_mssunli6_ah605m",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin1_tab_0001",
+   "b": "pt:box_mswll7mj_53sw8e",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin1_tab_0001",
+   "b": "pt:box_mswlqc1t_y2vyml",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin1_tab_0001",
+   "b": "pt:box_mswlxr6w_tkxtwz",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin1_tab_0001",
+   "b": "pt:chuck_cross_h_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin1_tab_0001",
+   "b": "pt:chuck_cross_v_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin1_tab_0001",
+   "b": "pt:bondhead_cross_h_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin1_tab_0001",
+   "b": "pt:bondhead_cross_v_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin1_tab_0001",
+   "b": "pt:diechuck_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin1_tab_0001",
+   "b": "pt:diechuck_ring_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin1_tab_0001",
+   "b": "pt:diechuck_cross_h_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin1_tab_0001",
+   "b": "pt:diechuck_cross_v_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin2_zrail_0001",
+   "b": "pt:epin3_zrail_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin2_zrail_0001",
+   "b": "pt:epin3_slider_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin2_zrail_0001",
+   "b": "pt:epin3_pin_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin2_zrail_0001",
+   "b": "pt:epin3_tab_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin2_zrail_0001",
+   "b": "pt:box_mssnz9ya_pdnd24",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin2_zrail_0001",
+   "b": "pt:plane_msso5x9z_gj2m7r",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin2_zrail_0001",
+   "b": "pt:mechanicalobject_msso9ff5_wwcgbe",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin2_zrail_0001",
+   "b": "pt:mechanicalobject_msso9ff6_tu00yq",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin2_zrail_0001",
+   "b": "pt:airring_left_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin2_zrail_0001",
+   "b": "pt:airring_right_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin2_zrail_0001",
+   "b": "pt:airring_front_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin2_zrail_0001",
+   "b": "pt:airring_back_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin2_zrail_0001",
+   "b": "pt:box_mssrsdpg_u0q0bi",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin2_zrail_0001",
+   "b": "pt:box_mswll7mj_53sw8e",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin2_zrail_0001",
+   "b": "pt:box_mswlqc1t_y2vyml",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin2_zrail_0001",
+   "b": "pt:box_mswlxr6w_tkxtwz",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin2_zrail_0001",
+   "b": "pt:tray4_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin2_zrail_0001",
+   "b": "pt:chuck_cross_h_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin2_zrail_0001",
+   "b": "pt:chuck_cross_v_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin2_zrail_0001",
+   "b": "pt:bondhead_cross_h_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin2_zrail_0001",
+   "b": "pt:bondhead_cross_v_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin2_zrail_0001",
+   "b": "pt:diechuck_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin2_zrail_0001",
+   "b": "pt:diechuck_ring_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin2_zrail_0001",
+   "b": "pt:diechuck_cross_h_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin2_zrail_0001",
+   "b": "pt:diechuck_cross_v_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin2_slider_0001",
+   "b": "pt:epin3_zrail_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin2_slider_0001",
+   "b": "pt:epin3_slider_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin2_slider_0001",
+   "b": "pt:epin3_pin_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin2_slider_0001",
+   "b": "pt:epin3_tab_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin2_slider_0001",
+   "b": "pt:box_mssnz9ya_pdnd24",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin2_slider_0001",
+   "b": "pt:plane_msso5x9z_gj2m7r",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin2_slider_0001",
+   "b": "pt:mechanicalobject_msso9ff5_wwcgbe",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin2_slider_0001",
+   "b": "pt:mechanicalobject_msso9ff6_tu00yq",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin2_slider_0001",
+   "b": "pt:airring_left_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin2_slider_0001",
+   "b": "pt:airring_right_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin2_slider_0001",
+   "b": "pt:airring_front_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin2_slider_0001",
+   "b": "pt:airring_back_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin2_slider_0001",
+   "b": "pt:box_mssrsdpg_u0q0bi",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin2_slider_0001",
+   "b": "pt:box_mswll7mj_53sw8e",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin2_slider_0001",
+   "b": "pt:box_mswlqc1t_y2vyml",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin2_slider_0001",
+   "b": "pt:box_mswlxr6w_tkxtwz",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin2_slider_0001",
+   "b": "pt:tray4_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin2_slider_0001",
+   "b": "pt:chuck_cross_h_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin2_slider_0001",
+   "b": "pt:chuck_cross_v_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin2_slider_0001",
+   "b": "pt:bondhead_cross_h_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin2_slider_0001",
+   "b": "pt:bondhead_cross_v_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin2_slider_0001",
+   "b": "pt:diechuck_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin2_slider_0001",
+   "b": "pt:diechuck_ring_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin2_slider_0001",
+   "b": "pt:diechuck_cross_h_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin2_slider_0001",
+   "b": "pt:diechuck_cross_v_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin2_pin_0001",
+   "b": "pt:epin3_zrail_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin2_pin_0001",
+   "b": "pt:epin3_slider_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin2_pin_0001",
+   "b": "pt:epin3_pin_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin2_pin_0001",
+   "b": "pt:epin3_tab_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin2_pin_0001",
+   "b": "pt:box_mssnz9ya_pdnd24",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin2_pin_0001",
+   "b": "pt:plane_msso5x9z_gj2m7r",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin2_pin_0001",
+   "b": "pt:mechanicalobject_msso9ff5_wwcgbe",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin2_pin_0001",
+   "b": "pt:mechanicalobject_msso9ff6_tu00yq",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin2_pin_0001",
+   "b": "pt:airring_left_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin2_pin_0001",
+   "b": "pt:airring_right_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin2_pin_0001",
+   "b": "pt:airring_front_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin2_pin_0001",
+   "b": "pt:airring_back_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin2_pin_0001",
+   "b": "pt:box_mssrsdpg_u0q0bi",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin2_pin_0001",
+   "b": "pt:box_mssty4oj_u3pj08",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin2_pin_0001",
+   "b": "pt:cam_dn_bezel_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin2_pin_0001",
+   "b": "pt:conf_dn_bezel_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin2_pin_0001",
+   "b": "pt:mechanicalobject_mssulatg_dwmc6r",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin2_pin_0001",
+   "b": "pt:mechanicalobject_mssunli6_ah605m",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin2_pin_0001",
+   "b": "pt:box_mswll7mj_53sw8e",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin2_pin_0001",
+   "b": "pt:box_mswlqc1t_y2vyml",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin2_pin_0001",
+   "b": "pt:box_mswlxr6w_tkxtwz",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin2_pin_0001",
+   "b": "pt:tray4_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin2_pin_0001",
+   "b": "pt:chuck_cross_h_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin2_pin_0001",
+   "b": "pt:chuck_cross_v_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin2_pin_0001",
+   "b": "pt:bondhead_cross_h_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin2_pin_0001",
+   "b": "pt:bondhead_cross_v_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin2_pin_0001",
+   "b": "pt:diechuck_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin2_pin_0001",
+   "b": "pt:diechuck_ring_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin2_pin_0001",
+   "b": "pt:diechuck_cross_h_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin2_pin_0001",
+   "b": "pt:diechuck_cross_v_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin2_tab_0001",
+   "b": "pt:epin3_zrail_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin2_tab_0001",
+   "b": "pt:epin3_slider_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin2_tab_0001",
+   "b": "pt:epin3_pin_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin2_tab_0001",
+   "b": "pt:epin3_tab_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin2_tab_0001",
+   "b": "pt:airring_left_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin2_tab_0001",
+   "b": "pt:airring_right_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin2_tab_0001",
+   "b": "pt:airring_front_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin2_tab_0001",
+   "b": "pt:airring_back_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin2_tab_0001",
+   "b": "pt:box_mssrsdpg_u0q0bi",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin2_tab_0001",
+   "b": "pt:box_mssty4oj_u3pj08",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin2_tab_0001",
+   "b": "pt:cam_dn_bezel_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin2_tab_0001",
+   "b": "pt:conf_dn_bezel_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin2_tab_0001",
+   "b": "pt:mechanicalobject_mssulatg_dwmc6r",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin2_tab_0001",
+   "b": "pt:mechanicalobject_mssunli6_ah605m",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin2_tab_0001",
+   "b": "pt:box_mswll7mj_53sw8e",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin2_tab_0001",
+   "b": "pt:box_mswlqc1t_y2vyml",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin2_tab_0001",
+   "b": "pt:box_mswlxr6w_tkxtwz",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin2_tab_0001",
+   "b": "pt:chuck_cross_h_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin2_tab_0001",
+   "b": "pt:chuck_cross_v_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin2_tab_0001",
+   "b": "pt:bondhead_cross_h_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin2_tab_0001",
+   "b": "pt:bondhead_cross_v_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin2_tab_0001",
+   "b": "pt:diechuck_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin2_tab_0001",
+   "b": "pt:diechuck_ring_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin2_tab_0001",
+   "b": "pt:diechuck_cross_h_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin2_tab_0001",
+   "b": "pt:diechuck_cross_v_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin3_zrail_0001",
+   "b": "pt:box_mssnz9ya_pdnd24",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin3_zrail_0001",
+   "b": "pt:plane_msso5x9z_gj2m7r",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin3_zrail_0001",
+   "b": "pt:mechanicalobject_msso9ff5_wwcgbe",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin3_zrail_0001",
+   "b": "pt:mechanicalobject_msso9ff6_tu00yq",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin3_zrail_0001",
+   "b": "pt:airring_left_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin3_zrail_0001",
+   "b": "pt:airring_right_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin3_zrail_0001",
+   "b": "pt:airring_front_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin3_zrail_0001",
+   "b": "pt:airring_back_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin3_zrail_0001",
+   "b": "pt:box_mssrsdpg_u0q0bi",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin3_zrail_0001",
+   "b": "pt:box_mswll7mj_53sw8e",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin3_zrail_0001",
+   "b": "pt:box_mswlqc1t_y2vyml",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin3_zrail_0001",
+   "b": "pt:box_mswlxr6w_tkxtwz",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin3_zrail_0001",
+   "b": "pt:tray4_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin3_zrail_0001",
+   "b": "pt:chuck_cross_h_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin3_zrail_0001",
+   "b": "pt:chuck_cross_v_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin3_zrail_0001",
+   "b": "pt:bondhead_cross_h_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin3_zrail_0001",
+   "b": "pt:bondhead_cross_v_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin3_zrail_0001",
+   "b": "pt:diechuck_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin3_zrail_0001",
+   "b": "pt:diechuck_ring_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin3_zrail_0001",
+   "b": "pt:diechuck_cross_h_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin3_zrail_0001",
+   "b": "pt:diechuck_cross_v_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin3_slider_0001",
+   "b": "pt:box_mssnz9ya_pdnd24",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin3_slider_0001",
+   "b": "pt:plane_msso5x9z_gj2m7r",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin3_slider_0001",
+   "b": "pt:mechanicalobject_msso9ff5_wwcgbe",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin3_slider_0001",
+   "b": "pt:mechanicalobject_msso9ff6_tu00yq",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin3_slider_0001",
+   "b": "pt:airring_left_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin3_slider_0001",
+   "b": "pt:airring_right_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin3_slider_0001",
+   "b": "pt:airring_front_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin3_slider_0001",
+   "b": "pt:airring_back_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin3_slider_0001",
+   "b": "pt:box_mssrsdpg_u0q0bi",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin3_slider_0001",
+   "b": "pt:box_mswll7mj_53sw8e",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin3_slider_0001",
+   "b": "pt:box_mswlqc1t_y2vyml",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin3_slider_0001",
+   "b": "pt:box_mswlxr6w_tkxtwz",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin3_slider_0001",
+   "b": "pt:tray4_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin3_slider_0001",
+   "b": "pt:chuck_cross_h_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin3_slider_0001",
+   "b": "pt:chuck_cross_v_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin3_slider_0001",
+   "b": "pt:bondhead_cross_h_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin3_slider_0001",
+   "b": "pt:bondhead_cross_v_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin3_slider_0001",
+   "b": "pt:diechuck_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin3_slider_0001",
+   "b": "pt:diechuck_ring_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin3_slider_0001",
+   "b": "pt:diechuck_cross_h_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin3_slider_0001",
+   "b": "pt:diechuck_cross_v_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin3_pin_0001",
+   "b": "pt:box_mssnz9ya_pdnd24",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin3_pin_0001",
+   "b": "pt:plane_msso5x9z_gj2m7r",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin3_pin_0001",
+   "b": "pt:mechanicalobject_msso9ff5_wwcgbe",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin3_pin_0001",
+   "b": "pt:mechanicalobject_msso9ff6_tu00yq",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin3_pin_0001",
+   "b": "pt:airring_left_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin3_pin_0001",
+   "b": "pt:airring_right_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin3_pin_0001",
+   "b": "pt:airring_front_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin3_pin_0001",
+   "b": "pt:airring_back_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin3_pin_0001",
+   "b": "pt:box_mssrsdpg_u0q0bi",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin3_pin_0001",
+   "b": "pt:box_mssty4oj_u3pj08",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin3_pin_0001",
+   "b": "pt:cam_dn_bezel_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin3_pin_0001",
+   "b": "pt:conf_dn_bezel_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin3_pin_0001",
+   "b": "pt:mechanicalobject_mssulatg_dwmc6r",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin3_pin_0001",
+   "b": "pt:mechanicalobject_mssunli6_ah605m",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin3_pin_0001",
+   "b": "pt:box_mswll7mj_53sw8e",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin3_pin_0001",
+   "b": "pt:box_mswlqc1t_y2vyml",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin3_pin_0001",
+   "b": "pt:box_mswlxr6w_tkxtwz",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin3_pin_0001",
+   "b": "pt:tray4_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin3_pin_0001",
+   "b": "pt:chuck_cross_h_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin3_pin_0001",
+   "b": "pt:chuck_cross_v_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin3_pin_0001",
+   "b": "pt:bondhead_cross_h_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin3_pin_0001",
+   "b": "pt:bondhead_cross_v_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin3_pin_0001",
+   "b": "pt:diechuck_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin3_pin_0001",
+   "b": "pt:diechuck_ring_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin3_pin_0001",
+   "b": "pt:diechuck_cross_h_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin3_pin_0001",
+   "b": "pt:diechuck_cross_v_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin3_tab_0001",
+   "b": "pt:airring_left_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin3_tab_0001",
+   "b": "pt:airring_right_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin3_tab_0001",
+   "b": "pt:airring_front_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin3_tab_0001",
+   "b": "pt:airring_back_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin3_tab_0001",
+   "b": "pt:box_mssrsdpg_u0q0bi",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin3_tab_0001",
+   "b": "pt:box_mssty4oj_u3pj08",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin3_tab_0001",
+   "b": "pt:cam_dn_bezel_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin3_tab_0001",
+   "b": "pt:conf_dn_bezel_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin3_tab_0001",
+   "b": "pt:mechanicalobject_mssulatg_dwmc6r",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin3_tab_0001",
+   "b": "pt:mechanicalobject_mssunli6_ah605m",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin3_tab_0001",
+   "b": "pt:box_mswll7mj_53sw8e",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin3_tab_0001",
+   "b": "pt:box_mswlqc1t_y2vyml",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin3_tab_0001",
+   "b": "pt:box_mswlxr6w_tkxtwz",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin3_tab_0001",
+   "b": "pt:chuck_cross_h_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin3_tab_0001",
+   "b": "pt:chuck_cross_v_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin3_tab_0001",
+   "b": "pt:bondhead_cross_h_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin3_tab_0001",
+   "b": "pt:bondhead_cross_v_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin3_tab_0001",
+   "b": "pt:diechuck_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin3_tab_0001",
+   "b": "pt:diechuck_ring_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin3_tab_0001",
+   "b": "pt:diechuck_cross_h_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:epin3_tab_0001",
+   "b": "pt:diechuck_cross_v_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:box_mssnz9ya_pdnd24",
+   "b": "pt:airring_left_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:box_mssnz9ya_pdnd24",
+   "b": "pt:airring_right_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:box_mssnz9ya_pdnd24",
+   "b": "pt:airring_front_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:box_mssnz9ya_pdnd24",
+   "b": "pt:airring_back_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:box_mssnz9ya_pdnd24",
+   "b": "pt:box_mssrsdpg_u0q0bi",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:box_mssnz9ya_pdnd24",
+   "b": "pt:box_mswlqc1t_y2vyml",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:box_mssnz9ya_pdnd24",
+   "b": "pt:box_mswlxr6w_tkxtwz",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:box_mssnz9ya_pdnd24",
+   "b": "pt:bondhead_cross_h_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:box_mssnz9ya_pdnd24",
+   "b": "pt:bondhead_cross_v_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:box_mssnz9ya_pdnd24",
+   "b": "pt:diechuck_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:box_mssnz9ya_pdnd24",
+   "b": "pt:diechuck_ring_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:box_mssnz9ya_pdnd24",
+   "b": "pt:diechuck_cross_h_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:box_mssnz9ya_pdnd24",
+   "b": "pt:diechuck_cross_v_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:plane_msso5x9z_gj2m7r",
+   "b": "pt:airring_left_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:plane_msso5x9z_gj2m7r",
+   "b": "pt:airring_right_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:plane_msso5x9z_gj2m7r",
+   "b": "pt:airring_front_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:plane_msso5x9z_gj2m7r",
+   "b": "pt:airring_back_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:plane_msso5x9z_gj2m7r",
+   "b": "pt:box_mssrsdpg_u0q0bi",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:plane_msso5x9z_gj2m7r",
+   "b": "pt:box_mswll7mj_53sw8e",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:plane_msso5x9z_gj2m7r",
+   "b": "pt:box_mswlqc1t_y2vyml",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:plane_msso5x9z_gj2m7r",
+   "b": "pt:box_mswlxr6w_tkxtwz",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:plane_msso5x9z_gj2m7r",
+   "b": "pt:bondhead_cross_h_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:plane_msso5x9z_gj2m7r",
+   "b": "pt:bondhead_cross_v_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:plane_msso5x9z_gj2m7r",
+   "b": "pt:diechuck_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:plane_msso5x9z_gj2m7r",
+   "b": "pt:diechuck_ring_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:plane_msso5x9z_gj2m7r",
+   "b": "pt:diechuck_cross_h_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:plane_msso5x9z_gj2m7r",
+   "b": "pt:diechuck_cross_v_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:mechanicalobject_msso9ff5_wwcgbe",
+   "b": "pt:airring_left_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:mechanicalobject_msso9ff5_wwcgbe",
+   "b": "pt:airring_right_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:mechanicalobject_msso9ff5_wwcgbe",
+   "b": "pt:airring_front_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:mechanicalobject_msso9ff5_wwcgbe",
+   "b": "pt:airring_back_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:mechanicalobject_msso9ff5_wwcgbe",
+   "b": "pt:box_mssrsdpg_u0q0bi",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:mechanicalobject_msso9ff5_wwcgbe",
+   "b": "pt:box_mswll7mj_53sw8e",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:mechanicalobject_msso9ff5_wwcgbe",
+   "b": "pt:box_mswlqc1t_y2vyml",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:mechanicalobject_msso9ff5_wwcgbe",
+   "b": "pt:box_mswlxr6w_tkxtwz",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:mechanicalobject_msso9ff5_wwcgbe",
+   "b": "pt:bondhead_cross_h_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:mechanicalobject_msso9ff5_wwcgbe",
+   "b": "pt:bondhead_cross_v_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:mechanicalobject_msso9ff5_wwcgbe",
+   "b": "pt:diechuck_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:mechanicalobject_msso9ff5_wwcgbe",
+   "b": "pt:diechuck_ring_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:mechanicalobject_msso9ff5_wwcgbe",
+   "b": "pt:diechuck_cross_h_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:mechanicalobject_msso9ff5_wwcgbe",
+   "b": "pt:diechuck_cross_v_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:mechanicalobject_msso9ff6_tu00yq",
+   "b": "pt:airring_left_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:mechanicalobject_msso9ff6_tu00yq",
+   "b": "pt:airring_right_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:mechanicalobject_msso9ff6_tu00yq",
+   "b": "pt:airring_front_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:mechanicalobject_msso9ff6_tu00yq",
+   "b": "pt:airring_back_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:mechanicalobject_msso9ff6_tu00yq",
+   "b": "pt:box_mssrsdpg_u0q0bi",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:mechanicalobject_msso9ff6_tu00yq",
+   "b": "pt:box_mswll7mj_53sw8e",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:mechanicalobject_msso9ff6_tu00yq",
+   "b": "pt:box_mswlqc1t_y2vyml",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:mechanicalobject_msso9ff6_tu00yq",
+   "b": "pt:box_mswlxr6w_tkxtwz",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:mechanicalobject_msso9ff6_tu00yq",
+   "b": "pt:bondhead_cross_h_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:mechanicalobject_msso9ff6_tu00yq",
+   "b": "pt:bondhead_cross_v_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:mechanicalobject_msso9ff6_tu00yq",
+   "b": "pt:diechuck_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:mechanicalobject_msso9ff6_tu00yq",
+   "b": "pt:diechuck_ring_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:mechanicalobject_msso9ff6_tu00yq",
+   "b": "pt:diechuck_cross_h_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:mechanicalobject_msso9ff6_tu00yq",
+   "b": "pt:diechuck_cross_v_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:box_mssptvdy_4guv68",
+   "b": "pt:cylinder_mssrakr3_y2opyb",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:box_mssptvdy_4guv68",
+   "b": "pt:rxry_level_screw3_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:box_mssptvdy_4guv68",
+   "b": "pt:box_mssriiqy_ihe0nb",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:box_mssptvdy_4guv68",
+   "b": "pt:box_mswl2pek_fdn9nq",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:box_mssqcuna_avt1yh",
+   "b": "pt:cylinder_mssrakr3_y2opyb",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:box_mssqcuna_avt1yh",
+   "b": "pt:rxry_level_screw1_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:box_mssqcuna_avt1yh",
+   "b": "pt:rxry_level_screw2_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:box_mssqcuna_avt1yh",
+   "b": "pt:box_mssriiqy_ihe0nb",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:box_mssqyue6_3jgqev",
+   "b": "pt:cylinder_mssrakr3_y2opyb",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:box_mssqyue6_3jgqev",
+   "b": "pt:rxry_level_screw1_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:box_mssqyue6_3jgqev",
+   "b": "pt:rxry_level_screw2_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:box_mssqyue6_3jgqev",
+   "b": "pt:rxry_level_screw3_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:box_mssqyue6_3jgqev",
+   "b": "pt:box_mssriiqy_ihe0nb",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:box_mssqyue6_3jgqev",
+   "b": "pt:airring_left_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:box_mssqyue6_3jgqev",
+   "b": "pt:airring_right_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:box_mssqyue6_3jgqev",
+   "b": "pt:airring_front_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:box_mssqyue6_3jgqev",
+   "b": "pt:airring_back_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:cylinder_mssrakr3_y2opyb",
+   "b": "pt:box_mswll7mj_53sw8e",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:cylinder_mssrakr3_y2opyb",
+   "b": "pt:box_mswlqc1t_y2vyml",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:cylinder_mssrakr3_y2opyb",
+   "b": "pt:box_mswlxr6w_tkxtwz",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:cylinder_mssrakr3_y2opyb",
+   "b": "pt:diechuck_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:cylinder_mssrakr3_y2opyb",
+   "b": "pt:diechuck_ring_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:cylinder_mssrakr3_y2opyb",
+   "b": "pt:diechuck_cross_h_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:cylinder_mssrakr3_y2opyb",
+   "b": "pt:diechuck_cross_v_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:box_mssriiqy_ihe0nb",
+   "b": "pt:mechanicalobject_msstt4h6_10bqi4",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:box_mssriiqy_ihe0nb",
+   "b": "pt:box_mssty4oj_u3pj08",
+   "hit_axes": [
+    "BS_Arm_Z"
+   ]
+  },
+  {
+   "a": "pt:box_mssriiqy_ihe0nb",
+   "b": "pt:cam_up_bezel_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:box_mssriiqy_ihe0nb",
+   "b": "pt:conf_up_bezel_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:box_mssriiqy_ihe0nb",
+   "b": "pt:circle_mssuehmv_q0y9ws",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:box_mssriiqy_ihe0nb",
+   "b": "pt:mechanicalobject_mssulwzt_9nstr9",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:box_mssriiqy_ihe0nb",
+   "b": "pt:box_mswll7mj_53sw8e",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:box_mssriiqy_ihe0nb",
+   "b": "pt:box_mswlqc1t_y2vyml",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:box_mssriiqy_ihe0nb",
+   "b": "pt:box_mswlxr6w_tkxtwz",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:box_mssriiqy_ihe0nb",
+   "b": "pt:diechuck_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:box_mssriiqy_ihe0nb",
+   "b": "pt:diechuck_ring_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:box_mssriiqy_ihe0nb",
+   "b": "pt:diechuck_cross_h_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:box_mssriiqy_ihe0nb",
+   "b": "pt:diechuck_cross_v_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:airring_left_0001",
+   "b": "pt:mechanicalobject_msstt4h6_10bqi4",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:airring_left_0001",
+   "b": "pt:box_mssty4oj_u3pj08",
+   "hit_axes": [
+    "BS_Arm_Z"
+   ]
+  },
+  {
+   "a": "pt:airring_left_0001",
+   "b": "pt:cam_up_bezel_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:airring_left_0001",
+   "b": "pt:cam_dn_bezel_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:airring_left_0001",
+   "b": "pt:conf_up_bezel_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:airring_left_0001",
+   "b": "pt:conf_dn_bezel_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:airring_left_0001",
+   "b": "pt:circle_mssuehmv_q0y9ws",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:airring_left_0001",
+   "b": "pt:mechanicalobject_mssulatg_dwmc6r",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:airring_left_0001",
+   "b": "pt:mechanicalobject_mssulwzt_9nstr9",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:airring_left_0001",
+   "b": "pt:mechanicalobject_mssunli6_ah605m",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:airring_left_0001",
+   "b": "pt:box_mswlqc1t_y2vyml",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:airring_left_0001",
+   "b": "pt:box_mswlxr6w_tkxtwz",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:airring_left_0001",
+   "b": "pt:tray4_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:airring_left_0001",
+   "b": "pt:chuck_cross_h_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:airring_left_0001",
+   "b": "pt:chuck_cross_v_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:airring_left_0001",
+   "b": "pt:diechuck_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:airring_left_0001",
+   "b": "pt:diechuck_ring_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:airring_left_0001",
+   "b": "pt:diechuck_cross_h_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:airring_left_0001",
+   "b": "pt:diechuck_cross_v_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:airring_right_0001",
+   "b": "pt:mechanicalobject_msstt4h6_10bqi4",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:airring_right_0001",
+   "b": "pt:box_mssty4oj_u3pj08",
+   "hit_axes": [
+    "BS_Arm_Z"
+   ]
+  },
+  {
+   "a": "pt:airring_right_0001",
+   "b": "pt:cam_up_bezel_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:airring_right_0001",
+   "b": "pt:cam_dn_bezel_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:airring_right_0001",
+   "b": "pt:conf_up_bezel_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:airring_right_0001",
+   "b": "pt:conf_dn_bezel_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:airring_right_0001",
+   "b": "pt:circle_mssuehmv_q0y9ws",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:airring_right_0001",
+   "b": "pt:mechanicalobject_mssulatg_dwmc6r",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:airring_right_0001",
+   "b": "pt:mechanicalobject_mssulwzt_9nstr9",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:airring_right_0001",
+   "b": "pt:mechanicalobject_mssunli6_ah605m",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:airring_right_0001",
+   "b": "pt:box_mswll7mj_53sw8e",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:airring_right_0001",
+   "b": "pt:box_mswlqc1t_y2vyml",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:airring_right_0001",
+   "b": "pt:box_mswlxr6w_tkxtwz",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:airring_right_0001",
+   "b": "pt:tray4_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:airring_right_0001",
+   "b": "pt:chuck_cross_h_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:airring_right_0001",
+   "b": "pt:chuck_cross_v_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:airring_right_0001",
+   "b": "pt:diechuck_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:airring_right_0001",
+   "b": "pt:diechuck_ring_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:airring_right_0001",
+   "b": "pt:diechuck_cross_h_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:airring_right_0001",
+   "b": "pt:diechuck_cross_v_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:airring_front_0001",
+   "b": "pt:mechanicalobject_msstt4h6_10bqi4",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:airring_front_0001",
+   "b": "pt:box_mssty4oj_u3pj08",
+   "hit_axes": [
+    "BS_Arm_Z"
+   ]
+  },
+  {
+   "a": "pt:airring_front_0001",
+   "b": "pt:cam_up_bezel_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:airring_front_0001",
+   "b": "pt:cam_dn_bezel_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:airring_front_0001",
+   "b": "pt:conf_up_bezel_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:airring_front_0001",
+   "b": "pt:conf_dn_bezel_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:airring_front_0001",
+   "b": "pt:circle_mssuehmv_q0y9ws",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:airring_front_0001",
+   "b": "pt:mechanicalobject_mssulatg_dwmc6r",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:airring_front_0001",
+   "b": "pt:mechanicalobject_mssulwzt_9nstr9",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:airring_front_0001",
+   "b": "pt:mechanicalobject_mssunli6_ah605m",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:airring_front_0001",
+   "b": "pt:box_mswlqc1t_y2vyml",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:airring_front_0001",
+   "b": "pt:box_mswlxr6w_tkxtwz",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:airring_front_0001",
+   "b": "pt:tray4_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:airring_front_0001",
+   "b": "pt:chuck_cross_h_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:airring_front_0001",
+   "b": "pt:chuck_cross_v_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:airring_front_0001",
+   "b": "pt:diechuck_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:airring_front_0001",
+   "b": "pt:diechuck_ring_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:airring_front_0001",
+   "b": "pt:diechuck_cross_h_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:airring_front_0001",
+   "b": "pt:diechuck_cross_v_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:airring_back_0001",
+   "b": "pt:box_mssty4oj_u3pj08",
+   "hit_axes": [
+    "BS_Arm_Z"
+   ]
+  },
+  {
+   "a": "pt:airring_back_0001",
+   "b": "pt:cam_up_bezel_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:airring_back_0001",
+   "b": "pt:cam_dn_bezel_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:airring_back_0001",
+   "b": "pt:conf_up_bezel_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:airring_back_0001",
+   "b": "pt:conf_dn_bezel_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:airring_back_0001",
+   "b": "pt:circle_mssuehmv_q0y9ws",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:airring_back_0001",
+   "b": "pt:mechanicalobject_mssulatg_dwmc6r",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:airring_back_0001",
+   "b": "pt:mechanicalobject_mssulwzt_9nstr9",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:airring_back_0001",
+   "b": "pt:mechanicalobject_mssunli6_ah605m",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:airring_back_0001",
+   "b": "pt:box_mswlqc1t_y2vyml",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:airring_back_0001",
+   "b": "pt:box_mswlxr6w_tkxtwz",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:airring_back_0001",
+   "b": "pt:tray4_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:airring_back_0001",
+   "b": "pt:chuck_cross_h_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:airring_back_0001",
+   "b": "pt:chuck_cross_v_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:airring_back_0001",
+   "b": "pt:diechuck_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:airring_back_0001",
+   "b": "pt:diechuck_ring_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:airring_back_0001",
+   "b": "pt:diechuck_cross_h_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:airring_back_0001",
+   "b": "pt:diechuck_cross_v_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:box_mssrsdpg_u0q0bi",
+   "b": "pt:box_mssty4oj_u3pj08",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:box_mssrsdpg_u0q0bi",
+   "b": "pt:cam_up_bezel_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:box_mssrsdpg_u0q0bi",
+   "b": "pt:cam_dn_bezel_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:box_mssrsdpg_u0q0bi",
+   "b": "pt:conf_up_bezel_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:box_mssrsdpg_u0q0bi",
+   "b": "pt:conf_dn_bezel_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:box_mssrsdpg_u0q0bi",
+   "b": "pt:circle_mssuehmv_q0y9ws",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:box_mssrsdpg_u0q0bi",
+   "b": "pt:mechanicalobject_mssulatg_dwmc6r",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:box_mssrsdpg_u0q0bi",
+   "b": "pt:mechanicalobject_mssulwzt_9nstr9",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:box_mssrsdpg_u0q0bi",
+   "b": "pt:mechanicalobject_mssunli6_ah605m",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:box_mssrsdpg_u0q0bi",
+   "b": "pt:box_mswll7mj_53sw8e",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:box_mssrsdpg_u0q0bi",
+   "b": "pt:box_mswlqc1t_y2vyml",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:box_mssrsdpg_u0q0bi",
+   "b": "pt:box_mswlxr6w_tkxtwz",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:box_mssrsdpg_u0q0bi",
+   "b": "pt:tray4_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:box_mssrsdpg_u0q0bi",
+   "b": "pt:chuck_cross_h_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:box_mssrsdpg_u0q0bi",
+   "b": "pt:chuck_cross_v_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:box_mssrsdpg_u0q0bi",
+   "b": "pt:diechuck_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:box_mssrsdpg_u0q0bi",
+   "b": "pt:diechuck_ring_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:box_mssrsdpg_u0q0bi",
+   "b": "pt:diechuck_cross_h_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:box_mssrsdpg_u0q0bi",
+   "b": "pt:diechuck_cross_v_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:box_msst6r7i_ppzlv5",
+   "b": "pt:alignz_rail1_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:box_msst6r7i_ppzlv5",
+   "b": "pt:alignz_rail2_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:mechanicalobject_msstt4h6_10bqi4",
+   "b": "pt:box_mssty4oj_u3pj08",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:mechanicalobject_msstt4h6_10bqi4",
+   "b": "pt:cam_up_bezel_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:mechanicalobject_msstt4h6_10bqi4",
+   "b": "pt:conf_up_bezel_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:mechanicalobject_msstt4h6_10bqi4",
+   "b": "pt:circle_mssuehmv_q0y9ws",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:mechanicalobject_msstt4h6_10bqi4",
+   "b": "pt:mechanicalobject_mssulwzt_9nstr9",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:mechanicalobject_msstt4h6_10bqi4",
+   "b": "pt:box_mswlxr6w_tkxtwz",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:mechanicalobject_msstt4h6_10bqi4",
+   "b": "pt:diechuck_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:mechanicalobject_msstt4h6_10bqi4",
+   "b": "pt:diechuck_ring_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:mechanicalobject_msstt4h6_10bqi4",
+   "b": "pt:diechuck_cross_h_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:mechanicalobject_msstt4h6_10bqi4",
+   "b": "pt:diechuck_cross_v_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:box_mssty4oj_u3pj08",
+   "b": "pt:box_mswl2pek_fdn9nq",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:box_mssty4oj_u3pj08",
+   "b": "pt:box_mswll7mj_53sw8e",
+   "hit_axes": [
+    "FA_X"
+   ]
+  },
+  {
+   "a": "pt:box_mssty4oj_u3pj08",
+   "b": "pt:box_mswlqc1t_y2vyml",
+   "hit_axes": [
+    "FA_X"
+   ]
+  },
+  {
+   "a": "pt:box_mssty4oj_u3pj08",
+   "b": "pt:box_mswlxr6w_tkxtwz",
+   "hit_axes": [
+    "FA_X"
+   ]
+  },
+  {
+   "a": "pt:box_mssty4oj_u3pj08",
+   "b": "pt:bondhead_cross_h_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:box_mssty4oj_u3pj08",
+   "b": "pt:bondhead_cross_v_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:box_mssty4oj_u3pj08",
+   "b": "pt:diechuck_0001",
+   "hit_axes": [
+    "FA_X"
+   ]
+  },
+  {
+   "a": "pt:box_mssty4oj_u3pj08",
+   "b": "pt:diechuck_ring_0001",
+   "hit_axes": [
+    "FA_X"
+   ]
+  },
+  {
+   "a": "pt:box_mssty4oj_u3pj08",
+   "b": "pt:diechuck_cross_h_0001",
+   "hit_axes": [
+    "FA_X"
+   ]
+  },
+  {
+   "a": "pt:box_mssty4oj_u3pj08",
+   "b": "pt:diechuck_cross_v_0001",
+   "hit_axes": [
+    "FA_X"
+   ]
+  },
+  {
+   "a": "pt:cam_up_bezel_0001",
+   "b": "pt:box_mswll7mj_53sw8e",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:cam_up_bezel_0001",
+   "b": "pt:box_mswlqc1t_y2vyml",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:cam_up_bezel_0001",
+   "b": "pt:box_mswlxr6w_tkxtwz",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:cam_up_bezel_0001",
+   "b": "pt:bondhead_cross_h_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:cam_up_bezel_0001",
+   "b": "pt:bondhead_cross_v_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:cam_up_bezel_0001",
+   "b": "pt:diechuck_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:cam_up_bezel_0001",
+   "b": "pt:diechuck_ring_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:cam_up_bezel_0001",
+   "b": "pt:diechuck_cross_h_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:cam_up_bezel_0001",
+   "b": "pt:diechuck_cross_v_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:cam_dn_bezel_0001",
+   "b": "pt:box_mswll7mj_53sw8e",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:cam_dn_bezel_0001",
+   "b": "pt:box_mswlqc1t_y2vyml",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:cam_dn_bezel_0001",
+   "b": "pt:box_mswlxr6w_tkxtwz",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:cam_dn_bezel_0001",
+   "b": "pt:bondhead_cross_h_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:cam_dn_bezel_0001",
+   "b": "pt:bondhead_cross_v_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:cam_dn_bezel_0001",
+   "b": "pt:diechuck_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:cam_dn_bezel_0001",
+   "b": "pt:diechuck_ring_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:cam_dn_bezel_0001",
+   "b": "pt:diechuck_cross_h_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:cam_dn_bezel_0001",
+   "b": "pt:diechuck_cross_v_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:conf_up_bezel_0001",
+   "b": "pt:box_mswll7mj_53sw8e",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:conf_up_bezel_0001",
+   "b": "pt:box_mswlqc1t_y2vyml",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:conf_up_bezel_0001",
+   "b": "pt:box_mswlxr6w_tkxtwz",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:conf_up_bezel_0001",
+   "b": "pt:bondhead_cross_h_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:conf_up_bezel_0001",
+   "b": "pt:bondhead_cross_v_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:conf_up_bezel_0001",
+   "b": "pt:diechuck_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:conf_up_bezel_0001",
+   "b": "pt:diechuck_ring_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:conf_up_bezel_0001",
+   "b": "pt:diechuck_cross_h_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:conf_up_bezel_0001",
+   "b": "pt:diechuck_cross_v_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:conf_dn_bezel_0001",
+   "b": "pt:box_mswll7mj_53sw8e",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:conf_dn_bezel_0001",
+   "b": "pt:box_mswlqc1t_y2vyml",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:conf_dn_bezel_0001",
+   "b": "pt:box_mswlxr6w_tkxtwz",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:conf_dn_bezel_0001",
+   "b": "pt:bondhead_cross_h_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:conf_dn_bezel_0001",
+   "b": "pt:bondhead_cross_v_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:conf_dn_bezel_0001",
+   "b": "pt:diechuck_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:conf_dn_bezel_0001",
+   "b": "pt:diechuck_ring_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:conf_dn_bezel_0001",
+   "b": "pt:diechuck_cross_h_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:conf_dn_bezel_0001",
+   "b": "pt:diechuck_cross_v_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:circle_mssuehmv_q0y9ws",
+   "b": "pt:box_mswll7mj_53sw8e",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:circle_mssuehmv_q0y9ws",
+   "b": "pt:box_mswlqc1t_y2vyml",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:circle_mssuehmv_q0y9ws",
+   "b": "pt:box_mswlxr6w_tkxtwz",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:circle_mssuehmv_q0y9ws",
+   "b": "pt:bondhead_cross_h_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:circle_mssuehmv_q0y9ws",
+   "b": "pt:bondhead_cross_v_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:circle_mssuehmv_q0y9ws",
+   "b": "pt:diechuck_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:circle_mssuehmv_q0y9ws",
+   "b": "pt:diechuck_ring_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:circle_mssuehmv_q0y9ws",
+   "b": "pt:diechuck_cross_h_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:circle_mssuehmv_q0y9ws",
+   "b": "pt:diechuck_cross_v_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:mechanicalobject_mssulatg_dwmc6r",
+   "b": "pt:box_mswll7mj_53sw8e",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:mechanicalobject_mssulatg_dwmc6r",
+   "b": "pt:box_mswlqc1t_y2vyml",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:mechanicalobject_mssulatg_dwmc6r",
+   "b": "pt:box_mswlxr6w_tkxtwz",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:mechanicalobject_mssulatg_dwmc6r",
+   "b": "pt:bondhead_cross_h_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:mechanicalobject_mssulatg_dwmc6r",
+   "b": "pt:bondhead_cross_v_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:mechanicalobject_mssulatg_dwmc6r",
+   "b": "pt:diechuck_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:mechanicalobject_mssulatg_dwmc6r",
+   "b": "pt:diechuck_ring_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:mechanicalobject_mssulatg_dwmc6r",
+   "b": "pt:diechuck_cross_h_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:mechanicalobject_mssulatg_dwmc6r",
+   "b": "pt:diechuck_cross_v_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:mechanicalobject_mssulwzt_9nstr9",
+   "b": "pt:box_mswll7mj_53sw8e",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:mechanicalobject_mssulwzt_9nstr9",
+   "b": "pt:box_mswlqc1t_y2vyml",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:mechanicalobject_mssulwzt_9nstr9",
+   "b": "pt:box_mswlxr6w_tkxtwz",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:mechanicalobject_mssulwzt_9nstr9",
+   "b": "pt:bondhead_cross_h_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:mechanicalobject_mssulwzt_9nstr9",
+   "b": "pt:bondhead_cross_v_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:mechanicalobject_mssulwzt_9nstr9",
+   "b": "pt:diechuck_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:mechanicalobject_mssulwzt_9nstr9",
+   "b": "pt:diechuck_ring_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:mechanicalobject_mssulwzt_9nstr9",
+   "b": "pt:diechuck_cross_h_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:mechanicalobject_mssulwzt_9nstr9",
+   "b": "pt:diechuck_cross_v_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:mechanicalobject_mssunli6_ah605m",
+   "b": "pt:box_mswll7mj_53sw8e",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:mechanicalobject_mssunli6_ah605m",
+   "b": "pt:box_mswlqc1t_y2vyml",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:mechanicalobject_mssunli6_ah605m",
+   "b": "pt:box_mswlxr6w_tkxtwz",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:mechanicalobject_mssunli6_ah605m",
+   "b": "pt:bondhead_cross_h_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:mechanicalobject_mssunli6_ah605m",
+   "b": "pt:bondhead_cross_v_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:mechanicalobject_mssunli6_ah605m",
+   "b": "pt:diechuck_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:mechanicalobject_mssunli6_ah605m",
+   "b": "pt:diechuck_ring_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:mechanicalobject_mssunli6_ah605m",
+   "b": "pt:diechuck_cross_h_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:mechanicalobject_mssunli6_ah605m",
+   "b": "pt:diechuck_cross_v_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:box_mswl2pek_fdn9nq",
+   "b": "pt:box_mswlqc1t_y2vyml",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:box_mswl2pek_fdn9nq",
+   "b": "pt:box_mswlxr6w_tkxtwz",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:box_mswl2pek_fdn9nq",
+   "b": "pt:diechuck_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:box_mswl2pek_fdn9nq",
+   "b": "pt:diechuck_ring_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:box_mswl2pek_fdn9nq",
+   "b": "pt:diechuck_cross_h_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:box_mswl2pek_fdn9nq",
+   "b": "pt:diechuck_cross_v_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:box_mswll7mj_53sw8e",
+   "b": "pt:box_mswlqc1t_y2vyml",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:box_mswll7mj_53sw8e",
+   "b": "pt:filmstage_yrail1_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:box_mswll7mj_53sw8e",
+   "b": "pt:filmstage_yrail2_0001",
+   "hit_axes": [
+    "FA_Z"
+   ]
+  },
+  {
+   "a": "pt:box_mswll7mj_53sw8e",
+   "b": "pt:filmstage_yplate_0001",
+   "hit_axes": [
+    "FA_Z"
+   ]
+  },
+  {
+   "a": "pt:box_mswll7mj_53sw8e",
+   "b": "pt:filmstage_body_0001",
+   "hit_axes": [
+    "FA_Z"
+   ]
+  },
+  {
+   "a": "pt:box_mswll7mj_53sw8e",
+   "b": "pt:filmstage_spoke1_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:box_mswll7mj_53sw8e",
+   "b": "pt:filmstage_spoke2_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:box_mswll7mj_53sw8e",
+   "b": "pt:filmstage_spoke3_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:box_mswll7mj_53sw8e",
+   "b": "pt:filmstage_spoke4_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:box_mswll7mj_53sw8e",
+   "b": "pt:filmstage_spoke5_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:box_mswll7mj_53sw8e",
+   "b": "pt:filmstage_spoke6_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:box_mswll7mj_53sw8e",
+   "b": "pt:filmstage_spoke7_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:box_mswll7mj_53sw8e",
+   "b": "pt:filmstage_spoke8_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:box_mswll7mj_53sw8e",
+   "b": "pt:filmstage_film_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:box_mswll7mj_53sw8e",
+   "b": "pt:filmpin_sleeve_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:box_mswll7mj_53sw8e",
+   "b": "pt:filmpin_needle_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:box_mswll7mj_53sw8e",
+   "b": "pt:filmpin_cap_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:box_mswll7mj_53sw8e",
+   "b": "pt:filmstage_frame_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:box_mswll7mj_53sw8e",
+   "b": "pt:tray4_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:box_mswll7mj_53sw8e",
+   "b": "pt:chuck_cross_h_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:box_mswll7mj_53sw8e",
+   "b": "pt:chuck_cross_v_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:box_mswll7mj_53sw8e",
+   "b": "pt:bondhead_cross_h_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:box_mswlqc1t_y2vyml",
+   "b": "pt:filmstage_xplate_0001",
+   "hit_axes": [
+    "FA_Z"
+   ]
+  },
+  {
+   "a": "pt:box_mswlqc1t_y2vyml",
+   "b": "pt:filmstage_yrail1_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:box_mswlqc1t_y2vyml",
+   "b": "pt:filmstage_yrail2_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:box_mswlqc1t_y2vyml",
+   "b": "pt:filmstage_yplate_0001",
+   "hit_axes": [
+    "FA_Z"
+   ]
+  },
+  {
+   "a": "pt:box_mswlqc1t_y2vyml",
+   "b": "pt:filmstage_body_0001",
+   "hit_axes": [
+    "FA_Z"
+   ]
+  },
+  {
+   "a": "pt:box_mswlqc1t_y2vyml",
+   "b": "pt:filmstage_spoke1_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:box_mswlqc1t_y2vyml",
+   "b": "pt:filmstage_spoke2_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:box_mswlqc1t_y2vyml",
+   "b": "pt:filmstage_spoke3_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:box_mswlqc1t_y2vyml",
+   "b": "pt:filmstage_spoke4_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:box_mswlqc1t_y2vyml",
+   "b": "pt:filmstage_spoke5_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:box_mswlqc1t_y2vyml",
+   "b": "pt:filmstage_spoke6_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:box_mswlqc1t_y2vyml",
+   "b": "pt:filmstage_spoke7_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:box_mswlqc1t_y2vyml",
+   "b": "pt:filmstage_spoke8_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:box_mswlqc1t_y2vyml",
+   "b": "pt:filmstage_film_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:box_mswlqc1t_y2vyml",
+   "b": "pt:filmpin_sleeve_0001",
+   "hit_axes": [
+    "FA_Z"
+   ]
+  },
+  {
+   "a": "pt:box_mswlqc1t_y2vyml",
+   "b": "pt:filmpin_needle_0001",
+   "hit_axes": [
+    "FA_Z"
+   ]
+  },
+  {
+   "a": "pt:box_mswlqc1t_y2vyml",
+   "b": "pt:filmpin_cap_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:box_mswlqc1t_y2vyml",
+   "b": "pt:filmstage_frame_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:box_mswlqc1t_y2vyml",
+   "b": "pt:tray4_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:box_mswlqc1t_y2vyml",
+   "b": "pt:chuck_cross_h_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:box_mswlqc1t_y2vyml",
+   "b": "pt:chuck_cross_v_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:box_mswlqc1t_y2vyml",
+   "b": "pt:bondhead_cross_h_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:box_mswlqc1t_y2vyml",
+   "b": "pt:bondhead_cross_v_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:box_mswlxr6w_tkxtwz",
+   "b": "pt:filmstage_xplate_0001",
+   "hit_axes": [
+    "FA_Z"
+   ]
+  },
+  {
+   "a": "pt:box_mswlxr6w_tkxtwz",
+   "b": "pt:filmstage_yrail1_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:box_mswlxr6w_tkxtwz",
+   "b": "pt:filmstage_yrail2_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:box_mswlxr6w_tkxtwz",
+   "b": "pt:filmstage_yplate_0001",
+   "hit_axes": [
+    "FA_Z"
+   ]
+  },
+  {
+   "a": "pt:box_mswlxr6w_tkxtwz",
+   "b": "pt:filmstage_body_0001",
+   "hit_axes": [
+    "FA_Z"
+   ]
+  },
+  {
+   "a": "pt:box_mswlxr6w_tkxtwz",
+   "b": "pt:filmstage_spoke1_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:box_mswlxr6w_tkxtwz",
+   "b": "pt:filmstage_spoke2_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:box_mswlxr6w_tkxtwz",
+   "b": "pt:filmstage_spoke3_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:box_mswlxr6w_tkxtwz",
+   "b": "pt:filmstage_spoke4_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:box_mswlxr6w_tkxtwz",
+   "b": "pt:filmstage_spoke5_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:box_mswlxr6w_tkxtwz",
+   "b": "pt:filmstage_spoke6_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:box_mswlxr6w_tkxtwz",
+   "b": "pt:filmstage_spoke7_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:box_mswlxr6w_tkxtwz",
+   "b": "pt:filmstage_spoke8_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:box_mswlxr6w_tkxtwz",
+   "b": "pt:filmstage_film_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:box_mswlxr6w_tkxtwz",
+   "b": "pt:filmpin_drive_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:box_mswlxr6w_tkxtwz",
+   "b": "pt:filmpin_sleeve_0001",
+   "hit_axes": [
+    "FA_Z"
+   ]
+  },
+  {
+   "a": "pt:box_mswlxr6w_tkxtwz",
+   "b": "pt:filmpin_needle_0001",
+   "hit_axes": [
+    "FA_Z"
+   ]
+  },
+  {
+   "a": "pt:box_mswlxr6w_tkxtwz",
+   "b": "pt:filmpin_cap_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:box_mswlxr6w_tkxtwz",
+   "b": "pt:filmstage_frame_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:box_mswlxr6w_tkxtwz",
+   "b": "pt:tray4_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:box_mswlxr6w_tkxtwz",
+   "b": "pt:chuck_cross_h_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:box_mswlxr6w_tkxtwz",
+   "b": "pt:chuck_cross_v_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:box_mswlxr6w_tkxtwz",
+   "b": "pt:bondhead_cross_h_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:box_mswlxr6w_tkxtwz",
+   "b": "pt:bondhead_cross_v_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:filmstage_xplate_0001",
+   "b": "pt:diechuck_0001",
+   "hit_axes": [
+    "FA_Z"
+   ]
+  },
+  {
+   "a": "pt:filmstage_xplate_0001",
+   "b": "pt:diechuck_ring_0001",
+   "hit_axes": [
+    "FA_Z"
+   ]
+  },
+  {
+   "a": "pt:filmstage_xplate_0001",
+   "b": "pt:diechuck_cross_h_0001",
+   "hit_axes": [
+    "FA_Z"
+   ]
+  },
+  {
+   "a": "pt:filmstage_xplate_0001",
+   "b": "pt:diechuck_cross_v_0001",
+   "hit_axes": [
+    "FA_Z"
+   ]
+  },
+  {
+   "a": "pt:filmstage_yrail1_0001",
+   "b": "pt:filmpin_sleeve_0001",
+   "hit_axes": [
+    "ES_X"
+   ]
+  },
+  {
+   "a": "pt:filmstage_yrail1_0001",
+   "b": "pt:filmpin_needle_0001",
+   "hit_axes": [
+    "ES_X"
+   ]
+  },
+  {
+   "a": "pt:filmstage_yrail1_0001",
+   "b": "pt:diechuck_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:filmstage_yrail1_0001",
+   "b": "pt:diechuck_ring_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:filmstage_yrail1_0001",
+   "b": "pt:diechuck_cross_h_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:filmstage_yrail1_0001",
+   "b": "pt:diechuck_cross_v_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:filmstage_yrail2_0001",
+   "b": "pt:filmpin_sleeve_0001",
+   "hit_axes": [
+    "ES_X"
+   ]
+  },
+  {
+   "a": "pt:filmstage_yrail2_0001",
+   "b": "pt:filmpin_needle_0001",
+   "hit_axes": [
+    "ES_X"
+   ]
+  },
+  {
+   "a": "pt:filmstage_yrail2_0001",
+   "b": "pt:diechuck_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:filmstage_yrail2_0001",
+   "b": "pt:diechuck_ring_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:filmstage_yrail2_0001",
+   "b": "pt:diechuck_cross_h_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:filmstage_yrail2_0001",
+   "b": "pt:diechuck_cross_v_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:filmstage_yplate_0001",
+   "b": "pt:diechuck_0001",
+   "hit_axes": [
+    "FA_Z"
+   ]
+  },
+  {
+   "a": "pt:filmstage_yplate_0001",
+   "b": "pt:diechuck_ring_0001",
+   "hit_axes": [
+    "FA_Z"
+   ]
+  },
+  {
+   "a": "pt:filmstage_yplate_0001",
+   "b": "pt:diechuck_cross_h_0001",
+   "hit_axes": [
+    "FA_Z"
+   ]
+  },
+  {
+   "a": "pt:filmstage_yplate_0001",
+   "b": "pt:diechuck_cross_v_0001",
+   "hit_axes": [
+    "FA_Z"
+   ]
+  },
+  {
+   "a": "pt:filmstage_body_0001",
+   "b": "pt:filmpin_cap_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:filmstage_body_0001",
+   "b": "pt:diechuck_0001",
+   "hit_axes": [
+    "FA_Z"
+   ]
+  },
+  {
+   "a": "pt:filmstage_body_0001",
+   "b": "pt:diechuck_ring_0001",
+   "hit_axes": [
+    "FA_Z"
+   ]
+  },
+  {
+   "a": "pt:filmstage_body_0001",
+   "b": "pt:diechuck_cross_h_0001",
+   "hit_axes": [
+    "FA_Z"
+   ]
+  },
+  {
+   "a": "pt:filmstage_body_0001",
+   "b": "pt:diechuck_cross_v_0001",
+   "hit_axes": [
+    "FA_Z"
+   ]
+  },
+  {
+   "a": "pt:filmstage_spoke1_0001",
+   "b": "pt:filmpin_needle_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:filmstage_spoke1_0001",
+   "b": "pt:filmpin_cap_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:filmstage_spoke1_0001",
+   "b": "pt:diechuck_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:filmstage_spoke1_0001",
+   "b": "pt:diechuck_ring_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:filmstage_spoke1_0001",
+   "b": "pt:diechuck_cross_h_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:filmstage_spoke1_0001",
+   "b": "pt:diechuck_cross_v_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:filmstage_spoke2_0001",
+   "b": "pt:filmpin_needle_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:filmstage_spoke2_0001",
+   "b": "pt:filmpin_cap_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:filmstage_spoke2_0001",
+   "b": "pt:diechuck_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:filmstage_spoke2_0001",
+   "b": "pt:diechuck_ring_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:filmstage_spoke2_0001",
+   "b": "pt:diechuck_cross_h_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:filmstage_spoke2_0001",
+   "b": "pt:diechuck_cross_v_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:filmstage_spoke3_0001",
+   "b": "pt:filmpin_needle_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:filmstage_spoke3_0001",
+   "b": "pt:filmpin_cap_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:filmstage_spoke3_0001",
+   "b": "pt:diechuck_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:filmstage_spoke3_0001",
+   "b": "pt:diechuck_ring_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:filmstage_spoke3_0001",
+   "b": "pt:diechuck_cross_h_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:filmstage_spoke3_0001",
+   "b": "pt:diechuck_cross_v_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:filmstage_spoke4_0001",
+   "b": "pt:filmpin_needle_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:filmstage_spoke4_0001",
+   "b": "pt:filmpin_cap_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:filmstage_spoke4_0001",
+   "b": "pt:diechuck_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:filmstage_spoke4_0001",
+   "b": "pt:diechuck_ring_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:filmstage_spoke4_0001",
+   "b": "pt:diechuck_cross_h_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:filmstage_spoke4_0001",
+   "b": "pt:diechuck_cross_v_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:filmstage_spoke5_0001",
+   "b": "pt:filmpin_needle_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:filmstage_spoke5_0001",
+   "b": "pt:filmpin_cap_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:filmstage_spoke5_0001",
+   "b": "pt:diechuck_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:filmstage_spoke5_0001",
+   "b": "pt:diechuck_ring_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:filmstage_spoke5_0001",
+   "b": "pt:diechuck_cross_h_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:filmstage_spoke5_0001",
+   "b": "pt:diechuck_cross_v_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:filmstage_spoke6_0001",
+   "b": "pt:filmpin_needle_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:filmstage_spoke6_0001",
+   "b": "pt:filmpin_cap_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:filmstage_spoke6_0001",
+   "b": "pt:diechuck_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:filmstage_spoke6_0001",
+   "b": "pt:diechuck_ring_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:filmstage_spoke6_0001",
+   "b": "pt:diechuck_cross_h_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:filmstage_spoke6_0001",
+   "b": "pt:diechuck_cross_v_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:filmstage_spoke7_0001",
+   "b": "pt:filmpin_needle_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:filmstage_spoke7_0001",
+   "b": "pt:filmpin_cap_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:filmstage_spoke7_0001",
+   "b": "pt:diechuck_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:filmstage_spoke7_0001",
+   "b": "pt:diechuck_ring_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:filmstage_spoke7_0001",
+   "b": "pt:diechuck_cross_h_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:filmstage_spoke7_0001",
+   "b": "pt:diechuck_cross_v_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:filmstage_spoke8_0001",
+   "b": "pt:filmpin_needle_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:filmstage_spoke8_0001",
+   "b": "pt:filmpin_cap_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:filmstage_spoke8_0001",
+   "b": "pt:diechuck_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:filmstage_spoke8_0001",
+   "b": "pt:diechuck_ring_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:filmstage_spoke8_0001",
+   "b": "pt:diechuck_cross_h_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:filmstage_spoke8_0001",
+   "b": "pt:diechuck_cross_v_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:filmstage_film_0001",
+   "b": "pt:filmpin_needle_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:filmstage_film_0001",
+   "b": "pt:filmpin_cap_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:filmstage_film_0001",
+   "b": "pt:diechuck_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:filmstage_film_0001",
+   "b": "pt:diechuck_ring_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:filmstage_film_0001",
+   "b": "pt:diechuck_cross_h_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:filmstage_film_0001",
+   "b": "pt:diechuck_cross_v_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:filmpin_drive_0001",
+   "b": "pt:diechuck_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:filmpin_drive_0001",
+   "b": "pt:diechuck_ring_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:filmpin_drive_0001",
+   "b": "pt:diechuck_cross_h_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:filmpin_drive_0001",
+   "b": "pt:diechuck_cross_v_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:filmpin_sleeve_0001",
+   "b": "pt:diechuck_0001",
+   "hit_axes": [
+    "FA_Z"
+   ]
+  },
+  {
+   "a": "pt:filmpin_sleeve_0001",
+   "b": "pt:diechuck_ring_0001",
+   "hit_axes": [
+    "FA_Z"
+   ]
+  },
+  {
+   "a": "pt:filmpin_sleeve_0001",
+   "b": "pt:diechuck_cross_h_0001",
+   "hit_axes": [
+    "FA_Z"
+   ]
+  },
+  {
+   "a": "pt:filmpin_sleeve_0001",
+   "b": "pt:diechuck_cross_v_0001",
+   "hit_axes": [
+    "FA_Z"
+   ]
+  },
+  {
+   "a": "pt:filmpin_needle_0001",
+   "b": "pt:filmstage_frame_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:filmpin_needle_0001",
+   "b": "pt:diechuck_0001",
+   "hit_axes": [
+    "FA_Z"
+   ]
+  },
+  {
+   "a": "pt:filmpin_needle_0001",
+   "b": "pt:diechuck_ring_0001",
+   "hit_axes": [
+    "FA_Z"
+   ]
+  },
+  {
+   "a": "pt:filmpin_needle_0001",
+   "b": "pt:diechuck_cross_h_0001",
+   "hit_axes": [
+    "FA_Z"
+   ]
+  },
+  {
+   "a": "pt:filmpin_needle_0001",
+   "b": "pt:diechuck_cross_v_0001",
+   "hit_axes": [
+    "FA_Z"
+   ]
+  },
+  {
+   "a": "pt:filmpin_cap_0001",
+   "b": "pt:filmstage_frame_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:filmpin_cap_0001",
+   "b": "pt:diechuck_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:filmpin_cap_0001",
+   "b": "pt:diechuck_ring_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:filmpin_cap_0001",
+   "b": "pt:diechuck_cross_h_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:filmpin_cap_0001",
+   "b": "pt:diechuck_cross_v_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:filmstage_frame_0001",
+   "b": "pt:diechuck_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:filmstage_frame_0001",
+   "b": "pt:diechuck_ring_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:filmstage_frame_0001",
+   "b": "pt:diechuck_cross_h_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:filmstage_frame_0001",
+   "b": "pt:diechuck_cross_v_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:tray4_0001",
+   "b": "pt:bondhead_cross_h_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:tray4_0001",
+   "b": "pt:bondhead_cross_v_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:tray4_0001",
+   "b": "pt:diechuck_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:tray4_0001",
+   "b": "pt:diechuck_ring_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:tray4_0001",
+   "b": "pt:diechuck_cross_h_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:tray4_0001",
+   "b": "pt:diechuck_cross_v_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:chuck_cross_h_0001",
+   "b": "pt:bondhead_cross_h_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:chuck_cross_h_0001",
+   "b": "pt:bondhead_cross_v_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:chuck_cross_h_0001",
+   "b": "pt:diechuck_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:chuck_cross_h_0001",
+   "b": "pt:diechuck_ring_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:chuck_cross_h_0001",
+   "b": "pt:diechuck_cross_h_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:chuck_cross_h_0001",
+   "b": "pt:diechuck_cross_v_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:chuck_cross_v_0001",
+   "b": "pt:bondhead_cross_h_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:chuck_cross_v_0001",
+   "b": "pt:bondhead_cross_v_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:chuck_cross_v_0001",
+   "b": "pt:diechuck_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:chuck_cross_v_0001",
+   "b": "pt:diechuck_ring_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:chuck_cross_v_0001",
+   "b": "pt:diechuck_cross_h_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:chuck_cross_v_0001",
+   "b": "pt:diechuck_cross_v_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:bondhead_cross_h_0001",
+   "b": "pt:diechuck_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:bondhead_cross_h_0001",
+   "b": "pt:diechuck_ring_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:bondhead_cross_h_0001",
+   "b": "pt:diechuck_cross_h_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:bondhead_cross_h_0001",
+   "b": "pt:diechuck_cross_v_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:bondhead_cross_v_0001",
+   "b": "pt:diechuck_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:bondhead_cross_v_0001",
+   "b": "pt:diechuck_ring_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:bondhead_cross_v_0001",
+   "b": "pt:diechuck_cross_h_0001",
+   "hit_axes": []
+  },
+  {
+   "a": "pt:bondhead_cross_v_0001",
+   "b": "pt:diechuck_cross_v_0001",
+   "hit_axes": []
+  }
+ ],
+ "exempt_pairs": [
+  {
+   "a": "pt:box_mssl7mh8_x6ugcu",
+   "b": "pt:epin1_zrail_0001",
+   "reason": "零位设计贴合/装配嵌套（跨组重叠 10.21mm > ε，零件级复审见生成报告）"
+  },
+  {
+   "a": "pt:box_mssl7mh8_x6ugcu",
+   "b": "pt:epin2_zrail_0001",
+   "reason": "零位设计贴合/装配嵌套（跨组重叠 14.10mm > ε，零件级复审见生成报告）"
+  },
+  {
+   "a": "pt:box_mssl7mh8_x6ugcu",
+   "b": "pt:epin3_zrail_0001",
+   "reason": "零位设计贴合/装配嵌套（跨组重叠 14.10mm > ε，零件级复审见生成报告）"
+  },
+  {
+   "a": "pt:cylinder_msslion7_fntuht",
+   "b": "pt:epin1_zrail_0001",
+   "reason": "零位设计贴合/装配嵌套（跨组重叠 7.80mm > ε，零件级复审见生成报告）"
+  },
+  {
+   "a": "pt:cylinder_msslion7_fntuht",
+   "b": "pt:epin2_zrail_0001",
+   "reason": "零位设计贴合/装配嵌套（跨组重叠 7.80mm > ε，零件级复审见生成报告）"
+  },
+  {
+   "a": "pt:cylinder_msslion7_fntuht",
+   "b": "pt:epin3_zrail_0001",
+   "reason": "零位设计贴合/装配嵌套（跨组重叠 7.80mm > ε，零件级复审见生成报告）"
+  },
+  {
+   "a": "pt:cylinder_msslion7_fntuht",
+   "b": "pt:box_mssnz9ya_pdnd24",
+   "reason": "零位设计贴合/装配嵌套（跨组重叠 7.65mm > ε，零件级复审见生成报告）"
+  },
+  {
+   "a": "pt:ceramic_msslygtz_8wc595",
+   "b": "pt:epin1_pin_0001",
+   "reason": "Epin顶针/片压×多孔陶瓷面：顶出晶圆走过孔/沉孔（AABB 无孔概念，设计接触）"
+  },
+  {
+   "a": "pt:ceramic_msslygtz_8wc595",
+   "b": "pt:epin1_tab_0001",
+   "reason": "Epin顶针/片压×多孔陶瓷面：顶出晶圆走过孔/沉孔（AABB 无孔概念，设计接触）"
+  },
+  {
+   "a": "pt:ceramic_msslygtz_8wc595",
+   "b": "pt:epin2_pin_0001",
+   "reason": "Epin顶针/片压×多孔陶瓷面：顶出晶圆走过孔/沉孔（AABB 无孔概念，设计接触）"
+  },
+  {
+   "a": "pt:ceramic_msslygtz_8wc595",
+   "b": "pt:epin2_tab_0001",
+   "reason": "Epin顶针/片压×多孔陶瓷面：顶出晶圆走过孔/沉孔（AABB 无孔概念，设计接触）"
+  },
+  {
+   "a": "pt:ceramic_msslygtz_8wc595",
+   "b": "pt:epin3_pin_0001",
+   "reason": "Epin顶针/片压×多孔陶瓷面：顶出晶圆走过孔/沉孔（AABB 无孔概念，设计接触）"
+  },
+  {
+   "a": "pt:ceramic_msslygtz_8wc595",
+   "b": "pt:epin3_tab_0001",
+   "reason": "Epin顶针/片压×多孔陶瓷面：顶出晶圆走过孔/沉孔（AABB 无孔概念，设计接触）"
+  },
+  {
+   "a": "pt:chuck_base_notched_0001",
+   "b": "pt:epin1_pin_0001",
+   "reason": "零位设计贴合/装配嵌套（跨组重叠 6.10mm > ε，零件级复审见生成报告）"
+  },
+  {
+   "a": "pt:chuck_base_notched_0001",
+   "b": "pt:epin1_tab_0001",
+   "reason": "零位设计贴合/装配嵌套（跨组重叠 3.00mm > ε，零件级复审见生成报告）"
+  },
+  {
+   "a": "pt:chuck_base_notched_0001",
+   "b": "pt:epin2_pin_0001",
+   "reason": "零位设计贴合/装配嵌套（跨组重叠 10.85mm > ε，零件级复审见生成报告）"
+  },
+  {
+   "a": "pt:chuck_base_notched_0001",
+   "b": "pt:epin2_tab_0001",
+   "reason": "零位设计贴合/装配嵌套（跨组重叠 3.00mm > ε，零件级复审见生成报告）"
+  },
+  {
+   "a": "pt:chuck_base_notched_0001",
+   "b": "pt:epin3_pin_0001",
+   "reason": "零位设计贴合/装配嵌套（跨组重叠 10.85mm > ε，零件级复审见生成报告）"
+  },
+  {
+   "a": "pt:chuck_base_notched_0001",
+   "b": "pt:epin3_tab_0001",
+   "reason": "零位设计贴合/装配嵌套（跨组重叠 3.00mm > ε，零件级复审见生成报告）"
+  },
+  {
+   "a": "pt:chuck_base_notched_0001",
+   "b": "pt:airring_left_0001",
+   "reason": "键合头气环/吸盘/十字槽×吸盘基座：基座是带Epin缺口的环形件，AABB 把中心孔填成实心方盒；键合头下降到真接触位（BS_Arm_Z≈-167.7）时从孔中穿过（AABB 无孔概念，设计让位）。遗留风险：晶圆台 X/Y 大偏（>~60mm）使基座边缘进到键合头正下方时不再报警"
+  },
+  {
+   "a": "pt:chuck_base_notched_0001",
+   "b": "pt:airring_right_0001",
+   "reason": "键合头气环/吸盘/十字槽×吸盘基座：基座是带Epin缺口的环形件，AABB 把中心孔填成实心方盒；键合头下降到真接触位（BS_Arm_Z≈-167.7）时从孔中穿过（AABB 无孔概念，设计让位）。遗留风险：晶圆台 X/Y 大偏（>~60mm）使基座边缘进到键合头正下方时不再报警"
+  },
+  {
+   "a": "pt:chuck_base_notched_0001",
+   "b": "pt:airring_front_0001",
+   "reason": "键合头气环/吸盘/十字槽×吸盘基座：基座是带Epin缺口的环形件，AABB 把中心孔填成实心方盒；键合头下降到真接触位（BS_Arm_Z≈-167.7）时从孔中穿过（AABB 无孔概念，设计让位）。遗留风险：晶圆台 X/Y 大偏（>~60mm）使基座边缘进到键合头正下方时不再报警"
+  },
+  {
+   "a": "pt:chuck_base_notched_0001",
+   "b": "pt:airring_back_0001",
+   "reason": "键合头气环/吸盘/十字槽×吸盘基座：基座是带Epin缺口的环形件，AABB 把中心孔填成实心方盒；键合头下降到真接触位（BS_Arm_Z≈-167.7）时从孔中穿过（AABB 无孔概念，设计让位）。遗留风险：晶圆台 X/Y 大偏（>~60mm）使基座边缘进到键合头正下方时不再报警"
+  },
+  {
+   "a": "pt:chuck_base_notched_0001",
+   "b": "pt:box_mssrsdpg_u0q0bi",
+   "reason": "键合头气环/吸盘/十字槽×吸盘基座：基座是带Epin缺口的环形件，AABB 把中心孔填成实心方盒；键合头下降到真接触位（BS_Arm_Z≈-167.7）时从孔中穿过（AABB 无孔概念，设计让位）。遗留风险：晶圆台 X/Y 大偏（>~60mm）使基座边缘进到键合头正下方时不再报警"
+  },
+  {
+   "a": "pt:chuck_base_notched_0001",
+   "b": "pt:bondhead_cross_h_0001",
+   "reason": "键合头气环/吸盘/十字槽×吸盘基座：基座是带Epin缺口的环形件，AABB 把中心孔填成实心方盒；键合头下降到真接触位（BS_Arm_Z≈-167.7）时从孔中穿过（AABB 无孔概念，设计让位）。遗留风险：晶圆台 X/Y 大偏（>~60mm）使基座边缘进到键合头正下方时不再报警"
+  },
+  {
+   "a": "pt:chuck_base_notched_0001",
+   "b": "pt:bondhead_cross_v_0001",
+   "reason": "键合头气环/吸盘/十字槽×吸盘基座：基座是带Epin缺口的环形件，AABB 把中心孔填成实心方盒；键合头下降到真接触位（BS_Arm_Z≈-167.7）时从孔中穿过（AABB 无孔概念，设计让位）。遗留风险：晶圆台 X/Y 大偏（>~60mm）使基座边缘进到键合头正下方时不再报警"
+  },
+  {
+   "a": "pt:mechanicalobject_msssjh6b_teh3bf",
+   "b": "pt:box_msst6r7i_ppzlv5",
+   "reason": "对准台X/Y轴承接板：层叠滑台副，AS_Z 行程内结构交叠（真机槽/孔让位）"
+  },
+  {
+   "a": "pt:box_mswll7mj_53sw8e",
+   "b": "pt:box_mswlxr6w_tkxtwz",
+   "reason": "零位设计贴合/装配嵌套（跨组重叠 17.90mm > ε，零件级复审见生成报告）"
+  },
+  {
+   "a": "pt:box_mswll7mj_53sw8e",
+   "b": "pt:diechuck_0001",
+   "reason": "零位设计贴合/装配嵌套（跨组重叠 18.90mm > ε，零件级复审见生成报告）"
+  },
+  {
+   "a": "pt:box_mswll7mj_53sw8e",
+   "b": "pt:diechuck_ring_0001",
+   "reason": "零位设计贴合/装配嵌套（跨组重叠 19.20mm > ε，零件级复审见生成报告）"
+  },
+  {
+   "a": "pt:box_mswll7mj_53sw8e",
+   "b": "pt:diechuck_cross_h_0001",
+   "reason": "零位设计贴合/装配嵌套（跨组重叠 19.10mm > ε，零件级复审见生成报告）"
+  },
+  {
+   "a": "pt:box_mswll7mj_53sw8e",
+   "b": "pt:diechuck_cross_v_0001",
+   "reason": "零位设计贴合/装配嵌套（跨组重叠 19.10mm > ε，零件级复审见生成报告）"
+  },
+  {
+   "a": "pt:box_mswlqc1t_y2vyml",
+   "b": "pt:box_mswlxr6w_tkxtwz",
+   "reason": "零位设计贴合/装配嵌套（跨组重叠 53.00mm > ε，零件级复审见生成报告）"
+  },
+  {
+   "a": "pt:box_mswlqc1t_y2vyml",
+   "b": "pt:diechuck_0001",
+   "reason": "零位设计贴合/装配嵌套（跨组重叠 53.00mm > ε，零件级复审见生成报告）"
+  },
+  {
+   "a": "pt:box_mswlqc1t_y2vyml",
+   "b": "pt:diechuck_ring_0001",
+   "reason": "零位设计贴合/装配嵌套（跨组重叠 53.00mm > ε，零件级复审见生成报告）"
+  },
+  {
+   "a": "pt:box_mswlqc1t_y2vyml",
+   "b": "pt:diechuck_cross_h_0001",
+   "reason": "零位设计贴合/装配嵌套（跨组重叠 53.00mm > ε，零件级复审见生成报告）"
+  },
+  {
+   "a": "pt:box_mswlqc1t_y2vyml",
+   "b": "pt:diechuck_cross_v_0001",
+   "reason": "零位设计贴合/装配嵌套（跨组重叠 53.00mm > ε，零件级复审见生成报告）"
+  },
+  {
+   "a": "pt:filmstage_xplate_0001",
+   "b": "pt:filmpin_drive_0001",
+   "reason": "零位设计贴合/装配嵌套（跨组重叠 6.23mm > ε，零件级复审见生成报告）"
+  },
+  {
+   "a": "pt:filmstage_xplate_0001",
+   "b": "pt:filmpin_sleeve_0001",
+   "reason": "零位设计贴合/装配嵌套（跨组重叠 7.77mm > ε，零件级复审见生成报告）"
+  },
+  {
+   "a": "pt:filmstage_xplate_0001",
+   "b": "pt:filmpin_needle_0001",
+   "reason": "零位设计贴合/装配嵌套（跨组重叠 3.00mm > ε，零件级复审见生成报告）"
+  },
+  {
+   "a": "pt:filmstage_yplate_0001",
+   "b": "pt:filmpin_sleeve_0001",
+   "reason": "零位设计贴合/装配嵌套（跨组重叠 8.23mm > ε，零件级复审见生成报告）"
+  },
+  {
+   "a": "pt:filmstage_yplate_0001",
+   "b": "pt:filmpin_needle_0001",
+   "reason": "零位设计贴合/装配嵌套（跨组重叠 3.00mm > ε，零件级复审见生成报告）"
+  },
+  {
+   "a": "pt:filmstage_body_0001",
+   "b": "pt:filmpin_needle_0001",
+   "reason": "零位设计贴合/装配嵌套（跨组重叠 2.40mm > ε，零件级复审见生成报告）"
+  },
+  {
+   "a": "pt:filmpin_drive_0001",
+   "b": "pt:filmpin_needle_0001",
+   "reason": "零位设计贴合/装配嵌套（跨组重叠 3.00mm > ε，零件级复审见生成报告）"
+  },
+  {
+   "a": "pt:filmpin_sleeve_0001",
+   "b": "pt:filmpin_needle_0001",
+   "reason": "零位设计贴合/装配嵌套（跨组重叠 3.00mm > ε，零件级复审见生成报告）"
+  },
+  {
+   "a": "pt:alignz_rail1_0001",
+   "b": "pt:alignz_slider1_0001",
+   "reason": "零位设计贴合/装配嵌套（跨组重叠 9.00mm > ε，零件级复审见生成报告）"
+  },
+  {
+   "a": "pt:alignz_rail2_0001",
+   "b": "pt:alignz_slider2_0001",
+   "reason": "零位设计贴合/装配嵌套（跨组重叠 9.00mm > ε，零件级复审见生成报告）"
+  }
+ ]
+}

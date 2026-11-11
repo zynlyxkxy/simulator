@@ -1,0 +1,220 @@
+{
+  "_meta": {
+    "说明": "Cordis MCS 树 → 仿真语义层 显式映射表（mcs_http.py 9190 唯一事实源，代码内不得散落硬编码 fullPath）",
+    "端口": 9190,
+    "生成日期": "2026-08-19",
+    "前缀警示": "fullPath 前缀 3000_1_Controller 源自同事 3000 硅片台项目模板，1928 D2W 真机前缀待复核",
+    "分隔符": "蓝本中 / 与 . 混用（io_config 全 /，motion stage 首段 / 后全 .）；适配层统一按 /→. 归一化匹配",
+    "路径错位": "motion config2/config4 的 plc stage JSON 存在 fullPath 轮转错位（复制粘贴），本表按文件名归位，见 docs/Cordis_MCS协议_V1.md §4",
+    "字段约定": {
+      "kind": "axis_stage=PLC运动台 / vacuum=真空吸盘 / di_presence=有无片观测组 / ws_stage_move=3000遗留晶圆台水平向(已映射到ACS轴) / unmapped=无对应物(访问返回真机式FAULT)",
+      "source": "蓝本来源文件（部分接口信息/ 下）",
+      "note": "映射假设与待确认项"
+    }
+  },
+
+  "machineParts": [
+    {
+      "fullPath": "3000_1_Controller/SystemMachine.SS_Bonding.M_WS.E_EPIN_Z",
+      "source": "motion/config1/plc/EPIN_Z.json",
+      "kind": "axis_stage",
+      "map": {"axes": ["E_EPIN_Z"]},
+      "note": "E_EPIN_Z 是仿真别名，一次驱动三根顶针轴（plc_sync_trio 同步）",
+      "commands": [
+        {"name": "Enable",      "arguments": []},
+        {"name": "Disable",     "arguments": []},
+        {"name": "Home",        "arguments": []},
+        {"name": "MoveAbs",     "arguments": [{"name": "Position", "type": "FLOAT_TYPED_VALUE"}]},
+        {"name": "MoveRel",     "arguments": [{"name": "Position", "type": "FLOAT_TYPED_VALUE"}]},
+        {"name": "Halt",        "arguments": []},
+        {"name": "Reset Error", "arguments": []},
+        {"name": "SetMoveParam","arguments": [{"name": "Velocity", "type": "FLOAT_TYPED_VALUE"}, {"name": "Acceleration", "type": "FLOAT_TYPED_VALUE"}]}
+      ],
+      "observers": [
+        {"name": "oCurrentPos_GC", "type": "FLOAT_OBSERVER"},
+        {"name": "obMoveSpd",      "type": "FLOAT_OBSERVER"},
+        {"name": "oMotorEnabled",  "type": "BOOLEAN_OBSERVER"},
+        {"name": "oMoving",        "type": "BOOLEAN_OBSERVER"},
+        {"name": "oInPos",         "type": "BOOLEAN_OBSERVER"}
+      ],
+      "settings": [
+        {"name": "MoveVelocity",  "type": "FLOAT_TYPED_VALUE", "bind": "vmax"},
+        {"name": "MoveAcc",       "type": "FLOAT_TYPED_VALUE", "bind": "amax"},
+        {"name": "CommandTimeOut","type": "FLOAT_TYPED_VALUE", "bind": null, "default": 30000.0}
+      ]
+    },
+    {
+      "fullPath": "3000_1_Controller/SystemMachine.SS_Bonding.M_BS.Arm_Z",
+      "source": "motion/config2/plc/CAL_Rx.json（路径轮转错位，按文件名归位）",
+      "kind": "axis_stage",
+      "map": {"axes": ["BS_Arm_Z"]},
+      "note": "键合臂 Z；源文件名为 CAL_Rx.json 但内嵌路径是 Arm_Z（错位）",
+      "commands": "STAGE_STD",
+      "observers": "STAGE_STD",
+      "settings": "STAGE_STD"
+    },
+    {
+      "fullPath": "3000_1_Controller/SystemMachine.SS_Bonding.M_BS.E_CAL.Rx",
+      "source": "motion/config2/plc/CAL_Ry.json（路径轮转错位，按文件名归位）",
+      "kind": "axis_stage",
+      "map": {"axes": ["BS_CAL_Rx"]},
+      "note": "键合校准台 Rx（零位传感器回零）",
+      "commands": "STAGE_STD",
+      "observers": "STAGE_STD",
+      "settings": "STAGE_STD"
+    },
+    {
+      "fullPath": "3000_1_Controller/SystemMachine.SS_Bonding.M_BS.E_CAL.Ry",
+      "source": "motion/config2/plc/Arm_Z.json（路径轮转错位，按文件名归位）",
+      "kind": "axis_stage",
+      "map": {"axes": ["BS_CAL_Ry"]},
+      "note": "键合校准台 Ry（零位传感器回零）",
+      "commands": "STAGE_STD",
+      "observers": "STAGE_STD",
+      "settings": "STAGE_STD"
+    },
+    {
+      "fullPath": "3000_1_Controller/SystemMachine.SS_CH.M_FA.Rx",
+      "source": "motion/config4/plc/FA_Rz.json（路径轮转错位，按文件名归位）",
+      "kind": "axis_stage",
+      "map": {"axes": ["FA_Rx"]},
+      "note": "翻转模块 Rx",
+      "commands": "STAGE_STD",
+      "observers": "STAGE_STD",
+      "settings": "STAGE_STD"
+    },
+    {
+      "fullPath": "3000_1_Controller/SystemMachine.SS_CH.M_FA.Z",
+      "source": "motion/config4/plc/FA_Z.json",
+      "kind": "axis_stage",
+      "map": {"axes": ["FA_Z"]},
+      "note": "翻转模块 Z（唯一路径未错位的 stage 配置）",
+      "commands": "STAGE_STD",
+      "observers": "STAGE_STD",
+      "settings": "STAGE_STD"
+    },
+    {
+      "fullPath": "3000_1_Controller/SystemMachine.SS_CH.M_CH.Rz",
+      "source": "motion/config4/plc/FA_Rx.json（路径轮转错位，按文件名归位）",
+      "kind": "axis_stage",
+      "map": {"axes": ["CH_Rz"]},
+      "note": "芯片台 Rz",
+      "commands": "STAGE_STD",
+      "observers": "STAGE_STD",
+      "settings": "STAGE_STD"
+    },
+
+    {
+      "fullPath": "3000_1_Controller/SystemMachine/SS_ME/M_MachineAirCabinet/BH_Chip_YN_XN_SuckerVac",
+      "source": "io_template/config/plc/io_config.json (id 6000~6002)",
+      "kind": "vacuum",
+      "map": {"circuit": "WT_BondingVac_1"},
+      "note": "假设映射：3000 模板键合头吸盘 YN_XN 位 → 1928 键合头真空回路 1；具体对应关系待真机复核",
+      "commands": [
+        {"name": "Close",        "arguments": []},
+        {"name": "OpenNegative", "arguments": []},
+        {"name": "OpenPositive", "arguments": []}
+      ],
+      "observers": [
+        {"name": "AirRouteClose",    "type": "BOOLEAN_OBSERVER"},
+        {"name": "AirRouteNegative", "type": "BOOLEAN_OBSERVER"},
+        {"name": "AirRoutePositive", "type": "BOOLEAN_OBSERVER"}
+      ],
+      "settings": []
+    },
+    {
+      "fullPath": "3000_1_Controller/SystemMachine/SS_ME/M_MachineAirCabinet/BH_Chip_YP_XN_SuckerVac",
+      "source": "io_template/config/plc/io_config.json (id 6003~6005)",
+      "kind": "vacuum",
+      "map": {"circuit": "WT_BondingVac_2"},
+      "note": "假设映射：键合头吸盘 YP_XN 位 → 键合头真空回路 2，待真机复核",
+      "commands": "VACUUM_STD",
+      "observers": "VACUUM_STD",
+      "settings": []
+    },
+    {
+      "fullPath": "3000_1_Controller/SystemMachine/SS_ME/M_MachineAirCabinet/FA_ChipSuckerVacuum",
+      "source": "io_template/config/plc/io_config.json (id 6006~6008)",
+      "kind": "vacuum",
+      "map": {"circuit": "ChuckVac"},
+      "note": "假设映射：FA（翻转臂）芯片吸盘 → 翻转吸盘 ChuckVac，待真机复核",
+      "commands": "VACUUM_STD",
+      "observers": "VACUUM_STD",
+      "settings": []
+    },
+
+    {
+      "fullPath": "3000_1_Controller/SystemMachine/SS_ME/M_MachineAirCabinet",
+      "source": "io_template/config/plc/io_config.json (id 2000~2003)",
+      "kind": "di_presence",
+      "map": {
+        "observers": {
+          "oYN_XN_WithChip": "die_on_head",
+          "oYP_XN_WithChip": "die_on_head",
+          "oFA_WithChip":    "die_on_flip",
+          "oWT_WithWafer":   "wafer_present"
+        }
+      },
+      "note": "假设映射：有无片 DI → workpieces 工件层（head/flip 载体是否有 die、晶圆是否在位）；两个 WithChip 暂同源，待真机复核",
+      "commands": [],
+      "observers": [
+        {"name": "oYN_XN_WithChip", "type": "BOOLEAN_OBSERVER"},
+        {"name": "oYP_XN_WithChip", "type": "BOOLEAN_OBSERVER"},
+        {"name": "oFA_WithChip",    "type": "BOOLEAN_OBSERVER"},
+        {"name": "oWT_WithWafer",   "type": "BOOLEAN_OBSERVER"}
+      ],
+      "settings": []
+    },
+
+    {
+      "fullPath": "3000_1_Controller/SystemMachine/SS_Bonding/M_WS_STAGE/E_WS_STAGE_Horizontal",
+      "source": "io_template/config/plc/io_config.json (id 4000~4002)",
+      "kind": "ws_stage_move",
+      "map": {
+        "cmd_axes": {"X_Move": "WS_LS_X", "Y_Move": "WS_LS_Y", "Rz_Move": "WS_Rz"},
+        "observers": {"oX_TargetPosition": "WS_LS_X", "oY_TargetPosition": "WS_LS_Y", "oRz_TargetPosition": "WS_Rz"}
+      },
+      "note": "3000 项目晶圆台水平向走 PLC；1928 的 WS_LS 三轴走 ACS 直驱，此处适配翻译到 engine.move（AO 目标位置语义），观测回读轴 target",
+      "commands": [
+        {"name": "X_Move",  "arguments": [{"name": "Value", "type": "FLOAT_TYPED_VALUE"}]},
+        {"name": "Y_Move",  "arguments": [{"name": "Value", "type": "FLOAT_TYPED_VALUE"}]},
+        {"name": "Rz_Move", "arguments": [{"name": "Value", "type": "FLOAT_TYPED_VALUE"}]}
+      ],
+      "observers": [
+        {"name": "oX_TargetPosition",  "type": "FLOAT_OBSERVER"},
+        {"name": "oY_TargetPosition",  "type": "FLOAT_OBSERVER"},
+        {"name": "oRz_TargetPosition", "type": "FLOAT_OBSERVER"}
+      ],
+      "settings": []
+    },
+
+    {
+      "fullPath": "3000_1_Controller/SystemMachine/SS_Bonding/M_WS_STAGE/Interferometer",
+      "source": "io_template/config/plc/io_config.json (AI id 0~4)",
+      "kind": "unmapped",
+      "unmapped": true,
+      "note": "3000 项目干涉仪五分量，1928 仿真无对应物；保留映射占位，访问返回真机式 FAULT",
+      "commands": [],
+      "observers": [
+        {"name": "oUI_Xg",  "type": "FLOAT_OBSERVER"},
+        {"name": "oUI_Yg",  "type": "FLOAT_OBSERVER"},
+        {"name": "oUI_Rxg", "type": "FLOAT_OBSERVER"},
+        {"name": "oUI_Ryg", "type": "FLOAT_OBSERVER"},
+        {"name": "oUI_Rzg", "type": "FLOAT_OBSERVER"}
+      ],
+      "settings": []
+    },
+    {
+      "fullPath": "3000_1_Controller/SystemMachine",
+      "source": "io_template/config/plc/io_config.json (DI id 2004)",
+      "kind": "unmapped",
+      "unmapped": true,
+      "note": "iPhoto_Finish_First（拍照完成）仿真无对应物；保留映射占位，访问返回真机式 FAULT",
+      "commands": [],
+      "observers": [
+        {"name": "iPhoto_Finish_First", "type": "BOOLEAN_OBSERVER"}
+      ],
+      "settings": []
+    }
+  ]
+}

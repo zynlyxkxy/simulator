@@ -1,0 +1,139 @@
+{
+ "_comment": "工艺流程定义（W4）：用户可编辑；op 全集见 flow_engine.py docstring。交接示教位为占位待标定（见 transfers.json 各规则 _note），本文件不重复定义坐标。",
+ "flows": [
+  {
+   "name": "晶圆键合示范流程",
+   "description": "蓝膜上机→上片→取片→退避对准台/晶圆台→翻转交接→对准→晶圆台回位→键合→回安全位→下片 全链路演示。交接坐标取自 transfers.json 示教位（占位值待真机标定，W5 零件级沙盒后已按接触面反推敲正）；对准台扫描幅值 ±20mm 沿用 ACS buffer2 align_scan 占位值。退避步与真机一致：键合头下降前先让开对准相机与晶圆台（沙盒干涉检查会拦不退避的下降）。跑前请确认各轴已回零。",
+   "steps": [
+    {
+     "op": "log",
+     "msg": "=== 晶圆键合示范流程 开始 ===",
+     "desc": "流程开始"
+    },
+    {
+     "op": "film",
+     "action": "load",
+     "desc": "蓝膜上机：film 台蓝膜在位 + 按处方重铺 die（幂等，已在位也允许重铺）"
+    },
+    {
+     "op": "wafer",
+     "action": "load",
+     "desc": "上片：晶圆加载到晶圆台（已在位则跳过）"
+    },
+    {
+     "op": "transfer",
+     "rule": "film_to_flip",
+     "desc": "取片：翻转吸盘从蓝膜台取一颗 die（ChuckVac 真空 + FA_X/FA_Z 到取片示教位）"
+    },
+    {
+     "op": "move",
+     "axis": "AS_Y",
+     "target": 120.0,
+     "desc": "退避对准台相机（真机流程先退避 AS 相机再降键合头；Y+120 退出键合头下方）"
+    },
+    {
+     "op": "move",
+     "axis": "WS_LS_X",
+     "target": 220.0,
+     "desc": "退避晶圆台（键合头下降通道让开；X+220 时吸盘台移出压头投影区）"
+    },
+    {
+     "op": "move",
+     "axis": "FA_Z",
+     "target": 20.0,
+     "desc": "翻转 Z 抬传送安全位（=flip_pick.fa_z_safe_mm；FA_Z=-5 扫掠会撞晶圆台 Rz 盘 Epin 缺口，2026-08-26 回归实测 FA_X 在 -773 被 soft-stop）"
+    },
+    {
+     "op": "transfer",
+     "rule": "flip_to_head",
+     "desc": "翻转交接：键合头三吸盘接管 die（WT_BondingVac_1..3 建立、ChuckVac 释放；FA_X=-1242.35 吸盘心=头心 / BS_Arm_Z=-50.93 接触 die 背面，2026-08-26 起真实几何，见 docs/工艺流程_芯片交接_V1.md）"
+    },
+    {
+     "op": "move",
+     "axis": "FA_X",
+     "target": 0.0,
+     "desc": "翻转撤离交接位（真实几何下交接位就在键合头正下方，不退则后续键合臂下降撞空吸盘）"
+    },
+    {
+     "op": "move",
+     "axis": "AS_X",
+     "target": 20.0,
+     "desc": "对准台移到扫描位（幅值沿用 buffer2 align_scan ±20mm）"
+    },
+    {
+     "op": "move",
+     "axis": "BS_Arm_Z",
+     "target": -118.83,
+     "desc": "上相机对焦：键合臂从交接位 -50.93 降到 up 相机工作距（BS_Arm_Z≈-118.83 时 up 镜头到焦面，见 vision_cameras.json up._note；对准台/晶圆台已退避不干涉）"
+    },
+    {
+     "op": "camera",
+     "source": "AlignCameraTigger_1",
+     "desc": "对准拍照 1（精对准相机 1）"
+    },
+    {
+     "op": "move",
+     "axis": "AS_X",
+     "target": 0.0,
+     "desc": "对准台回零位"
+    },
+    {
+     "op": "camera",
+     "source": "AlignCameraTigger_2",
+     "desc": "对准拍照 2（精对准相机 2）"
+    },
+    {
+     "op": "move",
+     "axis": "BS_Arm_Z",
+     "target": 0.0,
+     "desc": "键合臂抬起（晶圆台回位前必须先抬头，否则臂在低位挡回位通道）"
+    },
+    {
+     "op": "move",
+     "axis": "WS_LS_X",
+     "target": 0.0,
+     "desc": "晶圆台回零位（键合头已抬起，无干涉）"
+    },
+    {
+     "op": "transfer",
+     "rule": "head_to_wafer",
+     "desc": "键合：die 放到晶圆（晶圆真空建立、键合头三吸盘释放；BS_Arm_Z=-167.43 键合接触位，压头贴晶圆面 <ε 不判撞）"
+    },
+    {
+     "op": "move",
+     "axis": "BS_Arm_Z",
+     "target": 0.0,
+     "desc": "回安全位：键合臂抬起"
+    },
+    {
+     "op": "move",
+     "axis": "AS_Y",
+     "target": 0.0,
+     "desc": "回安全位：对准台相机退回零位（键合头已抬起，无干涉）"
+    },
+    {
+     "op": "move",
+     "axis": "FA_X",
+     "target": 0.0,
+     "desc": "回安全位：翻转臂退出交接位"
+    },
+    {
+     "op": "move",
+     "axis": "FA_Z",
+     "target": 0.0,
+     "desc": "回安全位：翻转 Z 抬起"
+    },
+    {
+     "op": "wafer",
+     "action": "unload",
+     "desc": "下片：成品晶圆离场（已键合 die 随片移除）"
+    },
+    {
+     "op": "log",
+     "msg": "=== 晶圆键合示范流程 完成 ===",
+     "desc": "流程完成"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,196 @@
+{
+ "_comment": "D2W 键合设备处方：晶圆/键合位阵列/蓝膜 die 布局。在线改：PUT /api/recipe（部分合并）；生效到物料层：POST /api/recipe/apply。die/键合位默认 auto 布局=芯片大小+间隔自动算阵列（派生值只读不落盘）",
+ "wafer": {
+  "diameter_mm": 300.0,
+  "thickness_mm": 1.0,
+  "marks": [
+   {
+    "name": "wafer_mark_1",
+    "shape": "cross",
+    "x_mm": -80.6102,
+    "y_mm": -80.6102,
+    "size_um": 2000
+   },
+   {
+    "name": "wafer_mark_2",
+    "shape": "cross",
+    "x_mm": 80.6102,
+    "y_mm": 80.6102,
+    "size_um": 2000
+   },
+   {
+    "name": "wafer_mark_3",
+    "shape": "cross",
+    "x_mm": 80.6102,
+    "y_mm": -80.6102,
+    "size_um": 2000
+   },
+   {
+    "name": "wafer_mark_4",
+    "shape": "cross",
+    "x_mm": -80.6102,
+    "y_mm": 80.6102,
+    "size_um": 2000
+   }
+  ],
+  "site_marks": {
+   "shape": "quad",
+   "size_um": 150,
+   "ratio": [
+    [
+     -0.76,
+     -0.76
+    ],
+    [
+     0.76,
+     -0.76
+    ],
+    [
+     -0.76,
+     0.76
+    ],
+    [
+     0.76,
+     0.76
+    ]
+   ],
+   "per_site": 4
+  }
+ },
+ "wafer_sites": {
+  "mode": "auto",
+  "size_x_mm": 10.0,
+  "size_y_mm": 10.0,
+  "gap_x_mm": 0.005,
+  "gap_y_mm": 0.005,
+  "edge_margin_mm": 3.0
+ },
+ "wafer_load": {
+  "load_x_mm": 0.25,
+  "load_y_mm": -0.18,
+  "load_rz_rad": 0.00025,
+  "jitter_xy_um": 5.0,
+  "jitter_rz_urad": 30.0,
+  "jitter_on": true,
+  "z_um": 0.0,
+  "rx_urad": 0.0,
+  "ry_urad": 0.0,
+  "die_head_rx_urad": 0.0,
+  "die_head_ry_urad": 0.0
+ },
+ "sim_sensors": {
+  "confocal_sigma_um": {
+   "up": 0.065,
+   "down": 0.065
+  },
+  "temp_noise_C": {
+   "PulseHeat_Up": 0.5,
+   "Heat_Dw": 0.5
+  },
+  "force_noise_N": 1.0,
+  "fast_noise_px": {
+   "coarse": 0.15,
+   "up": 0.1,
+   "down": 0.1
+  },
+  "real_noise_scale": {
+   "coarse": 1.0,
+   "up": 1.0,
+   "down": 1.0
+  },
+  "temp_gain_err": {
+   "PulseHeat_Up": 0.002,
+   "Heat_Dw": 0.002
+  },
+  "temp_offset_C": {
+   "PulseHeat_Up": 0.2,
+   "Heat_Dw": 0.2
+  },
+  "force_gain_err": 0.003,
+  "force_offset_N": 0.05
+ },
+ "focus_level": {
+  "measure_points": 4,
+  "align_first": true
+ },
+ "fine_align": {
+  "measure_points": 4,
+  "algorithm": "rigid",
+  "confirm_enable": true,
+  "confirm_tol_xy_um": 0.15,
+  "confirm_tol_rz_urad": 30.0,
+  "confirm_max_iter": 3,
+  "on_unconfirmed": "continue_warn"
+ },
+ "sim_align": {
+  "rz_center_true_offset_um": [
+   0.0,
+   0.0
+  ]
+ },
+ "bond": {
+  "force_N": 50.0,
+  "force_tol_N": 1.0,
+  "dwell_s": 10.0,
+  "head_temp_C": 300.0,
+  "wafer_temp_C": 30.0,
+  "wafer_preheat": true,
+  "wafer_keep_warm": true,
+  "head_cool_after": true,
+  "fast_speed_mm_s": 20.0,
+  "search_speed_mm_s": 0.2,
+  "touch_force_N": 2.0,
+  "search_overtravel_mm": 1.0
+ },
+ "full_wafer": {
+  "count": 0,
+  "path_mode": "center_out",
+  "die_order": "nearest_pick",
+  "skip_bonded": true,
+  "stop_on_fail": false,
+  "pipelined": false
+ },
+ "post_inspect": {
+  "enabled": true,
+  "auto_after_single": false,
+  "auto_after_full": false,
+  "cool_target_C": 25.0,
+  "cool_rate_cps": 5.0
+ },
+ "film": {
+  "diameter_mm": 300.0,
+  "dies": {
+   "mode": "auto",
+   "size_x_mm": 10.0,
+   "size_y_mm": 10.0,
+   "gap_x_mm": 10.0,
+   "gap_y_mm": 10.0,
+   "edge_margin_mm": 3.0,
+   "thickness_mm": 0.5
+  },
+  "pin_overtravel_um": 20.0,
+  "marks": {
+   "shape": "cross",
+   "size_um": 150,
+   "ratio": [
+    [
+     -0.76,
+     -0.76
+    ],
+    [
+     0.76,
+     -0.76
+    ],
+    [
+     -0.76,
+     0.76
+    ],
+    [
+     0.76,
+     0.76
+    ]
+   ],
+   "per_die": 4
+  }
+ }
+}

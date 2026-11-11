@@ -1,0 +1,132 @@
+{
+ "enabled": true,
+ "note": "scale_ppm 按轴分级：精密 ±5~10、辅助 ±20；direction_*_urad 暂不用留 0",
+ "axes": {
+  "WS_LS_X": {
+   "scale_ppm": -5.063,
+   "direction_rx_urad": 0.0,
+   "direction_ry_urad": 0.0,
+   "direction_rz_urad": 0.0
+  },
+  "WS_LS_Y": {
+   "scale_ppm": 6.102,
+   "direction_rx_urad": 0.0,
+   "direction_ry_urad": 0.0,
+   "direction_rz_urad": 0.0
+  },
+  "WS_Rz": {
+   "scale_ppm": 7.363,
+   "direction_rx_urad": 0.0,
+   "direction_ry_urad": 0.0,
+   "direction_rz_urad": 0.0
+  },
+  "E_EPIN_Z_1": {
+   "scale_ppm": -19.856,
+   "direction_rx_urad": 0.0,
+   "direction_ry_urad": 0.0,
+   "direction_rz_urad": 0.0
+  },
+  "E_EPIN_Z_2": {
+   "scale_ppm": -8.202,
+   "direction_rx_urad": 0.0,
+   "direction_ry_urad": 0.0,
+   "direction_rz_urad": 0.0
+  },
+  "E_EPIN_Z_3": {
+   "scale_ppm": 1.149,
+   "direction_rx_urad": 0.0,
+   "direction_ry_urad": 0.0,
+   "direction_rz_urad": 0.0
+  },
+  "BS_Arm_Z": {
+   "scale_ppm": -18.036,
+   "direction_rx_urad": 0.0,
+   "direction_ry_urad": 0.0,
+   "direction_rz_urad": 0.0
+  },
+  "BS_CAL_Rx": {
+   "scale_ppm": 7.42,
+   "direction_rx_urad": 0.0,
+   "direction_ry_urad": 0.0,
+   "direction_rz_urad": 0.0
+  },
+  "BS_CAL_Ry": {
+   "scale_ppm": 19.277,
+   "direction_rx_urad": 0.0,
+   "direction_ry_urad": 0.0,
+   "direction_rz_urad": 0.0
+  },
+  "AS_X": {
+   "scale_ppm": 7.269,
+   "direction_rx_urad": 0.0,
+   "direction_ry_urad": 0.0,
+   "direction_rz_urad": 0.0
+  },
+  "AS_Y": {
+   "scale_ppm": 9.223,
+   "direction_rx_urad": 0.0,
+   "direction_ry_urad": 0.0,
+   "direction_rz_urad": 0.0
+  },
+  "AS_Z": {
+   "scale_ppm": 5.633,
+   "direction_rx_urad": 0.0,
+   "direction_ry_urad": 0.0,
+   "direction_rz_urad": 0.0
+  },
+  "AS_Rx": {
+   "scale_ppm": -9.074,
+   "direction_rx_urad": 0.0,
+   "direction_ry_urad": 0.0,
+   "direction_rz_urad": 0.0
+  },
+  "AS_Ry": {
+   "scale_ppm": 8.025,
+   "direction_rx_urad": 0.0,
+   "direction_ry_urad": 0.0,
+   "direction_rz_urad": 0.0
+  },
+  "FA_X": {
+   "scale_ppm": 7.398,
+   "direction_rx_urad": 0.0,
+   "direction_ry_urad": 0.0,
+   "direction_rz_urad": 0.0
+  },
+  "FA_Z": {
+   "scale_ppm": 12.818,
+   "direction_rx_urad": 0.0,
+   "direction_ry_urad": 0.0,
+   "direction_rz_urad": 0.0
+  },
+  "FA_Rx": {
+   "scale_ppm": -15.771,
+   "direction_rx_urad": 0.0,
+   "direction_ry_urad": 0.0,
+   "direction_rz_urad": 0.0
+  },
+  "CH_Rz": {
+   "scale_ppm": 7.787,
+   "direction_rx_urad": 0.0,
+   "direction_ry_urad": 0.0,
+   "direction_rz_urad": 0.0
+  },
+  "ES_X": {
+   "scale_ppm": -6.011,
+   "direction_rx_urad": 0.0,
+   "direction_ry_urad": 0.0,
+   "direction_rz_urad": 0.0
+  },
+  "ES_Y": {
+   "scale_ppm": 12.392,
+   "direction_rx_urad": 0.0,
+   "direction_ry_urad": 0.0,
+   "direction_rz_urad": 0.0
+  },
+  "ES_PunchZ": {
+   "scale_ppm": -7.483,
+   "direction_rx_urad": 0.0,
+   "direction_ry_urad": 0.0,
+   "direction_rz_urad": 0.0
+  }
+ }
+}

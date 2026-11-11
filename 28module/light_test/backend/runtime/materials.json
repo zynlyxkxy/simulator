@@ -1,0 +1,172 @@
+{
+ "granite": {
+  "name_cn": "花岗岩（大理石）",
+  "cte_ppm_K": 6.5,
+  "youngs_GPa": 50.0,
+  "poisson": 0.25,
+  "density_kg_m3": 2650.0,
+  "thermal_cond_W_mK": 2.8,
+  "spec_heat_J_kgK": 880.0,
+  "note": "手册典型值，待供应商数据；E 40~70 取中值，ρ 2600~2700"
+ },
+ "al_6061": {
+  "name_cn": "铝合金 6061-T6",
+  "cte_ppm_K": 23.6,
+  "youngs_GPa": 68.9,
+  "poisson": 0.33,
+  "density_kg_m3": 2700.0,
+  "thermal_cond_W_mK": 167.0,
+  "spec_heat_J_kgK": 896.0,
+  "note": "手册典型值，待供应商数据"
+ },
+ "al_7075": {
+  "name_cn": "铝合金 7075-T6",
+  "cte_ppm_K": 23.4,
+  "youngs_GPa": 71.7,
+  "poisson": 0.33,
+  "density_kg_m3": 2810.0,
+  "thermal_cond_W_mK": 130.0,
+  "spec_heat_J_kgK": 960.0,
+  "note": "手册典型值，待供应商数据"
+ },
+ "ss_304": {
+  "name_cn": "不锈钢 304",
+  "cte_ppm_K": 17.3,
+  "youngs_GPa": 193.0,
+  "poisson": 0.29,
+  "density_kg_m3": 8000.0,
+  "thermal_cond_W_mK": 16.2,
+  "spec_heat_J_kgK": 500.0,
+  "note": "手册典型值，待供应商数据"
+ },
+ "ss_316": {
+  "name_cn": "不锈钢 316",
+  "cte_ppm_K": 16.0,
+  "youngs_GPa": 193.0,
+  "poisson": 0.29,
+  "density_kg_m3": 8000.0,
+  "thermal_cond_W_mK": 16.3,
+  "spec_heat_J_kgK": 500.0,
+  "note": "手册典型值，待供应商数据"
+ },
+ "cast_iron_ht300": {
+  "name_cn": "灰铸铁 HT300",
+  "cte_ppm_K": 11.0,
+  "youngs_GPa": 120.0,
+  "poisson": 0.25,
+  "density_kg_m3": 7200.0,
+  "thermal_cond_W_mK": 50.0,
+  "spec_heat_J_kgK": 500.0,
+  "note": "手册典型值，待供应商数据；E 110~130 取中值，λ 46~54 取中值"
+ },
+ "alumina_al2o3": {
+  "name_cn": "氧化铝陶瓷 96%",
+  "cte_ppm_K": 7.2,
+  "youngs_GPa": 300.0,
+  "poisson": 0.22,
+  "density_kg_m3": 3750.0,
+  "thermal_cond_W_mK": 25.0,
+  "spec_heat_J_kgK": 880.0,
+  "note": "手册典型值，待供应商数据；99.5% 纯度的 E≈370/λ≈30 另计"
+ },
+ "sic": {
+  "name_cn": "碳化硅（烧结 SiC）",
+  "cte_ppm_K": 4.0,
+  "youngs_GPa": 410.0,
+  "poisson": 0.17,
+  "density_kg_m3": 3100.0,
+  "thermal_cond_W_mK": 120.0,
+  "spec_heat_J_kgK": 670.0,
+  "note": "手册典型值，待供应商数据；CVD SiC 的 λ 可达 250+ 另计"
+ },
+ "invar_36": {
+  "name_cn": "殷钢 4J36（Invar36）",
+  "cte_ppm_K": 1.2,
+  "youngs_GPa": 141.0,
+  "poisson": 0.29,
+  "density_kg_m3": 8100.0,
+  "thermal_cond_W_mK": 10.5,
+  "spec_heat_J_kgK": 515.0,
+  "note": "手册典型值，待供应商数据；CTE 为 20~100℃ 均值"
+ },
+ "zerodur": {
+  "name_cn": "零膨胀玻璃陶瓷（Zerodur）",
+  "cte_ppm_K": 0.05,
+  "youngs_GPa": 90.6,
+  "poisson": 0.24,
+  "density_kg_m3": 2530.0,
+  "thermal_cond_W_mK": 1.64,
+  "spec_heat_J_kgK": 821.0,
+  "note": "手册典型值，待供应商数据；CTE 为 0~50℃ 级典型值（±0.05 级）"
+ },
+ "cfrp": {
+  "name_cn": "碳纤维复合材料 CFRP（准各向同性）",
+  "cte_ppm_K": 0.5,
+  "youngs_GPa": 70.0,
+  "poisson": 0.3,
+  "density_kg_m3": 1600.0,
+  "thermal_cond_W_mK": 1.0,
+  "spec_heat_J_kgK": 900.0,
+  "note": "手册典型值，待供应商数据；准各向同性铺层面内值，单向板 E 135~300 另计"
+ },
+ "fused_silica": {
+  "name_cn": "熔融石英",
+  "cte_ppm_K": 0.55,
+  "youngs_GPa": 72.0,
+  "poisson": 0.17,
+  "density_kg_m3": 2200.0,
+  "thermal_cond_W_mK": 1.4,
+  "spec_heat_J_kgK": 741.0,
+  "note": "手册典型值，待供应商数据"
+ },
+ "bk7": {
+  "name_cn": "光学玻璃 N-BK7",
+  "cte_ppm_K": 7.1,
+  "youngs_GPa": 82.0,
+  "poisson": 0.206,
+  "density_kg_m3": 2510.0,
+  "thermal_cond_W_mK": 1.11,
+  "spec_heat_J_kgK": 858.0,
+  "note": "手册典型值，待供应商数据"
+ },
+ "silicon": {
+  "name_cn": "单晶硅",
+  "cte_ppm_K": 2.6,
+  "youngs_GPa": 169.0,
+  "poisson": 0.28,
+  "density_kg_m3": 2330.0,
+  "thermal_cond_W_mK": 148.0,
+  "spec_heat_J_kgK": 705.0,
+  "note": "手册典型值，待供应商数据；E 各向异性 130~188，取 <110> 值"
+ },
+ "copper": {
+  "name_cn": "无氧铜",
+  "cte_ppm_K": 16.7,
+  "youngs_GPa": 117.0,
+  "poisson": 0.34,
+  "density_kg_m3": 8940.0,
+  "thermal_cond_W_mK": 398.0,
+  "spec_heat_J_kgK": 385.0,
+  "note": "手册典型值，待供应商数据"
+ },
+ "titanium_tc4": {
+  "name_cn": "钛合金 TC4（Ti-6Al-4V）",
+  "cte_ppm_K": 8.6,
+  "youngs_GPa": 110.0,
+  "poisson": 0.34,
+  "density_kg_m3": 4430.0,
+  "thermal_cond_W_mK": 6.7,
+  "spec_heat_J_kgK": 526.0,
+  "note": "手册典型值，待供应商数据"
+ },
+ "vacuum_black_al": {
+  "name_cn": "黑色阳极氧化铝（6061 基材）",
+  "cte_ppm_K": 23.6,
+  "youngs_GPa": 68.9,
+  "poisson": 0.33,
+  "density_kg_m3": 2700.0,
+  "thermal_cond_W_mK": 167.0,
+  "spec_heat_J_kgK": 896.0,
+  "note": "手册典型值，待供应商数据；6061 基材+黑色阳极氧化表面处理，物性按基材计"
+ }
+}

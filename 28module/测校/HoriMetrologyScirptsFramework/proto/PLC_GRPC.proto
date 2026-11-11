@@ -1,0 +1,33 @@
+syntax = "proto3";
+
+package PLC_GRPC;
+
+service PLC_Service {  
+  rpc BondingByForceManual (BondRequest) returns (BondReply) {}
+  rpc ChipBackToFA_Test (PLC_CMD_EmptyRequest) returns (PLC_CMD_Reply) {}
+  rpc DownCameraXNTakePhoto(PLC_CMD_EmptyRequest) returns (PLC_CMD_Reply) {}
+  rpc UpPreProcess_Start(PLC_CMD_EmptyRequest) returns (PLC_CMD_Reply) {}
+  rpc DownPreProcess_XP_Start(PLC_CMD_EmptyRequest) returns (PLC_CMD_Reply) {}
+  rpc CoarseProcess_Start(PLC_CMD_EmptyRequest) returns (PLC_CMD_Reply) {}
+  rpc Interferometer_ClearZero(PLC_CMD_EmptyRequest) returns (PLC_CMD_Reply) {}
+  rpc Interferometer_Homing(PLC_CMD_EmptyRequest) returns (PLC_CMD_Reply) {}
+  rpc Interferometer_Start_Calculate(PLC_CMD_EmptyRequest) returns (PLC_CMD_Reply) {}
+  rpc Interferometer_CalculateLamda(PLC_CMD_EmptyRequest) returns (PLC_CMD_Reply) {}
+  rpc ChipBackToBH_Test(PLC_CMD_EmptyRequest) returns (PLC_CMD_Reply) {}
+}
+
+message BondRequest {
+  double forceValue = 1;
+}
+
+// 0: Success, 1: Failure.
+message BondReply {
+  int32 excuteResult = 1;
+}
+
+message PLC_CMD_EmptyRequest {
+}
+
+message PLC_CMD_Reply {
+  int32 excuteResult = 1;
+}

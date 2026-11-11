@@ -1,0 +1,43 @@
+{
+ "_comment": "视觉系统相机配置（vision_model.py 加载，与 machine_constants.json 的 cameras 组**合并**后校验，坏配置拒绝拉起）。本文件只管**位姿与采集配置**：mount（安装）/look_dir/exposure/gain/mode/光源/触发点/marks 源；相机**内参**（pixel_um/mag/dir_x/dir_y/swap_xy/rot_mrad/wd_mm/dof_um + px_u/px_v 传感器分辨率）是机器常数，单一事实源在 machine_constants.json（2026-08-21 起含用户真实光学数据；px 分辨率 2026-08-24 自本文件迁入并更名 px_u/px_v，本文件出现 px_x/px_y 一律校验拒绝）。mount.module=null=相机固连机架；否则相机中心=对应 6DOF 模块位姿（名义+误差）+offset（随模块姿态旋转）。look_dir: -1=朝下看 / +1=朝上看；焦面 Z = 相机 Z + look_dir*wd_mm（wd 在机器常数里）。marks.source 决定该相机看哪类标记：wafer_marks=晶圆 marks（WS 模块，recipe.wafer.marks）+ 每 site 对准标记（recipe.wafer.site_marks，ratio×site 半宽）+ 已键合到晶圆上的 die 标记（carrier=wafer，几何=recipe.film.marks）/film_die_marks=蓝膜 die 标记（film 模块，几何=recipe.film.marks：ratio×die 半宽等比缩放）/flip_die_marks=翻转吸盘 die 背面检出特征（flip 模块，carrier=flip 且 cos(FA_Rx)>0 即呈现位 Rx=0 才可见；背面素板无标记，特征=die 外廓虚拟框，不画进图像，供 FAST 解析/引导；REAL 走模板匹配实图）/head_die_marks=键合头吸取的 die 标记（bond_head 模块，与 film 共用同一 film.marks schema）；surface_z_offset_mm=标记面相对载体工具点的 Z 偏移（晶圆=陶瓷面半高 3.0+片厚另加 recipe.wafer.thickness_mm；蓝膜 die=die 厚度 0.5；翻转 die=+45.9（呈现位 Rx=0 吸盘面朝上 +45.4 加 die 厚，die 背面朝上；2026-08-25 零位约定修正）；键合头 die=0——但标记在 die 下表面=吸盘尖端面−die 厚（2026-08-27 修正，原按吸盘尖端面导致 up 进焦 die 底面时标记恒离焦 t_d 判废）。view_rot_deg=相机物理安装旋转角（真值，°，逆时针为正，图像内容反向旋转；只进投影链 project_rel，identify 结果=原始传感器系不剥旋；迭代 39 真值/认知分离重构，旧「出图级 warp+结果逆变换」已删），与机器常数 rot_mrad（控制器认知，只进反算链 solve_rel/solve_pixel）同号约定：θ_b=θ_t 时 solve∘project=恒等（相等=补偿到位），不等则世界解相差旋转（认知−真值）。迭代 39 迁移：三相机真值角色自 rot_mrad 旧值搬入（°=mrad×0.05729577951：coarse 0.8→0.0458366、up −0.5→−0.0286479、down 0.309→0.0177044），机器常数 rot_mrad 数值保留不动（纯认知，机器测量行为不变）",
+ "defaults": {
+  "exposure_ms": 8.0,
+  "gain": 1.0,
+  "score_threshold": 0.6,
+  "mode": "trigger",
+  "_note_mode": "continuous=光源常开持续出图 / trigger=闪光（触发→光源亮 exposure_ms→拍一帧→光源灭）"
+ },
+ "cameras": {
+  "coarse": {
+   "label": "粗对准相机",
+   "_note": "固连机架（模型 coarsecam_0001 挂翻转模块横梁，sandboxes.json 标固定件，不随 FA_X 平移——与早期调研口径不同，以模型为准），朝下看翻转吸盘上的 die（2026-08-24 用户实测纠正：粗对准对的是翻转模块上的芯片，不是蓝膜上的——蓝膜面 z=886.9 距焦面 ~96mm 远超景深 dof±1mm，物理不可见）。模型 description 佐证：视场中心与蓝膜顶针、翻转Rz承载台 home 三点同心，镜头位于 Rz 承载台上方 200mm（吸盘顶面 982.4+200≈1182，与 3D 模型 CAD 外壳 z≈1181 占位一致）。镜头 z=1162.9=翻转后 die 背面 982.9（flip 工具点 937.0+吸盘面 45.4+die厚0.5）+180mm 真实工作距离；surface_z_offset_mm=+45.9=die 背面相对 flip 工具点的局部 Z（呈现位 Rx=0 吸盘面朝上 +45.4 再加 die 厚；2026-08-25 整机零位约定修正：Rx=0=呈现位背面朝上，Rx=−π=取片位 die 挂吸盘下不可见）",
+   "mount": {"module": null, "offset": [1199.85, 9.0, 1162.9]},
+   "look_dir": -1,
+   "light_point": "SystemMachine.SS_Bonding.M_AS.AS_LightOn",
+   "trigger_source": "AS_CameraOn",
+   "marks": {"source": "flip_die_marks", "surface_z_offset_mm": 45.9},
+   "view_rot_deg": 0.0458366,
+   "exposure_ms": 10.0
+  },
+  "up": {
+   "label": "上相机",
+   "_note": "模型 上相机镜头 circle_mssuehmv_q0y9ws 挂对准相机承载台（随 AS_X/Y/Z 平移 + AS_Rx/Ry 微转），offset=[0,-22.5,+15.0]；迭代 4 零位纠错后 align_stage 工具点=(-42.5,23.5,910)，故零位世界 [-42.5, 1.0, 925.0]，朝上看键合头吸的 die。真实工作距离 10mm（机器常数）：键合头须把 die 送到镜头上方 10mm——BS_Arm_Z = 935.0(焦面)-1053.83(工具点@0) ≈ -118.83（行程 [-190,0] 内）；BS_Arm_Z=0 时离焦 118.83mm 必然判废",
+   "mount": {"module": "align_stage", "offset": [0.0, -22.5, 15.0]},
+   "look_dir": 1,
+   "light_point": "SystemMachine.SS_Bonding.M_AS.LightOn_1",
+   "trigger_source": "AlignCameraTigger_1",
+   "marks": {"source": "head_die_marks", "surface_z_offset_mm": 0.0},
+   "view_rot_deg": -0.0286479
+  },
+  "down": {
+   "label": "下相机",
+   "_note": "模型 下相机镜头 mechanicalobject_mssulatg_dwmc6r 同挂对准相机承载台，offset=[0,-22.5,-14.1]；迭代 4 零位纠错后零位世界 [-42.5, 1.0, 895.9]，朝下看晶圆 marks（全局 4 个 + 每 site 对准标记 + 已键合 die 标记）。真实工作距离 10mm（机器常数）：895.9-885.9(陶瓷面顶 884.9+片厚 1.0)=10.0mm",
+   "mount": {"module": "align_stage", "offset": [0.0, -22.5, -14.1]},
+   "look_dir": -1,
+   "light_point": "SystemMachine.SS_Bonding.M_AS.LightOn_2",
+   "trigger_source": "AlignCameraTigger_2",
+   "marks": {"source": "wafer_marks", "surface_z_offset_mm": 3.0},
+   "view_rot_deg": 0.0177044
+  }
+ }
+}

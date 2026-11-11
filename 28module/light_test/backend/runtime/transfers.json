@@ -1,0 +1,139 @@
+{
+ "_comment": "交接规则表（示教位/真空点位为占位待标定，见各规则 _note）",
+ "grid": {
+  "rows": 10,
+  "cols": 10,
+  "pitch": 5.0
+ },
+ "rules": [
+  {
+   "name": "film_to_flip",
+   "from": "film",
+   "to": "flip",
+   "vacuum_on": [
+    "SystemMachine.SS_ME.M_AIR.ChuckVac.oNegtiveState"
+   ],
+   "vacuum_off": [],
+   "pose": {
+    "FA_X": [
+     0.0,
+     3.0
+    ],
+    "FA_Z": [
+     -5.0,
+     3.0
+    ]
+   },
+   "site": [
+    0.0,
+    0.0
+   ],
+   "_note": "取片：FA_X 靠近 0 端=取片位、FA_Z 下行=接触（占位待标定）。FA_Z=-4.2 与流程接触位一致（build_flip_pick_flow：fa_z_pick=film_surface 886.9+die厚 0.5−chuck_face_z0 891.6=-4.2，吸盘面 887.4 恰贴 die 顶面；2026-08-31 收口前为 -5.0±0.5，与 chuck_face_z0=891.6 常数组合出自洽性断裂——流程到 -4.2 而窗口只认 -5.0，film_to_flip 永不触发）；旧值 -38 会把吸盘压进蓝膜台体 3mm+（真穿模，v2 会报警）。真空假设：ChuckVac=翻转模块吸盘（点位表'吸盘吸附破真空'；翻转吸盘压力信号 iFA_Chuck_ForceSig 是 DI 观测，仿真以气路状态为准）。"
+  },
+  {
+   "name": "flip_to_head",
+   "from": "flip",
+   "to": "head",
+   "vacuum_on": [
+    "SystemMachine.SS_ME.M_AIR.WT_BondingVac_1.oNegtiveState",
+    "SystemMachine.SS_ME.M_AIR.WT_BondingVac_2.oNegtiveState",
+    "SystemMachine.SS_ME.M_AIR.WT_BondingVac_3.oNegtiveState"
+   ],
+   "vacuum_off": [
+    "SystemMachine.SS_ME.M_AIR.ChuckVac.oNegtiveState"
+   ],
+   "pose": {
+    "FA_X": [
+     -1242.35,
+     10.0
+    ],
+    "BS_Arm_Z": [
+     -50.93,
+     3.0
+    ]
+   },
+   "site": [
+    0.0,
+    0.0
+   ],
+   "_note": "翻转交接（2026-08-26 占位改真实几何，对齐 machine_constants flip_handoff 组）：FA_X=-1242.35=吸盘心与键合头心 X 对齐（键合头工具点 x=-42.5 − 翻转工具点 x=1199.85；±10mm 容差吸收粗对准 µm 级补偿）；BS_Arm_Z=-50.93=压头底接触 die 背面（die 背面 z=982.9+FA_Z，交接时 FA_Z=fa_z_safe=20 → 1002.9，压头底零位 1053.83）。键合头三吸盘真空建立且翻转吸盘已释放（真空交给键合头）。旧占位 FA_X=-600/BS_Arm_Z=-185 作废：-185 时压头底 868.8 会穿进翻转模块（真穿模）。die 交接后 site=[0,0] 居中于键合头（补偿生效时的物理真值），标记面朝下对晶圆。"
+  },
+  {
+   "name": "head_to_flip",
+   "from": "head",
+   "to": "flip",
+   "vacuum_on": [
+    "SystemMachine.SS_ME.M_AIR.ChuckVac.oNegtiveState"
+   ],
+   "vacuum_off": [
+    "SystemMachine.SS_ME.M_AIR.WT_BondingVac_1.oNegtiveState",
+    "SystemMachine.SS_ME.M_AIR.WT_BondingVac_2.oNegtiveState",
+    "SystemMachine.SS_ME.M_AIR.WT_BondingVac_3.oNegtiveState"
+   ],
+   "pose": {
+    "FA_X": [
+     -1242.35,
+     10.0
+    ],
+    "BS_Arm_Z": [
+     -50.93,
+     3.0
+    ]
+   },
+   "site": [
+    0.0,
+    0.0
+   ],
+   "_note": "吸回（flip_handoff 逆向，2026-08-26）：ChuckVac 负压建立 + 键合头三吸盘释放 + 同一交接位姿窗口（正逆共用 head_z_touch_mm——die 厚度在两侧相消，两吸盘间隙恒=die 厚），die 交回翻转吸盘居中（site=[0,0]，die 在 head 上居中，FA_X 无需补偿），标记面朝下贴吸盘（与取片后状态一致，可再次交接，闭环可逆）。与 flip_to_head 互斥（真空 on/off 镜像）。"
+  },
+  {
+   "name": "head_to_wafer",
+   "from": "head",
+   "to": "wafer",
+   "vacuum_on": [
+    "SystemMachine.SS_ME.M_AIR.WT_WaferVac.oNegtiveState"
+   ],
+   "vacuum_off": [
+    "SystemMachine.SS_ME.M_AIR.WT_BondingVac_1.oNegtiveState",
+    "SystemMachine.SS_ME.M_AIR.WT_BondingVac_2.oNegtiveState",
+    "SystemMachine.SS_ME.M_AIR.WT_BondingVac_3.oNegtiveState"
+   ],
+   "pose": {
+    "BS_Arm_Z": [
+     -167.43,
+     8.0
+    ]
+   },
+   "wafer_present": true,
+   "site": [
+    0.0,
+    0.0
+   ],
+   "_note": "键合：晶圆在位且晶圆真空建立、键合头三吸盘释放；BS_Arm_Z 下行到键合接触位。BS_Arm_Z=-167.43（2026-09-06 迭代 17 起=有效接触位真值：裸接触位 -168.93=陶瓷面顶 884.9−头吸盘底零位 1053.83，+晶圆厚 1.0+芯片厚 0.5；旧窗口中心 -167.9 是含片厚示教值，再早 -162.5 离晶圆面还差 6mm、-188 会把压头/气环埋进台体 25mm+ 真穿模）：键合头吸盘底 z=1053.83，晶圆面=多孔陶瓷面顶 884.9+片厚 1.0=885.9，-167.43 时压头贴晶圆面（<ε=2mm 不判撞）；上气环/吸盘×吸盘基座中心孔嵌套对已登记工艺豁免（环形件 AABB 填满中心孔的假象）。die 落片位置 site 为晶圆局部坐标占位 [0,0]。"
+  },
+  {
+   "name": "flip_to_film",
+   "from": "flip",
+   "to": "film",
+   "vacuum_on": [],
+   "vacuum_off": [
+    "SystemMachine.SS_ME.M_AIR.ChuckVac.oNegtiveState"
+   ],
+   "pose": {
+    "FA_X": [
+     0.0,
+     3.0
+    ],
+    "FA_Z": [
+     -5.0,
+     3.0
+    ]
+   },
+   "site": [
+    0.0,
+    0.0
+   ],
+   "_note": "放回蓝膜（flip_place_back 逆向流程）：ChuckVac 负压断开（吹扫释放）+ 取片位姿窗口内，die 交回 film 原槽位（die 保留 film_pos，workpieces 侧按 from=flip 选片）。与 film_to_flip 互斥（真空 on/off），flip 容量 1 硬约束防叠片。"
+  }
+ ]
+}

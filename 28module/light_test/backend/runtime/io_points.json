@@ -1,0 +1,1645 @@
+{
+ "source": "点位表_dump.txt",
+ "points": {
+  "GVL_IO.i3PH_OV2_HighHigh": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": false
+  },
+  "GVL_IO.i3PH_OV_High": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": false
+  },
+  "GVL_IO.i3PH_UV1_Low": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": false
+  },
+  "GVL_IO.i3PH_UV2_LowLow": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": false
+  },
+  "GVL_IO.iEFEM_EMO": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": false
+  },
+  "GVL_IO.iFrontLock_DoorStatus_1": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": true
+  },
+  "GVL_IO.iFrontLock_DoorStatus_2": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": true
+  },
+  "GVL_IO.iFrontLock_LockStatus_1": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": true
+  },
+  "GVL_IO.iFrontLock_LockStatus_2": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": true
+  },
+  "GVL_IO.iInterlock_Mask": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": false
+  },
+  "GVL_IO.iInterlock_Reset": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": false
+  },
+  "GVL_IO.iLeftLock_DoorStatus_1": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": true
+  },
+  "GVL_IO.iLeftLock_DoorStatus_2": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": true
+  },
+  "GVL_IO.iLeftLock_LockStatus_1": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": true
+  },
+  "GVL_IO.iLeftLock_LockStatus_2": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": true
+  },
+  "GVL_IO.iLightOn": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": false
+  },
+  "GVL_IO.iMachine_EMO": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": false
+  },
+  "GVL_IO.iMachine_Right_EMO": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": false
+  },
+  "GVL_IO.iMuteOn": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": false
+  },
+  "GVL_IO.iPowerControl_EMO": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": false
+  },
+  "GVL_IO.iRightLock_DoorStatus_1": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": true
+  },
+  "GVL_IO.iRightLock_LockStatus_1": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": true
+  },
+  "GVL_IO.iSystemOff": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": false
+  },
+  "GVL_IO.iSystemOn": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": true
+  },
+  "GVL_IO.oBackup_PowerOff": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": false
+  },
+  "GVL_IO.oBackup_PowerOn": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": false
+  },
+  "GVL_IO.oBonding_PowerOff": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": false
+  },
+  "GVL_IO.oBonding_PowerOn": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": false
+  },
+  "GVL_IO.oCH_PowerOff": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": false
+  },
+  "GVL_IO.oCH_PowerOn": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": false
+  },
+  "GVL_IO.oEV_PowerOff": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": false
+  },
+  "GVL_IO.oEV_PowerOn": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": false
+  },
+  "GVL_IO.oFan": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": false
+  },
+  "GVL_IO.oILLightOn": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": false
+  },
+  "GVL_IO.oILLight_Ind": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": false
+  },
+  "GVL_IO.oInterLock_AllDoors_Mask": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": false
+  },
+  "GVL_IO.oInterLock_AllDoors_Reset": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": false
+  },
+  "GVL_IO.oInterLock_Front": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": false
+  },
+  "GVL_IO.oInterLock_Left": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": false
+  },
+  "GVL_IO.oInterLock_Right": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": false
+  },
+  "GVL_IO.oIonBar": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": false
+  },
+  "GVL_IO.oMuteLight_Ind": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": false
+  },
+  "GVL_IO.oPLASMA_Acid_PowerOff": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": false
+  },
+  "GVL_IO.oPLASMA_Acid_PowerOn": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": false
+  },
+  "GVL_IO.oResetLight_Ind": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": false
+  },
+  "GVL_IO.oSignalTower_BlueLight": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": false
+  },
+  "GVL_IO.oSignalTower_Buzzer": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": false
+  },
+  "GVL_IO.oSignalTower_GreenLight": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": false
+  },
+  "GVL_IO.oSignalTower_RedLight": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": false
+  },
+  "GVL_IO.oSignalTower_YellowLight": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": false
+  },
+  "GVL_IO.oSystemOff_Ind": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.Heat_Dw.SetTargetTempWithPlan": {
+   "dir": "command",
+   "kind": "null",
+   "value": null
+  },
+  "SystemMachine.Heat_Dw.StopTargetTempWithPlan": {
+   "dir": "command",
+   "kind": "null",
+   "value": null
+  },
+  "SystemMachine.M_ACS_Buffer.ResumeBuffer": {
+   "dir": "command",
+   "kind": "null",
+   "value": null
+  },
+  "SystemMachine.M_ACS_Buffer.RunBuffer": {
+   "dir": "command",
+   "kind": "null",
+   "value": null
+  },
+  "SystemMachine.M_ACS_Buffer.SetBufferNumber": {
+   "dir": "command",
+   "kind": "null",
+   "value": null
+  },
+  "SystemMachine.M_ACS_Buffer.StopBuffer": {
+   "dir": "command",
+   "kind": "null",
+   "value": null
+  },
+  "SystemMachine.M_ACS_Buffer.oBufferDo": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.M_ACS_Buffer.oBufferNum": {
+   "dir": "observe",
+   "kind": "int",
+   "value": 0
+  },
+  "SystemMachine.M_Heater.Heat_Dw.oCurTemp": {
+   "dir": "observe",
+   "kind": "real",
+   "value": 25.0
+  },
+  "SystemMachine.M_Heater.PulseHeat_Up.PreHeatFinish": {
+   "dir": "command",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.M_Heater.PulseHeat_Up.PreHeatTime": {
+   "dir": "observe",
+   "kind": "real",
+   "value": 0.0
+  },
+  "SystemMachine.M_Heater.PulseHeat_Up.oCurTemp": {
+   "dir": "observe",
+   "kind": "real",
+   "value": 25.0
+  },
+  "SystemMachine.PulseHeat_Up.SetTargetTempWithPlan": {
+   "dir": "command",
+   "kind": "null",
+   "value": null
+  },
+  "SystemMachine.PulseHeat_Up.StartPreHeat": {
+   "dir": "command",
+   "kind": "null",
+   "value": null
+  },
+  "SystemMachine.PulseHeat_Up.StopTargetTempWithPlan": {
+   "dir": "command",
+   "kind": "null",
+   "value": null
+  },
+  "SystemMachine.SS_Bonding.M_AS.AS_LightOn": {
+   "dir": "command",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_Bonding.M_AS.AlignCameraTigger_1": {
+   "dir": "command",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_Bonding.M_AS.AlignCameraTigger_2": {
+   "dir": "command",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_Bonding.M_AS.AllowWaferIn": {
+   "dir": "command",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_Bonding.M_AS.HandOffRes": {
+   "dir": "command",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_Bonding.M_AS.HeatOn": {
+   "dir": "command",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_Bonding.M_AS.LightOn_1": {
+   "dir": "command",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_Bonding.M_AS.LightOn_2": {
+   "dir": "command",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_Bonding.M_AS.WaferHeatReset": {
+   "dir": "command",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_Bonding.M_AS.iAS_X_PT100": {
+   "dir": "observe",
+   "kind": "real",
+   "value": 25.0
+  },
+  "SystemMachine.SS_Bonding.M_AS.iAS_Y_PT100": {
+   "dir": "observe",
+   "kind": "real",
+   "value": 25.0
+  },
+  "SystemMachine.SS_Bonding.M_AS.oAS_CameraOn": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_Bonding.M_AS.oAS_LightOn": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_Bonding.M_AS.oAlignCameraTigger_1": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_Bonding.M_AS.oAlignCameraTigger_2": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_Bonding.M_AS.oAllowWaferIn": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_Bonding.M_AS.oHandOffRes": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_Bonding.M_AS.oHeatOn": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_Bonding.M_AS.oLightOn_1": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_Bonding.M_AS.oLightOn_2": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_Bonding.M_AS.oWaferHeatReset": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_Bonding.M_BS.Arm_Z": {
+   "dir": "command",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_Bonding.M_BS.BondingByForceManual": {
+   "dir": "command",
+   "kind": "null",
+   "value": null
+  },
+  "SystemMachine.SS_Bonding.M_BS.ChipVacValveNear": {
+   "dir": "command",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_Bonding.M_BS.ChipVacValveRemote": {
+   "dir": "command",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_Bonding.M_BS.E_CAL.Rx": {
+   "dir": "command",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_Bonding.M_BS.E_CAL.Ry": {
+   "dir": "command",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_Bonding.M_BS.iArm_Z_HH_Rx": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_Bonding.M_BS.iArm_Z_HH_Ry": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_Bonding.M_BS.iArm_Z_HO_Rx": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_Bonding.M_BS.iArm_Z_HO_Ry": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_Bonding.M_BS.iArm_Z_HandOffSignal": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_Bonding.M_BS.iArm_Z_LL_Rx": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_Bonding.M_BS.iArm_Z_LL_Ry": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_Bonding.M_BS.iArm_Z_LO_Rx": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_Bonding.M_BS.iArm_Z_LO_Ry": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_Bonding.M_BS.iArm_Z_OK_Rx": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_Bonding.M_BS.iArm_Z_OK_Ry": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_Bonding.M_BS.iArm_Z_PitchFpos_1": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_Bonding.M_BS.iArm_Z_SwingFpos_1": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_Bonding.M_BS.iArm_Z_SwingFpos_2": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_Bonding.M_BS.iRxNegSignal": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_Bonding.M_BS.iRxPosSignal": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_Bonding.M_BS.iRxZeroSignal": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_Bonding.M_BS.iRyNegSignal": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_Bonding.M_BS.iRyPosSignal": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_Bonding.M_BS.iRyZeroSignal": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_Bonding.M_BS.oActualForce": {
+   "dir": "observe",
+   "kind": "real",
+   "value": 0.0
+  },
+  "SystemMachine.SS_Bonding.M_BS.oChipVacValveNear": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_Bonding.M_BS.oChipVacValveRemote": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_Bonding.M_ES.ES_EmergencyStop": {
+   "dir": "command",
+   "kind": "null",
+   "value": null
+  },
+  "SystemMachine.SS_Bonding.M_ES.ES_GvieBackDie": {
+   "dir": "command",
+   "kind": "null",
+   "value": null
+  },
+  "SystemMachine.SS_Bonding.M_ES.ES_MoveToNextChip": {
+   "dir": "command",
+   "kind": "null",
+   "value": null
+  },
+  "SystemMachine.SS_Bonding.M_ES.ES_Reset": {
+   "dir": "command",
+   "kind": "null",
+   "value": null
+  },
+  "SystemMachine.SS_Bonding.M_ES.ES_Start": {
+   "dir": "command",
+   "kind": "null",
+   "value": null
+  },
+  "SystemMachine.SS_Bonding.M_ES.ES_Stop": {
+   "dir": "command",
+   "kind": "null",
+   "value": null
+  },
+  "SystemMachine.SS_Bonding.M_ES.oRz_CurentPos": {
+   "dir": "observe",
+   "kind": "real",
+   "value": 0.0
+  },
+  "SystemMachine.SS_Bonding.M_ES.oX_CurrentPos": {
+   "dir": "observe",
+   "kind": "real",
+   "value": 0.0
+  },
+  "SystemMachine.SS_Bonding.M_ES.oY_CurrentPos": {
+   "dir": "observe",
+   "kind": "real",
+   "value": 0.0
+  },
+  "SystemMachine.SS_Bonding.M_WS.AramPosSensorCalibrate_1": {
+   "dir": "command",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_Bonding.M_WS.E_EPIN_Z": {
+   "dir": "command",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_Bonding.M_WS.iHeaterPlatePowerCtrl_Alarm": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_Bonding.M_WS.iHeaterPlate_TC_Alarm": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_Bonding.M_WS.iHeaterPowerOnMonitor": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": true
+  },
+  "SystemMachine.SS_Bonding.M_WS.iHeatingEdgeTemper": {
+   "dir": "observe",
+   "kind": "real",
+   "value": 25.0
+  },
+  "SystemMachine.SS_Bonding.M_WS.iLS_Rz1_NTC": {
+   "dir": "observe",
+   "kind": "real",
+   "value": 25.0
+  },
+  "SystemMachine.SS_Bonding.M_WS.iLS_Rz1_PTC": {
+   "dir": "observe",
+   "kind": "real",
+   "value": 25.0
+  },
+  "SystemMachine.SS_Bonding.M_WS.iLS_Rz2_NTC": {
+   "dir": "observe",
+   "kind": "real",
+   "value": 25.0
+  },
+  "SystemMachine.SS_Bonding.M_WS.iLS_Rz2_PTC": {
+   "dir": "observe",
+   "kind": "real",
+   "value": 25.0
+  },
+  "SystemMachine.SS_Bonding.M_WS.iLS_XN_NTC": {
+   "dir": "observe",
+   "kind": "real",
+   "value": 25.0
+  },
+  "SystemMachine.SS_Bonding.M_WS.iLS_XN_PTC": {
+   "dir": "observe",
+   "kind": "real",
+   "value": 25.0
+  },
+  "SystemMachine.SS_Bonding.M_WS.iLS_XP_NTC": {
+   "dir": "observe",
+   "kind": "real",
+   "value": 25.0
+  },
+  "SystemMachine.SS_Bonding.M_WS.iLS_XP_PTC": {
+   "dir": "observe",
+   "kind": "real",
+   "value": 25.0
+  },
+  "SystemMachine.SS_Bonding.M_WS.iLS_YN_NTC": {
+   "dir": "observe",
+   "kind": "real",
+   "value": 25.0
+  },
+  "SystemMachine.SS_Bonding.M_WS.iLS_YN_PTC": {
+   "dir": "observe",
+   "kind": "real",
+   "value": 25.0
+  },
+  "SystemMachine.SS_Bonding.M_WS.iLS_YP_NTC": {
+   "dir": "observe",
+   "kind": "real",
+   "value": 25.0
+  },
+  "SystemMachine.SS_Bonding.M_WS.iLS_YP_PTC": {
+   "dir": "observe",
+   "kind": "real",
+   "value": 25.0
+  },
+  "SystemMachine.SS_Bonding.M_WS.iServoPowerOnMonitor": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": true
+  },
+  "SystemMachine.SS_Bonding.M_WS.iWaferHandoffResSig": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_Bonding.M_WS.iWaferRequestIn": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_Bonding.M_WS.iZeroEpin_Z": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_Bonding.M_WS.oAramPosSensorCalibrate_1": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_CH.M_CH.Rz": {
+   "dir": "command",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_CH.M_FA.ChipVacValue": {
+   "dir": "command",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_CH.M_FA.Rx": {
+   "dir": "command",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_CH.M_FA.Z": {
+   "dir": "command",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_CH.M_FA.iFA_ChuckPos_1": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_CH.M_FA.iFA_ChuckPos_Z1": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_CH.M_FA.iFA_Chuck_FlowMeterSig": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_CH.M_FA.iFA_Chuck_ForceSig": {
+   "dir": "observe",
+   "kind": "real",
+   "value": 0.0
+  },
+  "SystemMachine.SS_CH.M_FA.iFA_X_Temper": {
+   "dir": "observe",
+   "kind": "real",
+   "value": 25.0
+  },
+  "SystemMachine.SS_ME.M_AIR.AS_CameraCooling_1.oValue": {
+   "dir": "observe",
+   "kind": "real",
+   "value": 0.0
+  },
+  "SystemMachine.SS_ME.M_AIR.AS_CameraCooling_2.oValue": {
+   "dir": "observe",
+   "kind": "real",
+   "value": 0.0
+  },
+  "SystemMachine.SS_ME.M_AIR.AS_CameraCooling_3.oValue": {
+   "dir": "observe",
+   "kind": "real",
+   "value": 0.0
+  },
+  "SystemMachine.SS_ME.M_AIR.AS_CameraCooling_4.oValue": {
+   "dir": "observe",
+   "kind": "real",
+   "value": 0.0
+  },
+  "SystemMachine.SS_ME.M_AIR.AS_X_Cooling": {
+   "dir": "command",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_ME.M_AIR.AS_X_Cooling.FlowMeter.oValue": {
+   "dir": "observe",
+   "kind": "real",
+   "value": 0.0
+  },
+  "SystemMachine.SS_ME.M_AIR.AS_X_Cooling.OpenAir": {
+   "dir": "command",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_ME.M_AIR.AS_X_Cooling.OpenPositive": {
+   "dir": "command",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_ME.M_AIR.AS_X_Cooling.oAirState": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_ME.M_AIR.AS_X_Cooling.oPositiveState": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_ME.M_AIR.AS_Y_Cooling": {
+   "dir": "command",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_ME.M_AIR.AS_Y_Cooling.FlowMeter.oValue": {
+   "dir": "observe",
+   "kind": "real",
+   "value": 0.0
+  },
+  "SystemMachine.SS_ME.M_AIR.ChipTransferNeg.PressureSwitch.oValue": {
+   "dir": "observe",
+   "kind": "real",
+   "value": 0.0
+  },
+  "SystemMachine.SS_ME.M_AIR.ChipTransferPos.PressureSwitch.oValue": {
+   "dir": "observe",
+   "kind": "real",
+   "value": 0.0
+  },
+  "SystemMachine.SS_ME.M_AIR.ChipVac": {
+   "dir": "command",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_ME.M_AIR.ChipVac.FlowMeter.oValue": {
+   "dir": "observe",
+   "kind": "real",
+   "value": 0.0
+  },
+  "SystemMachine.SS_ME.M_AIR.ChipVacOpen.PressureSwitch.oValue": {
+   "dir": "observe",
+   "kind": "real",
+   "value": 0.0
+  },
+  "SystemMachine.SS_ME.M_AIR.ChuckVac": {
+   "dir": "command",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_ME.M_AIR.ChuckVac.FlowMeter.oValue": {
+   "dir": "observe",
+   "kind": "real",
+   "value": 0.0
+  },
+  "SystemMachine.SS_ME.M_AIR.ChuckVac.PressureSwitch.oValue": {
+   "dir": "observe",
+   "kind": "real",
+   "value": 0.0
+  },
+  "SystemMachine.SS_ME.M_AIR.ExhaustReserve_1.oValue": {
+   "dir": "observe",
+   "kind": "real",
+   "value": 0.0
+  },
+  "SystemMachine.SS_ME.M_AIR.ExhaustReserve_2.oValue": {
+   "dir": "observe",
+   "kind": "real",
+   "value": 0.0
+  },
+  "SystemMachine.SS_ME.M_AIR.FA_Exhaust.oValue": {
+   "dir": "observe",
+   "kind": "real",
+   "value": 0.0
+  },
+  "SystemMachine.SS_ME.M_AIR.Facility_N2Pressure.oValue": {
+   "dir": "observe",
+   "kind": "real",
+   "value": 500.0
+  },
+  "SystemMachine.SS_ME.M_AIR.Facility_NegPressure.oValue": {
+   "dir": "observe",
+   "kind": "real",
+   "value": -85.0
+  },
+  "SystemMachine.SS_ME.M_AIR.Facility_PosPressure.oValue": {
+   "dir": "observe",
+   "kind": "real",
+   "value": 700.0
+  },
+  "SystemMachine.SS_ME.M_AIR.GlassCoolingIn": {
+   "dir": "command",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_ME.M_AIR.GlassCoolingIn.FlowMeter.oValue": {
+   "dir": "observe",
+   "kind": "real",
+   "value": 0.0
+  },
+  "SystemMachine.SS_ME.M_AIR.GlassCoolingOut": {
+   "dir": "command",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_ME.M_AIR.GlassCoolingOut.FlowMeter.oValue": {
+   "dir": "observe",
+   "kind": "real",
+   "value": 0.0
+  },
+  "SystemMachine.SS_ME.M_AIR.IonicBarPositive": {
+   "dir": "command",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_ME.M_AIR.N2Reserve_1": {
+   "dir": "command",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_ME.M_AIR.N2Reserve_1.FlowMeter.oValue": {
+   "dir": "observe",
+   "kind": "real",
+   "value": 0.0
+  },
+  "SystemMachine.SS_ME.M_AIR.N2Reserve_2": {
+   "dir": "command",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_ME.M_AIR.N2Reserve_2.FlowMeter.oValue": {
+   "dir": "observe",
+   "kind": "real",
+   "value": 0.0
+  },
+  "SystemMachine.SS_ME.M_AIR.N2Seal": {
+   "dir": "command",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_ME.M_AIR.N2Seal.FlowMeter.oValue": {
+   "dir": "observe",
+   "kind": "real",
+   "value": 0.0
+  },
+  "SystemMachine.SS_ME.M_AIR.NegReserveVac_1": {
+   "dir": "command",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_ME.M_AIR.NegReserveVac_1.FlowMeter.oValue": {
+   "dir": "observe",
+   "kind": "real",
+   "value": 0.0
+  },
+  "SystemMachine.SS_ME.M_AIR.NegReserveVac_1.PressureSwitch.oValue": {
+   "dir": "observe",
+   "kind": "real",
+   "value": 0.0
+  },
+  "SystemMachine.SS_ME.M_AIR.NegReserveVac_2": {
+   "dir": "command",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_ME.M_AIR.NegReserveVac_2.FlowMeter.oValue": {
+   "dir": "observe",
+   "kind": "real",
+   "value": 0.0
+  },
+  "SystemMachine.SS_ME.M_AIR.NegReserveVac_2.PressureSwitch.oValue": {
+   "dir": "observe",
+   "kind": "real",
+   "value": 0.0
+  },
+  "SystemMachine.SS_ME.M_AIR.PosPressurePreserve_1.PressureSwitch.oValue": {
+   "dir": "observe",
+   "kind": "real",
+   "value": 0.0
+  },
+  "SystemMachine.SS_ME.M_AIR.PosPressurePreserve_2.PressureSwitch.oValue": {
+   "dir": "observe",
+   "kind": "real",
+   "value": 0.0
+  },
+  "SystemMachine.SS_ME.M_AIR.PosPressureReserve_1": {
+   "dir": "command",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_ME.M_AIR.PosPressureReserve_1.FlowMeter.oValue": {
+   "dir": "observe",
+   "kind": "real",
+   "value": 0.0
+  },
+  "SystemMachine.SS_ME.M_AIR.PosPressureReserve_2": {
+   "dir": "command",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_ME.M_AIR.PosPressureReserve_2.FlowMeter.oValue": {
+   "dir": "observe",
+   "kind": "real",
+   "value": 0.0
+  },
+  "SystemMachine.SS_ME.M_AIR.PulseHeatCooling_1": {
+   "dir": "command",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_ME.M_AIR.PulseHeatCooling_1.FlowMeter.oValue": {
+   "dir": "observe",
+   "kind": "real",
+   "value": 0.0
+  },
+  "SystemMachine.SS_ME.M_AIR.PulseHeatCooling_2": {
+   "dir": "command",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_ME.M_AIR.PulseHeatCooling_2.FlowMeter.oValue": {
+   "dir": "observe",
+   "kind": "real",
+   "value": 0.0
+  },
+  "SystemMachine.SS_ME.M_AIR.WT_AirFootComPos_1.PressureSwitch.oValue": {
+   "dir": "observe",
+   "kind": "real",
+   "value": 0.0
+  },
+  "SystemMachine.SS_ME.M_AIR.WT_AirFootComPos_2.PressureSwitch.oValue": {
+   "dir": "observe",
+   "kind": "real",
+   "value": 0.0
+  },
+  "SystemMachine.SS_ME.M_AIR.WT_AirFootComPos_3.PressureSwitch.oValue": {
+   "dir": "observe",
+   "kind": "real",
+   "value": 0.0
+  },
+  "SystemMachine.SS_ME.M_AIR.WT_AirfootCompPos": {
+   "dir": "command",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_ME.M_AIR.WT_AirfootCompVac": {
+   "dir": "command",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_ME.M_AIR.WT_AirfootCompVac.FlowMeter.oValue": {
+   "dir": "observe",
+   "kind": "real",
+   "value": 0.0
+  },
+  "SystemMachine.SS_ME.M_AIR.WT_AirfootCompVac.PressureSwitch.oValue": {
+   "dir": "observe",
+   "kind": "real",
+   "value": 0.0
+  },
+  "SystemMachine.SS_ME.M_AIR.WT_BondingVac_1": {
+   "dir": "command",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_ME.M_AIR.WT_BondingVac_1.FlowMeter.oValue": {
+   "dir": "observe",
+   "kind": "real",
+   "value": 0.0
+  },
+  "SystemMachine.SS_ME.M_AIR.WT_BondingVac_1.PressureSwitch.oValue": {
+   "dir": "observe",
+   "kind": "real",
+   "value": 0.0
+  },
+  "SystemMachine.SS_ME.M_AIR.WT_BondingVac_2": {
+   "dir": "command",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_ME.M_AIR.WT_BondingVac_2.FlowMeter.oValue": {
+   "dir": "observe",
+   "kind": "real",
+   "value": 0.0
+  },
+  "SystemMachine.SS_ME.M_AIR.WT_BondingVac_2.PressureSwitch.oValue": {
+   "dir": "observe",
+   "kind": "real",
+   "value": 0.0
+  },
+  "SystemMachine.SS_ME.M_AIR.WT_BondingVac_3": {
+   "dir": "command",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_ME.M_AIR.WT_BondingVac_3.FlowMeter.oValue": {
+   "dir": "observe",
+   "kind": "real",
+   "value": 0.0
+  },
+  "SystemMachine.SS_ME.M_AIR.WT_BondingVac_3.PressureSwitch.oValue": {
+   "dir": "observe",
+   "kind": "real",
+   "value": 0.0
+  },
+  "SystemMachine.SS_ME.M_AIR.WT_ChipVac": {
+   "dir": "command",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_ME.M_AIR.WT_ChipVac.FlowMeter.oValue": {
+   "dir": "observe",
+   "kind": "real",
+   "value": 0.0
+  },
+  "SystemMachine.SS_ME.M_AIR.WT_ChipVac.PressureSwitch.oValue": {
+   "dir": "observe",
+   "kind": "real",
+   "value": 0.0
+  },
+  "SystemMachine.SS_ME.M_AIR.WT_TrayVac_1": {
+   "dir": "command",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_ME.M_AIR.WT_TrayVac_1.FlowMeter.oValue": {
+   "dir": "observe",
+   "kind": "real",
+   "value": 0.0
+  },
+  "SystemMachine.SS_ME.M_AIR.WT_TrayVac_1.PressureSwitch.oValue": {
+   "dir": "observe",
+   "kind": "real",
+   "value": 0.0
+  },
+  "SystemMachine.SS_ME.M_AIR.WT_TrayVac_2": {
+   "dir": "command",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_ME.M_AIR.WT_TrayVac_2.FlowMeter.oValue": {
+   "dir": "observe",
+   "kind": "real",
+   "value": 0.0
+  },
+  "SystemMachine.SS_ME.M_AIR.WT_TrayVac_2.PressureSwitch.oValue": {
+   "dir": "observe",
+   "kind": "real",
+   "value": 0.0
+  },
+  "SystemMachine.SS_ME.M_AIR.WT_TrayVac_3": {
+   "dir": "command",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_ME.M_AIR.WT_TrayVac_3.FlowMeter.oValue": {
+   "dir": "observe",
+   "kind": "real",
+   "value": 0.0
+  },
+  "SystemMachine.SS_ME.M_AIR.WT_TrayVac_3.PressureSwitch.oValue": {
+   "dir": "observe",
+   "kind": "real",
+   "value": 0.0
+  },
+  "SystemMachine.SS_ME.M_AIR.WT_TrayVac_4": {
+   "dir": "command",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_ME.M_AIR.WT_TrayVac_4.FlowMeter.oValue": {
+   "dir": "observe",
+   "kind": "real",
+   "value": 0.0
+  },
+  "SystemMachine.SS_ME.M_AIR.WT_TrayVac_4.PressureSwitch.oValue": {
+   "dir": "observe",
+   "kind": "real",
+   "value": 0.0
+  },
+  "SystemMachine.SS_ME.M_AIR.WT_WaferVac": {
+   "dir": "command",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_ME.M_AIR.WT_WaferVac.FlowMeter.oValue": {
+   "dir": "observe",
+   "kind": "real",
+   "value": 0.0
+  },
+  "SystemMachine.SS_ME.M_AIR.WT_WaferVac.OpenAir": {
+   "dir": "command",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_ME.M_AIR.WT_WaferVac.OpenNegtive": {
+   "dir": "command",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_ME.M_AIR.WT_WaferVac.OpenPositive": {
+   "dir": "command",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_ME.M_AIR.WT_WaferVac.PressureSwitch.oValue": {
+   "dir": "observe",
+   "kind": "real",
+   "value": 0.0
+  },
+  "SystemMachine.SS_ME.M_AIR.WT_WaferVac.oAirState": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_ME.M_AIR.WT_WaferVac.oNegtiveState": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_ME.M_AIR.WT_WaferVac.oPositiveState": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_ME.M_EMO.iEFEM_EMO": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_ME.M_EMO.iMachine_EMO": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_ME.M_EMO.iMachine_Right_EMO": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_ME.M_EMO.iPowerControl_EMO": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_ME.M_InterLock.AllDoors_Mask": {
+   "dir": "command",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_ME.M_InterLock.AllDoors_Reset": {
+   "dir": "command",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_ME.M_InterLock.InterLock_Front": {
+   "dir": "command",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_ME.M_InterLock.InterLock_Left": {
+   "dir": "command",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_ME.M_InterLock.InterLock_Right": {
+   "dir": "command",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_ME.M_InterLock.iFrontDoorStatus_1": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": true
+  },
+  "SystemMachine.SS_ME.M_InterLock.iFrontDoorStatus_2": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": true
+  },
+  "SystemMachine.SS_ME.M_InterLock.iFrontLockStatus_1": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": true
+  },
+  "SystemMachine.SS_ME.M_InterLock.iFrontockStatus_2": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": true
+  },
+  "SystemMachine.SS_ME.M_InterLock.iInterlock_Mask": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_ME.M_InterLock.iInterlock_Reset": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_ME.M_InterLock.iLeftDoorStatus_1": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": true
+  },
+  "SystemMachine.SS_ME.M_InterLock.iLeftDoorStatus_2": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": true
+  },
+  "SystemMachine.SS_ME.M_InterLock.iLeftLockStatus_1": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": true
+  },
+  "SystemMachine.SS_ME.M_InterLock.iLeftLockStatus_2": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": true
+  },
+  "SystemMachine.SS_ME.M_InterLock.iRightDoorStatus_1": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": true
+  },
+  "SystemMachine.SS_ME.M_InterLock.iRightLockStatus_1": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": true
+  },
+  "SystemMachine.SS_ME.M_InterLock.oAllDoors_Mask": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_ME.M_InterLock.oAllDoors_Reset": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_ME.M_InterLock.oInterLock_Front": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_ME.M_InterLock.oInterLock_Left": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_ME.M_InterLock.oInterLock_Right": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_ME.M_PowerSwitch.Backup_PowerOff": {
+   "dir": "command",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_ME.M_PowerSwitch.Backup_PowerOn": {
+   "dir": "command",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_ME.M_PowerSwitch.Bonding_PowerOff": {
+   "dir": "command",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_ME.M_PowerSwitch.Bonding_PowerOn": {
+   "dir": "command",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_ME.M_PowerSwitch.CH_PowerOff": {
+   "dir": "command",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_ME.M_PowerSwitch.CH_PowerOn": {
+   "dir": "command",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_ME.M_PowerSwitch.EV_PowerOff": {
+   "dir": "command",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_ME.M_PowerSwitch.EV_PowerOn": {
+   "dir": "command",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_ME.M_PowerSwitch.Fan": {
+   "dir": "command",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_ME.M_PowerSwitch.ILLightOn": {
+   "dir": "command",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_ME.M_PowerSwitch.ILLight_Ind": {
+   "dir": "command",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_ME.M_PowerSwitch.IonBar": {
+   "dir": "command",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_ME.M_PowerSwitch.MuteLight_Ind": {
+   "dir": "command",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_ME.M_PowerSwitch.PLASMA_Acid_PowerOff": {
+   "dir": "command",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_ME.M_PowerSwitch.PLASMA_Acid_PowerOn": {
+   "dir": "command",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_ME.M_PowerSwitch.ResetLight_Ind": {
+   "dir": "command",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_ME.M_PowerSwitch.SystemOff_Ind": {
+   "dir": "command",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_ME.M_PowerSwitch.iLightOn": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_ME.M_PowerSwitch.iMuteOn": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_ME.M_PowerSwitch.iSystemOff": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_ME.M_PowerSwitch.iSystemOn": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": true
+  },
+  "SystemMachine.SS_ME.M_PowerSwitch.oBackup_PowerOff": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_ME.M_PowerSwitch.oBackup_PowerOn": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_ME.M_PowerSwitch.oBonding_PowerOff": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_ME.M_PowerSwitch.oBonding_PowerOn": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_ME.M_PowerSwitch.oCH_PowerOff": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_ME.M_PowerSwitch.oCH_PowerOn": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_ME.M_PowerSwitch.oEV_PowerOff": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_ME.M_PowerSwitch.oEV_PowerOn": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_ME.M_PowerSwitch.oFan": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_ME.M_PowerSwitch.oILLightOn": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_ME.M_PowerSwitch.oILLight_Ind": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_ME.M_PowerSwitch.oIonBar": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_ME.M_PowerSwitch.oMuteLight_Ind": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_ME.M_PowerSwitch.oPLASMA_Acid_PowerOff": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_ME.M_PowerSwitch.oPLASMA_Acid_PowerOn": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_ME.M_PowerSwitch.oResetLight_Ind": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_ME.M_PowerSwitchoSystemOff_Ind": {
+   "dir": "command",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_ME.M_SLAM.E_SignalTower.BlueLight.UpdateMode": {
+   "dir": "command",
+   "kind": "null",
+   "value": null
+  },
+  "SystemMachine.SS_ME.M_SLAM.E_SignalTower.BlueLight.oLightOn": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_ME.M_SLAM.E_SignalTower.Buzzer.UpdateMode": {
+   "dir": "command",
+   "kind": "null",
+   "value": null
+  },
+  "SystemMachine.SS_ME.M_SLAM.E_SignalTower.Buzzer.oBuzzOn": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_ME.M_SLAM.E_SignalTower.GreenLight.UpdateMode": {
+   "dir": "command",
+   "kind": "null",
+   "value": null
+  },
+  "SystemMachine.SS_ME.M_SLAM.E_SignalTower.GreenLight.oLightOn": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_ME.M_SLAM.E_SignalTower.RedLight.UpdateMode": {
+   "dir": "command",
+   "kind": "null",
+   "value": null
+  },
+  "SystemMachine.SS_ME.M_SLAM.E_SignalTower.RedLight.oLightOn": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_ME.M_SLAM.E_SignalTower.YellowLight.UpdateMode": {
+   "dir": "command",
+   "kind": "null",
+   "value": null
+  },
+  "SystemMachine.SS_ME.M_SLAM.E_SignalTower.YellowLight.oLightOn": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_ME.M_Voltage_Warning.i3PH_OV2_HighHigh": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_ME.M_Voltage_Warning.i3PH_OV_High": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_ME.M_Voltage_Warning.i3PH_UV1_Low": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": false
+  },
+  "SystemMachine.SS_ME.M_Voltage_Warning.i3PH_UV2_LowLow": {
+   "dir": "observe",
+   "kind": "bool",
+   "value": false
+  }
+ }
+}

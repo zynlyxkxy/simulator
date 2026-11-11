@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>键合设备 · 轴控与运动参数配置面板</title>
+<style>
+  :root{
+    --bg:#14181d; --bg2:#1b2129; --bg3:#222a34; --line:#2e3947;
+    --fg:#d5dde6; --dim:#8494a5; --acc:#3fa9f5; --ok:#2fbf71; --warn:#e6a23c; --err:#e05252;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{background:var(--bg);color:var(--fg);font:12px/1.5 "Segoe UI","Microsoft YaHei",sans-serif}
+  body{padding:8px 10px;max-width:1560px;margin:0 auto}
+  button{background:var(--bg3);color:var(--fg);border:1px solid var(--line);border-radius:4px;
+         padding:2px 8px;cursor:pointer;font:inherit}
+  button:hover{border-color:var(--acc)}
+  button:active{transform:translateY(1px)}
+  input,select{background:#10141a;color:var(--fg);border:1px solid var(--line);border-radius:4px;
+               padding:1px 5px;font:11px Consolas,monospace}
+  input:focus,select:focus{outline:none;border-color:var(--acc)}
+
+  /* ---- 顶部工具栏 ---- */
+  #toolbar{display:flex;align-items:center;gap:14px;flex-wrap:wrap;
+           background:var(--bg2);border:1px solid var(--line);border-radius:6px;
+           padding:6px 12px;margin-bottom:8px;position:sticky;top:0;z-index:10}
+  #toolbar .title{font-weight:600;font-size:14px;margin-right:6px}
+  .lamp{display:inline-block;width:10px;height:10px;border-radius:50%;background:#555;vertical-align:middle}
+  .lamp.on{background:var(--ok);box-shadow:0 0 6px var(--ok)}
+  .lamp.off{background:var(--err);box-shadow:0 0 6px var(--err)}
+  .lamp.moving{background:var(--warn);box-shadow:0 0 6px var(--warn)}
+  #connText{color:var(--dim)}
+  #simClock{font:13px Consolas,monospace;color:var(--acc)}
+  .tb-item{display:flex;align-items:center;gap:6px;color:var(--dim)}
+  #speedVal{font:12px Consolas,monospace;color:var(--fg);min-width:38px}
+  #btnEstop{background:#7a1f1f;border-color:#a03030;color:#ffd7d7;font-weight:700;padding:3px 14px}
+  #btnEstop:hover{background:#9b2626}
+  .switch{position:relative;width:34px;height:16px;background:#3a4654;border-radius:8px;cursor:pointer;border:1px solid var(--line)}
+  .switch::after{content:"";position:absolute;top:1px;left:1px;width:12px;height:12px;border-radius:50%;background:#8a97a5;transition:.15s}
+  .switch.on{background:#1d5c3a}
+  .switch.on::after{left:19px;background:var(--ok)}
+
+  /* ---- 分组 ---- */
+  details.group{background:var(--bg2);border:1px solid var(--line);border-radius:6px;margin-bottom:6px}
+  details.group>summary{cursor:pointer;padding:5px 12px;font-weight:600;list-style:none;user-select:none}
+  details.group>summary::before{content:"▸ ";color:var(--dim)}
+  details.group[open]>summary::before{content:"▾ "}
+  details.group>summary .cnt{color:var(--dim);font-weight:400;font-size:11px}
+  .gbody{padding:2px 8px 6px}
+
+  /* ---- 轴行 ---- */
+  .ax-head,.ax-row{display:grid;gap:6px;align-items:center;
+    grid-template-columns:150px 42px 132px 132px 86px 46px 96px 26px 64px 26px 118px 52px 52px 26px;
+    padding:2px 4px;border-bottom:1px solid #232b36}
+  .ax-head{color:var(--dim);font-size:11px;border-bottom:1px solid var(--line)}
+  .ax-row:hover{background:#1f2732}
+  .ax-name b{font-weight:600;margin-right:6px}
+  .ax-name i{color:var(--dim);font-style:normal;font-size:11px}
+  .badge{font-size:10px;text-align:center;border-radius:3px;padding:0 2px;border:1px solid}
+  .badge.ACS{color:#7ec3ff;border-color:#2c5a82;background:#16283a}
+  .badge.PLC{color:#c8a6ff;border-color:#5a3f82;background:#241a3a}
+  .val{font:12px Consolas,monospace;text-align:right;white-space:nowrap}
+  .val.act{color:#9fd3a8}
+  .val.dev{color:var(--dim);font-size:11px}
+  .val.dev.big{color:var(--warn)}
+  .jog-step{width:56px;text-align:right}
+  .tgt{width:70px;text-align:right}
+  .row-btn{padding:1px 6px;font-size:11px}
+  .row-btn:disabled{opacity:.45;cursor:not-allowed}
+
+  /* ---- 回零状态徽标 ---- */
+  .hbadge{font-size:10px;text-align:center;border-radius:3px;padding:0 4px;border:1px solid;white-space:nowrap}
+  .hbadge.never{color:#9aa7b4;border-color:#455262;background:#1a212b}
+  .hbadge.homing{color:#f0c36d;border-color:#8a6a2c;background:#332a16}
+  .hbadge.done{color:#5fd398;border-color:#2c7a52;background:#14301f}
+  .hbadge.fault{color:#ff9a9a;border-color:#a03030;background:#3a1d1d}
+  .ax-row.fault{border:1px solid var(--err);border-radius:4px;background:#2a1a1a}
+  .cfg .persisted{display:none;color:var(--ok);font-size:11px;border:1px solid #2c7a52;
+                  border-radius:3px;padding:0 6px}
+  .cfg .persisted.show{display:inline-block}
+
+  /* ---- 参数卡 ---- */
+  .cfg{grid-column:1/-1;background:var(--bg3);border:1px solid var(--line);border-radius:5px;
+       padding:8px 12px;margin:4px 0 6px;display:none}
+  .cfg.open{display:block}
+  .cfg-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:8px 18px;align-items:end}
+  .cfg label{display:block;color:var(--dim);font-size:11px;margin-bottom:2px}
+  .cfg input,.cfg select{width:130px}
+  .cfg .ro{color:var(--fg);font:12px Consolas,monospace}
+  .cfg .actions{display:flex;gap:8px;align-items:center}
+  .cfg .hint{color:var(--dim);font-size:11px}
+
+  /* ---- IO 监视页 ---- */
+  #tabbar{display:flex;gap:4px;margin-bottom:8px}
+  #tabbar button{padding:4px 18px;font-size:13px}
+  #tabbar button.active{background:var(--bg3);border-color:var(--acc);color:#fff}
+  #interlockBar{display:none;background:#3a1d1d;border:1px solid var(--err);color:#ffd7d7;
+                border-radius:6px;padding:4px 12px;margin-bottom:8px;font-weight:600}
+  .io-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:2px 16px;padding:4px 10px 8px}
+  .io-row{display:flex;align-items:center;gap:6px;padding:1px 2px;white-space:nowrap}
+  .io-row .lb{flex:1;overflow:hidden;text-overflow:ellipsis;color:var(--fg)}
+  .io-row .vv{font:11px Consolas,monospace;color:var(--acc)}
+  .io-row.err .lb,.io-row.err .vv{color:#ff9a9a}
+  .io-row.warn .lb,.io-row.warn .vv{color:#f0c36d}
+  .air-head,.air-row{display:grid;gap:6px;align-items:center;
+    grid-template-columns:210px 60px 150px 110px 110px;padding:2px 8px;border-bottom:1px solid #232b36}
+  .air-head{color:var(--dim);font-size:11px;border-bottom:1px solid var(--line)}
+  .air-state{font-size:10px;text-align:center;border-radius:3px;border:1px solid #455262;color:#9aa7b4}
+  .air-state.pos{color:#7ec3ff;border-color:#2c5a82;background:#16283a}
+  .air-state.neg{color:#5fd398;border-color:#2c7a52;background:#14301f}
+  .tri{display:flex;gap:3px}
+  .tri button{padding:1px 6px;font-size:11px}
+  .tri button.cur{border-color:var(--ok);color:#5fd398}
+  .air-val{font:11px Consolas,monospace;text-align:right;color:var(--acc)}
+
+  /* ---- 错误提示 ---- */
+  #toast{position:fixed;right:14px;bottom:14px;max-width:420px;background:#3a1d1d;border:1px solid var(--err);
+         color:#ffd7d7;border-radius:6px;padding:8px 12px;display:none;z-index:99;white-space:pre-wrap}
+  #offlineBar{display:none;background:#3a1d1d;border:1px solid var(--err);color:#ffd7d7;
+              border-radius:6px;padding:4px 12px;margin-bottom:8px}
+</style>
+</head>
+<body>
+
+<div id="offlineBar" style="display: none;">⚠ 后端离线（连续 3 次请求失败），持续重试中…</div>
+
+<div id="toolbar">
+  <span class="title">轴控面板</span>
+  <span class="tb-item"><span id="connLamp" class="lamp on"></span><span id="connText">后端已连接</span></span>
+  <span class="tb-item">仿真时钟 <span id="simClock">t = 75.120 s</span></span>
+  <span class="tb-item">全局倍速
+    <input type="range" id="speedRange" min="0.1" max="8" step="0.1" value="1" style="width:120px">
+    <span id="speedVal">×1.0</span>
+  </span>
+  <span class="tb-item">
+    <button id="btnEstop">急停</button>
+    <button id="btnReset">复位</button>
+    <button id="btnStopAll">全部停止</button>
+    <button id="btnHomeAll">全部回零</button>
+  </span>
+  <span class="tb-item">误差地图 <span id="emSwitch" class="switch on"></span><span id="emState">已启用</span></span>
+  <span class="tb-item">联锁使能 <span id="ilSwitch" class="switch on"></span><span id="ilState">已使能</span></span>
+</div>
+
+<div id="interlockBar" style="display: none;">⚠ 联锁异常</div>
+
+<div id="tabbar">
+  <button id="tabAxes" class="">轴控</button>
+  <button id="tabIO" class="active">IO 监视</button>
+</div>
+
+<div id="pageAxes" style="display: none;">
+<div id="groups"><details class="group" open=""><summary>硅片台模块 <span class="cnt">(6 轴)</span></summary><div class="gbody"><div class="ax-head"><span>轴</span><span>控制器</span><span>名义值</span><span>实际值</span><span>偏差</span><span>状态</span><span>回零</span><span></span><span>点动步长</span><span></span><span>绝对目标</span><span></span><span></span><span></span></div><div class="ax-row"><span class="ax-name"><b>硅片台X</b><i>WS_LS_X</i></span><span class="badge ACS">ACS</span><span class="val nom">7.528852 mm</span><span class="val act">7.528844 mm</span><span class="val dev">-8 nm</span><span><span class="lamp st on" title="到位"></span></span><span class="hbadge homing">回零中 fast_approach</span><button class="row-btn jog-m">−</button><input class="jog-step" type="number" step="any"><button class="row-btn jog-p">＋</button><span><input class="tgt" type="number" step="any" placeholder="mm"><button class="row-btn go">Go</button></span><button class="row-btn home" disabled="">回零</button><button class="row-btn stop">停止</button><button class="row-btn cfg-btn">⚙</button></div><div class="ax-row"><span class="ax-name"><b>硅片台Y</b><i>WS_LS_Y</i></span><span class="badge ACS">ACS</span><span class="val nom">43.399791 mm</span><span class="val act">43.399762 mm</span><span class="val dev">-29 nm</span><span><span class="lamp st on" title="到位"></span></span><span class="hbadge done">已回零</span><button class="row-btn jog-m">−</button><input class="jog-step" type="number" step="any"><button class="row-btn jog-p">＋</button><span><input class="tgt" type="number" step="any" placeholder="mm"><button class="row-btn go">Go</button></span><button class="row-btn home">回零</button><button class="row-btn stop">停止</button><button class="row-btn cfg-btn">⚙</button></div><div class="ax-row"><span class="ax-name"><b>硅片台旋转</b><i>WS_Rz</i></span><span class="badge ACS">ACS</span><span class="val nom" title="1.299945744e-2 rad">12999.457 µrad</span><span class="val act" title="1.299715559e-2 rad">12997.156 µrad</span><span class="val dev">-2.302 µrad</span><span><span class="lamp st on" title="到位"></span></span><span class="hbadge never">未回零</span><button class="row-btn jog-m">−</button><input class="jog-step" type="number" step="any"><button class="row-btn jog-p">＋</button><span><input class="tgt" type="number" step="any" placeholder="rad"><button class="row-btn go">Go</button></span><button class="row-btn home">回零</button><button class="row-btn stop">停止</button><button class="row-btn cfg-btn">⚙</button></div><div class="ax-row fault"><span class="ax-name"><b>顶针1</b><i>E_EPIN_Z_1</i></span><span class="badge PLC">PLC</span><span class="val nom">16.431873 mm</span><span class="val act">16.431876 mm</span><span class="val dev">+4 nm</span><span><span class="lamp st on" title="到位"></span></span><span class="hbadge fault">回零失败</span><button class="row-btn jog-m">−</button><input class="jog-step" type="number" step="any"><button class="row-btn jog-p">＋</button><span><input class="tgt" type="number" step="any" placeholder="mm"><button class="row-btn go">Go</button></span><button class="row-btn home">回零</button><button class="row-btn stop">停止</button><button class="row-btn cfg-btn">⚙</button></div><div class="ax-row"><span class="ax-name"><b>顶针2</b><i>E_EPIN_Z_2</i></span><span class="badge PLC">PLC</span><span class="val nom">12.137469 mm</span><span class="val act">12.137496 mm</span><span class="val dev">+27 nm</span><span><span class="lamp st on" title="到位"></span></span><span class="hbadge done">已回零</span><button class="row-btn jog-m">−</button><input class="jog-step" type="number" step="any"><button class="row-btn jog-p">＋</button><span><input class="tgt" type="number" step="any" placeholder="mm"><button class="row-btn go">Go</button></span><button class="row-btn home">回零</button><button class="row-btn stop">停止</button><button class="row-btn cfg-btn">⚙</button></div><div class="ax-row"><span class="ax-name"><b>顶针3</b><i>E_EPIN_Z_3</i></span><span class="badge PLC">PLC</span><span class="val nom">10.009372 mm</span><span class="val act">10.009398 mm</span><span class="val dev">+26 nm</span><span><span class="lamp st on" title="到位"></span></span><span class="hbadge done">已回零</span><button class="row-btn jog-m">−</button><input class="jog-step" type="number" step="any"><button class="row-btn jog-p">＋</button><span><input class="tgt" type="number" step="any" placeholder="mm"><button class="row-btn go">Go</button></span><button class="row-btn home">回零</button><button class="row-btn stop">停止</button><button class="row-btn cfg-btn">⚙</button></div></div></details><details class="group" open=""><summary>键合模块 <span class="cnt">(3 轴)</span></summary><div class="gbody"><div class="ax-head"><span>轴</span><span>控制器</span><span>名义值</span><span>实际值</span><span>偏差</span><span>状态</span><span>回零</span><span></span><span>点动步长</span><span></span><span>绝对目标</span><span></span><span></span><span></span></div><div class="ax-row"><span class="ax-name"><b>键合臂Z</b><i>BS_Arm_Z</i></span><span class="badge PLC">PLC</span><span class="val nom">-115.051504 mm</span><span class="val act">-115.051504 mm</span><span class="val dev">+0 nm</span><span><span class="lamp st on" title="到位"></span></span><span class="hbadge done">已回零</span><button class="row-btn jog-m">−</button><input class="jog-step" type="number" step="any"><button class="row-btn jog-p">＋</button><span><input class="tgt" type="number" step="any" placeholder="mm"><button class="row-btn go">Go</button></span><button class="row-btn home">回零</button><button class="row-btn stop">停止</button><button class="row-btn cfg-btn">⚙</button></div><div class="ax-row"><span class="ax-name"><b>校准Rx</b><i>BS_CAL_Rx</i></span><span class="badge PLC">PLC</span><span class="val nom" title="2.340491167e-4 rad">234.049 µrad</span><span class="val act" title="2.315512756e-4 rad">231.551 µrad</span><span class="val dev">-2.498 µrad</span><span><span class="lamp st on" title="到位"></span></span><span class="hbadge done">已回零</span><button class="row-btn jog-m">−</button><input class="jog-step" type="number" step="any"><button class="row-btn jog-p">＋</button><span><input class="tgt" type="number" step="any" placeholder="rad"><button class="row-btn go">Go</button></span><button class="row-btn home">回零</button><button class="row-btn stop">停止</button><button class="row-btn cfg-btn">⚙</button></div><div class="ax-row"><span class="ax-name"><b>校准Ry</b><i>BS_CAL_Ry</i></span><span class="badge PLC">PLC</span><span class="val nom" title="1.226711389e-3 rad">1226.711 µrad</span><span class="val act" title="1.223963643e-3 rad">1223.964 µrad</span><span class="val dev">-2.748 µrad</span><span><span class="lamp st on" title="到位"></span></span><span class="hbadge done">已回零</span><button class="row-btn jog-m">−</button><input class="jog-step" type="number" step="any"><button class="row-btn jog-p">＋</button><span><input class="tgt" type="number" step="any" placeholder="rad"><button class="row-btn go">Go</button></span><button class="row-btn home">回零</button><button class="row-btn stop">停止</button><button class="row-btn cfg-btn">⚙</button></div></div></details><details class="group" open=""><summary>对准模块 <span class="cnt">(5 轴)</span></summary><div class="gbody"><div class="ax-head"><span>轴</span><span>控制器</span><span>名义值</span><span>实际值</span><span>偏差</span><span>状态</span><span>回零</span><span></span><span>点动步长</span><span></span><span>绝对目标</span><span></span><span></span><span></span></div><div class="ax-row"><span class="ax-name"><b>对准台X</b><i>AS_X</i></span><span class="badge ACS">ACS</span><span class="val nom">43.443185 mm</span><span class="val act">43.443180 mm</span><span class="val dev">-5 nm</span><span><span class="lamp st on" title="到位"></span></span><span class="hbadge done">已回零</span><button class="row-btn jog-m">−</button><input class="jog-step" type="number" step="any"><button class="row-btn jog-p">＋</button><span><input class="tgt" type="number" step="any" placeholder="mm"><button class="row-btn go">Go</button></span><button class="row-btn home">回零</button><button class="row-btn stop">停止</button><button class="row-btn cfg-btn">⚙</button></div><div class="ax-row"><span class="ax-name"><b>对准台Y</b><i>AS_Y</i></span><span class="badge ACS">ACS</span><span class="val nom">53.106730 mm</span><span class="val act">53.106752 mm</span><span class="val dev">+22 nm</span><span><span class="lamp st on" title="到位"></span></span><span class="hbadge done">已回零</span><button class="row-btn jog-m">−</button><input class="jog-step" type="number" step="any"><button class="row-btn jog-p">＋</button><span><input class="tgt" type="number" step="any" placeholder="mm"><button class="row-btn go">Go</button></span><button class="row-btn home">回零</button><button class="row-btn stop">停止</button><button class="row-btn cfg-btn">⚙</button></div><div class="ax-row"><span class="ax-name"><b>对准台Z</b><i>AS_Z</i></span><span class="badge ACS">ACS</span><span class="val nom">0.827578 mm</span><span class="val act">0.827607 mm</span><span class="val dev">+29 nm</span><span><span class="lamp st on" title="到位"></span></span><span class="hbadge done">已回零</span><button class="row-btn jog-m">−</button><input class="jog-step" type="number" step="any"><button class="row-btn jog-p">＋</button><span><input class="tgt" type="number" step="any" placeholder="mm"><button class="row-btn go">Go</button></span><button class="row-btn home">回零</button><button class="row-btn stop">停止</button><button class="row-btn cfg-btn">⚙</button></div><div class="ax-row"><span class="ax-name"><b>对准Rx</b><i>AS_Rx</i></span><span class="badge ACS">ACS</span><span class="val nom" title="-1.398618885e-3 rad">-1398.619 µrad</span><span class="val act" title="-1.397734116e-3 rad">-1397.734 µrad</span><span class="val dev">+0.885 µrad</span><span><span class="lamp st on" title="到位"></span></span><span class="hbadge done">已回零</span><button class="row-btn jog-m">−</button><input class="jog-step" type="number" step="any"><button class="row-btn jog-p">＋</button><span><input class="tgt" type="number" step="any" placeholder="rad"><button class="row-btn go">Go</button></span><button class="row-btn home">回零</button><button class="row-btn stop">停止</button><button class="row-btn cfg-btn">⚙</button></div><div class="ax-row"><span class="ax-name"><b>对准Ry</b><i>AS_Ry</i></span><span class="badge ACS">ACS</span><span class="val nom" title="-9.180955336e-4 rad">-918.096 µrad</span><span class="val act" title="-9.200296201e-4 rad">-920.030 µrad</span><span class="val dev">-1.934 µrad</span><span><span class="lamp st on" title="到位"></span></span><span class="hbadge done">已回零</span><button class="row-btn jog-m">−</button><input class="jog-step" type="number" step="any"><button class="row-btn jog-p">＋</button><span><input class="tgt" type="number" step="any" placeholder="rad"><button class="row-btn go">Go</button></span><button class="row-btn home">回零</button><button class="row-btn stop">停止</button><button class="row-btn cfg-btn">⚙</button></div></div></details><details class="group" open=""><summary>翻转模块 <span class="cnt">(4 轴)</span></summary><div class="gbody"><div class="ax-head"><span>轴</span><span>控制器</span><span>名义值</span><span>实际值</span><span>偏差</span><span>状态</span><span>回零</span><span></span><span>点动步长</span><span></span><span>绝对目标</span><span></span><span></span><span></span></div><div class="ax-row"><span class="ax-name"><b>翻转X</b><i>FA_X</i></span><span class="badge ACS">ACS</span><span class="val nom">-564.880525 mm</span><span class="val act">-564.880555 mm</span><span class="val dev">-30 nm</span><span><span class="lamp st on" title="到位"></span></span><span class="hbadge done">已回零</span><button class="row-btn jog-m">−</button><input class="jog-step" type="number" step="any"><button class="row-btn jog-p">＋</button><span><input class="tgt" type="number" step="any" placeholder="mm"><button class="row-btn go">Go</button></span><button class="row-btn home">回零</button><button class="row-btn stop">停止</button><button class="row-btn cfg-btn">⚙</button></div><div class="ax-row"><span class="ax-name"><b>翻转Z</b><i>FA_Z</i></span><span class="badge PLC">PLC</span><span class="val nom">17.684026 mm</span><span class="val act">17.684013 mm</span><span class="val dev">-13 nm</span><span><span class="lamp st on" title="到位"></span></span><span class="hbadge done">已回零</span><button class="row-btn jog-m">−</button><input class="jog-step" type="number" step="any"><button class="row-btn jog-p">＋</button><span><input class="tgt" type="number" step="any" placeholder="mm"><button class="row-btn go">Go</button></span><button class="row-btn home">回零</button><button class="row-btn stop">停止</button><button class="row-btn cfg-btn">⚙</button></div><div class="ax-row"><span class="ax-name"><b>翻转Rx</b><i>FA_Rx</i></span><span class="badge PLC">PLC</span><span class="val nom" title="1.437374390e+0 rad">1437374.390 µrad</span><span class="val act" title="1.437375981e+0 rad">1437375.981 µrad</span><span class="val dev">+1.591 µrad</span><span><span class="lamp st on" title="到位"></span></span><span class="hbadge done">已回零</span><button class="row-btn jog-m">−</button><input class="jog-step" type="number" step="any"><button class="row-btn jog-p">＋</button><span><input class="tgt" type="number" step="any" placeholder="rad"><button class="row-btn go">Go</button></span><button class="row-btn home">回零</button><button class="row-btn stop">停止</button><button class="row-btn cfg-btn">⚙</button></div><div class="ax-row"><span class="ax-name"><b>卡盘旋转</b><i>CH_Rz</i></span><span class="badge PLC">PLC</span><span class="val nom" title="5.308553056e-1 rad">530855.306 µrad</span><span class="val act" title="5.308583054e-1 rad">530858.305 µrad</span><span class="val dev">+3.000 µrad</span><span><span class="lamp st on" title="到位"></span></span><span class="hbadge done">已回零</span><button class="row-btn jog-m">−</button><input class="jog-step" type="number" step="any"><button class="row-btn jog-p">＋</button><span><input class="tgt" type="number" step="any" placeholder="rad"><button class="row-btn go">Go</button></span><button class="row-btn home">回零</button><button class="row-btn stop">停止</button><button class="row-btn cfg-btn">⚙</button></div></div></details><details class="group" open=""><summary>蓝膜台模块 <span class="cnt">(3 轴)</span></summary><div class="gbody"><div class="ax-head"><span>轴</span><span>控制器</span><span>名义值</span><span>实际值</span><span>偏差</span><span>状态</span><span>回零</span><span></span><span>点动步长</span><span></span><span>绝对目标</span><span></span><span></span><span></span></div><div class="ax-row"><span class="ax-name"><b>蓝膜台X</b><i>ES_X</i></span><span class="badge PLC">PLC</span><span class="val nom">-159.975002 mm</span><span class="val act">-159.974985 mm</span><span class="val dev">+17 nm</span><span><span class="lamp st on" title="到位"></span></span><span class="hbadge done">已回零</span><button class="row-btn jog-m">−</button><input class="jog-step" type="number" step="any"><button class="row-btn jog-p">＋</button><span><input class="tgt" type="number" step="any" placeholder="mm"><button class="row-btn go">Go</button></span><button class="row-btn home">回零</button><button class="row-btn stop">停止</button><button class="row-btn cfg-btn">⚙</button></div><div class="ax-row"><span class="ax-name"><b>蓝膜台Y</b><i>ES_Y</i></span><span class="badge PLC">PLC</span><span class="val nom">-89.961893 mm</span><span class="val act">-89.961905 mm</span><span class="val dev">-12 nm</span><span><span class="lamp st on" title="到位"></span></span><span class="hbadge done">已回零</span><button class="row-btn jog-m">−</button><input class="jog-step" type="number" step="any"><button class="row-btn jog-p">＋</button><span><input class="tgt" type="number" step="any" placeholder="mm"><button class="row-btn go">Go</button></span><button class="row-btn home">回零</button><button class="row-btn stop">停止</button><button class="row-btn cfg-btn">⚙</button></div><div class="ax-row"><span class="ax-name"><b>冲膜Z</b><i>ES_PunchZ</i></span><span class="badge ACS">ACS</span><span class="val nom">1.214008 mm</span><span class="val act">1.213978 mm</span><span class="val dev">-30 nm</span><span><span class="lamp st on" title="到位"></span></span><span class="hbadge done">已回零</span><button class="row-btn jog-m">−</button><input class="jog-step" type="number" step="any"><button class="row-btn jog-p">＋</button><span><input class="tgt" type="number" step="any" placeholder="mm"><button class="row-btn go">Go</button></span><button class="row-btn home">回零</button><button class="row-btn stop">停止</button><button class="row-btn cfg-btn">⚙</button></div></div></details></div>
+</div>
+
+<div id="pageIO" style="">
+  <details class="group" open=""><summary>工件 <span class="cnt" id="wpCount">(0 片 / 8 颗)</span></summary>
+    <div class="io-grid" id="wpBody"><div class="io-row"><span class="lamp" id="wpLamp"></span><span class="lb">晶圆 wafer</span><span class="vv" id="wpState">无</span>offset <input id="wpOffX" type="number" step="any" value="0" style="width:56px"><input id="wpOffY" type="number" step="any" value="0" style="width:56px"><button class="row-btn" id="wpLoad">上片</button><button class="row-btn" id="wpUnload">下片</button></div><div class="io-row"><span class="lb">dies 分布</span><span class="vv" id="wpDies">film:8 flip:0 head:0 wafer:0</span><button class="row-btn" id="wpReset">reset</button></div></div>
+  </details>
+  <details class="group" open=""><summary>安全（EMO / 门锁 / 电压，DI 只读）</summary>
+    <div class="io-grid" id="ioSafety"><div class="io-row" title="GVL_IO.iEFEM_EMO"><span class="lamp on"></span><span class="lb">EMO·EFEM</span><span class="vv">正常</span></div><div class="io-row" title="GVL_IO.iMachine_EMO"><span class="lamp on"></span><span class="lb">EMO·机台</span><span class="vv">正常</span></div><div class="io-row" title="GVL_IO.iMachine_Right_EMO"><span class="lamp on"></span><span class="lb">EMO·机台右</span><span class="vv">正常</span></div><div class="io-row" title="GVL_IO.iPowerControl_EMO"><span class="lamp on"></span><span class="lb">EMO·电源柜</span><span class="vv">正常</span></div><div class="io-row" title="SystemMachine.SS_ME.M_EMO.iPowerControl_EMO"><span class="lamp on"></span><span class="lb">EMO·电源柜(镜像)</span><span class="vv">正常</span></div><div class="io-row" title="GVL_IO.iFrontLock_DoorStatus_1"><span class="lamp on"></span><span class="lb">前门门磁1</span><span class="vv">关</span></div><div class="io-row" title="GVL_IO.iFrontLock_LockStatus_1"><span class="lamp on"></span><span class="lb">前门锁1</span><span class="vv">锁定</span></div><div class="io-row" title="GVL_IO.iFrontLock_DoorStatus_2"><span class="lamp on"></span><span class="lb">前门门磁2</span><span class="vv">关</span></div><div class="io-row" title="GVL_IO.iFrontLock_LockStatus_2"><span class="lamp on"></span><span class="lb">前门锁2</span><span class="vv">锁定</span></div><div class="io-row" title="GVL_IO.iLeftLock_DoorStatus_1"><span class="lamp on"></span><span class="lb">左门门磁1</span><span class="vv">关</span></div><div class="io-row" title="GVL_IO.iLeftLock_LockStatus_1"><span class="lamp on"></span><span class="lb">左门锁1</span><span class="vv">锁定</span></div><div class="io-row" title="GVL_IO.iLeftLock_DoorStatus_2"><span class="lamp on"></span><span class="lb">左门门磁2</span><span class="vv">关</span></div><div class="io-row" title="GVL_IO.iLeftLock_LockStatus_2"><span class="lamp on"></span><span class="lb">左门锁2</span><span class="vv">锁定</span></div><div class="io-row" title="GVL_IO.iRightLock_DoorStatus_1"><span class="lamp on"></span><span class="lb">右门门磁1</span><span class="vv">关</span></div><div class="io-row" title="GVL_IO.iRightLock_LockStatus_1"><span class="lamp on"></span><span class="lb">右门锁1</span><span class="vv">锁定</span></div><div class="io-row" title="GVL_IO.iRightLock_DoorStatus_2"><span class="lamp"></span><span class="lb">右门门磁2</span><span class="vv"></span></div><div class="io-row" title="GVL_IO.iRightLock_LockStatus_2"><span class="lamp"></span><span class="lb">右门锁2</span><span class="vv"></span></div><div class="io-row" title="GVL_IO.i3PH_OV_High"><span class="lamp on"></span><span class="lb">三相过压</span><span class="vv">正常</span></div><div class="io-row" title="GVL_IO.i3PH_OV2_HighHigh"><span class="lamp on"></span><span class="lb">三相过压(高高)</span><span class="vv">正常</span></div><div class="io-row" title="GVL_IO.i3PH_UV1_Low"><span class="lamp on"></span><span class="lb">三相欠压</span><span class="vv">正常</span></div><div class="io-row" title="GVL_IO.i3PH_UV2_LowLow"><span class="lamp on"></span><span class="lb">三相欠压(低低)</span><span class="vv">正常</span></div></div>
+  </details>
+  <details class="group" open=""><summary>塔灯</summary>
+    <div class="io-grid" id="ioTower"><div class="io-row"><span class="lamp"></span><span class="lb">红灯</span><button class="row-btn">开</button><button class="row-btn">关</button></div><div class="io-row"><span class="lamp"></span><span class="lb">黄灯</span><button class="row-btn">开</button><button class="row-btn">关</button></div><div class="io-row"><span class="lamp on" style="background: rgb(47, 191, 113); box-shadow: rgb(47, 191, 113) 0px 0px 6px;"></span><span class="lb">绿灯</span><button class="row-btn">开</button><button class="row-btn">关</button></div><div class="io-row"><span class="lamp"></span><span class="lb">蓝灯</span><button class="row-btn">开</button><button class="row-btn">关</button></div><div class="io-row"><span class="lamp"></span><span class="lb">蜂鸣器</span><button class="row-btn">开</button><button class="row-btn">关</button></div></div>
+  </details>
+  <details class="group" open=""><summary>电源</summary>
+    <div class="io-grid" id="ioPower"><div class="io-row"><span class="lamp on"></span><span class="lb">后备电源</span><span class="vv">ON</span><button class="row-btn">On</button><button class="row-btn">Off</button></div><div class="io-row"><span class="lamp on"></span><span class="lb">键合分系统</span><span class="vv">ON</span><button class="row-btn">On</button><button class="row-btn">Off</button></div><div class="io-row"><span class="lamp on"></span><span class="lb">CH 分系统</span><span class="vv">ON</span><button class="row-btn">On</button><button class="row-btn">Off</button></div><div class="io-row"><span class="lamp on"></span><span class="lb">EV 分系统</span><span class="vv">ON</span><button class="row-btn">On</button><button class="row-btn">Off</button></div><div class="io-row"><span class="lamp on"></span><span class="lb">PLASMA 酸洗</span><span class="vv">ON</span><button class="row-btn">On</button><button class="row-btn">Off</button></div><div class="io-row"><span class="lamp"></span><span class="lb">风扇</span><span class="vv">OFF</span><button class="row-btn">On</button><button class="row-btn">Off</button></div><div class="io-row"><span class="lamp"></span><span class="lb">离子棒</span><span class="vv">OFF</span><button class="row-btn">On</button><button class="row-btn">Off</button></div></div>
+  </details>
+  <details class="group" open=""><summary>真空与气路 <span class="cnt" id="airCount">(45 路)</span></summary>
+    <div class="gbody">
+      <div class="air-head"><span>回路</span><span>状态</span><span>气路控制</span><span>压强</span><span>流量</span></div>
+      <div id="ioAir"><div class="air-row"><span class="lb">对准相机冷却1 <i style="color:var(--dim);font-style:normal;font-size:10px">AS_CameraCooling_1</i></span><span class="air-state">—</span><span class="tri"><button data-cmd="OpenPositive">正压</button><button data-cmd="OpenNegtive">负压</button><button data-cmd="OpenAir">大气</button></span><span class="air-val pres">1.0 kPa</span><span class="air-val flow">—</span></div><div class="air-row"><span class="lb">对准相机冷却2 <i style="color:var(--dim);font-style:normal;font-size:10px">AS_CameraCooling_2</i></span><span class="air-state">—</span><span class="tri"><button data-cmd="OpenPositive">正压</button><button data-cmd="OpenNegtive">负压</button><button data-cmd="OpenAir">大气</button></span><span class="air-val pres">1.0 kPa</span><span class="air-val flow">—</span></div><div class="air-row"><span class="lb">对准相机冷却3 <i style="color:var(--dim);font-style:normal;font-size:10px">AS_CameraCooling_3</i></span><span class="air-state">—</span><span class="tri"><button data-cmd="OpenPositive">正压</button><button data-cmd="OpenNegtive">负压</button><button data-cmd="OpenAir">大气</button></span><span class="air-val pres">1.0 kPa</span><span class="air-val flow">—</span></div><div class="air-row"><span class="lb">对准相机冷却4 <i style="color:var(--dim);font-style:normal;font-size:10px">AS_CameraCooling_4</i></span><span class="air-state">—</span><span class="tri"><button data-cmd="OpenPositive">正压</button><button data-cmd="OpenNegtive">负压</button><button data-cmd="OpenAir">大气</button></span><span class="air-val pres">1.0 kPa</span><span class="air-val flow">—</span></div><div class="air-row"><span class="lb">对准X冷却 <i style="color:var(--dim);font-style:normal;font-size:10px">AS_X_Cooling</i></span><span class="air-state">关</span><span class="tri"><button data-cmd="OpenPositive">正压</button><button data-cmd="OpenNegtive">负压</button><button data-cmd="OpenAir">大气</button></span><span class="air-val pres">—</span><span class="air-val flow">2.04 L/min</span></div><div class="air-row"><span class="lb">对准Y冷却 <i style="color:var(--dim);font-style:normal;font-size:10px">AS_Y_Cooling</i></span><span class="air-state">关</span><span class="tri"><button data-cmd="OpenPositive">正压</button><button data-cmd="OpenNegtive">负压</button><button data-cmd="OpenAir">大气</button></span><span class="air-val pres">—</span><span class="air-val flow">1.92 L/min</span></div><div class="air-row"><span class="lb">芯片转移负压 <i style="color:var(--dim);font-style:normal;font-size:10px">ChipTransferNeg</i></span><span class="air-state">—</span><span class="tri"><button data-cmd="OpenPositive">正压</button><button data-cmd="OpenNegtive">负压</button><button data-cmd="OpenAir">大气</button></span><span class="air-val pres">-79.6 kPa</span><span class="air-val flow">—</span></div><div class="air-row"><span class="lb">芯片转移正压 <i style="color:var(--dim);font-style:normal;font-size:10px">ChipTransferPos</i></span><span class="air-state">—</span><span class="tri"><button data-cmd="OpenPositive">正压</button><button data-cmd="OpenNegtive">负压</button><button data-cmd="OpenAir">大气</button></span><span class="air-val pres">381.1 kPa</span><span class="air-val flow">—</span></div><div class="air-row"><span class="lb">芯片真空 <i style="color:var(--dim);font-style:normal;font-size:10px">ChipVac</i></span><span class="air-state">关</span><span class="tri"><button data-cmd="OpenPositive">正压</button><button data-cmd="OpenNegtive">负压</button><button data-cmd="OpenAir">大气</button></span><span class="air-val pres">—</span><span class="air-val flow">2.04 L/min</span></div><div class="air-row"><span class="lb">芯片真空破真空 <i style="color:var(--dim);font-style:normal;font-size:10px">ChipVacOpen</i></span><span class="air-state">—</span><span class="tri"><button data-cmd="OpenPositive">正压</button><button data-cmd="OpenNegtive">负压</button><button data-cmd="OpenAir">大气</button></span><span class="air-val pres">-84.0 kPa</span><span class="air-val flow">—</span></div><div class="air-row"><span class="lb">卡盘真空 <i style="color:var(--dim);font-style:normal;font-size:10px">ChuckVac</i></span><span class="air-state">关</span><span class="tri"><button data-cmd="OpenPositive">正压</button><button data-cmd="OpenNegtive">负压</button><button data-cmd="OpenAir">大气</button></span><span class="air-val pres">-78.5 kPa</span><span class="air-val flow">2.09 L/min</span></div><div class="air-row"><span class="lb">排气储备1 <i style="color:var(--dim);font-style:normal;font-size:10px">ExhaustReserve_1</i></span><span class="air-state">—</span><span class="tri"><button data-cmd="OpenPositive">正压</button><button data-cmd="OpenNegtive">负压</button><button data-cmd="OpenAir">大气</button></span><span class="air-val pres">1.0 kPa</span><span class="air-val flow">—</span></div><div class="air-row"><span class="lb">排气储备2 <i style="color:var(--dim);font-style:normal;font-size:10px">ExhaustReserve_2</i></span><span class="air-state">—</span><span class="tri"><button data-cmd="OpenPositive">正压</button><button data-cmd="OpenNegtive">负压</button><button data-cmd="OpenAir">大气</button></span><span class="air-val pres">1.0 kPa</span><span class="air-val flow">—</span></div><div class="air-row"><span class="lb">翻转排气 <i style="color:var(--dim);font-style:normal;font-size:10px">FA_Exhaust</i></span><span class="air-state">—</span><span class="tri"><button data-cmd="OpenPositive">正压</button><button data-cmd="OpenNegtive">负压</button><button data-cmd="OpenAir">大气</button></span><span class="air-val pres">1.0 kPa</span><span class="air-val flow">—</span></div><div class="air-row"><span class="lb">厂务N2 <i style="color:var(--dim);font-style:normal;font-size:10px">Facility_N2Pressure</i></span><span class="air-state">—</span><span class="tri"><button data-cmd="OpenPositive">正压</button><button data-cmd="OpenNegtive">负压</button><button data-cmd="OpenAir">大气</button></span><span class="air-val pres">509.1 kPa</span><span class="air-val flow">—</span></div><div class="air-row"><span class="lb">厂务负压 <i style="color:var(--dim);font-style:normal;font-size:10px">Facility_NegPressure</i></span><span class="air-state">—</span><span class="tri"><button data-cmd="OpenPositive">正压</button><button data-cmd="OpenNegtive">负压</button><button data-cmd="OpenAir">大气</button></span><span class="air-val pres">-91.5 kPa</span><span class="air-val flow">—</span></div><div class="air-row"><span class="lb">厂务正压 <i style="color:var(--dim);font-style:normal;font-size:10px">Facility_PosPressure</i></span><span class="air-state">—</span><span class="tri"><button data-cmd="OpenPositive">正压</button><button data-cmd="OpenNegtive">负压</button><button data-cmd="OpenAir">大气</button></span><span class="air-val pres">517.4 kPa</span><span class="air-val flow">—</span></div><div class="air-row"><span class="lb">玻璃冷却进 <i style="color:var(--dim);font-style:normal;font-size:10px">GlassCoolingIn</i></span><span class="air-state">关</span><span class="tri"><button data-cmd="OpenPositive">正压</button><button data-cmd="OpenNegtive">负压</button><button data-cmd="OpenAir">大气</button></span><span class="air-val pres">—</span><span class="air-val flow">2.09 L/min</span></div><div class="air-row"><span class="lb">玻璃冷却出 <i style="color:var(--dim);font-style:normal;font-size:10px">GlassCoolingOut</i></span><span class="air-state">关</span><span class="tri"><button data-cmd="OpenPositive">正压</button><button data-cmd="OpenNegtive">负压</button><button data-cmd="OpenAir">大气</button></span><span class="air-val pres">—</span><span class="air-val flow">1.98 L/min</span></div><div class="air-row"><span class="lb">离子棒正压 <i style="color:var(--dim);font-style:normal;font-size:10px">IonicBarPositive</i></span><span class="air-state">关</span><span class="tri"><button data-cmd="OpenPositive">正压</button><button data-cmd="OpenNegtive">负压</button><button data-cmd="OpenAir">大气</button></span><span class="air-val pres">—</span><span class="air-val flow">—</span></div><div class="air-row"><span class="lb">N2储备1 <i style="color:var(--dim);font-style:normal;font-size:10px">N2Reserve_1</i></span><span class="air-state">关</span><span class="tri"><button data-cmd="OpenPositive">正压</button><button data-cmd="OpenNegtive">负压</button><button data-cmd="OpenAir">大气</button></span><span class="air-val pres">—</span><span class="air-val flow">2.07 L/min</span></div><div class="air-row"><span class="lb">N2储备2 <i style="color:var(--dim);font-style:normal;font-size:10px">N2Reserve_2</i></span><span class="air-state">关</span><span class="tri"><button data-cmd="OpenPositive">正压</button><button data-cmd="OpenNegtive">负压</button><button data-cmd="OpenAir">大气</button></span><span class="air-val pres">—</span><span class="air-val flow">1.98 L/min</span></div><div class="air-row"><span class="lb">N2密封 <i style="color:var(--dim);font-style:normal;font-size:10px">N2Seal</i></span><span class="air-state">关</span><span class="tri"><button data-cmd="OpenPositive">正压</button><button data-cmd="OpenNegtive">负压</button><button data-cmd="OpenAir">大气</button></span><span class="air-val pres">—</span><span class="air-val flow">2.10 L/min</span></div><div class="air-row"><span class="lb">负压储备1 <i style="color:var(--dim);font-style:normal;font-size:10px">NegReserveVac_1</i></span><span class="air-state">关</span><span class="tri"><button data-cmd="OpenPositive">正压</button><button data-cmd="OpenNegtive">负压</button><button data-cmd="OpenAir">大气</button></span><span class="air-val pres">-80.9 kPa</span><span class="air-val flow">2.04 L/min</span></div><div class="air-row"><span class="lb">负压储备2 <i style="color:var(--dim);font-style:normal;font-size:10px">NegReserveVac_2</i></span><span class="air-state">关</span><span class="tri"><button data-cmd="OpenPositive">正压</button><button data-cmd="OpenNegtive">负压</button><button data-cmd="OpenAir">大气</button></span><span class="air-val pres">-82.3 kPa</span><span class="air-val flow">2.07 L/min</span></div><div class="air-row"><span class="lb">正压保持1 <i style="color:var(--dim);font-style:normal;font-size:10px">PosPressurePreserve_1</i></span><span class="air-state">—</span><span class="tri"><button data-cmd="OpenPositive">正压</button><button data-cmd="OpenNegtive">负压</button><button data-cmd="OpenAir">大气</button></span><span class="air-val pres">407.3 kPa</span><span class="air-val flow">—</span></div><div class="air-row"><span class="lb">正压保持2 <i style="color:var(--dim);font-style:normal;font-size:10px">PosPressurePreserve_2</i></span><span class="air-state">—</span><span class="tri"><button data-cmd="OpenPositive">正压</button><button data-cmd="OpenNegtive">负压</button><button data-cmd="OpenAir">大气</button></span><span class="air-val pres">395.4 kPa</span><span class="air-val flow">—</span></div><div class="air-row"><span class="lb">正压储备1 <i style="color:var(--dim);font-style:normal;font-size:10px">PosPressureReserve_1</i></span><span class="air-state">关</span><span class="tri"><button data-cmd="OpenPositive">正压</button><button data-cmd="OpenNegtive">负压</button><button data-cmd="OpenAir">大气</button></span><span class="air-val pres">—</span><span class="air-val flow">1.92 L/min</span></div><div class="air-row"><span class="lb">正压储备2 <i style="color:var(--dim);font-style:normal;font-size:10px">PosPressureReserve_2</i></span><span class="air-state">关</span><span class="tri"><button data-cmd="OpenPositive">正压</button><button data-cmd="OpenNegtive">负压</button><button data-cmd="OpenAir">大气</button></span><span class="air-val pres">—</span><span class="air-val flow">2.10 L/min</span></div><div class="air-row"><span class="lb">脉冲加热冷却1 <i style="color:var(--dim);font-style:normal;font-size:10px">PulseHeatCooling_1</i></span><span class="air-state">关</span><span class="tri"><button data-cmd="OpenPositive">正压</button><button data-cmd="OpenNegtive">负压</button><button data-cmd="OpenAir">大气</button></span><span class="air-val pres">—</span><span class="air-val flow">1.98 L/min</span></div><div class="air-row"><span class="lb">脉冲加热冷却2 <i style="color:var(--dim);font-style:normal;font-size:10px">PulseHeatCooling_2</i></span><span class="air-state">关</span><span class="tri"><button data-cmd="OpenPositive">正压</button><button data-cmd="OpenNegtive">负压</button><button data-cmd="OpenAir">大气</button></span><span class="air-val pres">—</span><span class="air-val flow">2.01 L/min</span></div><div class="air-row"><span class="lb">气浮足正压1 <i style="color:var(--dim);font-style:normal;font-size:10px">WT_AirFootComPos_1</i></span><span class="air-state">—</span><span class="tri"><button data-cmd="OpenPositive">正压</button><button data-cmd="OpenNegtive">负压</button><button data-cmd="OpenAir">大气</button></span><span class="air-val pres">395.4 kPa</span><span class="air-val flow">—</span></div><div class="air-row"><span class="lb">气浮足正压2 <i style="color:var(--dim);font-style:normal;font-size:10px">WT_AirFootComPos_2</i></span><span class="air-state">—</span><span class="tri"><button data-cmd="OpenPositive">正压</button><button data-cmd="OpenNegtive">负压</button><button data-cmd="OpenAir">大气</button></span><span class="air-val pres">388.3 kPa</span><span class="air-val flow">—</span></div><div class="air-row"><span class="lb">气浮足正压3 <i style="color:var(--dim);font-style:normal;font-size:10px">WT_AirFootComPos_3</i></span><span class="air-state">—</span><span class="tri"><button data-cmd="OpenPositive">正压</button><button data-cmd="OpenNegtive">负压</button><button data-cmd="OpenAir">大气</button></span><span class="air-val pres">384.2 kPa</span><span class="air-val flow">—</span></div><div class="air-row"><span class="lb">气浮足正压 <i style="color:var(--dim);font-style:normal;font-size:10px">WT_AirfootCompPos</i></span><span class="air-state">关</span><span class="tri"><button data-cmd="OpenPositive">正压</button><button data-cmd="OpenNegtive">负压</button><button data-cmd="OpenAir">大气</button></span><span class="air-val pres">—</span><span class="air-val flow">—</span></div><div class="air-row"><span class="lb">气浮足真空 <i style="color:var(--dim);font-style:normal;font-size:10px">WT_AirfootCompVac</i></span><span class="air-state">关</span><span class="tri"><button data-cmd="OpenPositive">正压</button><button data-cmd="OpenNegtive">负压</button><button data-cmd="OpenAir">大气</button></span><span class="air-val pres">-76.1 kPa</span><span class="air-val flow">1.91 L/min</span></div><div class="air-row"><span class="lb">键合真空1 <i style="color:var(--dim);font-style:normal;font-size:10px">WT_BondingVac_1</i></span><span class="air-state neg">开</span><span class="tri"><button data-cmd="OpenPositive">正压</button><button data-cmd="OpenNegtive">负压</button><button data-cmd="OpenAir">大气</button></span><span class="air-val pres">-78.5 kPa</span><span class="air-val flow">1.94 L/min</span></div><div class="air-row"><span class="lb">键合真空2 <i style="color:var(--dim);font-style:normal;font-size:10px">WT_BondingVac_2</i></span><span class="air-state">关</span><span class="tri"><button data-cmd="OpenPositive">正压</button><button data-cmd="OpenNegtive">负压</button><button data-cmd="OpenAir">大气</button></span><span class="air-val pres">-84.0 kPa</span><span class="air-val flow">1.94 L/min</span></div><div class="air-row"><span class="lb">键合真空3 <i style="color:var(--dim);font-style:normal;font-size:10px">WT_BondingVac_3</i></span><span class="air-state">关</span><span class="tri"><button data-cmd="OpenPositive">正压</button><button data-cmd="OpenNegtive">负压</button><button data-cmd="OpenAir">大气</button></span><span class="air-val pres">-83.2 kPa</span><span class="air-val flow">2.10 L/min</span></div><div class="air-row"><span class="lb">芯片转移真空 <i style="color:var(--dim);font-style:normal;font-size:10px">WT_ChipVac</i></span><span class="air-state neg">开</span><span class="tri"><button data-cmd="OpenPositive">正压</button><button data-cmd="OpenNegtive">负压</button><button data-cmd="OpenAir">大气</button></span><span class="air-val pres">-82.3 kPa</span><span class="air-val flow">1.90 L/min</span></div><div class="air-row"><span class="lb">Tray真空1 <i style="color:var(--dim);font-style:normal;font-size:10px">WT_TrayVac_1</i></span><span class="air-state">关</span><span class="tri"><button data-cmd="OpenPositive">正压</button><button data-cmd="OpenNegtive">负压</button><button data-cmd="OpenAir">大气</button></span><span class="air-val pres">-78.5 kPa</span><span class="air-val flow">1.92 L/min</span></div><div class="air-row"><span class="lb">Tray真空2 <i style="color:var(--dim);font-style:normal;font-size:10px">WT_TrayVac_2</i></span><span class="air-state">关</span><span class="tri"><button data-cmd="OpenPositive">正压</button><button data-cmd="OpenNegtive">负压</button><button data-cmd="OpenAir">大气</button></span><span class="air-val pres">-76.5 kPa</span><span class="air-val flow">1.98 L/min</span></div><div class="air-row"><span class="lb">Tray真空3 <i style="color:var(--dim);font-style:normal;font-size:10px">WT_TrayVac_3</i></span><span class="air-state">关</span><span class="tri"><button data-cmd="OpenPositive">正压</button><button data-cmd="OpenNegtive">负压</button><button data-cmd="OpenAir">大气</button></span><span class="air-val pres">-84.0 kPa</span><span class="air-val flow">2.10 L/min</span></div><div class="air-row"><span class="lb">Tray真空4 <i style="color:var(--dim);font-style:normal;font-size:10px">WT_TrayVac_4</i></span><span class="air-state">关</span><span class="tri"><button data-cmd="OpenPositive">正压</button><button data-cmd="OpenNegtive">负压</button><button data-cmd="OpenAir">大气</button></span><span class="air-val pres">-80.9 kPa</span><span class="air-val flow">1.90 L/min</span></div><div class="air-row"><span class="lb">晶圆吸盘真空 <i style="color:var(--dim);font-style:normal;font-size:10px">WT_WaferVac</i></span><span class="air-state neg">负压</span><span class="tri"><button data-cmd="OpenPositive">正压</button><button data-cmd="OpenNegtive" class="cur">负压</button><button data-cmd="OpenAir">大气</button></span><span class="air-val pres">-83.2 kPa</span><span class="air-val flow">2.07 L/min</span></div></div>
+    </div>
+  </details>
+  <details class="group" open=""><summary>温控</summary>
+    <div class="io-grid" id="ioTemp"><div class="io-row"><span class="lb">脉冲加热(上)</span><span class="vv">25.00 ℃</span><input type="number" step="any" style="width:70px" placeholder="目标℃"><button class="row-btn">开始加热</button><button class="row-btn">停止</button></div><div class="io-row"><span class="lb">硅片台加热(下)</span><span class="vv">25.00 ℃</span><input type="number" step="any" style="width:70px" placeholder="目标℃"><button class="row-btn">开始加热</button><button class="row-btn">停止</button></div></div>
+  </details>
+  <details class="group"><summary>传感器（AI 只读） <span class="cnt" id="aiCount">(2)</span></summary>
+    <div class="io-grid" id="ioAI"><div class="io-row" title="SystemMachine.SS_Bonding.M_WS.iHeatingEdgeTemper"><span class="lb">SS_Bonding.M_WS.iHeatingEdgeTemper</span><span class="vv">24.267</span></div><div class="io-row" title="SystemMachine.SS_CH.M_FA.iFA_X_Temper"><span class="lb">SS_CH.M_FA.iFA_X_Temper</span><span class="vv">26.226</span></div></div>
+  </details>
+</div>
+<div id="toast"></div>
+
+<script>
+'use strict';
+/* ==========================================================================
+ * 键合设备 · 轴控与运动参数配置面板（vanilla JS，零外部依赖，可离线 file:// 打开）
+ * 后端契约见《前后端数据协议》配套接口规范：base = http://127.0.0.1:9010
+ * 单位约定：直线轴 mm（显示 6 位小数 = nm 精度），旋转轴 rad（显示 µrad）；
+ * 偏差列：直线 nm、旋转 µrad（均为 ×1e6）。
+ * ======================================================================== */
+
+// 页面若由 9010 网关托管则用相对路径，否则（file:// 等）直连 9010；
+// 支持 ?api=http://host:port 覆盖（调试/验证用）
+var BASE = (function () {
+  var m = /[?&]api=([^&]+)/.exec(location.search);
+  if (m) return decodeURIComponent(m[1]).replace(/\/$/, '');
+  return (location.protocol.indexOf('http') === 0 && location.host === '127.0.0.1:9010')
+         ? '' : 'http://127.0.0.1:9010';
+})();
+
+/* ---------- 静态轴表（21 轴，按模块分组；与后端轴名一致） ---------- */
+var GROUPS = [
+  { name: '硅片台模块', axes: [
+    { name: 'WS_LS_X',    cn: '硅片台X',    ctl: 'ACS', rotary: false },
+    { name: 'WS_LS_Y',    cn: '硅片台Y',    ctl: 'ACS', rotary: false },
+    { name: 'WS_Rz',      cn: '硅片台旋转',  ctl: 'ACS', rotary: true  },
+    { name: 'E_EPIN_Z_1', cn: '顶针1',      ctl: 'PLC', rotary: false },
+    { name: 'E_EPIN_Z_2', cn: '顶针2',      ctl: 'PLC', rotary: false },
+    { name: 'E_EPIN_Z_3', cn: '顶针3',      ctl: 'PLC', rotary: false } ] },
+  { name: '键合模块', axes: [
+    { name: 'BS_Arm_Z',   cn: '键合臂Z',    ctl: 'PLC', rotary: false },
+    { name: 'BS_CAL_Rx',  cn: '校准Rx',     ctl: 'PLC', rotary: true  },
+    { name: 'BS_CAL_Ry',  cn: '校准Ry',     ctl: 'PLC', rotary: true  } ] },
+  { name: '对准模块', axes: [
+    { name: 'AS_X',       cn: '对准台X',    ctl: 'ACS', rotary: false },
+    { name: 'AS_Y',       cn: '对准台Y',    ctl: 'ACS', rotary: false },
+    { name: 'AS_Z',       cn: '对准台Z',    ctl: 'ACS', rotary: false },
+    { name: 'AS_Rx',      cn: '对准Rx',     ctl: 'ACS', rotary: true  },
+    { name: 'AS_Ry',      cn: '对准Ry',     ctl: 'ACS', rotary: true  } ] },
+  { name: '翻转模块', axes: [
+    { name: 'FA_X',       cn: '翻转X',      ctl: 'ACS', rotary: false },
+    { name: 'FA_Z',       cn: '翻转Z',      ctl: 'PLC', rotary: false },
+    { name: 'FA_Rx',      cn: '翻转Rx',     ctl: 'PLC', rotary: true  },
+    { name: 'CH_Rz',      cn: '卡盘旋转',   ctl: 'PLC', rotary: true  } ] },
+  { name: '蓝膜台模块', axes: [
+    { name: 'ES_X',       cn: '蓝膜台X',    ctl: 'PLC', rotary: false },
+    { name: 'ES_Y',       cn: '蓝膜台Y',    ctl: 'PLC', rotary: false },
+    { name: 'ES_PunchZ',  cn: '冲膜Z',      ctl: 'ACS', rotary: false } ] }
+];
+var AXIS_META = {};   // name → meta（含 rotary）
+GROUPS.forEach(function (g) { g.axes.forEach(function (a) { AXIS_META[a.name] = a; }); });
+
+/* ---------- 数值格式统一入口 ---------- */
+function fmtLinear(v) { return Number(v).toFixed(6) + ' mm'; }        // 6 位小数 = nm 精度
+function fmtRotary(v) { return (Number(v) * 1e6).toFixed(3) + ' µrad'; }
+function fmtValue(name, v) { return AXIS_META[name].rotary ? fmtRotary(v) : fmtLinear(v); }
+function fmtDev(name, d) {                                              // 偏差：nm / µrad，带符号
+  var x = Number(d) * 1e6;
+  return (x >= 0 ? '+' : '') + x.toFixed(name && AXIS_META[name].rotary ? 3 : 0) +
+         (AXIS_META[name].rotary ? ' µrad' : ' nm');
+}
+function unitOf(name) { return AXIS_META[name].rotary ? 'rad' : 'mm'; }
+
+/* ---------- HTTP ---------- */
+function toast(msg) {
+  var t = document.getElementById('toast');
+  t.textContent = msg; t.style.display = 'block';
+  clearTimeout(t._timer);
+  t._timer = setTimeout(function () { t.style.display = 'none'; }, 5000);
+}
+function post(path, body) {
+  return fetch(BASE + path, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(body || {})
+  }).then(function (r) { return r.json(); })
+    .then(function (j) {
+      if (!j.ok) { toast((path + ' 失败：') + (j.error || '未知错误')); }
+      return j;
+    })
+    .catch(function (e) { toast(path + ' 请求异常：' + e.message); return { ok: false }; });
+}
+
+/* ---------- 构建 DOM ---------- */
+var rowEls = {};  // name → {nom, act, dev, lamp, cfg...}
+function buildUI() {
+  var root = document.getElementById('groups');
+  GROUPS.forEach(function (g) {
+    var det = document.createElement('details');
+    det.className = 'group'; det.open = true;
+    var sum = document.createElement('summary');
+    sum.innerHTML = g.name + ' <span class="cnt">(' + g.axes.length + ' 轴)</span>';
+    det.appendChild(sum);
+    var body = document.createElement('div');
+    body.className = 'gbody';
+    body.innerHTML =
+      '<div class="ax-head"><span>轴</span><span>控制器</span><span>名义值</span>' +
+      '<span>实际值</span><span>偏差</span><span>状态</span><span>回零</span><span></span><span>点动步长</span>' +
+      '<span></span><span>绝对目标</span><span></span><span></span><span></span></div>';
+    g.axes.forEach(function (a) { body.appendChild(buildAxisRow(a)); });
+    det.appendChild(body);
+    root.appendChild(det);
+  });
+}
+
+function buildAxisRow(a) {
+  var row = document.createElement('div');
+  row.className = 'ax-row';
+  var u = unitOf(a.name);
+  row.innerHTML =
+    '<span class="ax-name"><b></b><i></i></span>' +
+    '<span class="badge ' + a.ctl + '">' + a.ctl + '</span>' +
+    '<span class="val nom">—</span>' +
+    '<span class="val act">—</span>' +
+    '<span class="val dev">—</span>' +
+    '<span><span class="lamp st"></span></span>' +
+    '<span class="hbadge never">未回零</span>' +
+    '<button class="row-btn jog-m">−</button>' +
+    '<input class="jog-step" type="number" step="any">' +
+    '<button class="row-btn jog-p">＋</button>' +
+    '<span><input class="tgt" type="number" step="any" placeholder="' + u + '">' +
+    '<button class="row-btn go">Go</button></span>' +
+    '<button class="row-btn home">回零</button>' +
+    '<button class="row-btn stop">停止</button>' +
+    '<button class="row-btn cfg-btn">⚙</button>';
+  row.querySelector('.ax-name b').textContent = a.cn;
+  row.querySelector('.ax-name i').textContent = a.name;
+
+  var els = {
+    nom: row.querySelector('.nom'),
+    act: row.querySelector('.act'),
+    dev: row.querySelector('.dev'),
+    lamp: row.querySelector('.st'),
+    hbadge: row.querySelector('.hbadge'),
+    homeBtn: row.querySelector('.home'),
+    row: row,
+    step: row.querySelector('.jog-step'),
+    tgt: row.querySelector('.tgt'),
+    cfgCard: null, cfgFields: {}
+  };
+  els.step.value = a.rotary ? 0.001 : 1;   // 旋转默认 0.001 rad = 1000 µrad
+
+  row.querySelector('.jog-m').onclick = function () {
+    post('/api/axis/jog', { axis: a.name, delta: -Math.abs(Number(els.step.value) || 0) });
+  };
+  row.querySelector('.jog-p').onclick = function () {
+    post('/api/axis/jog', { axis: a.name, delta: Math.abs(Number(els.step.value) || 0) });
+  };
+  function go() {
+    var v = Number(els.tgt.value);
+    if (els.tgt.value === '' || isNaN(v)) return;
+    post('/api/axis/move', { axis: a.name, target: v });
+  }
+  row.querySelector('.go').onclick = go;
+  els.tgt.addEventListener('keydown', function (e) { if (e.key === 'Enter') go(); });
+  row.querySelector('.home').onclick = function () { post('/api/axis/home', { axis: a.name }); };
+  row.querySelector('.stop').onclick = function () {
+    // 契约无单轴 stop：以当前名义值为目标发 move，等价立即停止
+    post('/api/axis/move', { axis: a.name, target: els._lastNom || 0 });
+  };
+  row.querySelector('.cfg-btn').onclick = function () { toggleCfg(row, a, els); };
+
+  rowEls[a.name] = els;
+  return row;
+}
+
+/* ---------- 参数卡 ---------- */
+function toggleCfg(row, a, els) {
+  if (els.cfgCard) { els.cfgCard.classList.toggle('open'); return; }
+  var u = unitOf(a.name), ru = a.rotary ? 'µrad' : 'nm';
+  var lu = a.rotary ? 'µrad' : 'mm';   // 软限位输入单位：rad 轴用 µrad 换算
+  var card = document.createElement('div');
+  card.className = 'cfg';
+  card.innerHTML =
+    '<div class="cfg-grid">' +
+    '<div><label>vmax (' + u + '/s)</label><input data-k="vmax" type="number" step="any"></div>' +
+    '<div><label>amax (' + u + '/s²)</label><input data-k="amax" type="number" step="any"></div>' +
+    '<div><label>jerk (' + u + '/s³)</label><input data-k="jerk" type="number" step="any"></div>' +
+    '<div><label>repeat (' + ru + ')</label><input data-k="repeat" type="number" step="any"></div>' +
+    '<div><label>profile</label><select data-k="profile">' +
+    '<option value="scurve">S曲线</option><option value="trapezoid">梯形</option></select></div>' +
+    '<div><label>软限位下限 (' + lu + ')</label><input data-k="limitLo" type="number" step="any"></div>' +
+    '<div><label>软限位上限 (' + lu + ')</label><input data-k="limitHi" type="number" step="any"></div>' +
+    '<div><label>误差地图覆盖</label><span class="ro" data-k="em">—</span></div>' +
+    '<div class="actions"><button class="save">保存参数</button>' +
+    '<span class="persisted">已持久化</span>' +
+    '<span class="hint">repeat 单位即 ' + ru + '（API 直接收发，无换算）、软限位以 ' + lu + ' 输入；仅保存修改过的字段</span></div>' +
+    '</div>';
+  row.appendChild(card);
+  card.classList.add('open');
+  els.cfgCard = card;
+  card.querySelectorAll('[data-k]').forEach(function (el) {
+    els.cfgFields[el.dataset.k] = el;
+    // 脏字段跟踪：只有用户实际改过的字段才会被保存（防止旧表单值回写覆盖服务器新值）
+    var markDirty = function () { el._dirty = true; };
+    el.addEventListener('input', markDirty);
+    el.addEventListener('change', markDirty);
+  });
+  els.persistedTag = card.querySelector('.persisted');
+  fillCfg(a, els);
+  card.querySelector('.save').onclick = function () { saveCfg(a, els); };
+}
+function fillCfg(a, els) {
+  var d = lastAxes[a.name];
+  if (!d || !els.cfgFields.vmax) return;
+  var c = d.config || {};
+  // 脏字段（用户正在编辑/已修改未保存）不被轮询覆盖
+  ['vmax', 'amax', 'jerk'].forEach(function (k) {
+    if (c[k] !== undefined && !els.cfgFields[k]._dirty) els.cfgFields[k].value = c[k];
+  });
+  // repeat：API 收发均为显示单位（nm/µrad），直接显示，不再 ×1e6
+  if (c.repeat !== undefined && c.repeat !== null && !els.cfgFields.repeat._dirty)
+    els.cfgFields.repeat.value = +Number(c.repeat).toFixed(4);
+  if (c.profile && !els.cfgFields.profile._dirty) els.cfgFields.profile.value = c.profile;
+  if (d.limits && !els.cfgFields.limitLo._dirty && !els.cfgFields.limitHi._dirty) {
+    // rad 轴以 µrad 显示编辑（×1e6），直线轴直接用 mm
+    var k6 = a.rotary ? 1e6 : 1;
+    var lo = +(d.limits[0] * k6).toFixed(6), hi = +(d.limits[1] * k6).toFixed(6);
+    els.cfgFields.limitLo.value = lo; els.cfgFields.limitHi.value = hi;
+    els.cfgFields.limitLo.setAttribute('value', lo);   // 同步属性便于调试/DOM 检查
+    els.cfgFields.limitHi.setAttribute('value', hi);
+  }
+  var em = d.errormap || {};
+  els.cfgFields.em.textContent = em.enabled
+    ? (em.coverage ? fmtValue(a.name, em.coverage[0]) + ' ~ ' + fmtValue(a.name, em.coverage[1])
+                   : '全行程')
+    : '未启用';
+}
+function saveCfg(a, els) {
+  var f = els.cfgFields, body = { axis: a.name };
+  // 只发送用户修改过的字段（_dirty），避免把表单里的旧值回写覆盖服务器状态
+  ['vmax', 'amax', 'jerk'].forEach(function (k) {
+    if (f[k]._dirty && f[k].value !== '') body[k] = Number(f[k].value);
+  });
+  if (f.repeat._dirty && f.repeat.value !== '')
+    body.repeat = Number(f.repeat.value);            // API 口径即 nm/µrad，无换算
+  if (f.profile._dirty && f.profile.value) body.profile = f.profile.value;
+  // 软限位成对发送：任一端被改过即两端一起发（未改的一端是服务器最新值）
+  if ((f.limitLo._dirty || f.limitHi._dirty) &&
+      f.limitLo.value !== '' && f.limitHi.value !== '') {
+    var lo = Number(f.limitLo.value), hi = Number(f.limitHi.value);
+    if (isNaN(lo) || isNaN(hi)) return toast(a.name + ' 软限位输入无效');
+    if (!(lo < hi)) return toast(a.name + ' 软限位下限必须小于上限');
+    var k6 = a.rotary ? 1e-6 : 1;                                       // µrad → rad
+    body.limits = [lo * k6, hi * k6];
+  }
+  if (Object.keys(body).length <= 1) return toast(a.name + ' 无修改，未保存');
+  post('/api/axis/config', body).then(function (j) {
+    if (j.ok) {
+      toast(a.name + ' 参数已保存');
+      Object.keys(f).forEach(function (k) { f[k]._dirty = false; });   // 保存成功后清脏标
+      if (j.persisted && els.persistedTag) els.persistedTag.classList.add('show'); // 已写盘
+    }
+  });
+}
+
+/* ---------- 轮询 ---------- */
+var lastAxes = {};        // name → axis data
+var failCount = 0;
+var polling = false;      // 非重入
+function poll() {
+  if (polling) return;
+  polling = true;
+  fetch(BASE + '/api/axes').then(function (r) { return r.json(); }).then(function (j) {
+    polling = false;
+    if (!j.ok) throw new Error(j.error || 'axes 响应异常');
+    failCount = 0;
+    setConn(true);
+    lastAxesTop = j;   // 顶层字段（interlock_enabled/emo/doors_ok 等，防御性读取）
+    document.getElementById('simClock').textContent = 't = ' + Number(j.t !== undefined ? j.t : j.sim_time).toFixed(3) + ' s';
+    (j.axes || []).forEach(function (d) {
+      lastAxes[d.name || d.id] = d;
+      updateRow(d);
+    });
+  }).catch(function () {
+    polling = false;
+    if (++failCount >= 3) setConn(false);
+  });
+}
+function updateRow(d) {
+  var name = d.name || d.id;
+  var els = rowEls[name];
+  if (!els) return;
+  els._lastNom = d.value;
+  var rotary = AXIS_META[name].rotary;
+  els.nom.textContent = fmtValue(name, d.value);
+  els.act.textContent = fmtValue(name, d.actual);
+  if (rotary) {                                                 // 悬停显示原始 rad
+    els.nom.title = Number(d.value).toExponential(9) + ' rad';
+    els.act.title = Number(d.actual).toExponential(9) + ' rad';
+  }
+  var dev = Number(d.actual) - Number(d.value);
+  els.dev.textContent = fmtDev(name, dev);
+  els.dev.classList.toggle('big', Math.abs(dev) * 1e6 > (rotary ? 5 : 50)); // 超阈值高亮
+  els.lamp.className = 'lamp st ' + (d.moving ? 'moving' : (d.settled ? 'on' : ''));
+  els.lamp.title = d.moving ? '运动中' : (d.settled ? '到位' : '未到位');
+  // 回零状态徽标：never 灰 / homing 黄(带 phase) / done 绿 / fault 红 + 行高亮
+  var hs = d.home_state || 'never';
+  var hsText = { never: '未回零', homing: '回零中', done: '已回零', fault: '回零失败' }[hs] || hs;
+  if (hs === 'homing' && d.home_phase) hsText += ' ' + d.home_phase;
+  els.hbadge.textContent = hsText;
+  els.hbadge.className = 'hbadge ' + hs;
+  els.homeBtn.disabled = (hs === 'homing');           // 回零中禁用单轴回零
+  els.row.classList.toggle('fault', hs === 'fault');  // 回零失败行红框高亮
+  if (els.cfgCard && els.cfgCard.classList.contains('open') &&
+      document.activeElement && document.activeElement.closest &&
+      !document.activeElement.closest('.cfg')) {
+    fillCfg(AXIS_META[name], els);   // 参数卡打开且未在编辑时跟随刷新
+  }
+}
+function setConn(ok) {
+  document.getElementById('connLamp').className = 'lamp ' + (ok ? 'on' : 'off');
+  document.getElementById('connText').textContent = ok ? '后端已连接' : '后端离线';
+  document.getElementById('offlineBar').style.display = ok ? 'none' : 'block';
+}
+
+/* ---------- 工具栏 ---------- */
+function initToolbar() {
+  var range = document.getElementById('speedRange');
+  var val = document.getElementById('speedVal');
+  range.addEventListener('input', function () { val.textContent = '×' + Number(range.value).toFixed(1); });
+  range.addEventListener('change', function () { post('/api/speed', { scale: Number(range.value) }); });
+  document.getElementById('btnEstop').onclick = function () { post('/api/estop'); };
+  document.getElementById('btnReset').onclick = function () { post('/api/reset'); };
+  document.getElementById('btnStopAll').onclick = function () { post('/api/stop'); };
+  document.getElementById('btnHomeAll').onclick = function () { post('/api/axis/home', { axis: 'ALL' }); };
+
+  var sw = document.getElementById('emSwitch');
+  var st = document.getElementById('emState');
+  var emEnabled = false;
+  function renderEm() {
+    sw.classList.toggle('on', emEnabled);
+    st.textContent = emEnabled ? '已启用' : '已禁用';
+  }
+  sw.onclick = function () {
+    post('/api/errormaps', { enabled: !emEnabled }).then(function (j) {
+      if (j.ok) { emEnabled = !emEnabled; renderEm(); }
+    });
+  };
+  fetch(BASE + '/api/errormaps').then(function (r) { return r.json(); }).then(function (j) {
+    if (j.ok) { emEnabled = !!j.enabled; renderEm(); }
+  }).catch(function () { st.textContent = '未知'; });
+  renderEm();
+}
+
+/* ---------- IO 监视页 ---------- */
+var ioPoints = {};        // path → value（/api/io 最新快照，扁平）
+var ioRowCache = {};      // 行 key → {el, ...} 增量更新，不重建 DOM
+var ioPolling = false, vizPolling = false;
+var lastViz = null;
+
+function ioGet(path) { return ioPoints[path]; }
+function ioCmd(path, cmd, args) {
+  return post('/api/io/command', { path: path, cmd: cmd, args: args || {} });
+}
+// 通用只读行：judge(v) → '' | 'warn' | 'err'；fmt(v) → 显示文本
+function ioRow(container, key, label, path, judge, fmt) {
+  var rec = ioRowCache[key];
+  if (!rec) {
+    var el = document.createElement('div');
+    el.className = 'io-row';
+    el.innerHTML = '<span class="lamp"></span><span class="lb"></span><span class="vv"></span>';
+    el.querySelector('.lb').textContent = label;
+    el.title = path || '';
+    container.appendChild(el);
+    rec = ioRowCache[key] = { el: el, lamp: el.querySelector('.lamp'),
+                              vv: el.querySelector('.vv'), last: undefined };
+  }
+  var v = path ? ioGet(path) : undefined;
+  if (v !== rec.last) {
+    rec.last = v;
+    rec.vv.textContent = fmt ? fmt(v) : (v === undefined ? '—' : String(v));
+    var lv = judge ? judge(v) : '';
+    rec.el.className = 'io-row' + (lv ? ' ' + lv : '');
+    rec.lamp.className = 'lamp' + (lv === 'err' ? ' off' : lv === 'warn' ? ' moving'
+                                   : v === undefined ? '' : ' on');
+  }
+  return rec;
+}
+
+/* ---- 安全区 ---- */
+var SAFETY_EMO = [   // EMO×5（GVL_IO 直读）
+  ['GVL_IO.iEFEM_EMO', 'EMO·EFEM'],
+  ['GVL_IO.iMachine_EMO', 'EMO·机台'],
+  ['GVL_IO.iMachine_Right_EMO', 'EMO·机台右'],
+  ['GVL_IO.iPowerControl_EMO', 'EMO·电源柜'],
+  ['SystemMachine.SS_ME.M_EMO.iPowerControl_EMO', 'EMO·电源柜(镜像)']
+];
+var SAFETY_DOORS = [ // 5 组门/锁（前/左/右 + 门锁汇总）
+  ['Front', '前门'], ['Left', '左门'], ['Right', '右门']
+];
+var SAFETY_3PH = [
+  ['GVL_IO.i3PH_OV_High', '三相过压'],
+  ['GVL_IO.i3PH_OV2_HighHigh', '三相过压(高高)'],
+  ['GVL_IO.i3PH_UV1_Low', '三相欠压'],
+  ['GVL_IO.i3PH_UV2_LowLow', '三相欠压(低低)']
+];
+function boolZH(v) { return v === undefined ? '—' : (v ? '触发' : '正常'); }
+function doorZH(v) { return v === undefined ? '—' : (v ? '关' : '开'); }
+function lockZH(v) { return v === undefined ? '—' : (v ? '锁定' : '解锁'); }
+function renderSafety() {
+  var box = document.getElementById('ioSafety');
+  SAFETY_EMO.forEach(function (p, i) {
+    ioRow(box, 'emo' + i, p[1], p[0], function (v) { return v ? 'err' : ''; }, boolZH);
+  });
+  SAFETY_DOORS.forEach(function (d) {
+    for (var ch = 1; ch <= 2; ch++) {
+      ioRow(box, 'door' + d[0] + ch, d[1] + '门磁' + ch,
+            'GVL_IO.i' + d[0] + 'Lock_DoorStatus_' + ch,
+            function (v) { return v === false ? 'err' : ''; }, doorZH);
+      ioRow(box, 'lock' + d[0] + ch, d[1] + '锁' + ch,
+            'GVL_IO.i' + d[0] + 'Lock_LockStatus_' + ch,
+            function (v) { return v === false ? 'warn' : ''; }, lockZH);
+    }
+  });
+  SAFETY_3PH.forEach(function (p, i) {
+    ioRow(box, '3ph' + i, p[1], p[0], function (v) { return v ? 'err' : ''; }, boolZH);
+  });
+}
+
+/* ---- 塔灯 ---- */
+var TOWER = [
+  ['RedLight', '红灯', '#e05252'], ['YellowLight', '黄灯', '#e6a23c'],
+  ['GreenLight', '绿灯', '#2fbf71'], ['BlueLight', '蓝灯', '#3fa9f5'],
+  ['Buzzer', '蜂鸣器', '#c8a6ff']
+];
+function renderTower() {
+  var box = document.getElementById('ioTower');
+  TOWER.forEach(function (t) {
+    var key = 'tower' + t[0];
+    var rec = ioRowCache[key];
+    if (!rec) {
+      var el = document.createElement('div');
+      el.className = 'io-row';
+      el.innerHTML = '<span class="lamp"></span><span class="lb">' + t[1] + '</span>' +
+                     '<button class="row-btn">开</button><button class="row-btn">关</button>';
+      box.appendChild(el);
+      var btns = el.querySelectorAll('button');
+      var cp = 'SystemMachine.SS_ME.M_SLAM.E_SignalTower.' + t[0];
+      btns[0].onclick = function () { ioCmd(cp, 'SetBool', { value: true }); };
+      btns[1].onclick = function () { ioCmd(cp, 'SetBool', { value: false }); };
+      rec = ioRowCache[key] = { el: el, lamp: el.querySelector('.lamp'), last: undefined };
+    }
+    var v = ioGet('GVL_IO.oSignalTower_' + t[0]);
+    if (v !== rec.last) {
+      rec.last = v;
+      rec.lamp.className = 'lamp' + (v ? ' on' : '');
+      rec.lamp.style.background = v ? t[2] : '';
+      rec.lamp.style.boxShadow = v ? '0 0 6px ' + t[2] : '';
+    }
+  });
+}
+
+/* ---- 电源 ---- */
+var POWER_SYSTEMS = [
+  ['Backup', '后备电源'], ['Bonding', '键合分系统'], ['CH', 'CH 分系统'],
+  ['EV', 'EV 分系统'], ['PLASMA_Acid', 'PLASMA 酸洗'], ['Fan', '风扇'], ['IonBar', '离子棒']
+];
+function renderPower() {
+  var box = document.getElementById('ioPower');
+  POWER_SYSTEMS.forEach(function (s) {
+    var key = 'pwr' + s[0];
+    var rec = ioRowCache[key];
+    if (!rec) {
+      var el = document.createElement('div');
+      el.className = 'io-row';
+      el.innerHTML = '<span class="lamp"></span><span class="lb">' + s[1] + '</span>' +
+                     '<span class="vv"></span>' +
+                     '<button class="row-btn">On</button><button class="row-btn">Off</button>';
+      box.appendChild(el);
+      var btns = el.querySelectorAll('button');
+      var base = 'SystemMachine.SS_ME.M_PowerSwitch.' + s[0];
+      btns[0].onclick = function () { ioCmd(base + '_PowerOn', 'Pulse', {}); };
+      btns[1].onclick = function () { ioCmd(base + '_PowerOff', 'Pulse', {}); };
+      // Fan/IonBar 是单 bool 命令点
+      if (s[0] === 'Fan' || s[0] === 'IonBar') {
+        btns[0].onclick = function () { ioCmd(base, 'SetBool', { value: true }); };
+        btns[1].onclick = function () { ioCmd(base, 'SetBool', { value: false }); };
+      }
+      rec = ioRowCache[key] = { el: el, lamp: el.querySelector('.lamp'),
+                                vv: el.querySelector('.vv'), last: undefined };
+    }
+    var on = ioGet('GVL_IO.o' + s[0] + '_PowerOn');
+    if (on === undefined) on = ioGet('GVL_IO.o' + s[0]);       // Fan/IonBar
+    if (on !== rec.last) {
+      rec.last = on;
+      rec.vv.textContent = on === undefined ? '—' : (on ? 'ON' : 'OFF');
+      rec.lamp.className = 'lamp' + (on ? ' on' : '');
+    }
+  });
+}
+
+/* ---- 真空与气路（动态枚举 M_AIR 回路，增量更新） ---- */
+var AIR_CN = {
+  WT_WaferVac: '晶圆吸盘真空', WT_ChipVac: '芯片转移真空', WT_BondingVac_1: '键合真空1',
+  WT_BondingVac_2: '键合真空2', WT_BondingVac_3: '键合真空3',
+  WT_TrayVac_1: 'Tray真空1', WT_TrayVac_2: 'Tray真空2', WT_TrayVac_3: 'Tray真空3', WT_TrayVac_4: 'Tray真空4',
+  WT_AirfootCompVac: '气浮足真空', WT_AirfootCompPos: '气浮足正压',
+  ChuckVac: '卡盘真空', ChipVac: '芯片真空', ChipVacOpen: '芯片真空破真空',
+  ChipTransferNeg: '芯片转移负压', ChipTransferPos: '芯片转移正压',
+  AS_X_Cooling: '对准X冷却', AS_Y_Cooling: '对准Y冷却',
+  GlassCoolingIn: '玻璃冷却进', GlassCoolingOut: '玻璃冷却出',
+  N2Seal: 'N2密封', N2Reserve_1: 'N2储备1', N2Reserve_2: 'N2储备2',
+  NegReserveVac_1: '负压储备1', NegReserveVac_2: '负压储备2',
+  PosPressureReserve_1: '正压储备1', PosPressureReserve_2: '正压储备2',
+  PosPressurePreserve_1: '正压保持1', PosPressurePreserve_2: '正压保持2',
+  PulseHeatCooling_1: '脉冲加热冷却1', PulseHeatCooling_2: '脉冲加热冷却2',
+  IonicBarPositive: '离子棒正压', FA_Exhaust: '翻转排气',
+  Facility_PosPressure: '厂务正压', Facility_NegPressure: '厂务负压', Facility_N2Pressure: '厂务N2',
+  ExhaustReserve_1: '排气储备1', ExhaustReserve_2: '排气储备2',
+  AS_CameraCooling_1: '对准相机冷却1', AS_CameraCooling_2: '对准相机冷却2',
+  AS_CameraCooling_3: '对准相机冷却3', AS_CameraCooling_4: '对准相机冷却4',
+  WT_AirFootComPos_1: '气浮足正压1', WT_AirFootComPos_2: '气浮足正压2', WT_AirFootComPos_3: '气浮足正压3'
+};
+var airRows = {};   // circuit → {row, state, pres, flow, btns}
+function renderAir() {
+  var box = document.getElementById('ioAir');
+  var seen = {};
+  Object.keys(ioPoints).forEach(function (p) {
+    var m = /^SystemMachine\.SS_ME\.M_AIR\.([^.]+)/.exec(p);
+    if (m) seen[m[1]] = 1;
+  });
+  var names = Object.keys(seen).sort();
+  document.getElementById('airCount').textContent = '(' + names.length + ' 路)';
+  names.forEach(function (c) {
+    var base = 'SystemMachine.SS_ME.M_AIR.' + c;
+    var rec = airRows[c];
+    if (!rec) {
+      var row = document.createElement('div');
+      row.className = 'air-row';
+      row.innerHTML =
+        '<span class="lb">' + (AIR_CN[c] || c) + ' <i style="color:var(--dim);font-style:normal;font-size:10px">' + c + '</i></span>' +
+        '<span class="air-state">—</span>' +
+        '<span class="tri"><button data-cmd="OpenPositive">正压</button>' +
+        '<button data-cmd="OpenNegtive">负压</button>' +
+        '<button data-cmd="OpenAir">大气</button></span>' +
+        '<span class="air-val pres">—</span><span class="air-val flow">—</span>';
+      box.appendChild(row);
+      rec = airRows[c] = { state: row.querySelector('.air-state'),
+                           pres: row.querySelector('.pres'), flow: row.querySelector('.flow'),
+                           btns: row.querySelectorAll('.tri button'), lastKey: '' };
+      rec.btns.forEach(function (b) {
+        b.onclick = function () { ioCmd(base, b.dataset.cmd, {}); };
+      });
+      rec.base = base;
+    }
+    // 增量更新：拼签名比对
+    var pos = ioGet(base + '.oPositiveState'), neg = ioGet(base + '.oNegtiveState'),
+        air = ioGet(base + '.oAirState'), onOff = ioGet(base);
+    var pv = ioGet(base + '.PressureSwitch.oValue'), fv = ioGet(base + '.FlowMeter.oValue');
+    if (pv === undefined) pv = ioGet(base + '.oValue');
+    var sig = [pos, neg, air, onOff, pv, fv].join('|');
+    if (sig === rec.lastKey) return;
+    rec.lastKey = sig;
+    var st = pos ? ['正压', 'pos'] : neg ? ['负压', 'neg'] : air ? ['大气', '']
+             : onOff === true ? ['开', 'neg'] : onOff === false ? ['关', ''] : ['—', ''];
+    rec.state.textContent = st[0];
+    rec.state.className = 'air-state' + (st[1] ? ' ' + st[1] : '');
+    rec.pres.textContent = pv === undefined ? '—' : Number(pv).toFixed(1) + ' kPa';
+    rec.flow.textContent = fv === undefined ? '—' : Number(fv).toFixed(2) + ' L/min';
+    rec.btns.forEach(function (b) {
+      b.classList.toggle('cur',
+        (b.dataset.cmd === 'OpenPositive' && !!pos) ||
+        (b.dataset.cmd === 'OpenNegtive' && !!neg) ||
+        (b.dataset.cmd === 'OpenAir' && !!air));
+    });
+  });
+}
+
+/* ---- 温控 ---- */
+var TEMP_CHANNELS = [
+  { cn: '脉冲加热(上)', cur: 'SystemMachine.M_Heater.PulseHeat_Up.oCurTemp',
+    set: 'SystemMachine.PulseHeat_Up.SetTargetTempWithPlan',
+    stop: 'SystemMachine.PulseHeat_Up.StopTargetTempWithPlan' },
+  { cn: '硅片台加热(下)', cur: 'SystemMachine.M_Heater.Heat_Dw.oCurTemp',
+    set: 'SystemMachine.Heat_Dw.SetTargetTempWithPlan',
+    stop: 'SystemMachine.Heat_Dw.StopTargetTempWithPlan' }
+];
+function renderTemp() {
+  var box = document.getElementById('ioTemp');
+  TEMP_CHANNELS.forEach(function (ch, i) {
+    var key = 'temp' + i;
+    var rec = ioRowCache[key];
+    if (!rec) {
+      var el = document.createElement('div');
+      el.className = 'io-row';
+      el.innerHTML = '<span class="lb">' + ch.cn + '</span><span class="vv"></span>' +
+                     '<input type="number" step="any" style="width:70px" placeholder="目标℃">' +
+                     '<button class="row-btn">开始加热</button><button class="row-btn">停止</button>';
+      box.appendChild(el);
+      var inp = el.querySelector('input');
+      var btns = el.querySelectorAll('button');
+      btns[0].onclick = function () {
+        var t = Number(inp.value);
+        if (inp.value === '' || isNaN(t)) return toast(ch.cn + ' 目标温度无效');
+        ioCmd(ch.set, 'SetValue', { value: t });
+      };
+      btns[1].onclick = function () { ioCmd(ch.stop, 'Pulse', {}); };
+      rec = ioRowCache[key] = { vv: el.querySelector('.vv'), last: undefined };
+    }
+    var v = ioGet(ch.cur);
+    if (v !== rec.last) {
+      rec.last = v;
+      rec.vv.textContent = v === undefined ? '—' : Number(v).toFixed(2) + ' ℃';
+    }
+  });
+}
+
+/* ---- 传感器（AI 只读：未归入上面分区的 real 观测点） ---- */
+var AI_KNOWN = /Temper|Displace|FlowMeter|PressureSwitch|oValue/;
+var aiRows = {};
+function renderAI() {
+  var box = document.getElementById('ioAI');
+  var n = 0;
+  Object.keys(ioPoints).sort().forEach(function (p) {
+    var v = ioPoints[p];
+    if (typeof v !== 'number') return;
+    if (p.indexOf('SystemMachine.SS_ME.M_AIR.') === 0) return;   // 气路区已管
+    if (!AI_KNOWN.test(p)) return;
+    n++;
+    var rec = aiRows[p];
+    if (!rec) {
+      var el = document.createElement('div');
+      el.className = 'io-row';
+      el.innerHTML = '<span class="lb"></span><span class="vv"></span>';
+      el.querySelector('.lb').textContent = p.replace(/^SystemMachine\./, '');
+      el.title = p;
+      box.appendChild(el);
+      rec = aiRows[p] = { vv: el.querySelector('.vv'), last: undefined };
+    }
+    if (v !== rec.last) { rec.last = v; rec.vv.textContent = Number(v).toFixed(3); }
+  });
+  document.getElementById('aiCount').textContent = '(' + n + ')';
+}
+
+/* ---- 工件区（/api/viz） ---- */
+var wpEls = null;
+function renderWorkpiece() {
+  var box = document.getElementById('wpBody');
+  if (!wpEls) {
+    box.innerHTML =
+      '<div class="io-row"><span class="lamp" id="wpLamp"></span><span class="lb">晶圆 wafer</span>' +
+      '<span class="vv" id="wpState">—</span>' +
+      'offset <input id="wpOffX" type="number" step="any" value="0" style="width:56px">' +
+      '<input id="wpOffY" type="number" step="any" value="0" style="width:56px">' +
+      '<button class="row-btn" id="wpLoad">上片</button>' +
+      '<button class="row-btn" id="wpUnload">下片</button></div>' +
+      '<div class="io-row"><span class="lb">dies 分布</span><span class="vv" id="wpDies">—</span>' +
+      '<button class="row-btn" id="wpReset">reset</button></div>';
+    wpEls = { lamp: document.getElementById('wpLamp'), state: document.getElementById('wpState'),
+              dies: document.getElementById('wpDies') };
+    document.getElementById('wpLoad').onclick = function () {
+      post('/api/workpiece/wafer', { action: 'load',
+        offset: [Number(document.getElementById('wpOffX').value) || 0,
+                 Number(document.getElementById('wpOffY').value) || 0] });
+    };
+    document.getElementById('wpUnload').onclick = function () {
+      post('/api/workpiece/wafer', { action: 'unload' });
+    };
+    document.getElementById('wpReset').onclick = function () { post('/api/workpiece/reset'); };
+  }
+  var d = lastViz;
+  if (!d) {
+    wpEls.state.textContent = 'viz 不可用';
+    wpEls.lamp.className = 'lamp';
+    return;
+  }
+  var w = d.wafer || {};
+  wpEls.state.textContent = w.present
+    ? '在位 offset[' + (w.offset || [0, 0]).join(', ') + ']' : '无';
+  wpEls.lamp.className = 'lamp' + (w.present ? ' on' : '');
+  var counts = { film: 0, flip: 0, head: 0, wafer: 0 };
+  (d.dies || []).forEach(function (die) { counts[die.carrier] = (counts[die.carrier] || 0) + 1; });
+  wpEls.dies.textContent = 'film:' + counts.film + ' flip:' + counts.flip +
+                           ' head:' + counts.head + ' wafer:' + counts.wafer;
+  document.getElementById('wpCount').textContent =
+    '(' + (w.present ? 1 : 0) + ' 片 / ' + (d.dies || []).length + ' 颗)';
+}
+
+/* ---- IO / viz 轮询（5Hz，各自非重入） ---- */
+function pollIO() {
+  if (ioPolling) return;
+  ioPolling = true;
+  fetch(BASE + '/api/io').then(function (r) { return r.json(); }).then(function (j) {
+    ioPolling = false;
+    if (!j.ok) throw new Error(j.error || 'io 响应异常');
+    ioPoints = j.points || {};
+    renderSafety(); renderTower(); renderPower(); renderAir(); renderTemp(); renderAI();
+    updateInterlockBar();
+  }).catch(function () { ioPolling = false; });
+}
+function pollVizPanel() {
+  if (vizPolling) return;
+  vizPolling = true;
+  fetch(BASE + '/api/viz').then(function (r) { return r.json(); }).then(function (d) {
+    vizPolling = false;
+    lastViz = d;
+    renderWorkpiece();
+    updateInterlockBar();
+  }).catch(function () { vizPolling = false; lastViz = null; renderWorkpiece(); });
+}
+
+/* ---- 联锁状态条 + 联锁使能 ---- */
+var lastAxesTop = {};
+function updateInterlockBar() {
+  // 防御性读取：/api/axes 顶层字段名以后端实际为准；拿不到则从 /api/io 的 EMO/门磁推导
+  var emo = lastAxesTop.emo, doorsOk = lastAxesTop.doors_ok;
+  if (emo === undefined) {
+    emo = SAFETY_EMO.some(function (p) { return ioGet(p[0]) === true; });
+  }
+  if (doorsOk === undefined) {
+    doorsOk = !SAFETY_DOORS.some(function (d) {
+      return ioGet('GVL_IO.i' + d[0] + 'Lock_DoorStatus_1') === false ||
+             ioGet('GVL_IO.i' + d[0] + 'Lock_DoorStatus_2') === false;
+    });
+  }
+  var bar = document.getElementById('interlockBar');
+  if (emo || !doorsOk) {
+    bar.style.display = 'block';
+    bar.textContent = '⚠ ' + (emo ? 'EMO 触发' : '') + (emo && !doorsOk ? '　' : '') +
+                      (!doorsOk ? '门锁未闭合' : '');
+  } else {
+    bar.style.display = 'none';
+  }
+  var il = lastAxesTop.interlock_enabled;
+  if (il !== undefined) {
+    document.getElementById('ilSwitch').classList.toggle('on', !!il);
+    document.getElementById('ilState').textContent = il ? '已使能' : '已屏蔽';
+  }
+}
+
+/* ---- Tab 切换 ---- */
+function initTabs() {
+  var ta = document.getElementById('tabAxes'), ti = document.getElementById('tabIO');
+  ta.onclick = function () {
+    ta.classList.add('active'); ti.classList.remove('active');
+    document.getElementById('pageAxes').style.display = '';
+    document.getElementById('pageIO').style.display = 'none';
+  };
+  ti.onclick = function () {
+    ti.classList.add('active'); ta.classList.remove('active');
+    document.getElementById('pageAxes').style.display = 'none';
+    document.getElementById('pageIO').style.display = '';
+  };
+  document.getElementById('ilSwitch').onclick = function () {
+    var cur = document.getElementById('ilSwitch').classList.contains('on');
+    post('/api/interlock', { enabled: !cur });
+  };
+  if (/[?&]tab=io/.test(location.search)) ti.click();   // 调试钩子：?tab=io 直接切 IO 页
+}
+
+/* ---------- 启动 ---------- */
+buildUI();
+initToolbar();
+initTabs();
+poll();
+setInterval(poll, 100);   // /api/axes 10Hz，非重入
+pollIO();
+setInterval(pollIO, 200);         // /api/io 5Hz，非重入
+pollVizPanel();
+setInterval(pollVizPanel, 200);   // /api/viz 5Hz（工件区/联锁兜底），非重入
+// 调试钩子：?cfg=WS_LS_X 自动展开该轴参数卡（配合 headless 验证）
+(function () {
+  var m = /[?&]cfg=([^&]+)/.exec(location.search);
+  if (!m) return;
+  var name = decodeURIComponent(m[1]);
+  setTimeout(function () {
+    var els = rowEls[name];
+    if (els && !els.cfgCard) {
+      var btn = els.row.querySelector('.cfg-btn');
+      if (btn) btn.click();
+    }
+  }, 600);
+})();
+</script>
+
+
+</body></html>

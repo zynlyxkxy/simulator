@@ -1,0 +1,3597 @@
+{
+ "version": 1,
+ "records": [
+  {
+   "die_id": "R07C02",
+   "site": {
+    "row": 14,
+    "col": 14,
+    "x": 0.0,
+    "y": 0.0
+   },
+   "t_bond": 2587.691,
+   "truth": {
+    "dx": -0.01252,
+    "dy": -0.00066,
+    "drz": 1.2e-05
+   },
+   "truth_note": null,
+   "truth_components": {
+    "align_resid": {
+     "dx_um": -0.057429,
+     "dy_um": -0.003638,
+     "drz_urad": -7.050128
+    },
+    "descent": {
+     "dx_um": -12.462589,
+     "dy_um": -0.655921,
+     "drz_urad": 19.284398
+    },
+    "process_shift": {
+     "dx_um": 0.0,
+     "dy_um": 0.0,
+     "drz_urad": 0.0
+    },
+    "commit": {
+     "dx_um": -12.520018,
+     "dy_um": -0.659559,
+     "drz_urad": 12.23427
+    }
+   },
+   "measured": null,
+   "bond_offset": {
+    "x_um": 0.0,
+    "y_um": 0.0,
+    "rz_urad": 0.0
+   },
+   "timing": {
+    "stages": {
+     "flip_pick": 8.431,
+     "flip_handoff": 7.452,
+     "focus_level": 29.482,
+     "fine_align": 26.442,
+     "bond": 30.573
+    },
+    "t_start": 2485.311,
+    "t_end": 2587.691
+   },
+   "chain": {
+    "pick_coarse": {
+     "dx_mm": -0.124802,
+     "dy_mm": -0.017974,
+     "die": "R07C02",
+     "_note": "取片粗对准实测偏差（eng.coarse_offset，下相机测 die 世界位 − 标定中心）"
+    },
+    "handoff_tilt": {
+     "rx_urad": 0.0,
+     "ry_urad": 0.0,
+     "_note": "交接后 die 在头倾斜真值（die.rx/ry，处方 wafer_load.die_head_r*_urad 注入）"
+    },
+    "focus_level": {
+     "_note": "调焦调平：调平残余/焦面残差（eng.fl_fit.compensate），复测判定（fl_fit.verify）",
+     "residual_urad": [
+      0.0,
+      0.0
+     ],
+     "focus_resid_um": [
+      0.0,
+      0.0
+     ],
+     "verify_residual_urad": [
+      -3.555401,
+      -31.183523
+     ],
+     "verify_judge": "pass"
+    },
+    "fine_align": {
+     "algorithm": "rigid",
+     "judge": "pass",
+     "delta": {
+      "tx_um": 3.826840838536955,
+      "ty_um": -15.686978620355628,
+      "theta_urad": -229.3840520279672
+     },
+     "compensations": 2,
+     "rounds": [
+      {
+       "iter": 1,
+       "delta": {
+        "tx_um": 0.0038,
+        "ty_um": -0.167,
+        "theta_urad": -3.125
+       },
+       "theta_w_urad": -47.798,
+       "theta_d_urad": -50.923,
+       "resid_xy_um": 0.167,
+       "resid_rz_urad": 3.125,
+       "judge": "fail"
+      },
+      {
+       "iter": 2,
+       "delta": {
+        "tx_um": -0.0083,
+        "ty_um": 0.0543,
+        "theta_urad": -10.231
+       },
+       "theta_w_urad": -41.646,
+       "theta_d_urad": -51.877,
+       "resid_xy_um": 0.0549,
+       "resid_rz_urad": 10.231,
+       "judge": "pass"
+      }
+     ],
+     "phys_resid": {
+      "tx_um": -0.057429314594514835,
+      "ty_um": -0.0036377021972455736,
+      "theta_urad": -7.050128460416848
+     },
+     "_note": "精对准：Δ 解算/补偿次数/确认逐轮残余/物理真值残差（eng.fine_align_result；µm/µrad）"
+    },
+    "bond_commit": {
+     "commit": {
+      "dx_um": -12.520018,
+      "dy_um": -0.659559,
+      "drz_urad": 12.23427
+     },
+     "align_resid": {
+      "dx_um": -0.057429,
+      "dy_um": -0.003638,
+      "drz_urad": -7.050128
+     },
+     "process_shift": null,
+     "_note": "键合接触时刻真值分量（eng.bond_commit，迭代 20）：commit=触力停轴后 6DOF 真值（fa 同一 fit 管线）；align_resid=fa 时刻对准残差；descent=下降链=commit−align_resid；process_shift=压合微滑移（默认 0）",
+     "descent": {
+      "dx_um": -12.462589,
+      "dy_um": -0.655921,
+      "drz_urad": 19.284398
+     }
+    }
+   },
+   "bond_params": {
+    "force_N": 50.0,
+    "dwell_s": 10.0,
+    "head_temp_C": 300.0,
+    "wafer_temp_C": 30.0,
+    "head_actual_C": 295.379339,
+    "wafer_actual_C": 30.0,
+    "touch_pos_mm": -167.434452,
+    "contact_verify": {
+     "actual_contact_z_mm": -167.434452,
+     "eff_contact_z_mm": -167.43,
+     "dev_um": -4.452,
+     "touch_force_N": 2.737,
+     "tol_um": 50.0,
+     "judge": "pass",
+     "geom_gap_um": -4.452
+    },
+    "_note": "键合参数：处方力/保压/温度 + 键合时刻加热器实温 + 寻力实际接触位（eng.bond_touch_pos） + 接触确认证据（eng.bond_contact_evidence，迭代 13）"
+   }
+  },
+  {
+   "die_id": "R08C02",
+   "site": {
+    "row": 13,
+    "col": 14,
+    "x": 0.0,
+    "y": -10.005
+   },
+   "t_bond": 2683.648,
+   "truth": {
+    "dx": -0.012501,
+    "dy": -0.000726,
+    "drz": 1.8e-05
+   },
+   "truth_note": null,
+   "truth_components": {
+    "align_resid": {
+     "dx_um": -0.038516,
+     "dy_um": -0.069996,
+     "drz_urad": -1.612941
+    },
+    "descent": {
+     "dx_um": -12.462896,
+     "dy_um": -0.656377,
+     "drz_urad": 19.285224
+    },
+    "process_shift": {
+     "dx_um": 0.0,
+     "dy_um": 0.0,
+     "drz_urad": 0.0
+    },
+    "commit": {
+     "dx_um": -12.501412,
+     "dy_um": -0.726373,
+     "drz_urad": 17.672283
+    }
+   },
+   "measured": null,
+   "bond_offset": {
+    "x_um": 0.0,
+    "y_um": 0.0,
+    "rz_urad": 0.0
+   },
+   "timing": {
+    "stages": {
+     "flip_pick": 8.311,
+     "flip_handoff": 6.906,
+     "focus_level": 30.864,
+     "fine_align": 19.232,
+     "bond": 30.637
+    },
+    "t_start": 2587.698,
+    "t_end": 2683.648
+   },
+   "chain": {
+    "pick_coarse": {
+     "dx_mm": -0.122693,
+     "dy_mm": -0.01715,
+     "die": "R08C02",
+     "_note": "取片粗对准实测偏差（eng.coarse_offset，下相机测 die 世界位 − 标定中心）"
+    },
+    "handoff_tilt": {
+     "rx_urad": 0.0,
+     "ry_urad": 0.0,
+     "_note": "交接后 die 在头倾斜真值（die.rx/ry，处方 wafer_load.die_head_r*_urad 注入）"
+    },
+    "focus_level": {
+     "_note": "调焦调平：调平残余/焦面残差（eng.fl_fit.compensate），复测判定（fl_fit.verify）",
+     "residual_urad": [
+      0.0,
+      0.0
+     ],
+     "focus_resid_um": [
+      0.0,
+      0.0
+     ],
+     "verify_residual_urad": [
+      -29.013433,
+      -0.724085
+     ],
+     "verify_judge": "pass"
+    },
+    "fine_align": {
+     "algorithm": "rigid",
+     "judge": "pass",
+     "delta": {
+      "tx_um": 2.3252521709927634,
+      "ty_um": -14.339728331701002,
+      "theta_urad": -5.855507425591004
+     },
+     "compensations": 1,
+     "rounds": [
+      {
+       "iter": 1,
+       "delta": {
+        "tx_um": 0.0348,
+        "ty_um": 0.0289,
+        "theta_urad": 12.172
+       },
+       "theta_w_urad": -52.37,
+       "theta_d_urad": -40.198,
+       "resid_xy_um": 0.0453,
+       "resid_rz_urad": 12.172,
+       "judge": "pass"
+      }
+     ],
+     "phys_resid": {
+      "tx_um": -0.03851591210946026,
+      "ty_um": -0.06999579922428723,
+      "theta_urad": -1.612941460850579
+     },
+     "_note": "精对准：Δ 解算/补偿次数/确认逐轮残余/物理真值残差（eng.fine_align_result；µm/µrad）"
+    },
+    "bond_commit": {
+     "commit": {
+      "dx_um": -12.501412,
+      "dy_um": -0.726373,
+      "drz_urad": 17.672283
+     },
+     "align_resid": {
+      "dx_um": -0.038516,
+      "dy_um": -0.069996,
+      "drz_urad": -1.612941
+     },
+     "process_shift": null,
+     "_note": "键合接触时刻真值分量（eng.bond_commit，迭代 20）：commit=触力停轴后 6DOF 真值（fa 同一 fit 管线）；align_resid=fa 时刻对准残差；descent=下降链=commit−align_resid；process_shift=压合微滑移（默认 0）",
+     "descent": {
+      "dx_um": -12.462896,
+      "dy_um": -0.656377,
+      "drz_urad": 19.285224
+     }
+    }
+   },
+   "bond_params": {
+    "force_N": 50.0,
+    "dwell_s": 10.0,
+    "head_temp_C": 300.0,
+    "wafer_temp_C": 30.0,
+    "head_actual_C": 288.097686,
+    "wafer_actual_C": 30.000283,
+    "touch_pos_mm": -167.433652,
+    "contact_verify": {
+     "actual_contact_z_mm": -167.433652,
+     "eff_contact_z_mm": -167.43,
+     "dev_um": -3.652,
+     "touch_force_N": 2.5,
+     "tol_um": 50.0,
+     "judge": "pass",
+     "geom_gap_um": -3.852
+    },
+    "_note": "键合参数：处方力/保压/温度 + 键合时刻加热器实温 + 寻力实际接触位（eng.bond_touch_pos） + 接触确认证据（eng.bond_contact_evidence，迭代 13）"
+   }
+  },
+  {
+   "die_id": "R07C01",
+   "site": {
+    "row": 14,
+    "col": 13,
+    "x": -10.005,
+    "y": 0.0
+   },
+   "t_bond": 2786.368,
+   "truth": {
+    "dx": -0.012471,
+    "dy": -0.000729,
+    "drz": 1.9e-05
+   },
+   "truth_note": null,
+   "truth_components": {
+    "align_resid": {
+     "dx_um": -0.009555,
+     "dy_um": -0.074577,
+     "drz_urad": 0.015366
+    },
+    "descent": {
+     "dx_um": -12.461469,
+     "dy_um": -0.654028,
+     "drz_urad": 19.281004
+    },
+    "process_shift": {
+     "dx_um": 0.0,
+     "dy_um": 0.0,
+     "drz_urad": 0.0
+    },
+    "commit": {
+     "dx_um": -12.471024,
+     "dy_um": -0.728605,
+     "drz_urad": 19.29637
+    }
+   },
+   "measured": null,
+   "bond_offset": {
+    "x_um": 0.0,
+    "y_um": 0.0,
+    "rz_urad": 0.0
+   },
+   "timing": {
+    "stages": {
+     "flip_pick": 8.835,
+     "flip_handoff": 6.889,
+     "focus_level": 36.286,
+     "fine_align": 20.201,
+     "bond": 30.475
+    },
+    "t_start": 2683.677,
+    "t_end": 2786.363
+   },
+   "chain": {
+    "pick_coarse": {
+     "dx_mm": -0.125203,
+     "dy_mm": -0.018851,
+     "die": "R07C01",
+     "_note": "取片粗对准实测偏差（eng.coarse_offset，下相机测 die 世界位 − 标定中心）"
+    },
+    "handoff_tilt": {
+     "rx_urad": 0.0,
+     "ry_urad": 0.0,
+     "_note": "交接后 die 在头倾斜真值（die.rx/ry，处方 wafer_load.die_head_r*_urad 注入）"
+    },
+    "focus_level": {
+     "_note": "调焦调平：调平残余/焦面残差（eng.fl_fit.compensate），复测判定（fl_fit.verify）",
+     "residual_urad": [
+      0.0,
+      0.0
+     ],
+     "focus_resid_um": [
+      0.0,
+      0.0
+     ],
+     "verify_residual_urad": [
+      19.869707,
+      -23.289155
+     ],
+     "verify_judge": "pass"
+    },
+    "fine_align": {
+     "algorithm": "rigid",
+     "judge": "pass",
+     "delta": {
+      "tx_um": 0.4517503911570773,
+      "ty_um": -13.755999821761106,
+      "theta_urad": -1.0199661366718635
+     },
+     "compensations": 1,
+     "rounds": [
+      {
+       "iter": 1,
+       "delta": {
+        "tx_um": -0.0588,
+        "ty_um": 0.0637,
+        "theta_urad": 2.237
+       },
+       "theta_w_urad": -47.502,
+       "theta_d_urad": -45.265,
+       "resid_xy_um": 0.0867,
+       "resid_rz_urad": 2.237,
+       "judge": "pass"
+      }
+     ],
+     "phys_resid": {
+      "tx_um": -0.009555382554538028,
+      "ty_um": -0.0745765704444068,
+      "theta_urad": 0.015365539964856423
+     },
+     "_note": "精对准：Δ 解算/补偿次数/确认逐轮残余/物理真值残差（eng.fine_align_result；µm/µrad）"
+    },
+    "bond_commit": {
+     "commit": {
+      "dx_um": -12.471024,
+      "dy_um": -0.728605,
+      "drz_urad": 19.29637
+     },
+     "align_resid": {
+      "dx_um": -0.009555,
+      "dy_um": -0.074577,
+      "drz_urad": 0.015366
+     },
+     "process_shift": null,
+     "_note": "键合接触时刻真值分量（eng.bond_commit，迭代 20）：commit=触力停轴后 6DOF 真值（fa 同一 fit 管线）；align_resid=fa 时刻对准残差；descent=下降链=commit−align_resid；process_shift=压合微滑移（默认 0）",
+     "descent": {
+      "dx_um": -12.461469,
+      "dy_um": -0.654028,
+      "drz_urad": 19.281004
+     }
+    }
+   },
+   "bond_params": {
+    "force_N": 50.0,
+    "dwell_s": 10.0,
+    "head_temp_C": 300.0,
+    "wafer_temp_C": 30.0,
+    "head_actual_C": 296.27168,
+    "wafer_actual_C": 30.0,
+    "touch_pos_mm": -167.437852,
+    "contact_verify": {
+     "actual_contact_z_mm": -167.437852,
+     "eff_contact_z_mm": -167.43,
+     "dev_um": -7.852,
+     "touch_force_N": 3.698,
+     "tol_um": 50.0,
+     "judge": "pass",
+     "geom_gap_um": -7.852
+    },
+    "_note": "键合参数：处方力/保压/温度 + 键合时刻加热器实温 + 寻力实际接触位（eng.bond_touch_pos） + 接触确认证据（eng.bond_contact_evidence，迭代 13）"
+   }
+  },
+  {
+   "die_id": "R07C03",
+   "site": {
+    "row": 14,
+    "col": 15,
+    "x": 10.005,
+    "y": 0.0
+   },
+   "t_bond": 2880.394,
+   "truth": {
+    "dx": -0.012417,
+    "dy": -0.000685,
+    "drz": 9e-06
+   },
+   "truth_note": null,
+   "truth_components": {
+    "align_resid": {
+     "dx_um": 0.045719,
+     "dy_um": -0.029628,
+     "drz_urad": -10.268789
+    },
+    "descent": {
+     "dx_um": -12.462427,
+     "dy_um": -0.655572,
+     "drz_urad": 19.283854
+    },
+    "process_shift": {
+     "dx_um": 0.0,
+     "dy_um": 0.0,
+     "drz_urad": 0.0
+    },
+    "commit": {
+     "dx_um": -12.416708,
+     "dy_um": -0.6852,
+     "drz_urad": 9.015065
+    }
+   },
+   "measured": null,
+   "bond_offset": {
+    "x_um": 0.0,
+    "y_um": 0.0,
+    "rz_urad": 0.0
+   },
+   "timing": {
+    "stages": {
+     "flip_pick": 8.478,
+     "flip_handoff": 6.882,
+     "focus_level": 31.658,
+     "fine_align": 16.541,
+     "bond": 30.454
+    },
+    "t_start": 2786.381,
+    "t_end": 2880.394
+   },
+   "chain": {
+    "pick_coarse": {
+     "dx_mm": -0.125643,
+     "dy_mm": -0.016294,
+     "die": "R07C03",
+     "_note": "取片粗对准实测偏差（eng.coarse_offset，下相机测 die 世界位 − 标定中心）"
+    },
+    "handoff_tilt": {
+     "rx_urad": 0.0,
+     "ry_urad": 0.0,
+     "_note": "交接后 die 在头倾斜真值（die.rx/ry，处方 wafer_load.die_head_r*_urad 注入）"
+    },
+    "focus_level": {
+     "_note": "调焦调平：调平残余/焦面残差（eng.fl_fit.compensate），复测判定（fl_fit.verify）",
+     "residual_urad": [
+      0.0,
+      0.0
+     ],
+     "focus_resid_um": [
+      0.0,
+      0.0
+     ],
+     "verify_residual_urad": [
+      6.250146,
+      -1.249891
+     ],
+     "verify_judge": "pass"
+    },
+    "fine_align": {
+     "algorithm": "rigid",
+     "judge": "pass",
+     "delta": {
+      "tx_um": 7.302362320415666,
+      "ty_um": -0.9162519282209063,
+      "theta_urad": 9.50711022415483
+     },
+     "compensations": 1,
+     "rounds": [
+      {
+       "iter": 1,
+       "delta": {
+        "tx_um": 0.0866,
+        "ty_um": -0.0075,
+        "theta_urad": -5.658
+       },
+       "theta_w_urad": -36.185,
+       "theta_d_urad": -41.843,
+       "resid_xy_um": 0.0869,
+       "resid_rz_urad": 5.658,
+       "judge": "pass"
+      }
+     ],
+     "phys_resid": {
+      "tx_um": 0.04571863849633928,
+      "ty_um": -0.029627696500611478,
+      "theta_urad": -10.26878946192565
+     },
+     "_note": "精对准：Δ 解算/补偿次数/确认逐轮残余/物理真值残差（eng.fine_align_result；µm/µrad）"
+    },
+    "bond_commit": {
+     "commit": {
+      "dx_um": -12.416708,
+      "dy_um": -0.6852,
+      "drz_urad": 9.015065
+     },
+     "align_resid": {
+      "dx_um": 0.045719,
+      "dy_um": -0.029628,
+      "drz_urad": -10.268789
+     },
+     "process_shift": null,
+     "_note": "键合接触时刻真值分量（eng.bond_commit，迭代 20）：commit=触力停轴后 6DOF 真值（fa 同一 fit 管线）；align_resid=fa 时刻对准残差；descent=下降链=commit−align_resid；process_shift=压合微滑移（默认 0）",
+     "descent": {
+      "dx_um": -12.462427,
+      "dy_um": -0.655572,
+      "drz_urad": 19.283854
+     }
+    }
+   },
+   "bond_params": {
+    "force_N": 50.0,
+    "dwell_s": 10.0,
+    "head_temp_C": 300.0,
+    "wafer_temp_C": 30.0,
+    "head_actual_C": 289.837168,
+    "wafer_actual_C": 30.000282,
+    "touch_pos_mm": -167.435052,
+    "contact_verify": {
+     "actual_contact_z_mm": -167.435052,
+     "eff_contact_z_mm": -167.43,
+     "dev_um": -5.052,
+     "touch_force_N": 3.28,
+     "tol_um": 50.0,
+     "judge": "pass",
+     "geom_gap_um": -5.052
+    },
+    "_note": "键合参数：处方力/保压/温度 + 键合时刻加热器实温 + 寻力实际接触位（eng.bond_touch_pos） + 接触确认证据（eng.bond_contact_evidence，迭代 13）"
+   }
+  },
+  {
+   "die_id": "R08C01",
+   "site": {
+    "row": 15,
+    "col": 14,
+    "x": 0.0,
+    "y": 10.005
+   },
+   "t_bond": 2973.582,
+   "truth": {
+    "dx": -0.012484,
+    "dy": -0.000663,
+    "drz": 2.8e-05
+   },
+   "truth_note": null,
+   "truth_components": {
+    "align_resid": {
+     "dx_um": -0.021972,
+     "dy_um": -0.008356,
+     "drz_urad": 8.923007
+    },
+    "descent": {
+     "dx_um": -12.461595,
+     "dy_um": -0.654168,
+     "drz_urad": 19.281547
+    },
+    "process_shift": {
+     "dx_um": 0.0,
+     "dy_um": 0.0,
+     "drz_urad": 0.0
+    },
+    "commit": {
+     "dx_um": -12.483567,
+     "dy_um": -0.662524,
+     "drz_urad": 28.204554
+    }
+   },
+   "measured": null,
+   "bond_offset": {
+    "x_um": 0.0,
+    "y_um": 0.0,
+    "rz_urad": 0.0
+   },
+   "timing": {
+    "stages": {
+     "flip_pick": 8.442,
+     "flip_handoff": 6.893,
+     "focus_level": 30.027,
+     "fine_align": 17.159,
+     "bond": 30.637
+    },
+    "t_start": 2880.424,
+    "t_end": 2973.582
+   },
+   "chain": {
+    "pick_coarse": {
+     "dx_mm": -0.121287,
+     "dy_mm": -0.01629,
+     "die": "R08C01",
+     "_note": "取片粗对准实测偏差（eng.coarse_offset，下相机测 die 世界位 − 标定中心）"
+    },
+    "handoff_tilt": {
+     "rx_urad": 0.0,
+     "ry_urad": 0.0,
+     "_note": "交接后 die 在头倾斜真值（die.rx/ry，处方 wafer_load.die_head_r*_urad 注入）"
+    },
+    "focus_level": {
+     "_note": "调焦调平：调平残余/焦面残差（eng.fl_fit.compensate），复测判定（fl_fit.verify）",
+     "residual_urad": [
+      0.0,
+      0.0
+     ],
+     "focus_resid_um": [
+      0.0,
+      0.0
+     ],
+     "verify_residual_urad": [
+      -11.05354,
+      20.789361
+     ],
+     "verify_judge": "pass"
+    },
+    "fine_align": {
+     "algorithm": "rigid",
+     "judge": "pass",
+     "delta": {
+      "tx_um": 7.346252356595461,
+      "ty_um": -15.941245865867957,
+      "theta_urad": -18.09257545657624
+     },
+     "compensations": 1,
+     "rounds": [
+      {
+       "iter": 1,
+       "delta": {
+        "tx_um": 0.069,
+        "ty_um": 0.0183,
+        "theta_urad": -1.744
+       },
+       "theta_w_urad": -48.258,
+       "theta_d_urad": -50.002,
+       "resid_xy_um": 0.0714,
+       "resid_rz_urad": 1.744,
+       "judge": "pass"
+      }
+     ],
+     "phys_resid": {
+      "tx_um": -0.021972026544858636,
+      "ty_um": -0.008355630939149705,
+      "theta_urad": 8.923006538157564
+     },
+     "_note": "精对准：Δ 解算/补偿次数/确认逐轮残余/物理真值残差（eng.fine_align_result；µm/µrad）"
+    },
+    "bond_commit": {
+     "commit": {
+      "dx_um": -12.483567,
+      "dy_um": -0.662524,
+      "drz_urad": 28.204554
+     },
+     "align_resid": {
+      "dx_um": -0.021972,
+      "dy_um": -0.008356,
+      "drz_urad": 8.923007
+     },
+     "process_shift": null,
+     "_note": "键合接触时刻真值分量（eng.bond_commit，迭代 20）：commit=触力停轴后 6DOF 真值（fa 同一 fit 管线）；align_resid=fa 时刻对准残差；descent=下降链=commit−align_resid；process_shift=压合微滑移（默认 0）",
+     "descent": {
+      "dx_um": -12.461595,
+      "dy_um": -0.654168,
+      "drz_urad": 19.281547
+     }
+    }
+   },
+   "bond_params": {
+    "force_N": 50.0,
+    "dwell_s": 10.0,
+    "head_temp_C": 300.0,
+    "wafer_temp_C": 30.0,
+    "head_actual_C": 284.286525,
+    "wafer_actual_C": 30.000282,
+    "touch_pos_mm": -167.437252,
+    "contact_verify": {
+     "actual_contact_z_mm": -167.437252,
+     "eff_contact_z_mm": -167.43,
+     "dev_um": -7.252,
+     "touch_force_N": 2.91,
+     "tol_um": 50.0,
+     "judge": "pass",
+     "geom_gap_um": -7.252
+    },
+    "_note": "键合参数：处方力/保压/温度 + 键合时刻加热器实温 + 寻力实际接触位（eng.bond_touch_pos） + 接触确认证据（eng.bond_contact_evidence，迭代 13）"
+   }
+  },
+  {
+   "die_id": "R08C03",
+   "site": {
+    "row": 12,
+    "col": 14,
+    "x": 0.0,
+    "y": -20.01
+   },
+   "t_bond": 3069.019,
+   "truth": {
+    "dx": -0.01247,
+    "dy": -0.000757,
+    "drz": 1.5e-05
+   },
+   "truth_note": null,
+   "truth_components": {
+    "align_resid": {
+     "dx_um": -0.007649,
+     "dy_um": -0.100882,
+     "drz_urad": -3.826403
+    },
+    "descent": {
+     "dx_um": -12.462514,
+     "dy_um": -0.655771,
+     "drz_urad": 19.284342
+    },
+    "process_shift": {
+     "dx_um": 0.0,
+     "dy_um": 0.0,
+     "drz_urad": 0.0
+    },
+    "commit": {
+     "dx_um": -12.470163,
+     "dy_um": -0.756653,
+     "drz_urad": 15.457939
+    }
+   },
+   "measured": null,
+   "bond_offset": {
+    "x_um": 0.0,
+    "y_um": 0.0,
+    "rz_urad": 0.0
+   },
+   "timing": {
+    "stages": {
+     "flip_pick": 8.48,
+     "flip_handoff": 6.856,
+     "focus_level": 31.438,
+     "fine_align": 17.947,
+     "bond": 30.705
+    },
+    "t_start": 2973.593,
+    "t_end": 3069.019
+   },
+   "chain": {
+    "pick_coarse": {
+     "dx_mm": -0.12547,
+     "dy_mm": -0.016276,
+     "die": "R08C03",
+     "_note": "取片粗对准实测偏差（eng.coarse_offset，下相机测 die 世界位 − 标定中心）"
+    },
+    "handoff_tilt": {
+     "rx_urad": 0.0,
+     "ry_urad": 0.0,
+     "_note": "交接后 die 在头倾斜真值（die.rx/ry，处方 wafer_load.die_head_r*_urad 注入）"
+    },
+    "focus_level": {
+     "_note": "调焦调平：调平残余/焦面残差（eng.fl_fit.compensate），复测判定（fl_fit.verify）",
+     "residual_urad": [
+      0.0,
+      0.0
+     ],
+     "focus_resid_um": [
+      0.0,
+      0.0
+     ],
+     "verify_residual_urad": [
+      -9.343555,
+      30.526084
+     ],
+     "verify_judge": "pass"
+    },
+    "fine_align": {
+     "algorithm": "rigid",
+     "judge": "pass",
+     "delta": {
+      "tx_um": 1.3779938786933839,
+      "ty_um": -16.95358058356223,
+      "theta_urad": 12.49986801514729
+     },
+     "compensations": 1,
+     "rounds": [
+      {
+       "iter": 1,
+       "delta": {
+        "tx_um": 0.0079,
+        "ty_um": 0.0131,
+        "theta_urad": -8.257
+       },
+       "theta_w_urad": -42.698,
+       "theta_d_urad": -50.955,
+       "resid_xy_um": 0.0153,
+       "resid_rz_urad": 8.257,
+       "judge": "pass"
+      }
+     ],
+     "phys_resid": {
+      "tx_um": -0.007648646828783967,
+      "ty_um": -0.1008823002282,
+      "theta_urad": -3.8264034630063604
+     },
+     "_note": "精对准：Δ 解算/补偿次数/确认逐轮残余/物理真值残差（eng.fine_align_result；µm/µrad）"
+    },
+    "bond_commit": {
+     "commit": {
+      "dx_um": -12.470163,
+      "dy_um": -0.756653,
+      "drz_urad": 15.457939
+     },
+     "align_resid": {
+      "dx_um": -0.007649,
+      "dy_um": -0.100882,
+      "drz_urad": -3.826403
+     },
+     "process_shift": null,
+     "_note": "键合接触时刻真值分量（eng.bond_commit，迭代 20）：commit=触力停轴后 6DOF 真值（fa 同一 fit 管线）；align_resid=fa 时刻对准残差；descent=下降链=commit−align_resid；process_shift=压合微滑移（默认 0）",
+     "descent": {
+      "dx_um": -12.462514,
+      "dy_um": -0.655771,
+      "drz_urad": 19.284342
+     }
+    }
+   },
+   "bond_params": {
+    "force_N": 50.0,
+    "dwell_s": 10.0,
+    "head_temp_C": 300.0,
+    "wafer_temp_C": 30.0,
+    "head_actual_C": 277.303614,
+    "wafer_actual_C": 30.0,
+    "touch_pos_mm": -167.434452,
+    "contact_verify": {
+     "actual_contact_z_mm": -167.434452,
+     "eff_contact_z_mm": -167.43,
+     "dev_um": -4.452,
+     "touch_force_N": 2.12,
+     "tol_um": 50.0,
+     "judge": "pass",
+     "geom_gap_um": -4.452
+    },
+    "_note": "键合参数：处方力/保压/温度 + 键合时刻加热器实温 + 寻力实际接触位（eng.bond_touch_pos） + 接触确认证据（eng.bond_contact_evidence，迭代 13）"
+   }
+  },
+  {
+   "die_id": "R06C01",
+   "site": {
+    "row": 14,
+    "col": 12,
+    "x": -20.01,
+    "y": 0.0
+   },
+   "t_bond": 3229.051,
+   "truth": {
+    "dx": -0.012515,
+    "dy": -0.000647,
+    "drz": 2.8e-05
+   },
+   "truth_note": null,
+   "truth_components": {
+    "align_resid": {
+     "dx_um": -0.052535,
+     "dy_um": 0.00914,
+     "drz_urad": 9.149672
+    },
+    "descent": {
+     "dx_um": -12.462443,
+     "dy_um": -0.65564,
+     "drz_urad": 19.284011
+    },
+    "process_shift": {
+     "dx_um": 0.0,
+     "dy_um": 0.0,
+     "drz_urad": 0.0
+    },
+    "commit": {
+     "dx_um": -12.514978,
+     "dy_um": -0.6465,
+     "drz_urad": 28.433683
+    }
+   },
+   "measured": null,
+   "bond_offset": {
+    "x_um": 0.0,
+    "y_um": 0.0,
+    "rz_urad": 0.0
+   },
+   "timing": {
+    "stages": {
+     "flip_pick": 9.229,
+     "flip_handoff": 6.921,
+     "focus_level": 33.032,
+     "fine_align": 14.915,
+     "bond": 30.596
+    },
+    "t_start": 3134.358,
+    "t_end": 3229.051
+   },
+   "chain": {
+    "pick_coarse": {
+     "dx_mm": -0.123834,
+     "dy_mm": -0.018073,
+     "die": "R06C01",
+     "_note": "取片粗对准实测偏差（eng.coarse_offset，下相机测 die 世界位 − 标定中心）"
+    },
+    "handoff_tilt": {
+     "rx_urad": 0.0,
+     "ry_urad": 0.0,
+     "_note": "交接后 die 在头倾斜真值（die.rx/ry，处方 wafer_load.die_head_r*_urad 注入）"
+    },
+    "focus_level": {
+     "_note": "调焦调平：调平残余/焦面残差（eng.fl_fit.compensate），复测判定（fl_fit.verify）",
+     "residual_urad": [
+      0.0,
+      0.0
+     ],
+     "focus_resid_um": [
+      0.0,
+      0.0
+     ],
+     "verify_residual_urad": [
+      -16.38136,
+      -18.618799
+     ],
+     "verify_judge": "pass"
+    },
+    "fine_align": {
+     "algorithm": "rigid",
+     "judge": "pass",
+     "delta": {
+      "tx_um": 8.162504570983216,
+      "ty_um": -16.02849762940439,
+      "theta_urad": -13.355638934930575
+     },
+     "compensations": 1,
+     "rounds": [
+      {
+       "iter": 1,
+       "delta": {
+        "tx_um": 0.0062,
+        "ty_um": 0.119,
+        "theta_urad": 3.06
+       },
+       "theta_w_urad": -54.081,
+       "theta_d_urad": -51.021,
+       "resid_xy_um": 0.1191,
+       "resid_rz_urad": 3.06,
+       "judge": "pass"
+      }
+     ],
+     "phys_resid": {
+      "tx_um": -0.05253495477575143,
+      "ty_um": 0.009139632810573062,
+      "theta_urad": 9.149671537376861
+     },
+     "_note": "精对准：Δ 解算/补偿次数/确认逐轮残余/物理真值残差（eng.fine_align_result；µm/µrad）"
+    },
+    "bond_commit": {
+     "commit": {
+      "dx_um": -12.514978,
+      "dy_um": -0.6465,
+      "drz_urad": 28.433683
+     },
+     "align_resid": {
+      "dx_um": -0.052535,
+      "dy_um": 0.00914,
+      "drz_urad": 9.149672
+     },
+     "process_shift": null,
+     "_note": "键合接触时刻真值分量（eng.bond_commit，迭代 20）：commit=触力停轴后 6DOF 真值（fa 同一 fit 管线）；align_resid=fa 时刻对准残差；descent=下降链=commit−align_resid；process_shift=压合微滑移（默认 0）",
+     "descent": {
+      "dx_um": -12.462443,
+      "dy_um": -0.65564,
+      "drz_urad": 19.284011
+     }
+    }
+   },
+   "bond_params": {
+    "force_N": 50.0,
+    "dwell_s": 10.0,
+    "head_temp_C": 300.0,
+    "wafer_temp_C": 30.0,
+    "head_actual_C": 291.588152,
+    "wafer_actual_C": 30.0,
+    "touch_pos_mm": -167.434852,
+    "contact_verify": {
+     "actual_contact_z_mm": -167.434852,
+     "eff_contact_z_mm": -167.43,
+     "dev_um": -4.852,
+     "touch_force_N": 3.094,
+     "tol_um": 50.0,
+     "judge": "pass",
+     "geom_gap_um": -4.852
+    },
+    "_note": "键合参数：处方力/保压/温度 + 键合时刻加热器实温 + 寻力实际接触位（eng.bond_touch_pos） + 接触确认证据（eng.bond_contact_evidence，迭代 13）"
+   }
+  },
+  {
+   "die_id": "R06C03",
+   "site": {
+    "row": 14,
+    "col": 16,
+    "x": 20.01,
+    "y": 0.0
+   },
+   "t_bond": 3332.977,
+   "truth": {
+    "dx": -0.012554,
+    "dy": -0.000812,
+    "drz": 1.1e-05
+   },
+   "truth_note": null,
+   "truth_components": {
+    "align_resid": {
+     "dx_um": -0.091702,
+     "dy_um": -0.157417,
+     "drz_urad": -7.894234
+    },
+    "descent": {
+     "dx_um": -12.461911,
+     "dy_um": -0.654795,
+     "drz_urad": 19.282416
+    },
+    "process_shift": {
+     "dx_um": 0.0,
+     "dy_um": 0.0,
+     "drz_urad": 0.0
+    },
+    "commit": {
+     "dx_um": -12.553613,
+     "dy_um": -0.812212,
+     "drz_urad": 11.388182
+    }
+   },
+   "measured": null,
+   "bond_offset": {
+    "x_um": 0.0,
+    "y_um": 0.0,
+    "rz_urad": 0.0
+   },
+   "timing": {
+    "stages": {
+     "flip_pick": 8.541,
+     "flip_handoff": 6.94,
+     "focus_level": 35.463,
+     "fine_align": 22.278,
+     "bond": 30.671
+    },
+    "t_start": 3229.084,
+    "t_end": 3332.977
+   },
+   "chain": {
+    "pick_coarse": {
+     "dx_mm": -0.123397,
+     "dy_mm": -0.015863,
+     "die": "R06C03",
+     "_note": "取片粗对准实测偏差（eng.coarse_offset，下相机测 die 世界位 − 标定中心）"
+    },
+    "handoff_tilt": {
+     "rx_urad": 0.0,
+     "ry_urad": 0.0,
+     "_note": "交接后 die 在头倾斜真值（die.rx/ry，处方 wafer_load.die_head_r*_urad 注入）"
+    },
+    "focus_level": {
+     "_note": "调焦调平：调平残余/焦面残差（eng.fl_fit.compensate），复测判定（fl_fit.verify）",
+     "residual_urad": [
+      0.0,
+      0.0
+     ],
+     "focus_resid_um": [
+      0.0,
+      0.0
+     ],
+     "verify_residual_urad": [
+      -15.855501,
+      -11.908081
+     ],
+     "verify_judge": "pass"
+    },
+    "fine_align": {
+     "algorithm": "rigid",
+     "judge": "pass",
+     "delta": {
+      "tx_um": 3.231455947691532,
+      "ty_um": 1.3087449307746282,
+      "theta_urad": 16.777346105345575
+     },
+     "compensations": 1,
+     "rounds": [
+      {
+       "iter": 1,
+       "delta": {
+        "tx_um": -0.0806,
+        "ty_um": -0.0865,
+        "theta_urad": -10.823
+       },
+       "theta_w_urad": -32.863,
+       "theta_d_urad": -43.686,
+       "resid_xy_um": 0.1182,
+       "resid_rz_urad": 10.823,
+       "judge": "pass"
+      }
+     ],
+     "phys_resid": {
+      "tx_um": -0.09170169659000749,
+      "ty_um": -0.15741662645041288,
+      "theta_urad": -7.89423446024663
+     },
+     "_note": "精对准：Δ 解算/补偿次数/确认逐轮残余/物理真值残差（eng.fine_align_result；µm/µrad）"
+    },
+    "bond_commit": {
+     "commit": {
+      "dx_um": -12.553613,
+      "dy_um": -0.812212,
+      "drz_urad": 11.388182
+     },
+     "align_resid": {
+      "dx_um": -0.091702,
+      "dy_um": -0.157417,
+      "drz_urad": -7.894234
+     },
+     "process_shift": null,
+     "_note": "键合接触时刻真值分量（eng.bond_commit，迭代 20）：commit=触力停轴后 6DOF 真值（fa 同一 fit 管线）；align_resid=fa 时刻对准残差；descent=下降链=commit−align_resid；process_shift=压合微滑移（默认 0）",
+     "descent": {
+      "dx_um": -12.461911,
+      "dy_um": -0.654795,
+      "drz_urad": 19.282416
+     }
+    }
+   },
+   "bond_params": {
+    "force_N": 50.0,
+    "dwell_s": 10.0,
+    "head_temp_C": 300.0,
+    "wafer_temp_C": 30.0,
+    "head_actual_C": 282.704772,
+    "wafer_actual_C": 30.0,
+    "touch_pos_mm": -167.436452,
+    "contact_verify": {
+     "actual_contact_z_mm": -167.436452,
+     "eff_contact_z_mm": -167.43,
+     "dev_um": -6.452,
+     "touch_force_N": 2.188,
+     "tol_um": 50.0,
+     "judge": "pass",
+     "geom_gap_um": -6.452
+    },
+    "_note": "键合参数：处方力/保压/温度 + 键合时刻加热器实温 + 寻力实际接触位（eng.bond_touch_pos） + 接触确认证据（eng.bond_contact_evidence，迭代 13）"
+   }
+  },
+  {
+   "die_id": "R07C00",
+   "site": {
+    "row": 16,
+    "col": 14,
+    "x": 0.0,
+    "y": 20.01
+   },
+   "t_bond": 3505.484,
+   "truth": {
+    "dx": -0.012499,
+    "dy": -0.000765,
+    "drz": 2e-05
+   },
+   "truth_note": null,
+   "truth_components": {
+    "align_resid": {
+     "dx_um": -0.035954,
+     "dy_um": -0.108719,
+     "drz_urad": 0.547623
+    },
+    "descent": {
+     "dx_um": -12.462921,
+     "dy_um": -0.656588,
+     "drz_urad": 19.285562
+    },
+    "process_shift": {
+     "dx_um": 0.0,
+     "dy_um": 0.0,
+     "drz_urad": 0.0
+    },
+    "commit": {
+     "dx_um": -12.498875,
+     "dy_um": -0.765307,
+     "drz_urad": 19.833185
+    }
+   },
+   "measured": null,
+   "bond_offset": {
+    "x_um": 0.0,
+    "y_um": 0.0,
+    "rz_urad": 0.0
+   },
+   "timing": {
+    "stages": {
+     "flip_pick": 8.923,
+     "flip_handoff": 6.912,
+     "focus_level": 36.712,
+     "fine_align": 23.593,
+     "bond": 30.596
+    },
+    "t_start": 3398.748,
+    "t_end": 3505.484
+   },
+   "chain": {
+    "pick_coarse": {
+     "dx_mm": -0.125249,
+     "dy_mm": -0.018403,
+     "die": "R07C00",
+     "_note": "取片粗对准实测偏差（eng.coarse_offset，下相机测 die 世界位 − 标定中心）"
+    },
+    "handoff_tilt": {
+     "rx_urad": 0.0,
+     "ry_urad": 0.0,
+     "_note": "交接后 die 在头倾斜真值（die.rx/ry，处方 wafer_load.die_head_r*_urad 注入）"
+    },
+    "focus_level": {
+     "_note": "调焦调平：调平残余/焦面残差（eng.fl_fit.compensate），复测判定（fl_fit.verify）",
+     "residual_urad": [
+      0.0,
+      0.0
+     ],
+     "focus_resid_um": [
+      0.0,
+      0.0
+     ],
+     "verify_residual_urad": [
+      -26.711047,
+      -19.868379
+     ],
+     "verify_judge": "pass"
+    },
+    "fine_align": {
+     "algorithm": "rigid",
+     "judge": "pass",
+     "delta": {
+      "tx_um": 2.578250130001876,
+      "ty_um": -18.59824924053104,
+      "theta_urad": -6.84206704308388
+     },
+     "compensations": 1,
+     "rounds": [
+      {
+       "iter": 1,
+       "delta": {
+        "tx_um": -0.0279,
+        "ty_um": -0.0615,
+        "theta_urad": -7.434
+       },
+       "theta_w_urad": -42.929,
+       "theta_d_urad": -50.363,
+       "resid_xy_um": 0.0675,
+       "resid_rz_urad": 7.434,
+       "judge": "pass"
+      }
+     ],
+     "phys_resid": {
+      "tx_um": -0.03595393493327492,
+      "ty_um": -0.10871912572785192,
+      "theta_urad": 0.5476225385854978
+     },
+     "_note": "精对准：Δ 解算/补偿次数/确认逐轮残余/物理真值残差（eng.fine_align_result；µm/µrad）"
+    },
+    "bond_commit": {
+     "commit": {
+      "dx_um": -12.498875,
+      "dy_um": -0.765307,
+      "drz_urad": 19.833185
+     },
+     "align_resid": {
+      "dx_um": -0.035954,
+      "dy_um": -0.108719,
+      "drz_urad": 0.547623
+     },
+     "process_shift": null,
+     "_note": "键合接触时刻真值分量（eng.bond_commit，迭代 20）：commit=触力停轴后 6DOF 真值（fa 同一 fit 管线）；align_resid=fa 时刻对准残差；descent=下降链=commit−align_resid；process_shift=压合微滑移（默认 0）",
+     "descent": {
+      "dx_um": -12.462921,
+      "dy_um": -0.656588,
+      "drz_urad": 19.285562
+     }
+    }
+   },
+   "bond_params": {
+    "force_N": 50.0,
+    "dwell_s": 10.0,
+    "head_temp_C": 300.0,
+    "wafer_temp_C": 30.0,
+    "head_actual_C": 291.462698,
+    "wafer_actual_C": 30.00028,
+    "touch_pos_mm": -167.433252,
+    "contact_verify": {
+     "actual_contact_z_mm": -167.433252,
+     "eff_contact_z_mm": -167.43,
+     "dev_um": -3.252,
+     "touch_force_N": 2.025,
+     "tol_um": 50.0,
+     "judge": "pass",
+     "geom_gap_um": -3.252
+    },
+    "_note": "键合参数：处方力/保压/温度 + 键合时刻加热器实温 + 寻力实际接触位（eng.bond_touch_pos） + 接触确认证据（eng.bond_contact_evidence，迭代 13）"
+   }
+  },
+  {
+   "die_id": "R07C04",
+   "site": {
+    "row": 11,
+    "col": 14,
+    "x": 0.0,
+    "y": -30.015
+   },
+   "t_bond": 3613.127,
+   "truth": {
+    "dx": -0.012552,
+    "dy": -0.000755,
+    "drz": 1.8e-05
+   },
+   "truth_note": null,
+   "truth_components": {
+    "align_resid": {
+     "dx_um": -0.089196,
+     "dy_um": -0.099229,
+     "drz_urad": -1.738913
+    },
+    "descent": {
+     "dx_um": -12.462742,
+     "dy_um": -0.655995,
+     "drz_urad": 19.284625
+    },
+    "process_shift": {
+     "dx_um": 0.0,
+     "dy_um": 0.0,
+     "drz_urad": 0.0
+    },
+    "commit": {
+     "dx_um": -12.551938,
+     "dy_um": -0.755224,
+     "drz_urad": 17.545712
+    }
+   },
+   "measured": null,
+   "bond_offset": {
+    "x_um": 0.0,
+    "y_um": 0.0,
+    "rz_urad": 0.0
+   },
+   "timing": {
+    "stages": {
+     "flip_pick": 8.754,
+     "flip_handoff": 6.937,
+     "focus_level": 35.721,
+     "fine_align": 25.656,
+     "bond": 30.541
+    },
+    "t_start": 3505.518,
+    "t_end": 3613.127
+   },
+   "chain": {
+    "pick_coarse": {
+     "dx_mm": -0.125097,
+     "dy_mm": -0.014741,
+     "die": "R07C04",
+     "_note": "取片粗对准实测偏差（eng.coarse_offset，下相机测 die 世界位 − 标定中心）"
+    },
+    "handoff_tilt": {
+     "rx_urad": 0.0,
+     "ry_urad": 0.0,
+     "_note": "交接后 die 在头倾斜真值（die.rx/ry，处方 wafer_load.die_head_r*_urad 注入）"
+    },
+    "focus_level": {
+     "_note": "调焦调平：调平残余/焦面残差（eng.fl_fit.compensate），复测判定（fl_fit.verify）",
+     "residual_urad": [
+      0.0,
+      0.0
+     ],
+     "focus_resid_um": [
+      0.0,
+      0.0
+     ],
+     "verify_residual_urad": [
+      24.737897,
+      -11.578581
+     ],
+     "verify_judge": "pass"
+    },
+    "fine_align": {
+     "algorithm": "rigid",
+     "judge": "pass",
+     "delta": {
+      "tx_um": 7.340249902909701,
+      "ty_um": -12.376500310240763,
+      "theta_urad": 0.22993577842507934
+     },
+     "compensations": 1,
+     "rounds": [
+      {
+       "iter": 1,
+       "delta": {
+        "tx_um": -0.0263,
+        "ty_um": -0.0595,
+        "theta_urad": 2.797
+       },
+       "theta_w_urad": -45.265,
+       "theta_d_urad": -42.469,
+       "resid_xy_um": 0.0651,
+       "resid_rz_urad": 2.797,
+       "judge": "pass"
+      }
+     ],
+     "phys_resid": {
+      "tx_um": -0.08919623009973066,
+      "ty_um": -0.09922934740291822,
+      "theta_urad": -1.7389134611200932
+     },
+     "_note": "精对准：Δ 解算/补偿次数/确认逐轮残余/物理真值残差（eng.fine_align_result；µm/µrad）"
+    },
+    "bond_commit": {
+     "commit": {
+      "dx_um": -12.551938,
+      "dy_um": -0.755224,
+      "drz_urad": 17.545712
+     },
+     "align_resid": {
+      "dx_um": -0.089196,
+      "dy_um": -0.099229,
+      "drz_urad": -1.738913
+     },
+     "process_shift": null,
+     "_note": "键合接触时刻真值分量（eng.bond_commit，迭代 20）：commit=触力停轴后 6DOF 真值（fa 同一 fit 管线）；align_resid=fa 时刻对准残差；descent=下降链=commit−align_resid；process_shift=压合微滑移（默认 0）",
+     "descent": {
+      "dx_um": -12.462742,
+      "dy_um": -0.655995,
+      "drz_urad": 19.284625
+     }
+    }
+   },
+   "bond_params": {
+    "force_N": 50.0,
+    "dwell_s": 10.0,
+    "head_temp_C": 300.0,
+    "wafer_temp_C": 30.0,
+    "head_actual_C": 300.0,
+    "wafer_actual_C": 30.0,
+    "touch_pos_mm": -167.434252,
+    "contact_verify": {
+     "actual_contact_z_mm": -167.434252,
+     "eff_contact_z_mm": -167.43,
+     "dev_um": -4.252,
+     "touch_force_N": 2.427,
+     "tol_um": 50.0,
+     "judge": "pass",
+     "geom_gap_um": -4.252
+    },
+    "_note": "键合参数：处方力/保压/温度 + 键合时刻加热器实温 + 寻力实际接触位（eng.bond_touch_pos） + 接触确认证据（eng.bond_contact_evidence，迭代 13）"
+   }
+  },
+  {
+   "die_id": "R10C02",
+   "site": {
+    "row": 14,
+    "col": 11,
+    "x": -30.015,
+    "y": 0.0
+   },
+   "t_bond": 3854.086,
+   "truth": {
+    "dx": -0.01249,
+    "dy": -0.000633,
+    "drz": 1.1e-05
+   },
+   "truth_note": null,
+   "truth_components": {
+    "align_resid": {
+     "dx_um": -0.0275,
+     "dy_um": 0.02321,
+     "drz_urad": -8.656002
+    },
+    "descent": {
+     "dx_um": -12.462816,
+     "dy_um": -0.656135,
+     "drz_urad": 19.284848
+    },
+    "process_shift": {
+     "dx_um": 0.0,
+     "dy_um": 0.0,
+     "drz_urad": 0.0
+    },
+    "commit": {
+     "dx_um": -12.490316,
+     "dy_um": -0.632925,
+     "drz_urad": 10.628846
+    }
+   },
+   "measured": null,
+   "bond_offset": {
+    "x_um": 0.0,
+    "y_um": 0.0,
+    "rz_urad": 0.0
+   },
+   "timing": {
+    "stages": {
+     "flip_pick": 8.917,
+     "flip_handoff": 6.943,
+     "focus_level": 33.052,
+     "fine_align": 30.1,
+     "bond": 30.582
+    },
+    "t_start": 3744.492,
+    "t_end": 3854.086
+   },
+   "chain": {
+    "pick_coarse": {
+     "dx_mm": -0.125862,
+     "dy_mm": -0.017116,
+     "die": "R10C02",
+     "_note": "取片粗对准实测偏差（eng.coarse_offset，下相机测 die 世界位 − 标定中心）"
+    },
+    "handoff_tilt": {
+     "rx_urad": 0.0,
+     "ry_urad": 0.0,
+     "_note": "交接后 die 在头倾斜真值（die.rx/ry，处方 wafer_load.die_head_r*_urad 注入）"
+    },
+    "focus_level": {
+     "_note": "调焦调平：调平残余/焦面残差（eng.fl_fit.compensate），复测判定（fl_fit.verify）",
+     "residual_urad": [
+      0.0,
+      0.0
+     ],
+     "focus_resid_um": [
+      0.0,
+      0.0
+     ],
+     "verify_residual_urad": [
+      30.592974,
+      9.803019
+     ],
+     "verify_judge": "pass"
+    },
+    "fine_align": {
+     "algorithm": "rigid",
+     "judge": "pass",
+     "delta": {
+      "tx_um": 8.162749924924453,
+      "ty_um": -12.392250016059132,
+      "theta_urad": 0.1313657826163773
+     },
+     "compensations": 2,
+     "rounds": [
+      {
+       "iter": 1,
+       "delta": {
+        "tx_um": -0.0921,
+        "ty_um": -0.1236,
+        "theta_urad": 6.974
+       },
+       "theta_w_urad": -48.456,
+       "theta_d_urad": -41.482,
+       "resid_xy_um": 0.1541,
+       "resid_rz_urad": 6.974,
+       "judge": "fail"
+      },
+      {
+       "iter": 2,
+       "delta": {
+        "tx_um": 0.0186,
+        "ty_um": 0.1156,
+        "theta_urad": -10.263
+       },
+       "theta_w_urad": -36.449,
+       "theta_d_urad": -46.712,
+       "resid_xy_um": 0.1171,
+       "resid_rz_urad": 10.263,
+       "judge": "pass"
+      }
+     ],
+     "phys_resid": {
+      "tx_um": -0.027500166090987932,
+      "ty_um": 0.023209962302317422,
+      "theta_urad": -8.656002461922418
+     },
+     "_note": "精对准：Δ 解算/补偿次数/确认逐轮残余/物理真值残差（eng.fine_align_result；µm/µrad）"
+    },
+    "bond_commit": {
+     "commit": {
+      "dx_um": -12.490316,
+      "dy_um": -0.632925,
+      "drz_urad": 10.628846
+     },
+     "align_resid": {
+      "dx_um": -0.0275,
+      "dy_um": 0.02321,
+      "drz_urad": -8.656002
+     },
+     "process_shift": null,
+     "_note": "键合接触时刻真值分量（eng.bond_commit，迭代 20）：commit=触力停轴后 6DOF 真值（fa 同一 fit 管线）；align_resid=fa 时刻对准残差；descent=下降链=commit−align_resid；process_shift=压合微滑移（默认 0）",
+     "descent": {
+      "dx_um": -12.462816,
+      "dy_um": -0.656135,
+      "drz_urad": 19.284848
+     }
+    }
+   },
+   "bond_params": {
+    "force_N": 50.0,
+    "dwell_s": 10.0,
+    "head_temp_C": 300.0,
+    "wafer_temp_C": 30.0,
+    "head_actual_C": 294.997807,
+    "wafer_actual_C": 30.000278,
+    "touch_pos_mm": -167.434052,
+    "contact_verify": {
+     "actual_contact_z_mm": -167.434052,
+     "eff_contact_z_mm": -167.43,
+     "dev_um": -4.052,
+     "touch_force_N": 2.081,
+     "tol_um": 50.0,
+     "judge": "pass",
+     "geom_gap_um": -4.052
+    },
+    "_note": "键合参数：处方力/保压/温度 + 键合时刻加热器实温 + 寻力实际接触位（eng.bond_touch_pos） + 接触确认证据（eng.bond_contact_evidence，迭代 13）"
+   }
+  },
+  {
+   "die_id": "R05C01",
+   "site": {
+    "row": 14,
+    "col": 17,
+    "x": 30.015,
+    "y": 0.0
+   },
+   "t_bond": 3952.767,
+   "truth": {
+    "dx": -0.01245,
+    "dy": -0.000723,
+    "drz": 2.9e-05
+   },
+   "truth_note": null,
+   "truth_components": {
+    "align_resid": {
+     "dx_um": 0.012634,
+     "dy_um": -0.067136,
+     "drz_urad": 9.730806
+    },
+    "descent": {
+     "dx_um": -12.462269,
+     "dy_um": -0.655405,
+     "drz_urad": 19.283451
+    },
+    "process_shift": {
+     "dx_um": 0.0,
+     "dy_um": 0.0,
+     "drz_urad": 0.0
+    },
+    "commit": {
+     "dx_um": -12.449635,
+     "dy_um": -0.722541,
+     "drz_urad": 29.014257
+    }
+   },
+   "measured": null,
+   "bond_offset": {
+    "x_um": 0.0,
+    "y_um": 0.0,
+    "rz_urad": 0.0
+   },
+   "timing": {
+    "stages": {
+     "flip_pick": 8.925,
+     "flip_handoff": 6.929,
+     "focus_level": 31.524,
+     "fine_align": 20.7,
+     "bond": 30.568
+    },
+    "t_start": 3854.121,
+    "t_end": 3952.767
+   },
+   "chain": {
+    "pick_coarse": {
+     "dx_mm": -0.124457,
+     "dy_mm": -0.015581,
+     "die": "R05C01",
+     "_note": "取片粗对准实测偏差（eng.coarse_offset，下相机测 die 世界位 − 标定中心）"
+    },
+    "handoff_tilt": {
+     "rx_urad": 0.0,
+     "ry_urad": 0.0,
+     "_note": "交接后 die 在头倾斜真值（die.rx/ry，处方 wafer_load.die_head_r*_urad 注入）"
+    },
+    "focus_level": {
+     "_note": "调焦调平：调平残余/焦面残差（eng.fl_fit.compensate），复测判定（fl_fit.verify）",
+     "residual_urad": [
+      0.0,
+      0.0
+     ],
+     "focus_resid_um": [
+      0.0,
+      0.0
+     ],
+     "verify_residual_urad": [
+      -15.197497,
+      -10.329171
+     ],
+     "verify_judge": "pass"
+    },
+    "fine_align": {
+     "algorithm": "rigid",
+     "judge": "pass",
+     "delta": {
+      "tx_um": 4.556733547582872,
+      "ty_um": -3.8454941448396034,
+      "theta_urad": -17.303341958240242
+     },
+     "compensations": 1,
+     "rounds": [
+      {
+       "iter": 1,
+       "delta": {
+        "tx_um": -0.0251,
+        "ty_um": -0.0228,
+        "theta_urad": 7.205
+       },
+       "theta_w_urad": -54.015,
+       "theta_d_urad": -46.811,
+       "resid_xy_um": 0.0339,
+       "resid_rz_urad": 7.205,
+       "judge": "pass"
+      }
+     ],
+     "phys_resid": {
+      "tx_um": 0.012633997798161545,
+      "ty_um": -0.06713602177477185,
+      "theta_urad": 9.73080553869092
+     },
+     "_note": "精对准：Δ 解算/补偿次数/确认逐轮残余/物理真值残差（eng.fine_align_result；µm/µrad）"
+    },
+    "bond_commit": {
+     "commit": {
+      "dx_um": -12.449635,
+      "dy_um": -0.722541,
+      "drz_urad": 29.014257
+     },
+     "align_resid": {
+      "dx_um": 0.012634,
+      "dy_um": -0.067136,
+      "drz_urad": 9.730806
+     },
+     "process_shift": null,
+     "_note": "键合接触时刻真值分量（eng.bond_commit，迭代 20）：commit=触力停轴后 6DOF 真值（fa 同一 fit 管线）；align_resid=fa 时刻对准残差；descent=下降链=commit−align_resid；process_shift=压合微滑移（默认 0）",
+     "descent": {
+      "dx_um": -12.462269,
+      "dy_um": -0.655405,
+      "drz_urad": 19.283451
+     }
+    }
+   },
+   "bond_params": {
+    "force_N": 50.0,
+    "dwell_s": 10.0,
+    "head_temp_C": 300.0,
+    "wafer_temp_C": 30.0,
+    "head_actual_C": 297.808263,
+    "wafer_actual_C": 30.0,
+    "touch_pos_mm": -167.435452,
+    "contact_verify": {
+     "actual_contact_z_mm": -167.435452,
+     "eff_contact_z_mm": -167.43,
+     "dev_um": -5.452,
+     "touch_force_N": 3.329,
+     "tol_um": 50.0,
+     "judge": "pass",
+     "geom_gap_um": -5.452
+    },
+    "_note": "键合参数：处方力/保压/温度 + 键合时刻加热器实温 + 寻力实际接触位（eng.bond_touch_pos） + 接触确认证据（eng.bond_contact_evidence，迭代 13）"
+   }
+  },
+  {
+   "die_id": "R08C05",
+   "site": {
+    "row": 17,
+    "col": 14,
+    "x": 0.0,
+    "y": 30.015
+   },
+   "t_bond": 4184.683,
+   "truth": {
+    "dx": -0.012459,
+    "dy": -0.000713,
+    "drz": 3e-05
+   },
+   "truth_note": null,
+   "truth_components": {
+    "align_resid": {
+     "dx_um": 0.003462,
+     "dy_um": -0.057404,
+     "drz_urad": 10.874801
+    },
+    "descent": {
+     "dx_um": -12.462473,
+     "dy_um": -0.655739,
+     "drz_urad": 19.284042
+    },
+    "process_shift": {
+     "dx_um": 0.0,
+     "dy_um": 0.0,
+     "drz_urad": 0.0
+    },
+    "commit": {
+     "dx_um": -12.459011,
+     "dy_um": -0.713143,
+     "drz_urad": 30.158843
+    }
+   },
+   "measured": null,
+   "bond_offset": {
+    "x_um": 0.0,
+    "y_um": 0.0,
+    "rz_urad": 0.0
+   },
+   "timing": {
+    "stages": {
+     "flip_pick": 8.254,
+     "flip_handoff": 6.867,
+     "focus_level": 34.137,
+     "fine_align": 21.061,
+     "bond": 30.677
+    },
+    "t_start": 4083.687,
+    "t_end": 4184.683
+   },
+   "chain": {
+    "pick_coarse": {
+     "dx_mm": -0.125369,
+     "dy_mm": -0.017116,
+     "die": "R08C05",
+     "_note": "取片粗对准实测偏差（eng.coarse_offset，下相机测 die 世界位 − 标定中心）"
+    },
+    "handoff_tilt": {
+     "rx_urad": 0.0,
+     "ry_urad": 0.0,
+     "_note": "交接后 die 在头倾斜真值（die.rx/ry，处方 wafer_load.die_head_r*_urad 注入）"
+    },
+    "focus_level": {
+     "_note": "调焦调平：调平残余/焦面残差（eng.fl_fit.compensate），复测判定（fl_fit.verify）",
+     "residual_urad": [
+      0.0,
+      0.0
+     ],
+     "focus_resid_um": [
+      0.0,
+      0.0
+     ],
+     "verify_residual_urad": [
+      -4.013309,
+      -0.723995
+     ],
+     "verify_judge": "pass"
+    },
+    "fine_align": {
+     "algorithm": "rigid",
+     "judge": "pass",
+     "delta": {
+      "tx_um": 4.616249838424153,
+      "ty_um": -15.976499969916263,
+      "theta_urad": -1.9408512253867256
+     },
+     "compensations": 1,
+     "rounds": [
+      {
+       "iter": 1,
+       "delta": {
+        "tx_um": 0.1,
+        "ty_um": 0.0312,
+        "theta_urad": 15.264
+       },
+       "theta_w_urad": -56.713,
+       "theta_d_urad": -41.449,
+       "resid_xy_um": 0.1048,
+       "resid_rz_urad": 15.264,
+       "judge": "pass"
+      }
+     ],
+     "phys_resid": {
+      "tx_um": 0.0034618750248682773,
+      "ty_um": -0.05740441073243119,
+      "theta_urad": 10.874800540008474
+     },
+     "_note": "精对准：Δ 解算/补偿次数/确认逐轮残余/物理真值残差（eng.fine_align_result；µm/µrad）"
+    },
+    "bond_commit": {
+     "commit": {
+      "dx_um": -12.459011,
+      "dy_um": -0.713143,
+      "drz_urad": 30.158843
+     },
+     "align_resid": {
+      "dx_um": 0.003462,
+      "dy_um": -0.057404,
+      "drz_urad": 10.874801
+     },
+     "process_shift": null,
+     "_note": "键合接触时刻真值分量（eng.bond_commit，迭代 20）：commit=触力停轴后 6DOF 真值（fa 同一 fit 管线）；align_resid=fa 时刻对准残差；descent=下降链=commit−align_resid；process_shift=压合微滑移（默认 0）",
+     "descent": {
+      "dx_um": -12.462473,
+      "dy_um": -0.655739,
+      "drz_urad": 19.284042
+     }
+    }
+   },
+   "bond_params": {
+    "force_N": 50.0,
+    "dwell_s": 10.0,
+    "head_temp_C": 300.0,
+    "wafer_temp_C": 30.0,
+    "head_actual_C": 281.012136,
+    "wafer_actual_C": 30.0,
+    "touch_pos_mm": -167.434852,
+    "contact_verify": {
+     "actual_contact_z_mm": -167.434852,
+     "eff_contact_z_mm": -167.43,
+     "dev_um": -4.852,
+     "touch_force_N": 2.532,
+     "tol_um": 50.0,
+     "judge": "pass",
+     "geom_gap_um": -4.852
+    },
+    "_note": "键合参数：处方力/保压/温度 + 键合时刻加热器实温 + 寻力实际接触位（eng.bond_touch_pos） + 接触确认证据（eng.bond_contact_evidence，迭代 13）"
+   }
+  },
+  {
+   "die_id": "R05C04",
+   "site": {
+    "row": 10,
+    "col": 14,
+    "x": 0.0,
+    "y": -40.02
+   },
+   "t_bond": 4293.538,
+   "truth": {
+    "dx": -0.012499,
+    "dy": -0.000783,
+    "drz": 1.3e-05
+   },
+   "truth_note": null,
+   "truth_components": {
+    "align_resid": {
+     "dx_um": -0.036523,
+     "dy_um": -0.128171,
+     "drz_urad": -6.251457
+    },
+    "descent": {
+     "dx_um": -12.462149,
+     "dy_um": -0.655126,
+     "drz_urad": 19.283022
+    },
+    "process_shift": {
+     "dx_um": 0.0,
+     "dy_um": 0.0,
+     "drz_urad": 0.0
+    },
+    "commit": {
+     "dx_um": -12.498672,
+     "dy_um": -0.783297,
+     "drz_urad": 13.031565
+    }
+   },
+   "measured": null,
+   "bond_offset": {
+    "x_um": 0.0,
+    "y_um": 0.0,
+    "rz_urad": 0.0
+   },
+   "timing": {
+    "stages": {
+     "flip_pick": 9.116,
+     "flip_handoff": 6.887,
+     "focus_level": 36.827,
+     "fine_align": 25.367,
+     "bond": 30.598
+    },
+    "t_start": 4184.743,
+    "t_end": 4293.538
+   },
+   "chain": {
+    "pick_coarse": {
+     "dx_mm": -0.124757,
+     "dy_mm": -0.016503,
+     "die": "R05C04",
+     "_note": "取片粗对准实测偏差（eng.coarse_offset，下相机测 die 世界位 − 标定中心）"
+    },
+    "handoff_tilt": {
+     "rx_urad": 0.0,
+     "ry_urad": 0.0,
+     "_note": "交接后 die 在头倾斜真值（die.rx/ry，处方 wafer_load.die_head_r*_urad 注入）"
+    },
+    "focus_level": {
+     "_note": "调焦调平：调平残余/焦面残差（eng.fl_fit.compensate），复测判定（fl_fit.verify）",
+     "residual_urad": [
+      0.0,
+      0.0
+     ],
+     "focus_resid_um": [
+      0.0,
+      0.0
+     ],
+     "verify_residual_urad": [
+      11.711939,
+      -42.894512
+     ],
+     "verify_judge": "pass"
+    },
+    "fine_align": {
+     "algorithm": "rigid",
+     "judge": "pass",
+     "delta": {
+      "tx_um": 2.941743537066867,
+      "ty_um": -14.317285499225754,
+      "theta_urad": 16.908392977162944
+     },
+     "compensations": 1,
+     "rounds": [
+      {
+       "iter": 1,
+       "delta": {
+        "tx_um": 0.0037,
+        "ty_um": -0.0563,
+        "theta_urad": 3.948
+       },
+       "theta_w_urad": -47.995,
+       "theta_d_urad": -44.047,
+       "resid_xy_um": 0.0564,
+       "resid_rz_urad": 3.948,
+       "judge": "pass"
+      }
+     ],
+     "phys_resid": {
+      "tx_um": -0.03652316627977825,
+      "ty_um": -0.12817123952491016,
+      "theta_urad": -6.2514574598454695
+     },
+     "_note": "精对准：Δ 解算/补偿次数/确认逐轮残余/物理真值残差（eng.fine_align_result；µm/µrad）"
+    },
+    "bond_commit": {
+     "commit": {
+      "dx_um": -12.498672,
+      "dy_um": -0.783297,
+      "drz_urad": 13.031565
+     },
+     "align_resid": {
+      "dx_um": -0.036523,
+      "dy_um": -0.128171,
+      "drz_urad": -6.251457
+     },
+     "process_shift": null,
+     "_note": "键合接触时刻真值分量（eng.bond_commit，迭代 20）：commit=触力停轴后 6DOF 真值（fa 同一 fit 管线）；align_resid=fa 时刻对准残差；descent=下降链=commit−align_resid；process_shift=压合微滑移（默认 0）",
+     "descent": {
+      "dx_um": -12.462149,
+      "dy_um": -0.655126,
+      "drz_urad": 19.283022
+     }
+    }
+   },
+   "bond_params": {
+    "force_N": 50.0,
+    "dwell_s": 10.0,
+    "head_temp_C": 300.0,
+    "wafer_temp_C": 30.0,
+    "head_actual_C": 293.729916,
+    "wafer_actual_C": 30.000276,
+    "touch_pos_mm": -167.435852,
+    "contact_verify": {
+     "actual_contact_z_mm": -167.435852,
+     "eff_contact_z_mm": -167.43,
+     "dev_um": -5.852,
+     "touch_force_N": 3.61,
+     "tol_um": 50.0,
+     "judge": "pass",
+     "geom_gap_um": -5.852
+    },
+    "_note": "键合参数：处方力/保压/温度 + 键合时刻加热器实温 + 寻力实际接触位（eng.bond_touch_pos） + 接触确认证据（eng.bond_contact_evidence，迭代 13）"
+   }
+  },
+  {
+   "die_id": "R04C03",
+   "site": {
+    "row": 14,
+    "col": 10,
+    "x": -40.02,
+    "y": 0.0
+   },
+   "t_bond": 4595.645,
+   "truth": {
+    "dx": -0.012452,
+    "dy": -0.00071,
+    "drz": 6e-06
+   },
+   "truth_note": null,
+   "truth_components": {
+    "align_resid": {
+     "dx_um": 0.010353,
+     "dy_um": -0.055258,
+     "drz_urad": -13.771153
+    },
+    "descent": {
+     "dx_um": -12.46201,
+     "dy_um": -0.654966,
+     "drz_urad": 19.28282
+    },
+    "process_shift": {
+     "dx_um": 0.0,
+     "dy_um": 0.0,
+     "drz_urad": 0.0
+    },
+    "commit": {
+     "dx_um": -12.451657,
+     "dy_um": -0.710224,
+     "drz_urad": 5.511667
+    }
+   },
+   "measured": null,
+   "bond_offset": {
+    "x_um": 0.0,
+    "y_um": 0.0,
+    "rz_urad": 0.0
+   },
+   "timing": {
+    "stages": {
+     "flip_pick": 8.743,
+     "flip_handoff": 6.935,
+     "focus_level": 36.991,
+     "fine_align": 21.54,
+     "bond": 30.502
+    },
+    "t_start": 4490.927,
+    "t_end": 4595.638
+   },
+   "chain": {
+    "pick_coarse": {
+     "dx_mm": -0.126631,
+     "dy_mm": -0.015208,
+     "die": "R04C03",
+     "_note": "取片粗对准实测偏差（eng.coarse_offset，下相机测 die 世界位 − 标定中心）"
+    },
+    "handoff_tilt": {
+     "rx_urad": 0.0,
+     "ry_urad": 0.0,
+     "_note": "交接后 die 在头倾斜真值（die.rx/ry，处方 wafer_load.die_head_r*_urad 注入）"
+    },
+    "focus_level": {
+     "_note": "调焦调平：调平残余/焦面残差（eng.fl_fit.compensate），复测判定（fl_fit.verify）",
+     "residual_urad": [
+      0.0,
+      0.0
+     ],
+     "focus_resid_um": [
+      0.0,
+      0.0
+     ],
+     "verify_residual_urad": [
+      -7.106083,
+      18.684166
+     ],
+     "verify_judge": "pass"
+    },
+    "fine_align": {
+     "algorithm": "rigid",
+     "judge": "pass",
+     "delta": {
+      "tx_um": 6.612745379503054,
+      "ty_um": -17.541501548819745,
+      "theta_urad": 7.401686397296239
+     },
+     "compensations": 1,
+     "rounds": [
+      {
+       "iter": 1,
+       "delta": {
+        "tx_um": -0.0153,
+        "ty_um": -0.0479,
+        "theta_urad": -13.619
+       },
+       "theta_w_urad": -28.422,
+       "theta_d_urad": -42.041,
+       "resid_xy_um": 0.0503,
+       "resid_rz_urad": 13.619,
+       "judge": "pass"
+      }
+     ],
+     "phys_resid": {
+      "tx_um": 0.010353495923709488,
+      "ty_um": -0.05525822509255818,
+      "theta_urad": -13.771153463026128
+     },
+     "_note": "精对准：Δ 解算/补偿次数/确认逐轮残余/物理真值残差（eng.fine_align_result；µm/µrad）"
+    },
+    "bond_commit": {
+     "commit": {
+      "dx_um": -12.451657,
+      "dy_um": -0.710224,
+      "drz_urad": 5.511667
+     },
+     "align_resid": {
+      "dx_um": 0.010353,
+      "dy_um": -0.055258,
+      "drz_urad": -13.771153
+     },
+     "process_shift": null,
+     "_note": "键合接触时刻真值分量（eng.bond_commit，迭代 20）：commit=触力停轴后 6DOF 真值（fa 同一 fit 管线）；align_resid=fa 时刻对准残差；descent=下降链=commit−align_resid；process_shift=压合微滑移（默认 0）",
+     "descent": {
+      "dx_um": -12.46201,
+      "dy_um": -0.654966,
+      "drz_urad": 19.28282
+     }
+    }
+   },
+   "bond_params": {
+    "force_N": 50.0,
+    "dwell_s": 10.0,
+    "head_temp_C": 300.0,
+    "wafer_temp_C": 30.0,
+    "head_actual_C": 292.216304,
+    "wafer_actual_C": 30.000275,
+    "touch_pos_mm": -167.436052,
+    "contact_verify": {
+     "actual_contact_z_mm": -167.436052,
+     "eff_contact_z_mm": -167.43,
+     "dev_um": -6.052,
+     "touch_force_N": 2.988,
+     "tol_um": 50.0,
+     "judge": "pass",
+     "geom_gap_um": -6.052
+    },
+    "_note": "键合参数：处方力/保压/温度 + 键合时刻加热器实温 + 寻力实际接触位（eng.bond_touch_pos） + 接触确认证据（eng.bond_contact_evidence，迭代 13）"
+   }
+  },
+  {
+   "die_id": "R11C03",
+   "site": {
+    "row": 14,
+    "col": 18,
+    "x": 40.02,
+    "y": 0.0
+   },
+   "t_bond": 4711.094,
+   "truth": {
+    "dx": -0.012519,
+    "dy": -0.00063,
+    "drz": 2.2e-05
+   },
+   "truth_note": null,
+   "truth_components": {
+    "align_resid": {
+     "dx_um": -0.056893,
+     "dy_um": 0.025327,
+     "drz_urad": 2.978524
+    },
+    "descent": {
+     "dx_um": -12.462183,
+     "dy_um": -0.655113,
+     "drz_urad": 19.283047
+    },
+    "process_shift": {
+     "dx_um": 0.0,
+     "dy_um": 0.0,
+     "drz_urad": 0.0
+    },
+    "commit": {
+     "dx_um": -12.519076,
+     "dy_um": -0.629786,
+     "drz_urad": 22.261571
+    }
+   },
+   "measured": null,
+   "bond_offset": {
+    "x_um": 0.0,
+    "y_um": 0.0,
+    "rz_urad": 0.0
+   },
+   "timing": {
+    "stages": {
+     "flip_pick": 9.938,
+     "flip_handoff": 6.88,
+     "focus_level": 47.568,
+     "fine_align": 20.201,
+     "bond": 30.575
+    },
+    "t_start": 4595.932,
+    "t_end": 4711.094
+   },
+   "chain": {
+    "pick_coarse": {
+     "dx_mm": -0.123396,
+     "dy_mm": -0.016502,
+     "die": "R11C03",
+     "_note": "取片粗对准实测偏差（eng.coarse_offset，下相机测 die 世界位 − 标定中心）"
+    },
+    "handoff_tilt": {
+     "rx_urad": 0.0,
+     "ry_urad": 0.0,
+     "_note": "交接后 die 在头倾斜真值（die.rx/ry，处方 wafer_load.die_head_r*_urad 注入）"
+    },
+    "focus_level": {
+     "_note": "调焦调平：调平残余/焦面残差（eng.fl_fit.compensate），复测判定（fl_fit.verify）",
+     "residual_urad": [
+      0.0,
+      0.0
+     ],
+     "focus_resid_um": [
+      0.0,
+      0.0
+     ],
+     "verify_residual_urad": [
+      14.341683,
+      24.079049
+     ],
+     "verify_judge": "pass"
+    },
+    "fine_align": {
+     "algorithm": "rigid",
+     "judge": "pass",
+     "delta": {
+      "tx_um": 7.219995789138139,
+      "ty_um": 3.850006866561166,
+      "theta_urad": -13.520123855789949
+     },
+     "compensations": 1,
+     "rounds": [
+      {
+       "iter": 1,
+       "delta": {
+        "tx_um": -0.0818,
+        "ty_um": 0.0885,
+        "theta_urad": 5.362
+       },
+       "theta_w_urad": -49.113,
+       "theta_d_urad": -43.752,
+       "resid_xy_um": 0.1205,
+       "resid_rz_urad": 5.362,
+       "judge": "pass"
+      }
+     ],
+     "phys_resid": {
+      "tx_um": -0.0568929314326283,
+      "ty_um": 0.025326649685908365,
+      "theta_urad": 2.97852353888531
+     },
+     "_note": "精对准：Δ 解算/补偿次数/确认逐轮残余/物理真值残差（eng.fine_align_result；µm/µrad）"
+    },
+    "bond_commit": {
+     "commit": {
+      "dx_um": -12.519076,
+      "dy_um": -0.629786,
+      "drz_urad": 22.261571
+     },
+     "align_resid": {
+      "dx_um": -0.056893,
+      "dy_um": 0.025327,
+      "drz_urad": 2.978524
+     },
+     "process_shift": null,
+     "_note": "键合接触时刻真值分量（eng.bond_commit，迭代 20）：commit=触力停轴后 6DOF 真值（fa 同一 fit 管线）；align_resid=fa 时刻对准残差；descent=下降链=commit−align_resid；process_shift=压合微滑移（默认 0）",
+     "descent": {
+      "dx_um": -12.462183,
+      "dy_um": -0.655113,
+      "drz_urad": 19.283047
+     }
+    }
+   },
+   "bond_params": {
+    "force_N": 50.0,
+    "dwell_s": 10.0,
+    "head_temp_C": 300.0,
+    "wafer_temp_C": 30.0,
+    "head_actual_C": 294.743751,
+    "wafer_actual_C": 30.000275,
+    "touch_pos_mm": -167.435852,
+    "contact_verify": {
+     "actual_contact_z_mm": -167.435852,
+     "eff_contact_z_mm": -167.43,
+     "dev_um": -5.852,
+     "touch_force_N": 2.187,
+     "tol_um": 50.0,
+     "judge": "pass",
+     "geom_gap_um": -5.852
+    },
+    "_note": "键合参数：处方力/保压/温度 + 键合时刻加热器实温 + 寻力实际接触位（eng.bond_touch_pos） + 接触确认证据（eng.bond_contact_evidence，迭代 13）"
+   }
+  },
+  {
+   "die_id": "R06C06",
+   "site": {
+    "row": 18,
+    "col": 14,
+    "x": 0.0,
+    "y": 40.02
+   },
+   "t_bond": 4994.896,
+   "truth": {
+    "dx": -0.012514,
+    "dy": -0.00071,
+    "drz": 1.1e-05
+   },
+   "truth_note": null,
+   "truth_components": {
+    "align_resid": {
+     "dx_um": -0.051714,
+     "dy_um": -0.054813,
+     "drz_urad": -8.702181
+    },
+    "descent": {
+     "dx_um": -12.462142,
+     "dy_um": -0.655075,
+     "drz_urad": 19.283044
+    },
+    "process_shift": {
+     "dx_um": 0.0,
+     "dy_um": 0.0,
+     "drz_urad": 0.0
+    },
+    "commit": {
+     "dx_um": -12.513856,
+     "dy_um": -0.709888,
+     "drz_urad": 10.580863
+    }
+   },
+   "measured": null,
+   "bond_offset": {
+    "x_um": 0.0,
+    "y_um": 0.0,
+    "rz_urad": 0.0
+   },
+   "timing": {
+    "stages": {
+     "flip_pick": 8.64,
+     "flip_handoff": 6.917,
+     "focus_level": 26.489,
+     "fine_align": 14.387,
+     "bond": 30.569
+    },
+    "t_start": 4907.894,
+    "t_end": 4994.896
+   },
+   "chain": {
+    "pick_coarse": {
+     "dx_mm": -0.126164,
+     "dy_mm": -0.016093,
+     "die": "R06C06",
+     "_note": "取片粗对准实测偏差（eng.coarse_offset，下相机测 die 世界位 − 标定中心）"
+    },
+    "handoff_tilt": {
+     "rx_urad": 0.0,
+     "ry_urad": 0.0,
+     "_note": "交接后 die 在头倾斜真值（die.rx/ry，处方 wafer_load.die_head_r*_urad 注入）"
+    },
+    "focus_level": {
+     "_note": "调焦调平：调平残余/焦面残差（eng.fl_fit.compensate），复测判定（fl_fit.verify）",
+     "residual_urad": [
+      0.0,
+      0.0
+     ],
+     "focus_resid_um": [
+      0.0,
+      0.0
+     ],
+     "verify_residual_urad": [
+      1.907384,
+      13.486752
+     ],
+     "verify_judge": "pass"
+    },
+    "fine_align": {
+     "algorithm": "rigid",
+     "judge": "pass",
+     "delta": {
+      "tx_um": 8.49450091637763,
+      "ty_um": -16.03399999032414,
+      "theta_urad": 9.671532633176241
+     },
+     "compensations": 1,
+     "rounds": [
+      {
+       "iter": 1,
+       "delta": {
+        "tx_um": 0.0269,
+        "ty_um": -0.0028,
+        "theta_urad": 5.954
+       },
+       "theta_w_urad": -43.521,
+       "theta_d_urad": -37.567,
+       "resid_xy_um": 0.0271,
+       "resid_rz_urad": 5.954,
+       "judge": "pass"
+      }
+     ],
+     "phys_resid": {
+      "tx_um": -0.05171422296967876,
+      "ty_um": -0.05481292041320529,
+      "theta_urad": -8.702181462346282
+     },
+     "_note": "精对准：Δ 解算/补偿次数/确认逐轮残余/物理真值残差（eng.fine_align_result；µm/µrad）"
+    },
+    "bond_commit": {
+     "commit": {
+      "dx_um": -12.513856,
+      "dy_um": -0.709888,
+      "drz_urad": 10.580863
+     },
+     "align_resid": {
+      "dx_um": -0.051714,
+      "dy_um": -0.054813,
+      "drz_urad": -8.702181
+     },
+     "process_shift": null,
+     "_note": "键合接触时刻真值分量（eng.bond_commit，迭代 20）：commit=触力停轴后 6DOF 真值（fa 同一 fit 管线）；align_resid=fa 时刻对准残差；descent=下降链=commit−align_resid；process_shift=压合微滑移（默认 0）",
+     "descent": {
+      "dx_um": -12.462142,
+      "dy_um": -0.655075,
+      "drz_urad": 19.283044
+     }
+    }
+   },
+   "bond_params": {
+    "force_N": 50.0,
+    "dwell_s": 10.0,
+    "head_temp_C": 300.0,
+    "wafer_temp_C": 30.0,
+    "head_actual_C": 298.193767,
+    "wafer_actual_C": 30.000273,
+    "touch_pos_mm": -167.435852,
+    "contact_verify": {
+     "actual_contact_z_mm": -167.435852,
+     "eff_contact_z_mm": -167.43,
+     "dev_um": -5.852,
+     "touch_force_N": 2.73,
+     "tol_um": 50.0,
+     "judge": "pass",
+     "geom_gap_um": -5.852
+    },
+    "_note": "键合参数：处方力/保压/温度 + 键合时刻加热器实温 + 寻力实际接触位（eng.bond_touch_pos） + 接触确认证据（eng.bond_contact_evidence，迭代 13）"
+   }
+  },
+  {
+   "die_id": "R09C06",
+   "site": {
+    "row": 9,
+    "col": 14,
+    "x": 0.0,
+    "y": -50.025
+   },
+   "t_bond": 5113.492,
+   "truth": {
+    "dx": -0.012592,
+    "dy": -0.000664,
+    "drz": 1.8e-05
+   },
+   "truth_note": null,
+   "truth_components": {
+    "align_resid": {
+     "dx_um": -0.129853,
+     "dy_um": -0.008503,
+     "drz_urad": -1.737057
+    },
+    "descent": {
+     "dx_um": -12.462551,
+     "dy_um": -0.655826,
+     "drz_urad": 19.284234
+    },
+    "process_shift": {
+     "dx_um": 0.0,
+     "dy_um": 0.0,
+     "drz_urad": 0.0
+    },
+    "commit": {
+     "dx_um": -12.592404,
+     "dy_um": -0.664329,
+     "drz_urad": 17.547177
+    }
+   },
+   "measured": null,
+   "bond_offset": {
+    "x_um": 0.0,
+    "y_um": 0.0,
+    "rz_urad": 0.0
+   },
+   "timing": {
+    "stages": {
+     "flip_pick": 8.95,
+     "flip_handoff": 7.131,
+     "focus_level": 44.142,
+     "fine_align": 27.581,
+     "bond": 30.719
+    },
+    "t_start": 4994.969,
+    "t_end": 5113.492
+   },
+   "chain": {
+    "pick_coarse": {
+     "dx_mm": -0.122948,
+     "dy_mm": -0.017516,
+     "die": "R09C06",
+     "_note": "取片粗对准实测偏差（eng.coarse_offset，下相机测 die 世界位 − 标定中心）"
+    },
+    "handoff_tilt": {
+     "rx_urad": 0.0,
+     "ry_urad": 0.0,
+     "_note": "交接后 die 在头倾斜真值（die.rx/ry，处方 wafer_load.die_head_r*_urad 注入）"
+    },
+    "focus_level": {
+     "_note": "调焦调平：调平残余/焦面残差（eng.fl_fit.compensate），复测判定（fl_fit.verify）",
+     "residual_urad": [
+      0.0,
+      0.0
+     ],
+     "focus_resid_um": [
+      0.0,
+      0.0
+     ],
+     "verify_residual_urad": [
+      -23.816004,
+      -11.052784
+     ],
+     "verify_judge": "pass"
+    },
+    "fine_align": {
+     "algorithm": "rigid",
+     "judge": "pass",
+     "delta": {
+      "tx_um": -1.659747883529467,
+      "ty_um": -15.284686834070584,
+      "theta_urad": -8.882224409063292
+     },
+     "compensations": 1,
+     "rounds": [
+      {
+       "iter": 1,
+       "delta": {
+        "tx_um": -0.1266,
+        "ty_um": 0.059,
+        "theta_urad": 4.079
+       },
+       "theta_w_urad": -47.896,
+       "theta_d_urad": -43.818,
+       "resid_xy_um": 0.1396,
+       "resid_rz_urad": 4.079,
+       "judge": "pass"
+      }
+     ],
+     "phys_resid": {
+      "tx_um": -0.12985335830251188,
+      "ty_um": -0.008503464739462174,
+      "theta_urad": -1.7370574609103657
+     },
+     "_note": "精对准：Δ 解算/补偿次数/确认逐轮残余/物理真值残差（eng.fine_align_result；µm/µrad）"
+    },
+    "bond_commit": {
+     "commit": {
+      "dx_um": -12.592404,
+      "dy_um": -0.664329,
+      "drz_urad": 17.547177
+     },
+     "align_resid": {
+      "dx_um": -0.129853,
+      "dy_um": -0.008503,
+      "drz_urad": -1.737057
+     },
+     "process_shift": null,
+     "_note": "键合接触时刻真值分量（eng.bond_commit，迭代 20）：commit=触力停轴后 6DOF 真值（fa 同一 fit 管线）；align_resid=fa 时刻对准残差；descent=下降链=commit−align_resid；process_shift=压合微滑移（默认 0）",
+     "descent": {
+      "dx_um": -12.462551,
+      "dy_um": -0.655826,
+      "drz_urad": 19.284234
+     }
+    }
+   },
+   "bond_params": {
+    "force_N": 50.0,
+    "dwell_s": 10.0,
+    "head_temp_C": 300.0,
+    "wafer_temp_C": 30.0,
+    "head_actual_C": 283.311993,
+    "wafer_actual_C": 30.000273,
+    "touch_pos_mm": -167.434652,
+    "contact_verify": {
+     "actual_contact_z_mm": -167.434652,
+     "eff_contact_z_mm": -167.43,
+     "dev_um": -4.652,
+     "touch_force_N": 2.961,
+     "tol_um": 50.0,
+     "judge": "pass",
+     "geom_gap_um": -4.652
+    },
+    "_note": "键合参数：处方力/保压/温度 + 键合时刻加热器实温 + 寻力实际接触位（eng.bond_touch_pos） + 接触确认证据（eng.bond_contact_evidence，迭代 13）"
+   }
+  },
+  {
+   "die_id": "R03C02",
+   "site": {
+    "row": 14,
+    "col": 9,
+    "x": -50.025,
+    "y": 0.0
+   },
+   "t_bond": 5210.185,
+   "truth": {
+    "dx": -0.012473,
+    "dy": -0.0008,
+    "drz": 1.3e-05
+   },
+   "truth_note": null,
+   "truth_components": {
+    "align_resid": {
+     "dx_um": -0.011443,
+     "dy_um": -0.145277,
+     "drz_urad": -5.810593
+    },
+    "descent": {
+     "dx_um": -12.461928,
+     "dy_um": -0.654772,
+     "drz_urad": 19.28242
+    },
+    "process_shift": {
+     "dx_um": 0.0,
+     "dy_um": 0.0,
+     "drz_urad": 0.0
+    },
+    "commit": {
+     "dx_um": -12.473371,
+     "dy_um": -0.800049,
+     "drz_urad": 13.471827
+    }
+   },
+   "measured": null,
+   "bond_offset": {
+    "x_um": 0.0,
+    "y_um": 0.0,
+    "rz_urad": 0.0
+   },
+   "timing": {
+    "stages": {
+     "flip_pick": 8.984,
+     "flip_handoff": 6.859,
+     "focus_level": 31.05,
+     "fine_align": 18.931,
+     "bond": 30.683
+    },
+    "t_start": 5113.678,
+    "t_end": 5210.185
+   },
+   "chain": {
+    "pick_coarse": {
+     "dx_mm": -0.124456,
+     "dy_mm": -0.016457,
+     "die": "R03C02",
+     "_note": "取片粗对准实测偏差（eng.coarse_offset，下相机测 die 世界位 − 标定中心）"
+    },
+    "handoff_tilt": {
+     "rx_urad": 0.0,
+     "ry_urad": 0.0,
+     "_note": "交接后 die 在头倾斜真值（die.rx/ry，处方 wafer_load.die_head_r*_urad 注入）"
+    },
+    "focus_level": {
+     "_note": "调焦调平：调平残余/焦面残差（eng.fl_fit.compensate），复测判定（fl_fit.verify）",
+     "residual_urad": [
+      0.0,
+      0.0
+     ],
+     "focus_resid_um": [
+      0.0,
+      0.0
+     ],
+     "verify_residual_urad": [
+      3.093074,
+      -26.118189
+     ],
+     "verify_judge": "pass"
+    },
+    "fine_align": {
+     "algorithm": "rigid",
+     "judge": "pass",
+     "delta": {
+      "tx_um": 5.334497169360625,
+      "ty_um": -15.206751502213349,
+      "theta_urad": 4.572928284015224
+     },
+     "compensations": 1,
+     "rounds": [
+      {
+       "iter": 1,
+       "delta": {
+        "tx_um": 0.0091,
+        "ty_um": -0.0102,
+        "theta_urad": -8.652
+       },
+       "theta_w_urad": -40.363,
+       "theta_d_urad": -49.015,
+       "resid_xy_um": 0.0137,
+       "resid_rz_urad": 8.652,
+       "judge": "pass"
+      }
+     ],
+     "phys_resid": {
+      "tx_um": -0.01144336791725209,
+      "ty_um": -0.14527688805365813,
+      "theta_urad": -5.810593461430687
+     },
+     "_note": "精对准：Δ 解算/补偿次数/确认逐轮残余/物理真值残差（eng.fine_align_result；µm/µrad）"
+    },
+    "bond_commit": {
+     "commit": {
+      "dx_um": -12.473371,
+      "dy_um": -0.800049,
+      "drz_urad": 13.471827
+     },
+     "align_resid": {
+      "dx_um": -0.011443,
+      "dy_um": -0.145277,
+      "drz_urad": -5.810593
+     },
+     "process_shift": null,
+     "_note": "键合接触时刻真值分量（eng.bond_commit，迭代 20）：commit=触力停轴后 6DOF 真值（fa 同一 fit 管线）；align_resid=fa 时刻对准残差；descent=下降链=commit−align_resid；process_shift=压合微滑移（默认 0）",
+     "descent": {
+      "dx_um": -12.461928,
+      "dy_um": -0.654772,
+      "drz_urad": 19.28242
+     }
+    }
+   },
+   "bond_params": {
+    "force_N": 50.0,
+    "dwell_s": 10.0,
+    "head_temp_C": 300.0,
+    "wafer_temp_C": 30.0,
+    "head_actual_C": 282.704772,
+    "wafer_actual_C": 30.0,
+    "touch_pos_mm": -167.436452,
+    "contact_verify": {
+     "actual_contact_z_mm": -167.436452,
+     "eff_contact_z_mm": -167.43,
+     "dev_um": -6.452,
+     "touch_force_N": 3.714,
+     "tol_um": 50.0,
+     "judge": "pass",
+     "geom_gap_um": -6.452
+    },
+    "_note": "键合参数：处方力/保压/温度 + 键合时刻加热器实温 + 寻力实际接触位（eng.bond_touch_pos） + 接触确认证据（eng.bond_contact_evidence，迭代 13）"
+   }
+  },
+  {
+   "die_id": "R03C03",
+   "site": {
+    "row": 14,
+    "col": 19,
+    "x": 50.025,
+    "y": 0.0
+   },
+   "t_bond": 5314.865,
+   "truth": {
+    "dx": -0.012507,
+    "dy": -0.000818,
+    "drz": 1.7e-05
+   },
+   "truth_note": null,
+   "truth_components": {
+    "align_resid": {
+     "dx_um": -0.044592,
+     "dy_um": -0.161902,
+     "drz_urad": -2.295007
+    },
+    "descent": {
+     "dx_um": -12.462612,
+     "dy_um": -0.65606,
+     "drz_urad": 19.284593
+    },
+    "process_shift": {
+     "dx_um": 0.0,
+     "dy_um": 0.0,
+     "drz_urad": 0.0
+    },
+    "commit": {
+     "dx_um": -12.507204,
+     "dy_um": -0.817962,
+     "drz_urad": 16.989586
+    }
+   },
+   "measured": null,
+   "bond_offset": {
+    "x_um": 0.0,
+    "y_um": 0.0,
+    "rz_urad": 0.0
+   },
+   "timing": {
+    "stages": {
+     "flip_pick": 8.461,
+     "flip_handoff": 6.888,
+     "focus_level": 31.72,
+     "fine_align": 26.956,
+     "bond": 30.624
+    },
+    "t_start": 5210.216,
+    "t_end": 5314.865
+   },
+   "chain": {
+    "pick_coarse": {
+     "dx_mm": -0.124984,
+     "dy_mm": -0.018184,
+     "die": "R03C03",
+     "_note": "取片粗对准实测偏差（eng.coarse_offset，下相机测 die 世界位 − 标定中心）"
+    },
+    "handoff_tilt": {
+     "rx_urad": 0.0,
+     "ry_urad": 0.0,
+     "_note": "交接后 die 在头倾斜真值（die.rx/ry，处方 wafer_load.die_head_r*_urad 注入）"
+    },
+    "focus_level": {
+     "_note": "调焦调平：调平残余/焦面残差（eng.fl_fit.compensate），复测判定（fl_fit.verify）",
+     "residual_urad": [
+      0.0,
+      0.0
+     ],
+     "focus_resid_um": [
+      0.0,
+      0.0
+     ],
+     "verify_residual_urad": [
+      -10.197404,
+      -16.907985
+     ],
+     "verify_judge": "pass"
+    },
+    "fine_align": {
+     "algorithm": "rigid",
+     "judge": "pass",
+     "delta": {
+      "tx_um": 1.7508602712603512,
+      "ty_um": -1.1914958733979206,
+      "theta_urad": -6.677945620741051
+     },
+     "compensations": 2,
+     "rounds": [
+      {
+       "iter": 1,
+       "delta": {
+        "tx_um": -0.0051,
+        "ty_um": 0.212,
+        "theta_urad": 5.395
+       },
+       "theta_w_urad": -52.535,
+       "theta_d_urad": -47.14,
+       "resid_xy_um": 0.212,
+       "resid_rz_urad": 5.395,
+       "judge": "fail"
+      },
+      {
+       "iter": 2,
+       "delta": {
+        "tx_um": -0.0704,
+        "ty_um": -0.0917,
+        "theta_urad": -7.336
+       },
+       "theta_w_urad": -36.843,
+       "theta_d_urad": -44.18,
+       "resid_xy_um": 0.1156,
+       "resid_rz_urad": 7.336,
+       "judge": "pass"
+      }
+     ],
+     "phys_resid": {
+      "tx_um": -0.04459218002494936,
+      "ty_um": -0.16190175176067356,
+      "theta_urad": -2.2950074605027586
+     },
+     "_note": "精对准：Δ 解算/补偿次数/确认逐轮残余/物理真值残差（eng.fine_align_result；µm/µrad）"
+    },
+    "bond_commit": {
+     "commit": {
+      "dx_um": -12.507204,
+      "dy_um": -0.817962,
+      "drz_urad": 16.989586
+     },
+     "align_resid": {
+      "dx_um": -0.044592,
+      "dy_um": -0.161902,
+      "drz_urad": -2.295007
+     },
+     "process_shift": null,
+     "_note": "键合接触时刻真值分量（eng.bond_commit，迭代 20）：commit=触力停轴后 6DOF 真值（fa 同一 fit 管线）；align_resid=fa 时刻对准残差；descent=下降链=commit−align_resid；process_shift=压合微滑移（默认 0）",
+     "descent": {
+      "dx_um": -12.462612,
+      "dy_um": -0.65606,
+      "drz_urad": 19.284593
+     }
+    }
+   },
+   "bond_params": {
+    "force_N": 50.0,
+    "dwell_s": 10.0,
+    "head_temp_C": 300.0,
+    "wafer_temp_C": 30.0,
+    "head_actual_C": 285.142255,
+    "wafer_actual_C": 30.0,
+    "touch_pos_mm": -167.434252,
+    "contact_verify": {
+     "actual_contact_z_mm": -167.434252,
+     "eff_contact_z_mm": -167.43,
+     "dev_um": -4.252,
+     "touch_force_N": 2.197,
+     "tol_um": 50.0,
+     "judge": "pass",
+     "geom_gap_um": -4.252
+    },
+    "_note": "键合参数：处方力/保压/温度 + 键合时刻加热器实温 + 寻力实际接触位（eng.bond_touch_pos） + 接触确认证据（eng.bond_contact_evidence，迭代 13）"
+   }
+  },
+  {
+   "die_id": "R04C05",
+   "site": {
+    "row": 19,
+    "col": 14,
+    "x": 0.0,
+    "y": 50.025
+   },
+   "t_bond": 5399.787,
+   "truth": {
+    "dx": -0.01252,
+    "dy": -0.00071,
+    "drz": 2.2e-05
+   },
+   "truth_note": null,
+   "truth_components": {
+    "align_resid": {
+     "dx_um": -0.05806,
+     "dy_um": -0.055343,
+     "drz_urad": 2.364312
+    },
+    "descent": {
+     "dx_um": -12.462132,
+     "dy_um": -0.655121,
+     "drz_urad": 19.282871
+    },
+    "process_shift": {
+     "dx_um": 0.0,
+     "dy_um": 0.0,
+     "drz_urad": 0.0
+    },
+    "commit": {
+     "dx_um": -12.520192,
+     "dy_um": -0.710464,
+     "drz_urad": 21.647183
+    }
+   },
+   "measured": null,
+   "bond_offset": {
+    "x_um": 0.0,
+    "y_um": 0.0,
+    "rz_urad": 0.0
+   },
+   "timing": {
+    "stages": {
+     "flip_pick": 8.453,
+     "flip_handoff": 6.918,
+     "focus_level": 25.825,
+     "fine_align": 13.11,
+     "bond": 30.58
+    },
+    "t_start": 5314.901,
+    "t_end": 5399.787
+   },
+   "chain": {
+    "pick_coarse": {
+     "dx_mm": -0.124063,
+     "dy_mm": -0.016265,
+     "die": "R04C05",
+     "_note": "取片粗对准实测偏差（eng.coarse_offset，下相机测 die 世界位 − 标定中心）"
+    },
+    "handoff_tilt": {
+     "rx_urad": 0.0,
+     "ry_urad": 0.0,
+     "_note": "交接后 die 在头倾斜真值（die.rx/ry，处方 wafer_load.die_head_r*_urad 注入）"
+    },
+    "focus_level": {
+     "_note": "调焦调平：调平残余/焦面残差（eng.fl_fit.compensate），复测判定（fl_fit.verify）",
+     "residual_urad": [
+      0.0,
+      0.0
+     ],
+     "focus_resid_um": [
+      0.0,
+      0.0
+     ],
+     "verify_residual_urad": [
+      -6.249685,
+      -18.749958
+     ],
+     "verify_judge": "pass"
+    },
+    "fine_align": {
+     "algorithm": "rigid",
+     "judge": "pass",
+     "delta": {
+      "tx_um": 3.1052490587122734,
+      "ty_um": -14.203750298336915,
+      "theta_urad": -6.381603397698179
+     },
+     "compensations": 1,
+     "rounds": [
+      {
+       "iter": 1,
+       "delta": {
+        "tx_um": -0.1009,
+        "ty_um": 0.0292,
+        "theta_urad": 7.566
+       },
+       "theta_w_urad": -49.805,
+       "theta_d_urad": -42.238,
+       "resid_xy_um": 0.105,
+       "resid_rz_urad": 7.566,
+       "judge": "pass"
+      }
+     ],
+     "phys_resid": {
+      "tx_um": -0.058059784564079564,
+      "ty_um": -0.0553425714828748,
+      "theta_urad": 2.364311541173379
+     },
+     "_note": "精对准：Δ 解算/补偿次数/确认逐轮残余/物理真值残差（eng.fine_align_result；µm/µrad）"
+    },
+    "bond_commit": {
+     "commit": {
+      "dx_um": -12.520192,
+      "dy_um": -0.710464,
+      "drz_urad": 21.647183
+     },
+     "align_resid": {
+      "dx_um": -0.05806,
+      "dy_um": -0.055343,
+      "drz_urad": 2.364312
+     },
+     "process_shift": null,
+     "_note": "键合接触时刻真值分量（eng.bond_commit，迭代 20）：commit=触力停轴后 6DOF 真值（fa 同一 fit 管线）；align_resid=fa 时刻对准残差；descent=下降链=commit−align_resid；process_shift=压合微滑移（默认 0）",
+     "descent": {
+      "dx_um": -12.462132,
+      "dy_um": -0.655121,
+      "drz_urad": 19.282871
+     }
+    }
+   },
+   "bond_params": {
+    "force_N": 50.0,
+    "dwell_s": 10.0,
+    "head_temp_C": 300.0,
+    "wafer_temp_C": 30.0,
+    "head_actual_C": 292.845937,
+    "wafer_actual_C": 30.0,
+    "touch_pos_mm": -167.436052,
+    "contact_verify": {
+     "actual_contact_z_mm": -167.436052,
+     "eff_contact_z_mm": -167.43,
+     "dev_um": -6.052,
+     "touch_force_N": 2.865,
+     "tol_um": 50.0,
+     "judge": "pass",
+     "geom_gap_um": -6.052
+    },
+    "_note": "键合参数：处方力/保压/温度 + 键合时刻加热器实温 + 寻力实际接触位（eng.bond_touch_pos） + 接触确认证据（eng.bond_contact_evidence，迭代 13）"
+   }
+  },
+  {
+   "die_id": "R10C07",
+   "site": {
+    "row": 8,
+    "col": 14,
+    "x": 0.0,
+    "y": -60.03
+   },
+   "t_bond": 6004.28,
+   "truth": {
+    "dx": -0.01249,
+    "dy": -0.000684,
+    "drz": 2.4e-05
+   },
+   "truth_note": null,
+   "truth_components": {
+    "align_resid": {
+     "dx_um": -0.02822,
+     "dy_um": -0.029155,
+     "drz_urad": 4.372467
+    },
+    "descent": {
+     "dx_um": -12.462229,
+     "dy_um": -0.655308,
+     "drz_urad": 19.283282
+    },
+    "process_shift": {
+     "dx_um": 0.0,
+     "dy_um": 0.0,
+     "drz_urad": 0.0
+    },
+    "commit": {
+     "dx_um": -12.490449,
+     "dy_um": -0.684463,
+     "drz_urad": 23.655749
+    }
+   },
+   "measured": null,
+   "bond_offset": {
+    "x_um": 0.0,
+    "y_um": 0.0,
+    "rz_urad": 0.0
+   },
+   "timing": {
+    "stages": {
+     "flip_pick": 8.276,
+     "flip_handoff": 6.865,
+     "focus_level": 25.816,
+     "fine_align": 13.962,
+     "bond": 30.592
+    },
+    "t_start": 5918.769,
+    "t_end": 6004.28
+   },
+   "chain": {
+    "pick_coarse": {
+     "dx_mm": -0.12473,
+     "dy_mm": -0.01664,
+     "die": "R10C07",
+     "_note": "取片粗对准实测偏差（eng.coarse_offset，下相机测 die 世界位 − 标定中心）"
+    },
+    "handoff_tilt": {
+     "rx_urad": 0.0,
+     "ry_urad": 0.0,
+     "_note": "交接后 die 在头倾斜真值（die.rx/ry，处方 wafer_load.die_head_r*_urad 注入）"
+    },
+    "focus_level": {
+     "_note": "调焦调平：调平残余/焦面残差（eng.fl_fit.compensate），复测判定（fl_fit.verify）",
+     "residual_urad": [
+      0.0,
+      0.0
+     ],
+     "focus_resid_um": [
+      0.0,
+      0.0
+     ],
+     "verify_residual_urad": [
+      15.856677,
+      -26.513093
+     ],
+     "verify_judge": "pass"
+    },
+    "fine_align": {
+     "algorithm": "rigid",
+     "judge": "pass",
+     "delta": {
+      "tx_um": 6.0802505185662685,
+      "ty_um": -16.354002091210965,
+      "theta_urad": -2.3358950549699093
+     },
+     "compensations": 1,
+     "rounds": [
+      {
+       "iter": 1,
+       "delta": {
+        "tx_um": 0.02,
+        "ty_um": -0.0358,
+        "theta_urad": 13.882
+       },
+       "theta_w_urad": -48.818,
+       "theta_d_urad": -34.935,
+       "resid_xy_um": 0.041,
+       "resid_rz_urad": 13.882,
+       "judge": "pass"
+      }
+     ],
+     "phys_resid": {
+      "tx_um": -0.028219701171394718,
+      "ty_um": -0.029154785160301344,
+      "theta_urad": 4.372466538460759
+     },
+     "_note": "精对准：Δ 解算/补偿次数/确认逐轮残余/物理真值残差（eng.fine_align_result；µm/µrad）"
+    },
+    "bond_commit": {
+     "commit": {
+      "dx_um": -12.490449,
+      "dy_um": -0.684463,
+      "drz_urad": 23.655749
+     },
+     "align_resid": {
+      "dx_um": -0.02822,
+      "dy_um": -0.029155,
+      "drz_urad": 4.372467
+     },
+     "process_shift": null,
+     "_note": "键合接触时刻真值分量（eng.bond_commit，迭代 20）：commit=触力停轴后 6DOF 真值（fa 同一 fit 管线）；align_resid=fa 时刻对准残差；descent=下降链=commit−align_resid；process_shift=压合微滑移（默认 0）",
+     "descent": {
+      "dx_um": -12.462229,
+      "dy_um": -0.655308,
+      "drz_urad": 19.283282
+     }
+    }
+   },
+   "bond_params": {
+    "force_N": 50.0,
+    "dwell_s": 10.0,
+    "head_temp_C": 300.0,
+    "wafer_temp_C": 30.0,
+    "head_actual_C": 289.961856,
+    "wafer_actual_C": 30.000269,
+    "touch_pos_mm": -167.435652,
+    "contact_verify": {
+     "actual_contact_z_mm": -167.435652,
+     "eff_contact_z_mm": -167.43,
+     "dev_um": -5.652,
+     "touch_force_N": 2.656,
+     "tol_um": 50.0,
+     "judge": "pass",
+     "geom_gap_um": -5.652
+    },
+    "_note": "键合参数：处方力/保压/温度 + 键合时刻加热器实温 + 寻力实际接触位（eng.bond_touch_pos） + 接触确认证据（eng.bond_contact_evidence，迭代 13）"
+   }
+  },
+  {
+   "die_id": "R02C05",
+   "site": {
+    "row": 14,
+    "col": 8,
+    "x": -60.03,
+    "y": 0.0
+   },
+   "t_bond": 6442.041,
+   "truth": {
+    "dx": -0.012423,
+    "dy": -0.000855,
+    "drz": 1.3e-05
+   },
+   "truth_note": null,
+   "truth_components": {
+    "align_resid": {
+     "dx_um": 0.038013,
+     "dy_um": -0.201583,
+     "drz_urad": -6.019402
+    },
+    "descent": {
+     "dx_um": -12.460976,
+     "dy_um": -0.653209,
+     "drz_urad": 19.279654
+    },
+    "process_shift": {
+     "dx_um": 0.0,
+     "dy_um": 0.0,
+     "drz_urad": 0.0
+    },
+    "commit": {
+     "dx_um": -12.422963,
+     "dy_um": -0.854792,
+     "drz_urad": 13.260252
+    }
+   },
+   "measured": null,
+   "bond_offset": {
+    "x_um": 0.0,
+    "y_um": 0.0,
+    "rz_urad": 0.0
+   },
+   "timing": {
+    "stages": {
+     "flip_pick": 9.085,
+     "flip_handoff": 6.882,
+     "focus_level": 33.967,
+     "fine_align": 30.335,
+     "bond": 30.733
+    },
+    "t_start": 6331.039,
+    "t_end": 6442.041
+   },
+   "chain": {
+    "pick_coarse": {
+     "dx_mm": -0.125178,
+     "dy_mm": -0.015371,
+     "die": "R02C05",
+     "_note": "取片粗对准实测偏差（eng.coarse_offset，下相机测 die 世界位 − 标定中心）"
+    },
+    "handoff_tilt": {
+     "rx_urad": 0.0,
+     "ry_urad": 0.0,
+     "_note": "交接后 die 在头倾斜真值（die.rx/ry，处方 wafer_load.die_head_r*_urad 注入）"
+    },
+    "focus_level": {
+     "_note": "调焦调平：调平残余/焦面残差（eng.fl_fit.compensate），复测判定（fl_fit.verify）",
+     "residual_urad": [
+      0.0,
+      0.0
+     ],
+     "focus_resid_um": [
+      0.0,
+      0.0
+     ],
+     "verify_residual_urad": [
+      -18.750226,
+      -15.592461
+     ],
+     "verify_judge": "pass"
+    },
+    "fine_align": {
+     "algorithm": "rigid",
+     "judge": "pass",
+     "delta": {
+      "tx_um": 3.9107439751867226,
+      "ty_um": -16.854503911273127,
+      "theta_urad": 12.270544496023996
+     },
+     "compensations": 2,
+     "rounds": [
+      {
+       "iter": 1,
+       "delta": {
+        "tx_um": -0.1327,
+        "ty_um": 0.1445,
+        "theta_urad": -2.073
+       },
+       "theta_w_urad": -46.12,
+       "theta_d_urad": -48.193,
+       "resid_xy_um": 0.1962,
+       "resid_rz_urad": 2.073,
+       "judge": "fail"
+      },
+      {
+       "iter": 2,
+       "delta": {
+        "tx_um": 0.0422,
+        "ty_um": -0.0913,
+        "theta_urad": 3.553
+       },
+       "theta_w_urad": -40.462,
+       "theta_d_urad": -36.909,
+       "resid_xy_um": 0.1005,
+       "resid_rz_urad": 3.553,
+       "judge": "pass"
+      }
+     ],
+     "phys_resid": {
+      "tx_um": 0.03801264723080067,
+      "ty_um": -0.20158309435558408,
+      "theta_urad": -6.019402460595623
+     },
+     "_note": "精对准：Δ 解算/补偿次数/确认逐轮残余/物理真值残差（eng.fine_align_result；µm/µrad）"
+    },
+    "bond_commit": {
+     "commit": {
+      "dx_um": -12.422963,
+      "dy_um": -0.854792,
+      "drz_urad": 13.260252
+     },
+     "align_resid": {
+      "dx_um": 0.038013,
+      "dy_um": -0.201583,
+      "drz_urad": -6.019402
+     },
+     "process_shift": null,
+     "_note": "键合接触时刻真值分量（eng.bond_commit，迭代 20）：commit=触力停轴后 6DOF 真值（fa 同一 fit 管线）；align_resid=fa 时刻对准残差；descent=下降链=commit−align_resid；process_shift=压合微滑移（默认 0）",
+     "descent": {
+      "dx_um": -12.460976,
+      "dy_um": -0.653209,
+      "drz_urad": 19.279654
+     }
+    }
+   },
+   "bond_params": {
+    "force_N": 50.0,
+    "dwell_s": 10.0,
+    "head_temp_C": 300.0,
+    "wafer_temp_C": 30.0,
+    "head_actual_C": 276.000641,
+    "wafer_actual_C": 30.0,
+    "touch_pos_mm": -167.439252,
+    "contact_verify": {
+     "actual_contact_z_mm": -167.439252,
+     "eff_contact_z_mm": -167.43,
+     "dev_um": -9.252,
+     "touch_force_N": 5.096,
+     "tol_um": 50.0,
+     "judge": "pass",
+     "geom_gap_um": -9.252
+    },
+    "_note": "键合参数：处方力/保压/温度 + 键合时刻加热器实温 + 寻力实际接触位（eng.bond_touch_pos） + 接触确认证据（eng.bond_contact_evidence，迭代 13）"
+   }
+  }
+ ],
+ "throughput": {
+  "runs": 1,
+  "ok": 23,
+  "fail": 51,
+  "net_time_s": 3956.73,
+  "overlap_s": 0.0,
+  "stage_sums": {
+   "flip_pick": 201.16600000000003,
+   "flip_handoff": 159.48900000000003,
+   "focus_level": 769.7910000000002,
+   "fine_align": 488.195,
+   "bond": 703.8870000000001
+  },
+  "stage_counts": {
+   "flip_pick": 23,
+   "flip_handoff": 23,
+   "focus_level": 23,
+   "fine_align": 23,
+   "bond": 23
+  }
+ }
+}

@@ -1,0 +1,30 @@
+{
+ "_comment": "下位机调参：调试好即交付、不计入机械常数的参数（区别于 machine_constants.json 设备本体标定量）。pid 组=三回路 TwinCAT 系列型 PID 整定；bond_hw 组=热压键合被控对象硬件参数（弹簧刚度/双加热器速率限与量程上限/环境温度）。PUT /api/tuning 在线改 + 原子落盘 + 热生效（engine 每秒重读）。整定依据见开发交接.md 迭代 8。",
+ "pid": {
+  "_note": "force_*：键合力回路，输出=BS_Arm_Z 压入量 mm（对象=弹簧 F=k·压入量 k=500N/mm，静态对象+4ms 采样构成代数环，P 通路稳定条件 kp<1/k=0.002，取 0.0008（环增益 0.4）；Tn 消 P 静差）；headtemp_*/wafertemp_*：温度回路输出=功率 0~100%（一阶热对象+速率限，纯 P 有静差，小 I 消除）；tn_s=0 关积分（纯 PD）；tv_s/td_s=微分增益/滤波常数",
+  "force_kp": 0.0008,
+  "force_tn_s": 0.1,
+  "force_tv_s": 0.0,
+  "force_td_s": 0.01,
+  "headtemp_kp": 3.0,
+  "headtemp_tn_s": 1.0,
+  "headtemp_tv_s": 0.0,
+  "headtemp_td_s": 0.1,
+  "wafertemp_kp": 20.0,
+  "wafertemp_tn_s": 10.0,
+  "wafertemp_tv_s": 0.0,
+  "wafertemp_td_s": 1.0,
+  "cycle_s": 0.004
+ },
+ "bond_hw": {
+  "_note": "热压键合被控对象硬件参数（engine 三回路 PID 被控对象消费）。force_spring_k_n_per_mm=接触弹簧刚度（压头低于有效接触位后真值力 F=k·压入量）；ambient_C=环境温度；pulse_heater_rate_cps/head_heater_max_C=脉冲加热器满功率升温速率/量程上限；wafer_heater_rate_cps/wafer_heater_max_C=硅片台陶瓷加热片满功率速率（511.4℃/11.6min 实测）/上限；wafer_cool_rate_cps=硅片台主动冷却速率（迭代 11，降温方向=目标<当前时按此速率线性逼近）。热对象：dT/dt=功率%×rate − rate·(T−amb)/(max−amb)，再按 ±rate 限速并夹到 [amb,max]",
+  "force_spring_k_n_per_mm": 500.0,
+  "ambient_C": 25.0,
+  "head_heater_max_C": 450.0,
+  "pulse_heater_rate_cps": 200.0,
+  "wafer_heater_rate_cps": 0.733,
+  "wafer_heater_max_C": 511.4,
+  "wafer_cool_rate_cps": 5.0,
+  "flip_contact_z_mm": -51.43
+ }
+}

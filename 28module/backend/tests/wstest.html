@@ -1,0 +1,12 @@
+<!DOCTYPE html><html><head><title>init</title></head><body><script>
+var log=[], n=0, raf=0;
+try{
+  var ws=new WebSocket('ws://127.0.0.1:9010/ws'); ws.binaryType='arraybuffer';
+  ws.onopen=function(){log.push('open')};
+  ws.onmessage=function(e){n++};
+  ws.onerror=function(){log.push('err')};
+  ws.onclose=function(e){log.push('close:'+e.code)};
+  (function loop(){raf++;requestAnimationFrame(loop)})();
+  setInterval(function(){document.title=log.join(',')+' frames='+n+' raf='+raf},500);
+}catch(err){document.title='EX '+err.message}
+</script></body></html>

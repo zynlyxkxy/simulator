@@ -1,0 +1,21 @@
+[project]
+name = "horimetrologyscirptsframework"
+version = "0.1.0"
+description = "Add your description here"
+requires-python = ">=3.11"
+dependencies = [
+    "cython>=3.2.4",
+    "grpcio>=1.76.0",
+    "grpcio-tools>=1.76.0",
+    "matplotlib>=3.10.8",
+    "numpy>=2.4.1",
+    "opencv-python>=4.13.0.90",
+    "openpyxl>=3.1.5",
+    "paho-mqtt>=2.1.0",
+    "pandas>=2.3.3",
+    "pyqt5==5.15.11",
+    "pyqt5-qt5==5.15.2",
+    "scikit-learn>=1.8.0",
+    "scipy>=1.17.0",
+    "scipy-stubs~=1.17.0",
+]

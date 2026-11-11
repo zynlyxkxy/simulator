@@ -1,0 +1,183 @@
+{
+ "_comment": "机器常数：不随工艺变化的设备固有参数（区别于处方 recipe.json——recipe 管物料与布局，本文件管设备本体）。顶层按分组组织：cameras 组（三相机内参，2026-08-21/2026-08-24 用户提供的真实光学/传感器数据；px_u/px_v 传感器分辨率 2026-08-24 自 vision_cameras.json 迁入，用户'像素值也要放到机械常数分别有u和v'）；flip_pick 组（翻转取片工艺机械常数，2026-08-24 起，见 docs/工艺流程_翻转取片_V1.md）；未来扩展 points（点位标定）/hardware 等组。由 machine_constants.py 加载（schema 校验，坏配置拒绝拉起）；PUT /api/machine_constants 在线改 + 原子落盘 + 热生效。派生量不落盘（k_mm=pixel_um/mag/1000、fov=px_u/px_v×k，GET 时计算）。注意：3D 模型里画出的相机外壳位置是 CAD 占位，视觉仿真的镜头位置以本文件 + vision_cameras.json mount 为准。",
+ "cameras": {
+  "coarse": {
+   "pixel_um": 2.74,
+   "mag": 0.3,
+   "dir_x": 1.0,
+   "dir_y": -1.0,
+   "swap_xy": false,
+   "rot_mrad": 0.8,
+   "wd_mm": 180.0,
+   "dof_um": 1000.0,
+   "px_u": 3000,
+   "px_v": 3000,
+   "_note": "粗对准：2026-08-21/24 用户真实光学+传感器数据——焦面距镜头 180mm、清晰范围 ±1mm（dof_um 为半范围：blur_ratio=|err|/dof 在 ±dof 处=1）；像元 2.74µm/0.3× → k≈9.133µm/px，3000×3000 → FOV 27.4×27.4mm。镜头固连机架 z=1162.9（翻转后 die 标记面 982.9 之上 180mm，见 vision_cameras.json mount；2026-08-24 起 coarse 对翻转模块上的 die，不再看蓝膜）。rot_mrad=控制器认知的相机安装微旋（只进 solve 反算链；真值在 vision_cameras.json view_rot_deg，两者相等=补偿到位，2026-09-16 迭代 38 真值/认知分离）"
+  },
+  "up": {
+   "pixel_um": 6.0,
+   "mag": 10.0,
+   "dir_x": 1.0,
+   "dir_y": -1.0,
+   "swap_xy": false,
+   "rot_mrad": -0.599,
+   "wd_mm": 10.0,
+   "dof_um": 20.0,
+   "px_u": 3000,
+   "px_v": 3000,
+   "_note": "上精对准：2026-08-24 用户真实光学+传感器——焦面距镜头 10mm、清晰范围 ±20µm；像元 6µm/10× → k=0.6µm/px，3000×3000 → FOV 1.8×1.8mm。镜头挂对准台（z=925@AS 零位）不动；键合头须把 die 送到镜头上方 10mm（BS_Arm_Z≈-118.83）才清晰。rot_mrad=控制器认知的相机安装微旋（只进 solve 反算链；真值在 vision_cameras.json view_rot_deg，两者相等=补偿到位，2026-09-16 迭代 38 真值/认知分离）"
+  },
+  "down": {
+   "pixel_um": 6.0,
+   "mag": 10.0,
+   "dir_x": 1.0,
+   "dir_y": -1.0,
+   "swap_xy": false,
+   "rot_mrad": 0.185,
+   "wd_mm": 10.0,
+   "dof_um": 20.0,
+   "px_u": 3000,
+   "px_v": 3000,
+   "_note": "下精对准：2026-08-24 用户真实光学+传感器——焦面距镜头 10mm、清晰范围 ±20µm；像元 6µm/10× → k=0.6µm/px，3000×3000 → FOV 1.8×1.8mm。mount offset z 已调 -14.1（镜头 z=895.9，距晶圆面 885.9 正好 10mm）。rot_mrad=控制器认知的相机安装微旋（只进 solve 反算链；真值在 vision_cameras.json view_rot_deg，两者相等=补偿到位，2026-09-16 迭代 38 真值/认知分离）"
+  }
+ },
+ "flip_pick": {
+  "_note": "翻转取片工艺机械常数（process_flows.build_flip_pick_flow 消费；设备本体参数，不随处方变化，全部待真机标定）。几何来源（2026-08-24 核实，sandboxes.json AABB）：pick_point_xy_mm=取片位三点同心（翻转吸盘心/蓝膜顶针/粗对准视场中心）世界 (1199.85, 9.0)；film_surface_z_mm=蓝膜面世界 z（filmstage_film 顶 886.9）；chuck_face_z0_mm=翻转吸盘面 FA_Z=0 时世界 z（diechuck_0001 底 891.6）；pin_top_z0_mm=蓝膜顶针帽顶面 ES_PunchZ=0 时世界 z（filmpin_cap 顶 885.8）。fa_x_pick/fa_rx_pick=取片姿态（拾取头朝下，**Rx=−π 到位**——Rx=0 是吸盘面朝上的呈现位，2026-08-25 用户按整机零位约定修正）；fa_z_safe=Rx 旋转安全位（**Rx 动之前必抬到本位**：91mm 方板绕工具点旋转扫掠半径≈64.2mm，FA_Z=0 时吸盘面虽离膜 4.7mm 但板角扫掠最低点 937−64.2≈872.8 会切入膜面 886.9——FA_Z=+20 时扫掠最低点≈891.8，离膜 ~5mm，2026-08-25 用户实测撞膜后修正）；fa_rx_flip=翻转位 **0**（Rx 回零=吸盘面朝上，芯片**背面**朝上呈现给粗对准——标记面朝下贴吸盘面）；fa_z_view=粗对准景深位（coarse 焦面 z=982.9=mount 1162.9−wd 180，翻转后 die 背面在 FA_Z=0 即 982.9 → 默认 0.0）；coarse_die_center_mm=**粗对准芯片中心标定位置**（世界 xy：拾取后 die 背面中心应处的标定位置，默认=取片位三点同心 (1199.85, 9.0)——粗对准拍照反投影测得 die 世界坐标后与本点对比得偏差，供后续对准策略使用）；pick_vac_timeout_s=拾取真空建立判定超时",
+  "pick_point_xy_mm": [
+   1199.85,
+   9.0
+  ],
+  "film_surface_z_mm": 886.9,
+  "chuck_face_z0_mm": 891.6,
+  "pin_top_z0_mm": 885.8,
+  "fa_x_pick_mm": 0.0,
+  "fa_rx_pick_rad": -3.1415926,
+  "fa_z_safe_mm": 20.0,
+  "fa_rx_flip_rad": 0,
+  "fa_z_view_mm": 0.0,
+  "coarse_die_center_mm": [
+   1199.85,
+   9.0
+  ],
+  "pick_vac_timeout_s": 3.0
+ },
+ "wafer_ega": {
+  "_note": "晶圆上片与全局对准（EGA）机械常数（process_flows.build_wafer_ega_flow 消费；设备本体参数，不随处方变化）。ws_ega_xyz_mm=硅片台 EGA 测量位 [WS_LS_X, WS_LS_Y, WS_Rz]（mm/mm/rad）：键合锚定位——该位下吸盘心=(−42.5,7.0)=键合头吸盘底面中心（运动链名义，error_kinematics wafer_stage 工具点(−0.106,0)+台位）。as_anchor_xy_mm=对准台锚点：WS 处于 EGA 位时对准台移到本值，上/下相机光轴（FOV 中心）正好对准吸盘心（=吸盘心(−42.5,7.0)−相机零位(−42.5,1.0)=(0,6)；不变量 anchor−ws_ega=(42.394,−1)=吸盘心零位(−0.106,0)−相机零位(−42.5,1.0)，EGA 分流 _ega_split_targets 依赖）。ega_n_points=EGA 测量点数（默认 9，沿晶圆边缘均匀分布）。ega_measure_timeout_s=单点视觉测量超时。",
+  "ws_ega_xyz_mm": [
+   -42.394,
+   7.0,
+   0.0
+  ],
+  "as_anchor_xy_mm": [
+   0.0,
+   6.0
+  ],
+  "ega_n_points": 9,
+  "ega_measure_timeout_s": 10.0
+ },
+ "flip_handoff": {
+  "_note": "芯片交接工艺机械常数（process_flows.build_flip_handoff_flow / build_head_to_flip_flow 消费；设备本体参数，不随处方变化，全部待真机标定）。几何来源（2026-08-26 核实，error_kinematics.json 工具点）：fa_x_handoff_mm=交接位 FA_X——翻转吸盘心与键合头心 X 对齐，推导：键合头工具点 x=-42.5 − 翻转工具点 x=1199.85 = -1242.35（FA_X dir=[1,0,0]，量程 -1250~0 余量 7.65mm）；粗对准补偿在流程内叠加：FA_X 目标=fa_x_handoff−off_x（off 为 coarse_offset 实测偏差，见 docs/工艺流程_芯片交接_V1.md 符号约定）。head_z_touch_mm=键合头下降接触位（BS_Arm_Z）：Rx=0 呈现位 die 背面世界 z=982.9+FA_Z（FA_Z=0 时 982.9=coarse 焦面，见 flip_pick._note），交接时 FA_Z=fa_z_safe=20 → die 背面 1002.9，键合头吸盘底零位 z=1053.83 → -50.93；**fa_z_safe_mm 改了本字段要同步改**。正向交接与逆向吸回共用本接触位（die 厚度在两侧相消：两吸盘间隙恒=die 厚）。as_safe_xy_mm=对准台退避安全位（AS_X/AS_Y；沿用示范流程 Y+120 退出键合头下方）。head_z_safe_mm/head_z_lift_mm=键合头安全高度/交接后抬起高度。fa_x_retreat_mm=交接后翻转撤离位。已知限制：Y 向翻转模块无 Y 轴补不了（head y=7.0 vs flip 工具点 y=9.0 固有 2mm 间隙，10mm die 不受影响）。；fa_x_standby_mm（2026-09-05 迭代 15，产率模式 pipelined）=翻转模块携片待机位：预取完成的下一颗 die 在此等当前颗 bond 结束，初值 −1050（曾取 −1100：待机吸盘盒 min x≈54.4 与对准相机承载台（AS_X≈+4 时 max x≈56.8）相交 2.4mm>ε，fl_measure 被 409——迭代 15 冒烟实测暴露后改 −1050，待机吸盘盒 min x≈104.4，净空 ~47mm），**待真机标定**",
+  "as_safe_xy_mm": [
+   0.0,
+   120.0
+  ],
+  "head_z_safe_mm": 0.0,
+  "head_z_touch_mm": -54.05,
+  "head_z_lift_mm": 0.0,
+  "fa_x_handoff_mm": -1242.35,
+  "fa_x_retreat_mm": 0.0,
+  "handoff_vac_timeout_s": 3.0,
+  "fa_x_standby_mm": -1050.0
+ },
+ "focus_level": {
+  "_note": "调焦调平机械常数（confocal.py 共焦读数模型与 fl_measure/fl_solve 流程消费；设备本体参数，不随处方变化，全部待真机标定）。几何来源（2026-08-27 前端模型事实；2026-08-27 迭代 4 零位纠错：TwinDOM 轴语义 position=authored−current，AS_X current=17、AS_Y current=55.4，真实零位 = authored−(17,55.4)）：confocal_cam_dx/dy_mm=共焦相对相机 X/Y 偏移——上/下共焦同挂对准相机承载台，共焦局部 [0,-47.5] vs 相机 [0,-22.5] → ΔX=0、ΔY=-25.0（上/下共用，测校后可改）；Z 同高（上 925.0/下 895.0 零位世界 z）。fl_measure 走位全走『相机光轴+标定偏移』认知链：探头对准点 P 时相机光轴须对准 P−(dx,dy)，改错常数→测点偏移→拟合面歪（真实测校行为）。confocal_mid_up/down_um=共焦中点读数=相机最佳焦面对应读数（中点共面装配约定：共焦读数 350µm ↔ 相机焦面，调焦原理核心）；confocal_range_um=量程（0~700µm，量程外无读数）；读数噪声 confocal_sigma_um 2026-08-27 起移到 recipe sim_sensors 组（噪声真值≠可标定设备认知，测校页『传感器仿真』卡）。as_z_chuck_focus_mm=下相机焦面=无晶圆吸盘面（884.9）时的 AS_Z：895.9+AS_Z−10=884.9 → -1.0。head_z_upfocus_mm=AS_Z=as_z_chuck_focus 时上相机焦面=无芯片键合头吸盘面（1053.83+BS_Arm_Z）的 BS_Arm_Z：925−1+10=934=1053.83+BS_Arm_Z → -119.83。level_tol_urad=调平验收残余阈值（2026-09-04 迭代 12 起默认 60）；focus_search_span/step_um=共焦无读数时 AS_Z 搜索窗口/步距（共焦 700µm 量程 ≫ 相机 ±20µm 景深，共焦快速定位焦面）。as_head_center_xy_mm=上相机认键合头吸盘中心（气道交叉标定）时的对准台轴位：真实零位下相机世界=(-42.5,1.0)，吸盘中心=(-42.5,7.0) ⇒ AS_X=0、AS_Y=+6.0；**仿真假定，待真机测校**，±200 放行",
+  "confocal_cam_dx_mm": 0.0,
+  "as_head_center_xy_mm": [
+   0.0,
+   6.0
+  ],
+  "confocal_cam_dy_mm": -25.0,
+  "confocal_mid_up_um": 350.0,
+  "confocal_mid_down_um": 350.0,
+  "confocal_range_um": 700.0,
+  "as_z_chuck_focus_mm": 0.0,
+  "head_z_upfocus_mm": -98.0,
+  "level_tol_urad": 60,
+  "focus_search_span_um": 300.0,
+  "focus_search_step_um": 10
+ },
+ "fine_align": {
+  "_note": "逐键合位精对准机械常数（2026-08-28 迭代 6，flow_engine fa_* 步消费；设备本体参数，不随处方变化，全部待真机标定）。rz_center_offset_mm=WS_Rz 旋转轴心相对吸盘中心偏移·标定值（认知侧补偿枢轴=吸盘心世界 XY+本偏移；真值枢轴偏移在 recipe sim_align 组注入——两者不等产生阿贝残余，被确认环实测抓到，真实测校行为）。rz_gain/rz_sign=WS_Rz 轴位→物理角换算（物理角=轴位增量×rz_gain×rz_sign；默认 1/1）。行程守卫：WS_Rz ±1°（axes_config）；bond_offset_x/y_um、bond_offset_rz_urad（2026-09-05 迭代 15）=键合附加补偿：由键合后检测 measured 的 mean 系统偏差给出（结果分析页「补偿量建议」一键应用），bond 流程在精对准完成后/下压前施加（bond_offset_apply op：WS 设计系平移 +offset 经 EGA map 线性部换算、旋转 +orz 含 map 同步；在 fl_ready 施加会被精对准补偿环吸收，只有 fa 之后的偏移才留在 die 落点里）；补偿系统偏差，不补偿随机散布，应用后 mean→0，默认 0。frame_cal_x/y_um、frame_cal_rz_urad（2026-09-07 迭代 20）=精对准计量帧标定残差：上/下相机两条测量链帧间偏差经出厂标定后的常数残余，fa 解算按标定值修正测量 Δ（delta_used=delta_meas+frame_cal）；本机两测量侧几乎共用同一 AS 位姿（WS 承担大行程），帧间差亚 µm，标定后残差取 0=标定理想，注入非零可演示标定残余（详见 docs/键合误差模型_V1.md）。rz_center_ref_xy_mm（2026-09-11 迭代 35）=rz_center_offset_mm 标定时的机台位 [WS_LS_X, WS_LS_Y]（ws_rotate_center measured 双键，apply 一并写回）——测校侧枢轴信念按 pivot=吸盘心信念+offset+(当前WS_LS_XY−ref_xy) 平移；默认/旧数据 [0,0]=平移项关闭=原行为（兼容）",
+  "rz_center_offset_mm": [
+   0.020903,
+   -0.168552
+  ],
+  "rz_center_ref_xy_mm": [
+   0.0,
+   0.0
+  ],
+  "rz_gain": 1.0,
+  "rz_sign": 1,
+  "bond_offset_x_um": 0.0,
+  "bond_offset_y_um": 0.0,
+  "bond_offset_rz_urad": 0.0,
+  "frame_cal_x_um": 0.0,
+  "frame_cal_y_um": 0.0,
+  "frame_cal_rz_urad": 0.0
+ },
+ "vision_marks": {
+  "_note": "视觉对准标记模板机械常数（2026-09-04 迭代 12 起，flow_engine 全部拍照点消费；设备本体参数，不随处方变化）。每次触发相机拍照必须依据本组模板名识别标记——模板名对应 vision_templates.json 里的已建模板（FAST/REAL 两模式都做存在性校验，模板未建立=不能识别，模拟真机未建模板行为）；识别结果 entry 带 template 字段供流程日志溯源。tpl_wafer_site=下相机认晶圆 site 标记（wafer_ega ega_measure / focus_level 晶圆侧 align_first / fine_align fa_measure 晶圆侧）；tpl_coarse_die=粗对准相机认翻转吸盘上 die 背面特征（flip_pick coarse_offset，取片/交接链）；tpl_die_head=上相机认键合头上 die 角标（fine_align fa_measure die 侧 / focus_level die 侧 align_first）；tpl_head_chuck=上相机认键合头吸盘标记（as_head_center 测校预留）；tpl_post_inspect=下相机键合后红外透视检测认 die 角标（post_inspect pi_measure）。默认套刻组合（迭代 13）：晶圆 site 标记=quad（150µm 边界四角 30µm 小方块），die 侧标记=cross（tpl_die_head/tpl_coarse_die 等），quad⊕cross 套刻对准。**2026-09-07 迭代 20：tpl_wafer_site 默认 cv_cross_0824 → cv_quad**——cv_cross_0824 是占位期 cross 图（shape 字段标 quad 但 PNG 是十字），REAL 套刻同帧下会把 die 的 cross 当最佳峰（quad/cross 两模板命中同一特征 → measured≈0 假象）；cv_quad 为 gen_vision_templates 合成的真 quad 模板，cv_cross_0824 留库兼容手动场景。wafer.marks 全局 2000µm cross 超 down 相机 FOV（1.8mm）且无拍照点消费，不建模板",
+  "tpl_wafer_site": "cv_quad",
+  "tpl_coarse_die": "cv_chipback",
+  "tpl_die_head": "tpl_die_head",
+  "tpl_head_chuck": "tpl_head_chuck",
+  "tpl_post_inspect": "tpl_post_inspect"
+ },
+ "bond": {
+  "_note": "热压键合机械常数（process_flows.build_bond_flow 与 engine 真值力模型消费；设备本体标定量，不随处方变化）。2026-08-31 迭代 9 重新定义：head_z_contact_mm=**裸接触位**（无晶圆无芯片、键合头吸盘表面贴硅片台陶瓷面时的 BS_Arm_Z = 陶瓷面顶 884.9 − 头吸盘底零位 1053.83 = **−168.93**；2026-09-06 迭代 17 修 round 误差：旧值 −168.9 比几何真值高 30µm，键合时 die 底面悬空「没接触上」；更早的 −167.9 是含片厚 1.0 的示教位）；有效接触位=裸接触位+晶圆厚+芯片厚（engine.effective_bond_contact_mm，片变厚→接触位上移/pos 增大）。head_z_search_mm=两段速下压快慢切换高度（慢速寻力段起点，裸值，默认=裸接触位+2.0mm 安全余量，流程按厚度同样换算）。弹簧刚度/热对象/PID 参数 2026-08-31 起迁入 tuning.json（下位机调参），读数噪声迁入 recipe sim_sensors。bond_shift_xy_um/bond_shift_rz_urad（2026-09-07 迭代 20）=压合微滑移随机项 3σ（加压/保压瞬间 die 相对 site 的不可再补偿滑移，对照参考项目 bond_shift 150nm/1.5µrad 语义；bond_mark 时逐颗高斯采样落进 die[\"resid\"] 与 truth 的 process_shift 分量，默认 0=工艺项不建模，详见 docs/键合误差模型_V1.md）",
+  "head_z_contact_mm": -147.0,
+  "head_z_search_mm": -145.0,
+  "contact_verify_tol_um": 50.0,
+  "bond_shift_xy_um": 0.0,
+  "bond_shift_rz_urad": 0.0
+ },
+ "stage_geo": {
+  "_note": "运动台几何机械常数（迭代 36 起，error_kinematics 六自由度合成 FK 与 as/ws_stage_nonortho 测校消费；设备本体参数，不随处方变化）。as/ws_y_rail_dir_urad=对准台（AS_Y 链元）/硅片台（WS_LS_Y 链元）Y 导轨方向角真值/注入旋钮（µrad，±5000）——一阶真值矩阵 A=[[1+εx,sinφ],[0,(1+εy)cosφ]] 的 φ，X 基准轴；FK 消费为 Y 链元平移贡献 y·(sinφ,cosφ)，φ=0 逐字节恒等；六自由度链关时注入不生效。as/ws_nonortho_urad=非正交角测校结果（as/ws_stage_nonortho measured phi_urad，apply 写回本键；apply 不动 *_y_rail_dir——那是真值旋钮不是测校结果）",
+  "as_y_rail_dir_urad": 0.0,
+  "ws_y_rail_dir_urad": 0.0,
+  "as_nonortho_urad": 0.0,
+  "ws_nonortho_urad": 0.0
+ },
+ "bs_rxry_axis": {
+  "_note": "键合头调平轴旋转轴线标定（迭代 49 起，bs_rxry_axis 测校 routine apply 写回；设备本体参数，不随处方变化）。rx/ry_axis_point_mm=BS_CAL_Rx/Ry 旋转轴线上一点（世界坐标 mm）、rx/ry_axis_dir=轴线方向单位向量；默认值与 error_kinematics.json bond_head 链 BS_CAL_Rx/Ry R 链元真值对齐（center=[-42.5,7.0,1215.25]，Rx dir=[1,0,0]、Ry dir=[0,1,0]）",
+  "rx_axis_point_mm": [
+   -42.5,
+   7.0,
+   1215.25
+  ],
+  "rx_axis_dir": [
+   1.0,
+   0.0,
+   0.0
+  ],
+  "ry_axis_point_mm": [
+   -42.5,
+   7.0,
+   1215.25
+  ],
+  "ry_axis_dir": [
+   0.0,
+   1.0,
+   0.0
+  ]
+ },
+ "sensor_calib": {
+  "_note": "传感链标定常数（迭代 49 起，bond_temp_calib/bond_force_calib 测校 routine apply 写回；设备本体标定量）。发布读数=(raw−offset_cal)/gain_cal，raw=真值×(1+gain_err)+offset_err+noise（gain_err/offset_err=recipe sim_sensors 注入真值旋钮）；gain=1.0/offset=0=标定理想（默认）。head_temp_*↔PulseHeat_Up（键合头脉冲加热器 oCurTemp）、wafer_temp_*↔Heat_Dw（硅片台加热盘）、force_*↔键合力传感器（M_BS.oActualForce）",
+  "head_temp_gain": 1.0,
+  "head_temp_offset_c": 0.0,
+  "wafer_temp_gain": 1.0,
+  "wafer_temp_offset_c": 0.0,
+  "force_gain": 1.0,
+  "force_offset_n": 0.0
+ }
+}
