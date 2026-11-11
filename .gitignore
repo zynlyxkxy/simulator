@@ -4,7 +4,7 @@
 # ============================================================
 /28module/env/
 /28module/backend/runtime/
-/simbridge/deploy/
+/simbridge/deploy/bin/
 
 # 构建产物
 /build/
